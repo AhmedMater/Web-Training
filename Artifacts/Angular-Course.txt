@@ -1,0 +1,22 @@
+		
+====> Angular 5 Course:
+------------------------
+Session 1:
+----------
+	1. npm and package.json
+	2. Components & Modules
+	3. Built-in Directive
+Session 2:
+----------
+	4. Directives and Pipes
+	5. Dependency Injection and Angular Services
+
+Session 3:
+----------
+	6. Angular HTTP CLient
+	7. Angular Routing 
+	8. Angular Guards and Interceptors
+
+Session 4: Communication between Components (Input, Output, ViewChild, Subject)
+Session 5: Angular Forms (Template Driven - Reactive Forms)
+Session 6: Angular Animations & Material Components

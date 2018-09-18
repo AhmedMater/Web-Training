@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Auth-Services" />
+        <module name="Auth-Webapp" />
+        <module name="Dorrar-Services" />
+        <module name="Dorrar-Webapp" />
+        <module name="FM-Services" />
+        <module name="FM-Webapp" />
+        <module name="NM-Services" />
+        <module name="NM-Webapp" />
+        <module name="SubHub-Services" />
+        <module name="SubHub-Webapp" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>

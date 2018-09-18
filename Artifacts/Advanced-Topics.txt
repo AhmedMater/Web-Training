@@ -1,0 +1,13 @@
+
+Advanced Topics: ( Will be scheduled after the 3 Courses)
+------------------
+	1. Authentication & Authorization
+	2. Application Localization (Arabic & English)
+	3. Workflow Session
+	4. Sending Emails through Spring Application
+	5. Exporting Data to Files (PDF, HTML, ..) through Jasper Tool
+	6. JMS - Java Messaging Service
+	7. Application Logger Using Log4j2
+	8. Agile Software Session
+	9. How to write Design Document
+	10. Maven Building Tool

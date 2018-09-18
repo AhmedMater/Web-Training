@@ -1,0 +1,24 @@
+
+====> Spring 5 Course:
+------------------------
+Session 1: Spring REST Provider
+Session 2: 3-Layer Architecture (Controller - Service - Repository)
+
+Session 3:
+----------
+	3. Model Types (DTO - VTO)
+	4. Model Validations
+	
+Session 4:
+----------
+	5. Spring Configuration
+	6. Dependency Injection and Beans
+	7. Spring Annotations
+	
+Session 5:
+----------
+	8. Database and SQL 
+	9. Basic Transactions (SELECT, INSERT, UPDATE, DELETE)
+	10. Primary & Foriegn Keys and Table Join
+	
+Session 6: Integrate Spring Application with Database (MySQL)

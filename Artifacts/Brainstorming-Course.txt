@@ -1,0 +1,46 @@
+Web Development Brainstorming Course
+
+Session 1: Web Development
+--------------------------
+	1. History of the Web Development:
+		1.1 Static Web Pages
+		1.2 Dynamic Web Pages
+		1.3 MVC Architecture Applications
+		1.4 Distributed Systems
+	2. What are Application Servers?
+	3. Version Control:
+		3.1 What is Version Control
+		3.2 Types of Version Control
+		3.3 How to use BitBucket VC in Intellij
+	4. Installing all the Application needed for Development
+	5. Explaining the tools we will use throughout the Training
+		(Bitbucket) - (Git) - (Slack) - (Taiga) - (Zoom)
+
+Session 2: Build Up and Running Project
+---------------------------------------
+	1. Angular Application:
+		1.1 Preparing new Angular Project and how to run it
+		1.2 Giving a brief introduction about every part in the Angular Project
+			(Package.json) - (angular-cli.json) - (index.html) - (styles.sass)
+			(assets) - (app) - (Modules) - (Components) - (Services) - (Routing)
+		1.3 Introduction about npm Repository and how to install libraries 
+		1.4 Introduction to Angular CLI Commands
+	2. Introduction to Web Services
+	3. Spring Application:
+		3.1 Preparing new Spring Boot Project and how to run it
+		3.2 Giving a brief introduction about every part in the Spring Project
+			(pom.xml) - (application.properties) - (Controller) - (Services) 
+			(Repository) - (Model: DTO - VTO) - (Configuration)
+		3.2 Introduction about the Maven Building Tool
+	4. Full Cycle of the 2 Application together (Angular & Spring)
+	5. Java Annotations (Creating - Using)
+
+Session 3: Projects (Business - Planning - Assignments)
+--------------------------------------------------------
+	1. Application Versioning
+	2. Explaining Business Details of Sub-Hub & Dorrar Projects
+	3. Assign Tasks for each Member 
+	4. Discussing Development and Testing Guidelines
+	5. Development & Testing Life Cycle and Regression Test Cycle
+	6. Roles and Responsibilities of all the members of the Team
+	7. Present the Architecture Model of the Projects

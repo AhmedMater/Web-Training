@@ -1,0 +1,26 @@
+As a User in the System, I can request new Role (Instructor - Content Reviewer) in the System.
+
+Data Dictionary:
+
+Requested Role: (Drop-down List) (Mandatory)
+What makes you qualified for this Role in the System: (Mandatory) (Text Area: up to 200 Char)
+Your work in the past years: (Mandatory) (Text Area: up to 4000 Char)
+Email Address: (Mandatory) (Valid) (Length 5-50 Char)
+Propose Interview Date:
+Attach your CV File
+
+
+Flow:
+Login with my Student Account in the System
+Go to my profile page
+Click on Request Role
+Fill the Data in the Form
+Click Submit or Cancel
+
+On Success: Success Alert will be Popup "Your Request is submitted Successfully, Waiting for Approval"
+On Failure: Failure Alert with Error will be Popup
+
+Acceptance Criteria:
+User must be authenticated
+Student can Request Instructor and Content Reviewer
+Instructor can Request Content Reviewer
