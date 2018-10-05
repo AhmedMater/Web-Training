@@ -1,0 +1,13 @@
+
+
+
+Angular GuideLines:
+---------------------
+	1. names in angular should small letter with dash in between (ex: add-user, edit-profile, user-detail)
+	1. component file names : ([Component-Name].component.(ts/html/sass/spec))
+	2. directive file names : ([Directive-Name].directive.(ts/html)) (ex: app-validator.directive.ts)
+	3. model names should be: ([Model-Name].data.ts) (ex: user-dto.data.ts, user-resultset.data.ts, pagination-info.data.ts)
+	4. service name should be: ([Service-Name].service.ts) (ex: user.service.ts)
+	1. @Input() names should be nouns
+	2. @Output() names should be verbs (ex: createDept, createUser)
+	3. Callback function of @Output() should be (on + noun + past verd) (ex: onDeptCreated, onUserChanged)

@@ -1,0 +1,162 @@
+
+==> Project Main Idea:
+------------------------
+1. The Project aims to provide Tutoring Service for graduates and non-graduates and train them through Videos, Written Tutorials and Projects.
+2. The Website will provide Articles, Courses (Videos & Written), Project after each Course and Certifications after each Course.
+3. The Website will be in Arabic & English View 
+4. Courses, Atricles and Certificates will be translated to many languages
+5. Instructors will be choosen and approved
+
+
+==> Project Epics:
+-------------------
+1. User managment
+2. Website Roles
+3. Article
+4. Course
+5. Certificate
+5. Administration Panel
+6. User Panel
+7. System Reports
+
+==> Project Stories:
+---------------------
+
+2. Article & Tutorial: {
+	2.1 Create new Article
+	2.2 Save Article as Draft
+	2.3 Submit Article
+	2.4 Edit Article
+	2.6 Vote up to Articles
+	2.7 Rate Article
+	2.8 Share Article on Social Media
+	2.9 Export Article as a File
+	2.10 Submit Article Video
+	2.11 Change Article Video
+	2.12 Delete Article Video
+	2.13 Article Wrokflow Cycle (Create - Save - Submit - Approved - Rejected - ReSubmitted - Deny)
+	2.14 Translate Article
+	2.15 Save Translations as Draft
+	2.16 Submit Translation
+	2.17 Edit Translation
+	2.18 Delete Translation
+	2.19 View All Translation
+	2.20 View Article in different Language
+	2.21 View Article Activities
+	2.22 Review & Comment Article
+}
+
+3. Course: {
+	3.1 Create new Course
+	3.2 Add Sections
+	3.3 Add Tutorials
+	3.4 Edit Course
+	3.5 Course Wrokflow Cycle (Create - Save - Submit - Approved - Rejected - ReSubmitted - Deny)
+	3.5 View Main Course Details
+	3.6 Join Course
+	3.7 Schedule Course for Starting
+	3.8 View Scheduled-Course Details
+	3.8 Start Scheduled-Course
+	3.9 Finish Tutorial
+	3.10 Finish Section
+	3.9 Add Assignments
+	3.10 Assign Assignments for Students
+	3.11 Student save Assignment as Draft
+	3.12 Student Submit Assignment
+	3.13 Instructor score Assignment
+	3.14 Student apply for Course
+	3.15 Interview Student
+	3.16 Accept or Reject Student Application
+}
+
+4. Certificate: {
+	4.1 Generate Certificate
+	4.2 Export Certificate
+	4.3 Search For Certificate
+	4.4 View Certificate
+}
+
+5. User Panel: {
+	5.1 Scheduled List
+	5.2 Assignments
+	5.3 Courses
+	5.4 Course-Scores
+	5.5 Certificates
+	5.6 My Courses
+	5.7 My Articles
+}
+
+6. Administration Panel: {
+	5.1 Ban User
+	5.2 Authentication
+	5.2 Authorization
+	5.3 User Request Role
+	5.3 Assign Role to User
+	5.4 Change User Role
+	5.5 Manage privileges (Authorizations)
+	5.6 List of Role Requests
+	5.7 Role Request Actions (Accept - Reject)
+}
+	
+7. Notifications: {
+	6.1 Build Notification System
+	6.2 Send Email Notification
+	6.3 Send Web Notification
+	6.4 View Notifications
+	6.5 Mark Notification as read
+}
+	
+===> Releases:
+
+Version 0.1.0.0:
+---------------{
+	1. Register
+	2. Login & Logout
+	3. User List
+	4. View User Profile
+	5. Edit User Profile
+	6. Change Password
+	7. User Request Role
+	8. Assign Role to User
+	9. Change User Role
+	10. Manage privileges (Authorizations)
+	11. List of Role Requests
+	12. Role Request Actions (Accept - Reject)
+	13. Activate & Deactivate User
+	14. Forget Password
+}
+	
+Version 0.2.0.0:
+---------------{
+	1. Authentication
+	2. Authorization
+	3. Create new Article
+	4. My Articles
+	5. Edit Article
+	6. Save Article as Draft
+	7. Submit Article
+	8. Create new Course
+	9. My Courses
+	10. Add Sections
+	11. Add Tutorials
+	12. View Main Course Details
+	13. Edit Course
+}
+
+Version 0.3.0.0:
+---------------{
+	4. Article Wrokflow Cycle (Create - Save - Submit - Approved - Rejected - ReSubmitted - Deny)
+	4. Course Wrokflow Cycle (Create - Save - Submit - Approved - Rejected - ReSubmitted - Deny)
+	1. Submit Article Video
+	2. Change Article Video
+	3. Delete Article Video
+	5. Review Article
+	6. Comment on Article
+	7. Join Course
+	8. Schedule Course for Starting
+	9. View Scheduled-Course Details
+	10. Start Scheduled-Course
+	11. Finish Tutorial
+	12. Finish Section
+	13. Add Assignments
+}

@@ -1,18 +1,75 @@
+
+
 User Accounts:
 ---------------
 
-- Mater: ahmedmotair@gmail.com
-- Mahmoud: mahmoud0i0d@gmail.com
+ ----------------------------------------------------------------
+|	Name	|  		Email					|	GitHub Account	|
+ ----------------------------------------------------------------
+| Mater: 	| ahmedmotair@gmail.com			| AhmedMater		|
+| Mahmoud: 	| mahmoud0i0d@gmail.com			| 					|
+| Amr: 		| amrhossamm@gmail.com			| Amr-Hossam		|
+| Asmaa: 	| asmaaabdelnasder@gmail.com	| AsmaaNaser		|
+| Mahmoud: 	| mahmoudtaha613@gmail.com		| MahmoudMTaha		|
+| Abanoub: 	| abanoubfayez2611@gmail.com	| AbanoubFayez		|
+| Fathy: 	| ahmadfathy285@gmail.com		| ahmedfathy97		|
+| Hala: 	| halamahmoud97@outlook.com		| halamahmoud8		|
+| Youssef: 	| youssefelhadad20@gmail.com	| Yousefelhadad		|
+| Aya: 		| aya.77.samir@gmail.com		| ayaasamir			|
+| Yara: 	| yaracom779@gmail.com			| YaraAbdElrahman	|
+| Sara: 	| sara.m505.SA@gmail.com		| sara505			|
+| Manar: 	| manaar.elsayed2018@gmail.com	| manar2018			|
+| Enas: 	| nosamahmoud980@gmail.com		| enasmahmoud96		|
+| Heba: 	| hebafoda39@gmail.com			| hebafoda39		|
+| Manal: 	| manal.mahmoud.gouda@gmail.com	| ManalMahmoudGouda |
+ ----------------------------------------------------------------
+ 
+ 
+ Angular 6 Modules:
+ -------------------
+ 
+ -----------------------------------------------------------------------
+|  #  |  Time  | #V |				Module Name							|
+|-----------------------------------------------------------------------|
+| 01  |    33m | 09 | Getting Started									|
+| 02  | 1h 39m | 28 | The Basics										|
+| 03  | 1h 03m | 15 | Course Project - The Basics						|
+| 04  |    12m | 03 | Debugging											|
+ -----------------------------------------------------------------------
+| Total: 55 Video ==> 3h 27min (Components in a Project)				|
+ -----------------------------------------------------------------------
+| 05  | 1h 14m | 19 | Components & Databinding Deep Dive				|
+| 06  |    31m | 05 | Course Project - Components & Databinding			|
+| 07  |    47m | 11 | Directives Deep Dive								|
+| 08  |    06m | 01 | Course Project - Directives						|
+ -----------------------------------------------------------------------
+| Total: 36 Video => 2h 38min (Directives, Data Binding)				|
+ -----------------------------------------------------------------------
+| 09  |    35m | 10 | Using Services & Dependency Injection				|
+| 10  |    30m | 08 | Course Project - Services & Dependency Injection	|
+| 11  | 2h 17m | 29 | Changing Pages with Routing						|
+| 12  |    45m | 14 | Course Project - Routing							|
+ -----------------------------------------------------------------------
+| Total: 61 Video => 4h 07min (Services, Angular Routing)				|
+ ----------------------------------------------------------------------- 
+| 13  |    38m | 11 | Understanding Observables							|
+| 14  |    03m | 01 | Course Project - Observables						|
+| 15  | 1h 48m | 32 | Handling Forms in Angular Apps					|
+| 16  | 1h 14m | 21 | Course Project - Forms							|
+ -----------------------------------------------------------------------
+| Total: 65 Video => 3h 43min (Observables, Angular Forms)				|
+ ----------------------------------------------------------------------- 
+| 17  | 1h 30m | 15 | 							|
+| 18  | 1h 30m | 15 | 							|
+| 19  | 1h 30m | 15 | 							|
 
-- Amr: amrhossamm@gmail.com
-- Asmaa: asmaaabdelnasder@gmail.com
-- Mahmoud: mahmoudtaha613@gmail.com
-- Abanoub: abanoubfayez2611@gmail.com
-- Fathy: ahmadfathy285@gmail.com
-- Hala: halamahmoud97@outlook.com
-- Youssef: youssefelhadad20@gmail.com
-- Aya: aya.77.samir@gmail.com
-- Yara: yaracom779@gmail.com
-- Sara: sara.m505.SA@gmail.com
-- Manar: manaar.elsayed2018@gmail.com
-- Enas: nosamahmoud980@gmail.com
+
+
+
+
+
+
+
+
+
+ 

@@ -11,3 +11,22 @@ Advanced Topics: ( Will be scheduled after the 3 Courses)
 	8. Agile Software Session
 	9. How to write Design Document
 	10. Maven Building Tool
+
+
+Development Topics:
+--------------------
+1. List Page 
+2. View/Edit Detail Page
+2. Add/Update/Delete Item
+3. Workflow
+4. Authentication
+5. Authorization
+6. Application Localization
+
+
+Development Topics:
+--------------------
+1. Java SE Basics & OOP
+2. Java Annotation
+3. HTML & Bootstrap
+4. Database & SQL (Basic CRUD Operations)

@@ -1,0 +1,97 @@
+
+==> Project Main Idea:
+------------------------
+The Project aims to provide Translation Service for anyone, and help beginner Translator to build good profile.
+
+
+==> Project Life Cycle:
+------------------------
+1. User can login to the system and request materials for translation
+2. Translators are able to apply on these materials and submit their translations
+3. User can rate the translations and review the committed translations
+4. Administrators has to approve the materials before published on the website
+5. Users can report inappropriate translations and Administrators can remove them
+6. Each Translator will have profile that view his translations and their rates and his points on the system
+
+==> Project Epics:
+-------------------
+1. User managment
+2. Translation Request
+3. Translation Life Cycle
+4. Translation Actions
+5. Administration Panel
+6. Notifications and Activities
+7. System Reports
+
+==> Project Stories:
+---------------------
+1. User Management:{
+	1.1 Register
+	1.2 Login & Logout
+	1.3 Forget Password
+	1.4 User List
+	1.5 View User Profile
+	1.6 Edit User Profile
+	1.7 Change Password
+	1.8 User Request Role
+	1.9 Assign and UnAssign Role to User
+	1.10 Role Reuquest List
+	1.11 Activate/Deactivate User
+	1.12 Manage Roles & Privileges
+	1.13 Role Request Details
+}
+
+2. Translation Request:{
+	2.1 Create new Translation Request
+	2.2 Translation Request List
+	2.3 Edit Translation Request
+	2.4 Delete Translation Request
+	2.5 View Request before Translation
+	2.6 View Request after Translation
+	2.7 View List of Applying Translator
+}
+
+3. Translation Life Cycle: {
+	3.1 Building workflow for Translation
+	3.2 Administrator has to Accept Material
+	3.3 Applying for Material
+	3.4 Moving Material to pending Translations
+	3.5 Submit Translation Progress
+	3.6 Build Editor for translation
+	3.7 Save Draft Translation
+	3.8 Submit Translation
+	3.9 Edit My Translation
+}
+	
+4. Translation Actions:{
+	4.1 Review Translation
+	4.2 Reject Translation
+	4.3 Accept Translation
+	4.4 Report Translation
+	4.5 Translation Rereview
+	4.6 Rate Translation
+	4.7 Vote Up and Down for Translation
+	4.8 Add Translation Review 
+	4.9 Vote Up and Down for Translation Review
+	4.10 Share Translation on Social Media
+}
+
+5. Administration Panel: {
+	5.6 List of Translations to be reviewed
+	5.7 List of Rejected Translations
+}
+	
+6. Notifications: {
+	6.1 Build Notification System
+	6.2 Send Email Notification
+	6.3 Send Web Notification
+	6.4 View Notifications
+	6.5 Mark Notification as read
+	6.6 Log Activity on Material
+	6.7 View Activities on each Material
+}
+	
+	
+	
+	
+	
