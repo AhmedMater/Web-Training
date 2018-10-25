@@ -37,7 +37,10 @@ export class HomeComponent implements OnInit {
     this.isFailure = false;
     this.isSuccess = false;
   }
+  onClick(){
+    console.log('Finished');
 
+  }
   validateText(text: string){
     console.log(text);
 
