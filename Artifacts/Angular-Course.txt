@@ -20,3 +20,101 @@ Session 3:
 Session 4: Communication between Components (Input, Output, ViewChild, Subject)
 Session 5: Angular Forms (Template Driven - Reactive Forms)
 Session 6: Angular Animations & Material Components
+
+
+Angular 6 Modules:
+-------------------
+ 
+ ---------------------------------------------------------------------------
+|  #  |  Time  | #V |				Module Name								|
+|---------------------------------------------------------------------------|
+| 01  |    33m | 09 | Getting Started										|
+| 02  | 1h 39m | 28 | The Basics											|
+-----------------------------------------------------------------------------
+| Total: (2h 09m) (37 Videos) Getting Started in Angular					|
+-----------------------------------------------------------------------------
+
+ ---------------------------------------------------------------------------
+|  #  |  Time  | #V |				Module Name								|
+|---------------------------------------------------------------------------|
+| 03  | 1h 03m | 15 | Course Project - The Basics							|
+| 04  |    12m | 03 | Debugging												|
+| 05  | 1h 14m | 19 | Components & Databinding Deep Dive					|
+-----------------------------------------------------------------------------
+| Total: (2h 29m) (37 Videos) Applying the Angular Basics					|
+-----------------------------------------------------------------------------
+
+ ---------------------------------------------------------------------------
+|  #  |  Time  | #V |				Module Name								|
+|---------------------------------------------------------------------------|
+| 06  |    31m | 05 | Course Project - Components & Databinding				|
+| 07  |    47m | 11 | Directives Deep Dive									|
+| 08  |    06m | 01 | Course Project - Directives							|
+| 09  |    35m | 10 | Using Services & Dependency Injection					|
+| 10  |    30m | 08 | Course Project - Services & Dependency Injection		|
+-----------------------------------------------------------------------------
+| Total: (2h 29m) (35 Videos) Components & Databinding						|
+-----------------------------------------------------------------------------
+
+ ---------------------------------------------------------------------------
+|  #  |  Time  | #V |				Module Name								|
+|---------------------------------------------------------------------------|
+| 11  | 2h 17m | 29 | Changing Pages with Routing							|
+| 12  |    45m | 14 | Course Project - Routing								|
+-----------------------------------------------------------------------------
+| Total: (3h 2m) (43 Videos) Angular Page Routing							|
+-----------------------------------------------------------------------------
+
+ ---------------------------------------------------------------------------
+|  #  |  Time  | #V |				Module Name								|
+|---------------------------------------------------------------------------|
+| 13  |    38m | 11 | Understanding Observables								|
+| 14  |    03m | 01 | Course Project - Observables							|
+| 15  | 1h 48m | 32 | Handling Forms in Angular Apps						|
+-----------------------------------------------------------------------------
+| Total: (2h 26m) (42 Videos) Observables & Angular Forms					|
+-----------------------------------------------------------------------------
+
+ ---------------------------------------------------------------------------
+|  #  |  Time  | #V |				Module Name								|
+|---------------------------------------------------------------------------|
+| 16  | 1h 14m | 21 | Course Project - Forms								|
+| 17  |    37m |  	| Using Pipes to Transform Output						|
+| 18  |    38m |  	| Making Http Requests									|
+| 19  |    21m |  	| Course Project - Http									|
+| 20  |    43m |  	| Authentication & Route Protection in Angular Apps		|
+-----------------------------------------------------------------------------
+| Total: (1h 15m) (18 Videos) Applying the Angular Basics					|
+-----------------------------------------------------------------------------
+
+ ---------------------------------------------------------------------------
+|  #  |  Time  | #V |				Module Name								|
+|---------------------------------------------------------------------------|
+-----------------------------------------------------------------------------
+| 21  | 1h 25m |  	| Using Angular Modules & Optimizing Apps				|
+-----------------------------------------------------------------------------
+
+
+
+| 22  |    11m |  	| Deploying an Angular App								|
+| 23  |    51m |  	| Bonus The   ttpClient									|
+| 23  | 3h 40m | 47 | Bonus Working with NgRx in our Project				|
+| 23  |    39m | 07 | Bonus Angular Universal								|
+| 23  |    39m | 11 | Angular Animations									|
+| 23  |    44m | 09 | A Basic Introduction to Unit Testing in Angular Apps	|
+| 23  |    02m | 01 | Course Roundup										|
+| 23  |    07m | 01 | About the Course Update & Angular 4					|
+| 23  |    35m | 02 | Angular 6 Changes & New Features						|
+| 23  |    49m |  	| Custom Project & Workflow Setup						|
+| 23  |    24m |  	| Bonus TypeScript Introduction (for Angular 2 Usage)	|
+
+
+
+
+
+
+
+
+
+
+ 
