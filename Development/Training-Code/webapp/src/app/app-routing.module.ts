@@ -5,6 +5,7 @@ import {FullLayout} from "./layout/full-layout/full-layout.component";
 import {HomeComponent} from "./modules/home/home.component";
 import {LoginComponent} from "./modules/authentication/components/login/login.component";
 import {RegisterComponent} from "./modules/authentication/components/register/register.component";
+import {AppFormsComponent} from "./modules/pages/app-forms/app-forms.component";
 
 
 const ROUTES: Routes = [
@@ -18,7 +19,8 @@ const ROUTES: Routes = [
     ]
   },
   {path: '', component: FullLayout, children: [
-      {path: 'home', component: HomeComponent}
+      {path: 'home', component: HomeComponent},
+      {path: 'forms', component: AppFormsComponent}
 
     ]
   }

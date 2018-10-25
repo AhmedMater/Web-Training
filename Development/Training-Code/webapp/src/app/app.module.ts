@@ -24,6 +24,8 @@ import {HeaderComponent} from "./layout/components/header/header.component";
 import {AMValidatorDirective} from "./core/directive/validator/am-validator.directive";
 import {RequestResponse} from "./core/directive/request-response/request-response.directive";
 import {AlertComponent} from "./core/directive/alerts/alert.component";
+import { AppFormsComponent } from './modules/pages/app-forms/app-forms.component';
+import { AppComponentsComponent } from './modules/pages/app-components/app-components.component';
 
 
 let AUTH_COMPONENTS = [LoginComponent, RegisterComponent];
@@ -34,7 +36,7 @@ let DIRECTIVES = [AMValidatorDirective, RequestResponse];
 @NgModule({
   declarations: [
     AppComponent, SHARED_COMPONENTS, DIRECTIVES, PIPES,
-    HomeComponent, AUTH_COMPONENTS, AlertComponent
+    HomeComponent, AUTH_COMPONENTS, AlertComponent, AppFormsComponent, AppComponentsComponent
   ],
   imports: [
     AppRoutingModule, BrowserModule, ReactiveFormsModule, BrowserAnimationsModule,
