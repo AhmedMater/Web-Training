@@ -31,7 +31,9 @@ import { CreateTutorialComponent } from './modules/tutorial/components/create-tu
     CourseReferenceComponent,
     CreateReferenceComponent,
     CreateSectionComponent,
-    CreateTutorialComponent
+    CreateTutorialComponent,
+    CreateTutorialComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

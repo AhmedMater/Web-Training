@@ -1,5 +1,9 @@
 package com.dorrar.controller;
 
+import com.dorrar.model.College;
+import com.dorrar.model.Country;
+import com.dorrar.model.University;
+
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
