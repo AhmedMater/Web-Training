@@ -13,7 +13,7 @@ import {CourseReference} from "../../shared/data/course-ref-dto.data";
   styleUrls: ['./course-reference.component.scss'],
   providers: [FormBuilder, UserService]
 })
-export class CourseReferenceComponent implements OnInit {
+export class CreateReferenceComponent implements OnInit {
   dataList: CourseReference[] = [];
   formData: FormGroup;
 
@@ -52,7 +52,7 @@ export class CourseReferenceComponent implements OnInit {
   //TODO: add Reference List into CourseData Object and send it to Backend
   saveCorReferences() {
     let data: CourseData = new CourseData();
-    data.item = this.dataList;
+    data.reference = this.dataList;
     console.log(data);
     this.userService.references(data).subscribe(
       res => {
