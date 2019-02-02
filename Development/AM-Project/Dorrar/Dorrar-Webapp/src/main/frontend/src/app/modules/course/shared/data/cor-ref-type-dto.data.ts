@@ -1,6 +1,6 @@
-//
-// export class CorRefType {
-//   id:number;
-//   labelEN:string;
-//
-// }
+
+export class CorRefType {
+  id:number;
+  labelEN:string;
+
+}
