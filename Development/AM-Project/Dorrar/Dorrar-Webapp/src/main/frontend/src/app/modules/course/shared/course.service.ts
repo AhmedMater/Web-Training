@@ -3,10 +3,8 @@ import {HttpClient} from "@angular/common/http";
 import {CorRefType} from "./data/cor-ref-type-dto.data";
 import {CourseData} from "./data/course-data-dto.data";
 
-@Injectable({
-  providedIn: 'root'
-})
-export class UserService {
+@Injectable()
+export class CourseService {
 
   constructor(private http:HttpClient) { }
 

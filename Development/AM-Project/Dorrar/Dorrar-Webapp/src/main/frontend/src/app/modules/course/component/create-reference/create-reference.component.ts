@@ -1,6 +1,6 @@
 import {Component, OnInit} from "@angular/core";
 import {FormBuilder, FormGroup} from "@angular/forms";
-import {UserService} from "../../shared/user.service";
+import {CourseService} from "../../shared/course.service";
 
 import {CorRefType} from "../../shared/data/cor-ref-type-dto.data";
 import {CourseData} from "../../shared/data/course-data-dto.data";
@@ -11,7 +11,7 @@ import {CourseReference} from "../../shared/data/course-ref-dto.data";
   selector: 'course-reference',
   templateUrl: './course-reference.component.html',
   styleUrls: ['./course-reference.component.scss'],
-  providers: [FormBuilder, UserService]
+  providers: [FormBuilder, CourseService]
 })
 export class CreateReferenceComponent implements OnInit {
   dataList: CourseReference[] = [];
@@ -23,7 +23,7 @@ export class CreateReferenceComponent implements OnInit {
 
 
   constructor(private formBuilder: FormBuilder,
-              private  userService: UserService) {
+              private  courseService: CourseService) {
   }
 
   refTypes: CorRefType[] = [];
@@ -39,7 +39,7 @@ export class CreateReferenceComponent implements OnInit {
 
     });
 
-    this.userService.findCorRefTypes().subscribe(
+    this.courseService.findCorRefTypes().subscribe(
       res => {
         this.refTypes = res;
         console.log(this.refTypes);
@@ -54,7 +54,7 @@ export class CreateReferenceComponent implements OnInit {
     let data: CourseData = new CourseData();
     data.reference = this.dataList;
     console.log(data);
-    this.userService.references(data).subscribe(
+    this.courseService.references(data).subscribe(
       res => {
         console.log('request succed')
       },
