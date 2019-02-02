@@ -24,9 +24,6 @@ import { HamadaComponent } from './modules/hamada/hamada.component';
     MainFooterComponent,
     SimpleFooterComponent,
     HomeComponent,
-    RegisterComponent,
-    LoginComponent,
-    HamadaComponent
   ],
   imports: [
     BrowserModule,
