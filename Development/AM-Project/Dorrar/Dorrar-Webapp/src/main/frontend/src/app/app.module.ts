@@ -10,6 +10,7 @@ import { MainSidebarComponent } from './layout/components/main-layout/components
 import { MainFooterComponent } from './layout/components/main-layout/components/main-footer/main-footer.component';
 import { SimpleFooterComponent } from './layout/components/simple-layout/components/simple-footer/simple-footer.component';
 import { HomeComponent } from './modules/home/home.component';
+import { RegisterComponent } from './modules/register/register.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HomeComponent } from './modules/home/home.component';
     MainSidebarComponent,
     MainFooterComponent,
     SimpleFooterComponent,
-    HomeComponent
+    HomeComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
