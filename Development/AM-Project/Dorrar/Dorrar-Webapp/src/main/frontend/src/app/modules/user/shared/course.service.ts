@@ -4,7 +4,7 @@ import {FilterUserData} from "./data/user-filter.data";
 //import {College} from "./model/college";
 
 @Injectable()
-export class UserServices {
+export class CourseService {
   constructor(private http:HttpClient){
 
   }
