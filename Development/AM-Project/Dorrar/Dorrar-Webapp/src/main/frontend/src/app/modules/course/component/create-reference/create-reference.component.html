@@ -1,0 +1,114 @@
+<!--<div class="container-fluid">-->
+  <!--<h4 class="page-title">Forms</h4>-->
+  <!--<div class=" row">-->
+    <!--<div class="offset-3 col-md-6">-->
+      <!--<div class="card">-->
+        <!--<div class="card-header">-->
+          <!--<div class="card-title">Course Reference</div>-->
+
+
+        <!--</div>-->
+
+        <!--<div class="card-body">-->
+          <!--<form [formGroup]="formData">-->
+
+            <!--&lt;!&ndash;TODO: Use Dirty with invalid in the ngClass Condition&ndash;&gt;-->
+            <!--<div class="row"><div class="form-group col-md-9">-->
+              <!--&lt;!&ndash;[ngClass]="{'has-error has-feedback':formData.get('ReferenceName').invalid}">&ndash;&gt;-->
+              <!--<label for="referenceName">Reference Name</label>-->
+              <!--<input type="referenceName" class="form-control" id="referenceName" formControlName="referenceName"-->
+                     <!--placeholder="Enter referencename">-->
+              <!--&lt;!&ndash;<small class="form-text text-muted" *ngIf="formData.get('ReferenceName').hasError('required')"> This field&ndash;&gt;-->
+              <!--&lt;!&ndash;is required&ndash;&gt;-->
+              <!--&lt;!&ndash;</small>&ndash;&gt;-->
+              <!--&lt;!&ndash;<small class="form-text text-muted" *ngIf="formData.get('ReferenceName').hasError('maxlength')"> Must be less than 15&ndash;&gt;-->
+              <!--&lt;!&ndash;</small>&ndash;&gt;-->
+            <!--</div>-->
+              <!--<div class="form-group col-md-3" >-->
+                <!--&lt;!&ndash;[ngClass]="{'has-error has-feedback':formData.get('ReferenceType').invalid}">&ndash;&gt;-->
+                <!--<label for="referenceType">ReferenceType</label>-->
+                <!--<select class="form-control" id="referenceType" formControlName="referenceType">-->
+                  <!--<option *ngFor="let ref of refTypes">{{ref.labelEN}}</option>-->
+
+                <!--</select>-->
+
+                <!--&lt;!&ndash;<small class="form-text text-muted" *ngIf="formData.get('ReferenceID').hasError('required')"> This field&ndash;&gt;-->
+                <!--&lt;!&ndash;is required&ndash;&gt;-->
+                <!--&lt;!&ndash;</small>&ndash;&gt;-->
+                <!--&lt;!&ndash;<small class="form-text text-muted" *ngIf="formData.get('ReferenceID').hasError('maxlength')"> Must be&ndash;&gt;-->
+                <!--&lt;!&ndash;less than 15&ndash;&gt;-->
+                <!--&lt;!&ndash;</small>&ndash;&gt;-->
+              <!--</div>-->
+            <!--</div>-->
+
+
+            <!--&lt;!&ndash;TODO: to be changed to Reference Type and will loaded from Backend as Lookup List&ndash;&gt;-->
+
+            <!--<div class="row">-->
+              <!--<div class="form-group col-md-12 ">-->
+                <!--[ngClass]="{'has-error has-feedback':formData.get('ReferenceUrl').invalid}">-->
+                <!--<label for="referenceUrl">Reference URL</label>-->
+                <!--<input type="referenceUrl" class="form-control " id="referenceUrl" formControlName="referenceUrl"-->
+                       <!--placeholder="Enter URL">-->
+                <!--&lt;!&ndash;<small class="form-text text-muted" *ngIf="formData.get('ReferenceUrl').hasError('required')"> This field&ndash;&gt;-->
+                <!--&lt;!&ndash;is required&ndash;&gt;-->
+                <!--&lt;!&ndash;</small>&ndash;&gt;-->
+                <!--&lt;!&ndash;<small class="form-text text-muted" *ngIf="formData.get('ReferenceUrl').hasError('maxlength')"> Must be less than 15&ndash;&gt;-->
+                <!--&lt;!&ndash;</small>&ndash;&gt;-->
+              <!--</div>-->
+            <!--</div>-->
+
+          <!--</form>-->
+          <!--<button type="submit" class="btn btn-success pull-right ml-2" *ngIf="!isEditMode" (click)="addItem()">add</button>-->
+          <!--<button class=" btn btn-danger pull-right ml-2" *ngIf="!isEditMode" (click)="clear()">clear</button>-->
+
+          <!--<button type="submit" class="btn btn-success pull-right ml-2" *ngIf="isEditMode" (click)="addItem()">Save</button>-->
+          <!--<button class=" btn btn-danger pull-right ml-2" *ngIf="isEditMode" (click)="clear()">Discard</button>-->
+
+
+
+          <!--<table class="table table-striped mt-3">-->
+            <!--<thead>-->
+            <!--<tr>-->
+              <!--&lt;!&ndash;TODO: Spaces between Names&ndash;&gt;-->
+              <!--<th scope="col">Reference Name</th>-->
+              <!--<th scope="col">Reference Type</th>-->
+              <!--<th scope="col">Reference Url</th>-->
+              <!--<th scope="col"></th>-->
+            <!--</tr>-->
+
+            <!--</thead>-->
+            <!--<tbody>-->
+
+            <!--<tr *ngFor="let item of dataList; index as i">-->
+
+
+              <!--<td>{{item.referenceName}}</td>-->
+              <!--<td>{{item.referenceType}}</td>-->
+              <!--<td>{{item.referenceUrl}}</td>-->
+
+
+              <!--<td><i class="la la-eyedropper"  [hidden]="isEditMode"(click)="onEditRow(dataList[i])"></i></td>-->
+
+              <!--<td><i class="la la-trash"  (click)='removerow(dataList[i])'></i></td>-->
+
+            <!--</tr>-->
+
+
+            <!--</tbody>-->
+          <!--</table>-->
+
+
+          <!--<div class="card-action">-->
+            <!--<button class="btn btn-success mr-1 btn-sm pull-right ml-2" (click)="saveCorReferences()">next</button>-->
+            <!--<button class="btn btn-danger ml-1 btn-sm pull-right" (click)="isclick()">Back</button>-->
+          <!--</div>-->
+        <!--</div>-->
+
+      <!--</div>-->
+
+
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
+
