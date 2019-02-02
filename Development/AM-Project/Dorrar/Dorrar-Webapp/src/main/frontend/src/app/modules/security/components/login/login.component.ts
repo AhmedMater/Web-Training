@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {LoginDto} from "../../shared/data/login-dto.data";
 import {SecurityService} from "../../shared/security.service";
-import {LoginDto} from "../../shared/data/login-dto.data";
 
 @Component({
   selector: 'login',
