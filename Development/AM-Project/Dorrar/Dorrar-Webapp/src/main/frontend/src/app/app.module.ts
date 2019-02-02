@@ -10,6 +10,7 @@ import { MainSidebarComponent } from './layout/components/main-layout/components
 import { MainFooterComponent } from './layout/components/main-layout/components/main-footer/main-footer.component';
 import { SimpleFooterComponent } from './layout/components/simple-layout/components/simple-footer/simple-footer.component';
 import { HomeComponent } from './modules/home/home.component';
+import { CreateReferenceComponent } from './modules/course/component/create-reference/create-reference.component';
 import { CreateSectionComponent } from './modules/section/components/create-section/create-section.component';
 import { CreateTutorialComponent } from './modules/tutorial/components/create-tutorial/create-tutorial.component';
 
@@ -22,6 +23,8 @@ import { CreateTutorialComponent } from './modules/tutorial/components/create-tu
     MainSidebarComponent,
     MainFooterComponent,
     SimpleFooterComponent,
+    HomeComponent,
+    CreateReferenceComponent,
     HomeComponent,
     CreateSectionComponent,
     CreateTutorialComponent
