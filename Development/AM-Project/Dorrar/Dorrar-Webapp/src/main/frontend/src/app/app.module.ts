@@ -10,6 +10,7 @@ import { MainSidebarComponent } from './layout/components/main-layout/components
 import { MainFooterComponent } from './layout/components/main-layout/components/main-footer/main-footer.component';
 import { SimpleFooterComponent } from './layout/components/simple-layout/components/simple-footer/simple-footer.component';
 import { HomeComponent } from './modules/home/home.component';
+import { CreateTutorialComponent } from './modules/tutorial/components/create-tutorial/create-tutorial.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { HomeComponent } from './modules/home/home.component';
     MainFooterComponent,
     SimpleFooterComponent,
     HomeComponent,
+    CreateTutorialComponent
   ],
   imports: [
     BrowserModule,
