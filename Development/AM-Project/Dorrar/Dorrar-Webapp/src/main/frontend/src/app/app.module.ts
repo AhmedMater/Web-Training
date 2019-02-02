@@ -11,11 +11,7 @@ import { MainFooterComponent } from './layout/components/main-layout/components/
 import { SimpleFooterComponent } from './layout/components/simple-layout/components/simple-footer/simple-footer.component';
 import { HomeComponent } from './modules/home/home.component';
 import { LoginComponent } from './modules/security/components/login/login.component';
-// import { RegisterComponent } from './modules/register/register.component';
 import { CourseReferenceComponent } from './modules/course/component/create-reference/create-reference.component';
-// import { CreateSectionComponent } from './modules/section/components/create-section/create-section.component';
-// import { CreateReferenceComponent } from './modules/course/component/create-reference/create-reference.component';
-// import { CreateSectionComponent } from './modules/section/components/create-section/create-section.component';
 import {CreateReferenceComponent} from './modules/course/component/create-reference/create-reference.component';
 import { CreateSectionComponent } from './modules/section/components/create-section/create-section.component';
 import { CreateTutorialComponent } from './modules/tutorial/components/create-tutorial/create-tutorial.component';
