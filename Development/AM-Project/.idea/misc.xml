@@ -11,4 +11,9 @@
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
+  <component name="StateStorage">
+    <option name="argHtml" value="true" />
+    <option name="argSpec" value="false" />
+    <option name="hasAngularCli" value="true" />
+  </component>
 </project>

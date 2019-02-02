@@ -2,17 +2,31 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { MainLayoutComponent } from './layout/components/main-layout/main-layout.component';
+import { SimpleLayoutComponent } from './layout/components/simple-layout/simple-layout.component';
+import { LayoutComponent } from './layout/layout.component';
+import { MainHeaderComponent } from './layout/components/main-layout/components/main-header/main-header.component';
+import { MainSidebarComponent } from './layout/components/main-layout/components/main-sidebar/main-sidebar.component';
+import { MainFooterComponent } from './layout/components/main-layout/components/main-footer/main-footer.component';
+import { SimpleFooterComponent } from './layout/components/simple-layout/components/simple-footer/simple-footer.component';
+import { HomeComponent } from './modules/home/home.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    MainLayoutComponent,
+    SimpleLayoutComponent,
+    LayoutComponent,
+    MainHeaderComponent,
+    MainSidebarComponent,
+    MainFooterComponent,
+    SimpleFooterComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [LayoutComponent]
 })
 export class AppModule { }

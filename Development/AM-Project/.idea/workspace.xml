@@ -2,81 +2,224 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="38de4a3a-ef46-4c61-b17d-42c4dc2ac06a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auth/Auth-Services/src/main/java/com" afterDir="true" />
-      <change afterPath="$PROJECT_DIR$/Auth/Auth-Services/src/main/java/com/app" afterDir="true" />
-      <change afterPath="$PROJECT_DIR$/Auth/Auth-Services/src/main/java/com/app/auth" afterDir="true" />
-      <change afterPath="$PROJECT_DIR$/Auth/Auth-Services/src/main/java/com/app/auth/AuthApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auth/Auth-Services/src/main/java/com/app/auth/controller" afterDir="true" />
-      <change afterPath="$PROJECT_DIR$/Auth/Auth-Services/src/main/java/com/app/auth/controller/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auth/Auth-Services/src/main/java/com/app/auth/data" afterDir="true" />
-      <change afterPath="$PROJECT_DIR$/Auth/Auth-Services/src/main/java/com/app/auth/data/dto" afterDir="true" />
-      <change afterPath="$PROJECT_DIR$/Auth/Auth-Services/src/main/java/com/app/auth/data/dto/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auth/Auth-Services/src/main/java/com/app/auth/data/vto" afterDir="true" />
-      <change afterPath="$PROJECT_DIR$/Auth/Auth-Services/src/main/java/com/app/auth/data/vto/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auth/Auth-Services/src/main/java/com/app/auth/infrastructure" afterDir="true" />
-      <change afterPath="$PROJECT_DIR$/Auth/Auth-Services/src/main/java/com/app/auth/infrastructure/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auth/Auth-Services/src/main/java/com/app/auth/repository" afterDir="true" />
-      <change afterPath="$PROJECT_DIR$/Auth/Auth-Services/src/main/java/com/app/auth/repository/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auth/Auth-Services/src/main/java/com/app/auth/service" afterDir="true" />
-      <change afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend" afterDir="true" />
-      <change afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/angular.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/e2e" afterDir="true" />
-      <change afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/e2e/protractor.conf.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/e2e/src" afterDir="true" />
-      <change afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/e2e/src/app.e2e-spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/e2e/src/app.po.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/e2e/tsconfig.e2e.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/src" afterDir="true" />
-      <change afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/src/app" afterDir="true" />
-      <change afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/src/app/app.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/src/app/app.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/src/app/app.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/src/app/app.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/src/app/app.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/src/assets" afterDir="true" />
-      <change afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/src/assets/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/src/browserslist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/src/environments" afterDir="true" />
-      <change afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/src/environments/environment.prod.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/src/environments/environment.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/src/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/src/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/src/karma.conf.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/src/main.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/src/polyfills.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/src/styles.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/src/test.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/src/tsconfig.app.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/src/tsconfig.spec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/src/tslint.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/tslint.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/java/com" afterDir="true" />
-      <change afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/java/com/app" afterDir="true" />
-      <change afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/java/com/app/auth" afterDir="true" />
-      <change afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/java/com/app/auth/AuthWebApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/java/com/app/auth/ViewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend" afterDir="true" />
-      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/File-Manager/FM-Webapp/src/main/frontend" afterDir="true" />
-      <change afterPath="$PROJECT_DIR$/File-Manager/FM-Webapp/src/main/frontend/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Notification-Manager/NM-Webapp/src/main/frontend" afterDir="true" />
-      <change afterPath="$PROJECT_DIR$/Notification-Manager/NM-Webapp/src/main/frontend/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SubHub/SubHub-Webapp/src/main/frontend" afterDir="true" />
-      <change afterPath="$PROJECT_DIR$/SubHub/SubHub-Webapp/src/main/frontend/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/layout" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/layout/components" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/layout/components/main-layout" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/layout/components/main-layout/components" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/layout/components/main-layout/components/main-footer" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/layout/components/main-layout/components/main-footer/main-footer.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/layout/components/main-layout/components/main-footer/main-footer.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/layout/components/main-layout/components/main-footer/main-footer.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/layout/components/main-layout/components/main-header" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/layout/components/main-layout/components/main-header/main-header.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/layout/components/main-layout/components/main-header/main-header.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/layout/components/main-layout/components/main-header/main-header.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/layout/components/main-layout/components/main-sidebar" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/layout/components/main-layout/components/main-sidebar/main-sidebar.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/layout/components/main-layout/components/main-sidebar/main-sidebar.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/layout/components/main-layout/components/main-sidebar/main-sidebar.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/layout/components/main-layout/main-layout.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/layout/components/main-layout/main-layout.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/layout/components/main-layout/main-layout.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/layout/components/simple-layout" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/layout/components/simple-layout/components" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/layout/components/simple-layout/components/simple-footer" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/layout/components/simple-layout/components/simple-footer/simple-footer.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/layout/components/simple-layout/components/simple-footer/simple-footer.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/layout/components/simple-layout/components/simple-footer/simple-footer.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/layout/components/simple-layout/simple-layout.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/layout/components/simple-layout/simple-layout.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/layout/components/simple-layout/simple-layout.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/layout/layout.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/layout/layout.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/layout/layout.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/modules" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/modules/home" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/modules/home/home.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/modules/home/home.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/modules/home/home.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/fonts" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/fonts/educate-icon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/fonts/educate-icon.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/fonts/educate-icon.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/imgs" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/imgs/blog-details" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/imgs/blog-details/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/imgs/clear.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/imgs/contact" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/imgs/contact/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/imgs/contact/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/imgs/contact/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/imgs/contact/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/imgs/courses" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/imgs/courses/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/imgs/courses/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/imgs/courses/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/imgs/cropper" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/imgs/cropper/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/imgs/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/imgs/green1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/imgs/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/imgs/logo" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/imgs/logo/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/imgs/logo/logosn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/imgs/notification" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/imgs/notification/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/imgs/notification/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/imgs/notification/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/imgs/notification/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/imgs/notification/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/imgs/notification/6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/imgs/product" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/imgs/product/book-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/imgs/product/book-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/imgs/product/book-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/imgs/product/book-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/imgs/product/pro4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/imgs/product/profile-bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/imgs/profile" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/imgs/profile/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/imgs/student" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/imgs/student/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/imgs/student/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/imgs/student/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/imgs/student/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/accordions.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/alerts.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/animate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/buttons.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/c3" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/c3/c3.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/calendar" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/calendar/fullcalendar.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/calendar/fullcalendar.print.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/chosen" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/chosen/bootstrap-chosen.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/chosen/chosen-sprite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/code-editor" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/code-editor/ambiance.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/code-editor/codemirror.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/colorpicker" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/colorpicker/colorpicker.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/cropper" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/cropper/cropper.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/data-table" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/data-table/bootstrap-editable.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/data-table/bootstrap-table.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/datapicker" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/datapicker/colorpicker.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/datapicker/datepicker3.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/dropzone" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/dropzone/dropzone.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/duallistbox" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/duallistbox/bootstrap-duallistbox.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/editor" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/editor/bootstrap-editable.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/editor/datetimepicker.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/editor/select2.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/editor/x-editor-style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/educate-custon-icon.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/form" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/form.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/form/all-type-forms.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/form/themesaller-forms.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/ionRangeSlider" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/ionRangeSlider/ion.rangeSlider.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/ionRangeSlider/ion.rangeSlider.skinFlat.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/ionRangeSlider/sprite-skin-flat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/meanmenu.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/metisMenu" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/metisMenu/metisMenu-vertical.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/metisMenu/metisMenu.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/metisMenu/metisMenu.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/modals.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/morrisjs" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/morrisjs/morris.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/normalize.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/notifications" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/notifications/Lobibox.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/notifications/notifications.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/owl.carousel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/owl.theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/owl.transitions.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/preloader" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/preloader/preloader-style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/responsive.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/scrollbar" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/scrollbar/jquery.mCustomScrollbar.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/select2" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/select2/select2.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/summernote" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/summernote/fonts" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/summernote/fonts/summernote.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/summernote/fonts/summernote.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/summernote/fonts/summernote.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/summernote/summernote.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/tabs.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/touchspin" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/touchspin/jquery.bootstrap-touchspin.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/tree-viewer" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/tree-viewer/32px.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/tree-viewer/throbber.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/tree-viewer/tree-viewer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auth/Auth-Services/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Auth/Auth-Services/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auth/Auth-Services/src/main/java/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Auth/Auth-Services/src/main/java/com/app/auth/service/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auth/Auth-Webapp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/java/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/index" beforeDir="false" afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/objects/16/317897b1c50a3a71bc775a8d6429f2b4c6cf98" beforeDir="false" afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/objects/16/317897b1c50a3a71bc775a8d6429f2b4c6cf98" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/objects/1d/68d989ccdd3180b560939471773ba39bb48b6f" beforeDir="false" afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/objects/1d/68d989ccdd3180b560939471773ba39bb48b6f" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/objects/1f/0f575ba7565f8c2fbcc675a621321bb9477d8a" beforeDir="false" afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/objects/1f/0f575ba7565f8c2fbcc675a621321bb9477d8a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/objects/29/b67ebfcf046f70cf3e6503addc037b824be740" beforeDir="false" afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/objects/29/b67ebfcf046f70cf3e6503addc037b824be740" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/objects/36/12073bc31cd4c1f5d6cbb00318521e9a61bd8a" beforeDir="false" afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/objects/36/12073bc31cd4c1f5d6cbb00318521e9a61bd8a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/objects/3f/aefb6e8c0db1bfd69eadaf2318a4b7f3d9a695" beforeDir="false" afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/objects/3f/aefb6e8c0db1bfd69eadaf2318a4b7f3d9a695" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/objects/52/e2c1a5a74ce268bec92d34cd3bca751624adb3" beforeDir="false" afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/objects/52/e2c1a5a74ce268bec92d34cd3bca751624adb3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/objects/6d/db6b2931511b11e5d5938f76076fb37e70363e" beforeDir="false" afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/objects/6d/db6b2931511b11e5d5938f76076fb37e70363e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/objects/7a/2c378ce3039a6c213f93d15df0fffa2d3c1d5f" beforeDir="false" afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/objects/7a/2c378ce3039a6c213f93d15df0fffa2d3c1d5f" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/objects/7b/4f817adb754769ca126a939d48ac4b0850489d" beforeDir="false" afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/objects/7b/4f817adb754769ca126a939d48ac4b0850489d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/objects/82/ea75ba504ab2726e4bd08d89e69e99b7a711ba" beforeDir="false" afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/objects/82/ea75ba504ab2726e4bd08d89e69e99b7a711ba" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/objects/86/776a391a5b48b32506eb0fa62b15ed6c926b69" beforeDir="false" afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/objects/86/776a391a5b48b32506eb0fa62b15ed6c926b69" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/objects/87/525cf2c7c4161edf6a45b897035b88d9adc8c9" beforeDir="false" afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/objects/87/525cf2c7c4161edf6a45b897035b88d9adc8c9" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/objects/8a/ac1b95402c0366bd7014c4aecc950e547859f0" beforeDir="false" afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/objects/8a/ac1b95402c0366bd7014c4aecc950e547859f0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/objects/8f/dc59fc789ae4c4c2d642d5270d4a4dfd749e8d" beforeDir="false" afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/objects/8f/dc59fc789ae4c4c2d642d5270d4a4dfd749e8d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/objects/91/3eaa02ce288e46e7db4844b183c2611990a373" beforeDir="false" afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/objects/91/3eaa02ce288e46e7db4844b183c2611990a373" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/objects/92/dc48cddaa866cda608a4dbb6b467cd41c4f071" beforeDir="false" afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/objects/92/dc48cddaa866cda608a4dbb6b467cd41c4f071" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/objects/a3/e32c076aeeac6e5ea683db38f7a3a9b90f28c9" beforeDir="false" afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/objects/a3/e32c076aeeac6e5ea683db38f7a3a9b90f28c9" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/objects/a6/dd6220282460dae17d69fc030b94ab1e81d960" beforeDir="false" afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/objects/a6/dd6220282460dae17d69fc030b94ab1e81d960" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/objects/a9/eaedc7492aa5ab5ed5a5825e1134bb797b8a00" beforeDir="false" afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/objects/a9/eaedc7492aa5ab5ed5a5825e1134bb797b8a00" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/objects/cb/0c7a51dbb5be7469dd1eb1b388b82189cc7462" beforeDir="false" afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/objects/cb/0c7a51dbb5be7469dd1eb1b388b82189cc7462" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/objects/d3/10405a6817a4b84bb6117fb709e2c6ea11ef55" beforeDir="false" afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/objects/d3/10405a6817a4b84bb6117fb709e2c6ea11ef55" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/objects/d5/64d0bc3dd917926892c55e3706cc116d5b165e" beforeDir="false" afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/objects/d5/64d0bc3dd917926892c55e3706cc116d5b165e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/objects/de/7733630eb224b246854a20934f792051926e8f" beforeDir="false" afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/objects/de/7733630eb224b246854a20934f792051926e8f" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/objects/df/8e9b753251345bd3ae53371c9d046bafb360b4" beforeDir="false" afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/objects/df/8e9b753251345bd3ae53371c9d046bafb360b4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/objects/e6/9de29bb2d1d6434b8b29ae775ad8c2e48c5391" beforeDir="false" afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/objects/e6/9de29bb2d1d6434b8b29ae775ad8c2e48c5391" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/objects/ee/5c9d8336b76b3bb5658d0888bdec86eb7b0990" beforeDir="false" afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/objects/ee/5c9d8336b76b3bb5658d0888bdec86eb7b0990" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/objects/f6/5716351aa5930fea545e1e3f016e2980c1f483" beforeDir="false" afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/objects/f6/5716351aa5930fea545e1e3f016e2980c1f483" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/objects/fa/2706a406ba65e05f8e23003ce6e9df291fa146" beforeDir="false" afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.git/objects/fa/2706a406ba65e05f8e23003ce6e9df291fa146" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/app.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/app.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/app.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/app.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -104,67 +247,122 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AuthApplication.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Auth/Auth-Services/src/main/java/com/app/auth/AuthApplication.java">
+      <file leaf-file-name="main-header.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/layout/components/main-layout/components/main-header/main-header.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            <state relative-caret-position="722">
+              <caret line="38" column="50" lean-forward="true" selection-start-line="38" selection-start-column="50" selection-end-line="38" selection-end-column="50" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#a#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#li#3;n#ul#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#a#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#li#3;n#ul#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#a#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#li#3;n#ul#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#a#0;n#li#3;n#ul#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#li#3;n#ul#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#a#0;n#li#4;n#ul#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#li#3;n#ul#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#a#0;n#li#5;n#ul#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#li#3;n#ul#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#a#0;n#li#6;n#ul#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#li#3;n#ul#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#a#0;n#li#7;n#ul#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#li#3;n#ul#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="karma.conf.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/src/karma.conf.js">
+      <file leaf-file-name="main-layout.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/layout/components/main-layout/main-layout.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+              <folding>
+                <element signature="n#div#0;n#div#1;n#!!top" />
+                <element signature="n#div#1;n#div#0;n#!!top" />
+                <element signature="n#div#2;n#div#0;n#!!top" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="responsive.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/responsive.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="143" column="3" selection-start-line="143" selection-start-column="3" selection-end-line="143" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="styles.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/styles.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="99">
+              <caret line="79" column="7" selection-start-line="79" selection-start-column="4" selection-end-line="79" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/modules/home/home.component.html">
           <provider selected="true" editor-type-id="text-editor">
             <state>
+              <caret lean-forward="true" selection-end-line="54" selection-end-column="6" />
               <folding>
-                <element signature="n#!!doc" expanded="true" />
+                <element signature="n#div#0;n#!!top" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-441" />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-599">
-              <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/src/index.html">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="app.module.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/src/app/app.module.ts">
+        <entry file="file://$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/app.module.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+            <state relative-caret-position="76">
+              <caret line="21" column="26" lean-forward="true" selection-start-line="21" selection-start-column="26" selection-end-line="22" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app-routing.module.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/app-routing.module.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="38">
+              <caret line="6" column="24" lean-forward="true" selection-start-line="6" selection-start-column="24" selection-end-line="13" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main-sidebar.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/layout/components/main-layout/components/main-sidebar/main-sidebar.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main-sidebar.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/layout/components/main-layout/components/main-sidebar/main-sidebar.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="8" column="58" selection-start-line="8" selection-start-column="58" selection-end-line="8" selection-end-column="58" />
               <folding>
-                <element signature="e#0#58#0" expanded="true" />
+                <element signature="n#div#0;n#nav#0;n#!!top" />
+                <element signature="n#div#1;n#nav#0;n#!!top" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="angular.json" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/angular.json">
+      <file leaf-file-name="main-header.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/layout/components/main-layout/components/main-header/main-header.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="32" column="86" selection-start-line="32" selection-start-column="86" selection-end-line="32" selection-end-column="86" />
+            <state relative-caret-position="76">
+              <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -175,14 +373,63 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="CSS File" />
+        <option value="TypeScript File" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>&amp;+</find>
+      <find>grabbing.png</find>
+      <find>AjaxLoader.gif</find>
+      <find>fonts</find>
+      <find>mCSB_buttons.png</find>
+      <find>img</find>
+      <find>&lt;img</find>
+      <find>img/</find>
+      <find>png</find>
+      <find>40px.png</find>
+      <find>images</find>
+      <find>dark</find>
+      <find>left.p</find>
+      <find>/*</find>
+      <find>clear</find>
+      <find>gradient(left</find>
+      <find>gradient(top</find>
+      <find>grad</find>
+      <find>rgba</find>
+      <find>0px</find>
+      <find>box;*</find>
+      <find>20;</find>
+      <find>20</find>
+      <find>40;</find>
+      <find>analytics-sparkle-area</find>
+      <find>url</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>../../imgs/</replace>
+      <replace>../imgs/</replace>
+      <replace>assets/imgs/</replace>
+      <replace>gradient(to left</replace>
+      <replace>gradient(to top</replace>
+      <replace>0</replace>
+      <replace>20px;</replace>
+      <replace>20px</replace>
+      <replace>20px</replace>
+      <replace>50px</replace>
+      <replace>40px;</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>D:\Personal\AM-Work\Web-Training\Development\AM-Project\Dorrar\Dorrar-Webapp\src\main\frontend\src\assets\imgs</dir>
+      <dir>D:\Personal\AM-Work\Web-Training\Development\AM-Project\Dorrar\Dorrar-Webapp\src\main\frontend\src\app</dir>
+      <dir>D:\Personal\AM-Work\Web-Training\Development\AM-Project\Dorrar\Dorrar-Webapp\src\main\frontend\src\assets\styles</dir>
+      <dir>D:\Personal\AM-Work\Web-Training\Development\AM-Project\Dorrar\Dorrar-Webapp\src\main\frontend\src\assets</dir>
+    </dirStrings>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Auth/pom.xml" />
-        <option value="$PROJECT_DIR$/Dorrar/pom.xml" />
         <option value="$PROJECT_DIR$/Sub-Hub/pom.xml" />
         <option value="$PROJECT_DIR$/SubHub/pom.xml" />
         <option value="$PROJECT_DIR$/Notification-Manager/pom.xml" />
@@ -197,6 +444,43 @@
         <option value="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/package.json" />
         <option value="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/angular.json" />
+        <option value="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/_variables.scss" />
+        <option value="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/modules/home/home.component.ts" />
+        <option value="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/layout/components/main-layout/main-layout.component.ts" />
+        <option value="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/layout/components/main-layout/components/main-sidebar/main-sidebar.component.ts" />
+        <option value="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/layout/components/main-layout/components/main-header/main-header.component.ts" />
+        <option value="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/layout/components/main-layout/components/main-footer/main-footer.component.ts" />
+        <option value="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/layout/components/main-layout/components/main-footer/main-footer.component.html" />
+        <option value="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/app-routing.module.ts" />
+        <option value="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/layout/layout.component.html" />
+        <option value="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/index.html" />
+        <option value="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/layouts/ar-layout.scss" />
+        <option value="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/owl.theme.css" />
+        <option value="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/scrollbar/jquery.mCustomScrollbar.min.css" />
+        <option value="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/layout/components/main-layout/components/main-sidebar/main-sidebar.component.html" />
+        <option value="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/calendar/fullcalendar.print.min.css" />
+        <option value="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/src/app/modules/home/CourseReference.ts" />
+        <option value="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/src/app/modules/home/course-main-details.data.ts" />
+        <option value="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/src/app/modules/home/course-dto.data.ts" />
+        <option value="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/src/app/modules/home/course-level.data.ts" />
+        <option value="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/select2/select2.min.css" />
+        <option value="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/tree-viewer/tree-viewer.css" />
+        <option value="$PROJECT_DIR$/Auth/Auth-Services/src/main/resources/SQL-Script/1-Clean-Structure.sql" />
+        <option value="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/form/themesaller-forms.css" />
+        <option value="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/editor/x-editor-style.css" />
+        <option value="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/editor/select2.css" />
+        <option value="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/c3/c3.min.css" />
+        <option value="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/preloader/preloader-style.css" />
+        <option value="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/calendar/fullcalendar.min.css" />
+        <option value="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/chosen/bootstrap-chosen.css" />
+        <option value="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/code-editor/codemirror.css" />
+        <option value="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/angular.json" />
+        <option value="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/educate-custon-icon.css" />
+        <option value="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/layout/components/main-layout/components/main-header/main-header.component.html" />
+        <option value="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/modules/home/home.component.html" />
+        <option value="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/layout/components/main-layout/main-layout.component.html" />
+        <option value="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/styles.css" />
       </list>
     </option>
   </component>
@@ -213,19 +497,36 @@
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="auth-project" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="auth-project" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
   <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/node_modules" />
+    <handled-path value="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/node_modules" />
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
       <path value="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/package.json" />
+      <path value="$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/package.json" />
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="x" value="-6" />
+    <option name="y" value="1" />
+    <option name="width" value="1378" />
+    <option name="height" value="733" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -252,7 +553,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -312,12 +615,74 @@
               <item name="Auth-Services" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AM-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AM-Project" type="462c0819:PsiDirectoryNode" />
+              <item name="Auth" type="462c0819:PsiDirectoryNode" />
+              <item name="Auth-Services" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AM-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AM-Project" type="462c0819:PsiDirectoryNode" />
+              <item name="Auth" type="462c0819:PsiDirectoryNode" />
+              <item name="Auth-Services" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
+              <item name="infrastructure" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AM-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AM-Project" type="462c0819:PsiDirectoryNode" />
+              <item name="Auth" type="462c0819:PsiDirectoryNode" />
+              <item name="Auth-Services" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
+              <item name="repository" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AM-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AM-Project" type="462c0819:PsiDirectoryNode" />
+              <item name="Auth" type="462c0819:PsiDirectoryNode" />
+              <item name="Auth-Services" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="AM-Project" type="b2602c69:ProjectViewProjectNode" />
               <item name="AM-Project" type="462c0819:PsiDirectoryNode" />
               <item name="Auth" type="462c0819:PsiDirectoryNode" />
+              <item name="Auth-Services" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="SQL-Script" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AM-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AM-Project" type="462c0819:PsiDirectoryNode" />
+              <item name="Auth" type="462c0819:PsiDirectoryNode" />
+              <item name="Auth-Services" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AM-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AM-Project" type="462c0819:PsiDirectoryNode" />
+              <item name="Auth" type="462c0819:PsiDirectoryNode" />
               <item name="Auth-Webapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -347,6 +712,156 @@
             <path>
               <item name="AM-Project" type="b2602c69:ProjectViewProjectNode" />
               <item name="AM-Project" type="462c0819:PsiDirectoryNode" />
+              <item name="Auth" type="462c0819:PsiDirectoryNode" />
+              <item name="Auth-Webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AM-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AM-Project" type="462c0819:PsiDirectoryNode" />
+              <item name="Auth" type="462c0819:PsiDirectoryNode" />
+              <item name="Auth-Webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AM-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AM-Project" type="462c0819:PsiDirectoryNode" />
+              <item name="Auth" type="462c0819:PsiDirectoryNode" />
+              <item name="Auth-Webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="layout" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AM-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AM-Project" type="462c0819:PsiDirectoryNode" />
+              <item name="Auth" type="462c0819:PsiDirectoryNode" />
+              <item name="Auth-Webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="layout" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AM-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AM-Project" type="462c0819:PsiDirectoryNode" />
+              <item name="Auth" type="462c0819:PsiDirectoryNode" />
+              <item name="Auth-Webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="layout" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="footer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AM-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AM-Project" type="462c0819:PsiDirectoryNode" />
+              <item name="Auth" type="462c0819:PsiDirectoryNode" />
+              <item name="Auth-Webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="layout" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="header" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AM-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AM-Project" type="462c0819:PsiDirectoryNode" />
+              <item name="Auth" type="462c0819:PsiDirectoryNode" />
+              <item name="Auth-Webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="layout" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="side-bar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AM-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AM-Project" type="462c0819:PsiDirectoryNode" />
+              <item name="Auth" type="462c0819:PsiDirectoryNode" />
+              <item name="Auth-Webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="layout" type="462c0819:PsiDirectoryNode" />
+              <item name="full-layout" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AM-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AM-Project" type="462c0819:PsiDirectoryNode" />
+              <item name="Auth" type="462c0819:PsiDirectoryNode" />
+              <item name="Auth-Webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="layout" type="462c0819:PsiDirectoryNode" />
+              <item name="simple-layout" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AM-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AM-Project" type="462c0819:PsiDirectoryNode" />
+              <item name="Auth" type="462c0819:PsiDirectoryNode" />
+              <item name="Auth-Webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AM-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AM-Project" type="462c0819:PsiDirectoryNode" />
+              <item name="Auth" type="462c0819:PsiDirectoryNode" />
+              <item name="Auth-Webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AM-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AM-Project" type="462c0819:PsiDirectoryNode" />
+              <item name="Auth" type="462c0819:PsiDirectoryNode" />
+              <item name="Auth-Webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="styles" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AM-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AM-Project" type="462c0819:PsiDirectoryNode" />
               <item name="Dorrar" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -382,137 +897,67 @@
             <path>
               <item name="AM-Project" type="b2602c69:ProjectViewProjectNode" />
               <item name="AM-Project" type="462c0819:PsiDirectoryNode" />
-              <item name="File-Manager" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AM-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AM-Project" type="462c0819:PsiDirectoryNode" />
-              <item name="File-Manager" type="462c0819:PsiDirectoryNode" />
-              <item name="FM-Webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AM-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AM-Project" type="462c0819:PsiDirectoryNode" />
-              <item name="File-Manager" type="462c0819:PsiDirectoryNode" />
-              <item name="FM-Webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AM-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AM-Project" type="462c0819:PsiDirectoryNode" />
-              <item name="File-Manager" type="462c0819:PsiDirectoryNode" />
-              <item name="FM-Webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AM-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AM-Project" type="462c0819:PsiDirectoryNode" />
-              <item name="File-Manager" type="462c0819:PsiDirectoryNode" />
-              <item name="FM-Webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="Dorrar" type="462c0819:PsiDirectoryNode" />
+              <item name="Dorrar-Webapp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AM-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AM-Project" type="462c0819:PsiDirectoryNode" />
-              <item name="Notification-Manager" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AM-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AM-Project" type="462c0819:PsiDirectoryNode" />
-              <item name="Notification-Manager" type="462c0819:PsiDirectoryNode" />
-              <item name="NM-Webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AM-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AM-Project" type="462c0819:PsiDirectoryNode" />
-              <item name="Notification-Manager" type="462c0819:PsiDirectoryNode" />
-              <item name="NM-Webapp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="AM-Project" type="b2602c69:ProjectViewProjectNode" />
               <item name="AM-Project" type="462c0819:PsiDirectoryNode" />
-              <item name="Notification-Manager" type="462c0819:PsiDirectoryNode" />
-              <item name="NM-Webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AM-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AM-Project" type="462c0819:PsiDirectoryNode" />
-              <item name="Notification-Manager" type="462c0819:PsiDirectoryNode" />
-              <item name="NM-Webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="Dorrar" type="462c0819:PsiDirectoryNode" />
+              <item name="Dorrar-Webapp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AM-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AM-Project" type="462c0819:PsiDirectoryNode" />
-              <item name="SubHub" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AM-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AM-Project" type="462c0819:PsiDirectoryNode" />
-              <item name="SubHub" type="462c0819:PsiDirectoryNode" />
-              <item name="SubHub-Webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AM-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AM-Project" type="462c0819:PsiDirectoryNode" />
-              <item name="SubHub" type="462c0819:PsiDirectoryNode" />
-              <item name="SubHub-Webapp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="AM-Project" type="b2602c69:ProjectViewProjectNode" />
               <item name="AM-Project" type="462c0819:PsiDirectoryNode" />
-              <item name="SubHub" type="462c0819:PsiDirectoryNode" />
-              <item name="SubHub-Webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AM-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AM-Project" type="462c0819:PsiDirectoryNode" />
-              <item name="SubHub" type="462c0819:PsiDirectoryNode" />
-              <item name="SubHub-Webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="Dorrar" type="462c0819:PsiDirectoryNode" />
+              <item name="Dorrar-Webapp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="fonts" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="javascript.nodejs.core.library.configured.version" value="5.9.1" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="D:/Test/frontend" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Facets" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.19195402" />
-    <property name="settings.editor.selected.configurable" value="terminal" />
-    <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="ts.external.directory.path" value="$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/node_modules/typescript/lib" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Personal\AM-Work\Web-Training\Development\AM-Project\Dorrar\Dorrar-Webapp\src\main\frontend\src\app\layout\components" />
+      <recent name="D:\Personal\AM-Work\Web-Training\Development\AM-Project\Dorrar\Dorrar-Webapp\src\main\frontend\src\assets" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Personal\AM-Work\Web-Training\Development\AM-Project\Dorrar\Dorrar-Webapp\src\main\frontend\src\assets\styles" />
+      <recent name="D:\Personal\AM-Work\Web-Training\Development\AM-Project\Dorrar\Dorrar-Webapp\src\main\frontend\src\assets\imgs" />
+      <recent name="D:\Personal\AM-Work\Web-Training\Development\AM-Project\Dorrar\Dorrar-Webapp\src\main\frontend\src\assets\fonts" />
       <recent name="D:\Giza-Projects\Ahmed-Mater\Web-Training\Development\AM-Project\Auth\Auth-Services\src\main\java\com\app\auth\data\vto" />
       <recent name="D:\Giza-Projects\Ahmed-Mater\Web-Training\Development\AM-Project\Auth\Auth-Services\src\main\java\com\app\auth\data\dto" />
-      <recent name="D:\Giza-Projects\Ahmed-Mater\Web-Training\Development\AM-Project\Auth\Auth-Services\src\main\java\com\app\auth\service" />
-      <recent name="D:\Giza-Projects\Ahmed-Mater\Web-Training\Development\AM-Project\Auth\Auth-Services\src\main\java\com\app\auth\repository" />
-      <recent name="D:\Giza-Projects\Ahmed-Mater\Web-Training\Development\AM-Project\Auth\Auth-Services\src\main\java\com\app\auth\infrastructure" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -595,16 +1040,16 @@
     <option name="myMappingRoots">
       <list>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="D:\Giza-Projects\Ahmed-Mater\Web-Training\Development\AM-Project" />
-          <option name="myCopyRoot" value="D:\Giza-Projects\Ahmed-Mater\Web-Training\Development\AM-Project" />
+          <option name="myVcsRoot" value="D:\Personal\AM-Work\Web-Training\Development\AM-Project" />
+          <option name="myCopyRoot" value="D:\Personal\AM-Work\Web-Training\Development\AM-Project" />
         </SvnCopyRootSimple>
       </list>
     </option>
     <option name="myMoreRealMappingRoots">
       <list>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="D:\Giza-Projects\Ahmed-Mater\Web-Training\Development\AM-Project" />
-          <option name="myCopyRoot" value="D:\Giza-Projects\Ahmed-Mater\Web-Training\Development\AM-Project" />
+          <option name="myVcsRoot" value="D:\Personal\AM-Work\Web-Training\Development\AM-Project" />
+          <option name="myCopyRoot" value="D:\Personal\AM-Work\Web-Training\Development\AM-Project" />
         </SvnCopyRootSimple>
       </list>
     </option>
@@ -620,197 +1065,466 @@
       <workItem from="1537834331411" duration="2202000" />
       <workItem from="1537839944945" duration="1242000" />
       <workItem from="1537858159265" duration="4566000" />
+      <workItem from="1548407805959" duration="3338000" />
+      <workItem from="1548453559785" duration="1538000" />
+      <workItem from="1548457846956" duration="6899000" />
+      <workItem from="1548554938382" duration="41000" />
+      <workItem from="1548720510189" duration="3902000" />
+      <workItem from="1548838300946" duration="605000" />
+      <workItem from="1548919600688" duration="2349000" />
+      <workItem from="1548999258899" duration="1728000" />
+      <workItem from="1549010857297" duration="1202000" />
+      <workItem from="1549078862165" duration="9204000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9306000" />
+    <option name="totallyTimeSpent" value="40112000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="3" weight="0.32928678" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info anchor="bottom" id="TypeScript" order="8" weight="0.32838285" />
+      <window_info id="Designer" order="2" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24962063" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
+      <window_info anchor="bottom" id="Java Enterprise" order="8" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32838285" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3293919" />
       <window_info anchor="bottom" id="Spring" order="8" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3790186" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info anchor="bottom" id="TypeScript" order="8" />
-      <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26096824" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.38283828" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29954615" />
       <window_info anchor="right" id="Bean Validation" order="4" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="2" />
+      <window_info id="Web" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info id="Learn" order="4" weight="0.32980332" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Java Enterprise" order="8" />
-      <window_info id="Web" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.32838285" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Designer" order="2" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3293919" />
+      <window_info anchor="bottom" id="Spring" order="11" />
+      <window_info id="Image Layers" order="3" />
+      <window_info anchor="bottom" id="TypeScript" order="12" weight="0.32838285" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24962063" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.38283828" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="14" weight="0.32838285" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29954615" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="10" visible="true" weight="0.32838285" />
+      <window_info anchor="right" id="Maven Projects" order="5" weight="0.32928678" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info id="Learn" order="8" weight="0.32980332" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-    <option name="exactExcludedFiles">
-      <list>
-        <option value="$PROJECT_DIR$/../../../../STC/ECMS/Branches/Dev/Code/webapp/src/main/frontend/node_modules/karma/config.tpl.js" />
-      </list>
-    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Change to new Bootstrap Theme" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change to new Bootstrap Theme" />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Auth/Auth-Services/src/main/java/com/app/auth/AuthApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="170">
+          <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AM-Project.iml" />
-    <entry file="file://$PROJECT_DIR$/.idea/modules.xml" />
-    <entry file="file://$PROJECT_DIR$/Auth/Auth-Services/src/main/java/com/app/auth/service/.gitignore">
+    <entry file="file://$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/_variables.scss" />
+    <entry file="file://$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/modules/home/home.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
-          <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Auth/Auth-Webapp/pom.xml">
+    <entry file="file://$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/layout/components/main-layout/main-layout.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
-          <folding>
-            <element signature="n#parent#0;n#project#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="51">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Auth/Auth-Services/pom.xml">
+    <entry file="file://$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/layout/components/main-layout/components/main-footer/main-footer.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-          <folding>
-            <element signature="n#parent#0;n#project#0;n#!!top" expanded="true" />
-            <element signature="n#dependency#0;n#dependencies#0;n#project#0;n#!!top" expanded="true" />
-            <element signature="n#dependency#1;n#dependencies#0;n#project#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="51">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Auth/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="n#parent#0;n#project#0;n#!!top" expanded="true" />
-            <element signature="n#modules#0;n#project#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
-          <folding>
-            <element signature="n#modules#0;n#project#0;n#!!top" expanded="true" />
-            <element signature="n#parent#0;n#project#0;n#!!top" expanded="true" />
-            <element signature="n#dependency#0;n#dependencies#0;n#dependencyManagement#0;n#project#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Auth/Auth-Webapp/src/main/java/com/app/auth/AuthWebApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Auth/Auth-Webapp/src/main/java/com/app/auth/ViewController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/tsconfig.json" />
-    <entry file="file://$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/tslint.json" />
-    <entry file="file://$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/src/main.ts" />
-    <entry file="file://$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/src/polyfills.ts" />
-    <entry file="file://$PROJECT_DIR$/Auth/Auth-Services/src/main/java/com/app/auth/AuthApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/src/assets/.gitkeep">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/src/karma.conf.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/src/app/app.module.ts">
+    <entry file="file://$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/layout/components/main-layout/components/main-footer/main-footer.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/polyfills.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-510" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/main.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="46" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/layout/layout.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="15" selection-start-column="15" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/layout/layout.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/layouts/ar-layout.scss" />
+    <entry file="file://$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/owl.carousel.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-27" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/owl.theme.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="78" column="1" lean-forward="true" selection-start-line="78" selection-start-column="1" selection-end-line="78" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/scrollbar/jquery.mCustomScrollbar.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5593">
+          <caret line="329" column="31" selection-start-line="329" selection-start-column="31" selection-end-line="329" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/src/app/modules/home/CourseReference.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/src/app/modules/home/course-main-details.data.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/src/app/modules/home/course-dto.data.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
           <folding>
-            <element signature="e#0#58#0" expanded="true" />
+            <element signature="e#0#61#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/src/index.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/.gitignore">
+    <entry file="file://$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/src/app/modules/home/course-level.data.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-441" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-599">
-          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+        <state relative-caret-position="133">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Auth/Auth-Webapp/src/main/frontend/angular.json">
+    <entry file="file://$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/tree-viewer/tree-viewer.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="32" column="86" selection-start-line="32" selection-start-column="86" selection-end-line="32" selection-end-column="86" />
+        <state relative-caret-position="22724">
+          <caret line="1196" column="28" selection-start-line="1196" selection-start-column="28" selection-end-line="1196" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Auth/Auth-Services/src/main/resources/SQL-Script/1-Clean-Structure.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/form.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="28" column="1" lean-forward="true" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/form/themesaller-forms.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-16673">
+          <caret line="385" column="6" selection-start-line="385" selection-start-column="6" selection-end-line="385" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/data-table/bootstrap-editable.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="129" column="8" selection-start-line="129" selection-start-column="8" selection-end-line="129" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/summernote/summernote.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2223">
+          <folding>
+            <element signature="e#8195#8452#1" expanded="true" />
+            <element signature="e#8751#9008#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/editor/x-editor-style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="101" column="44" selection-start-line="101" selection-start-column="44" selection-end-line="101" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/editor/select2.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="288" column="41" selection-start-line="288" selection-start-column="41" selection-end-line="288" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/preloader/preloader-style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="7977" column="7" lean-forward="true" selection-start-line="7977" selection-start-column="7" selection-end-line="7977" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/c3/c3.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="177" column="31" lean-forward="true" selection-start-line="177" selection-start-column="31" selection-end-line="177" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/calendar/fullcalendar.print.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1873">
+          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/calendar/fullcalendar.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="1078" lean-forward="true" selection-start-line="1078" selection-end-line="1078" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/code-editor/ambiance.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/code-editor/codemirror.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3591" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1197" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="47" selection-start-line="1" selection-start-column="47" selection-end-line="1" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/styles.scss">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/chosen/bootstrap-chosen.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="341" column="40" selection-start-line="341" selection-start-column="40" selection-end-line="341" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/package.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/angular.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="77" column="45" selection-start-line="77" selection-start-column="45" selection-end-line="77" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/fonts/educate-icon.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/educate-custon-icon.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="41" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/layout/components/main-layout/components/main-sidebar/main-sidebar.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/layout/components/main-layout/components/main-sidebar/main-sidebar.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="8" column="58" selection-start-line="8" selection-start-column="58" selection-end-line="8" selection-end-column="58" />
+          <folding>
+            <element signature="n#div#0;n#nav#0;n#!!top" />
+            <element signature="n#div#1;n#nav#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/layout/components/main-layout/components/main-header/main-header.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/layout/components/main-layout/components/main-header/main-header.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="722">
+          <caret line="38" column="50" lean-forward="true" selection-start-line="38" selection-start-column="50" selection-end-line="38" selection-end-column="50" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#a#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#li#3;n#ul#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#a#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#li#3;n#ul#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#a#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#li#3;n#ul#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#a#0;n#li#3;n#ul#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#li#3;n#ul#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#a#0;n#li#4;n#ul#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#li#3;n#ul#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#a#0;n#li#5;n#ul#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#li#3;n#ul#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#a#0;n#li#6;n#ul#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#li#3;n#ul#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#a#0;n#li#7;n#ul#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#li#3;n#ul#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="21" column="26" lean-forward="true" selection-start-line="21" selection-start-column="26" selection-end-line="22" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/app-routing.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="6" column="24" lean-forward="true" selection-start-line="6" selection-start-column="24" selection-end-line="13" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/modules/home/home.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" selection-end-line="54" selection-end-column="6" />
+          <folding>
+            <element signature="n#div#0;n#!!top" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/responsive.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="143" column="3" selection-start-line="143" selection-start-column="3" selection-end-line="143" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/app/layout/components/main-layout/main-layout.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+          <folding>
+            <element signature="n#div#0;n#div#1;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#!!top" />
+            <element signature="n#div#2;n#div#0;n#!!top" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dorrar/Dorrar-Webapp/src/main/frontend/src/assets/styles/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="79" column="7" selection-start-line="79" selection-start-column="4" selection-end-line="79" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -853,7 +1567,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Web (Auth-Services)|Web</last-edited>
+          <last-edited>Detection</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

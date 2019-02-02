@@ -7,10 +7,10 @@
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
-      "prefix": "app",
+      "prefix": "",
       "schematics": {
         "@schematics/angular:component": {
-          "styleext": "scss"
+          "styleext": "css"
         }
       },
       "architect": {
@@ -27,7 +27,62 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/assets/styles/bootstrap.min.css",
+              "src/assets/styles/font-awesome.min.css",
+              "src/assets/styles/calendar/fullcalendar.min.css",
+              "src/assets/styles/calendar/fullcalendar.print.min.css",
+              "src/assets/styles/metisMenu/metisMenu.min.css",
+              "src/assets/styles/metisMenu/metisMenu-vertical.css",
+              "src/assets/styles/morrisjs/morris.css",
+              "src/assets/styles/scrollbar/jquery.mCustomScrollbar.min.css",
+              "src/assets/styles/animate.css",
+              "src/assets/styles/educate-custon-icon.css",
+              "src/assets/styles/main.css",
+              "src/assets/styles/meanmenu.min.css",
+              "src/assets/styles/normalize.css",
+              "src/assets/styles/owl.carousel.css",
+              "src/assets/styles/owl.theme.css",
+              "src/assets/styles/owl.transitions.css",
+              "src/assets/styles/responsive.css",
+              "src/assets/styles/cropper/cropper.min.css",
+              "src/assets/styles/data-table/bootstrap-editable.css",
+              "src/assets/styles/data-table/bootstrap-table.css",
+              "src/assets/styles/datapicker/colorpicker.css",
+              "src/assets/styles/datapicker/datepicker3.css",
+
+              "src/assets/styles/dropzone/dropzone.css",
+              "src/assets/styles/duallistbox/bootstrap-duallistbox.min.css",
+              "src/assets/styles/editor/bootstrap-editable.css",
+              "src/assets/styles/editor/datetimepicker.css",
+              "src/assets/styles/editor/select2.css",
+              "src/assets/styles/editor/x-editor-style.css",
+              "src/assets/styles/form/all-type-forms.css",
+              "src/assets/styles/form/themesaller-forms.css",
+
+
+              "src/assets/styles/notifications/Lobibox.min.css",
+              "src/assets/styles/notifications/notifications.css",
+              "src/assets/styles/preloader/preloader-style.css",
+              "src/assets/styles/select2/select2.min.css",
+              "src/assets/styles/summernote/summernote.css",
+              "src/assets/styles/touchspin/jquery.bootstrap-touchspin.min.css",
+              "src/assets/styles/tree-viewer/tree-viewer.css",
+              "src/assets/styles/chosen/bootstrap-chosen.css",
+              "src/assets/styles/ionRangeSlider/ion.rangeSlider.css",
+              "src/assets/styles/ionRangeSlider/ion.rangeSlider.skinFlat.css",
+
+              "src/assets/styles/accordions.css",
+              "src/assets/styles/alerts.css",
+              "src/assets/styles/c3/c3.min.css",
+              "src/assets/styles/form.css",
+              "src/assets/styles/modals.css",
+              "src/assets/styles/buttons.css",
+              "src/assets/styles/tabs.css",
+
+              "src/assets/styles/code-editor/ambiance.css",
+              "src/assets/styles/code-editor/codemirror.css",
+              "src/assets/styles/colorpicker/colorpicker.css",
+              "src/assets/styles/styles.css"
             ],
             "scripts": []
           },
