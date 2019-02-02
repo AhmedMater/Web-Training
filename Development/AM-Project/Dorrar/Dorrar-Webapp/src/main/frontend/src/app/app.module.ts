@@ -11,6 +11,8 @@ import { MainFooterComponent } from './layout/components/main-layout/components/
 import { SimpleFooterComponent } from './layout/components/simple-layout/components/simple-footer/simple-footer.component';
 import { HomeComponent } from './modules/home/home.component';
 import { RegisterComponent } from './modules/register/register.component';
+import { LoginComponent } from './modules/login/login.component';
+import { HamadaComponent } from './modules/hamada/hamada.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { RegisterComponent } from './modules/register/register.component';
     MainFooterComponent,
     SimpleFooterComponent,
     HomeComponent,
-    RegisterComponent
+    RegisterComponent,
+    LoginComponent,
+    HamadaComponent
   ],
   imports: [
     BrowserModule,
