@@ -1,8 +1,6 @@
 import {Injectable} from "@angular/core";
-import {LoginDto} from "./data/login-dto.data";
 import {HttpClient} from "@angular/common/http";
 import {LoginDto} from "./data/login-dto.data";
-
 @Injectable()
 export class SecurityService{
 
