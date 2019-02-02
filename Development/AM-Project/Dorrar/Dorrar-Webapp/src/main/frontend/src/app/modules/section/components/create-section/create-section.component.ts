@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {sectionData} from "../../shared/data/section-data";
 import {FormBuilder, Validators} from "@angular/forms";
-import {UserService} from "../../shared/sections.service";
+import {SectionsService} from "../../shared/sections.service";
 import {CourseData} from "../../../course/shared/data/course-data-dto.data";
 
 
@@ -24,7 +24,7 @@ export class CreateSectionComponent implements OnInit {
   });
 
 
-  constructor(private formBuilder : FormBuilder , private userService : UserService) {
+  constructor(private formBuilder : FormBuilder , private userService : SectionsService) {
 
 
   }
