@@ -15,10 +15,7 @@ export class CourseService {
 
 
   }
-  // findData(){
-  //   return this.http.get<ReferenceTypeData>("http://localhost:8080/api/user/findData")
-  //
-  // }
+
   findCorRefTypes() {
     return this.http.get<CorRefType[]>("http://localhost:8080/api/user/findData")
 

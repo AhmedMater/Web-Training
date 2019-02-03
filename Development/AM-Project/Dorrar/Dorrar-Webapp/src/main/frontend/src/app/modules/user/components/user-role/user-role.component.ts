@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Page} from "../../shared/data/page";
 import {Role} from "../../shared/data/role";
-import {UserService, UserServices} from "../../shared/user.service";
+import {UserService} from "../../shared/user.service";
 
 @Component({
   selector: 'user-role',
@@ -40,25 +40,25 @@ export class UserRoleComponent implements OnInit {
 
   //TODO: function labelEN to be camelCase
   onGetRoles() {
-    this.privligeService.getRoles()
-      .subscribe(res=>
-        {
-          console.log(res);
-          this.roleList = res;
-          //TODO: no need for return
-          // return this.roleList ;
-        }
-      )
+    // this.privligeService.getRoles()
+    //   .subscribe(res=>
+    //     {
+    //       console.log(res);
+    //       this.roleList = res;
+    //       //TODO: no need for return
+    //       // return this.roleList ;
+    //     }
+    //   )
   }
 
   //TODO: function labelEN to be camelCase
   onGetPages() {
-    this.privligeService.getPages().subscribe((res: Page[]) => {
-      console.log(res);
-      this.pageList = res;
-      //TODO: no need for return
-      // return this.pageList;
-    })
+    // this.privligeService.getPages().subscribe((res: Page[]) => {
+    //   console.log(res);
+    //   this.pageList = res;
+    //   //TODO: no need for return
+    //   // return this.pageList;
+    // })
   }
 
 

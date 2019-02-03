@@ -12,8 +12,6 @@ import {CourseData} from "../../../course/shared/data/course-data-dto.data";
 })
 export class CreateSectionComponent implements OnInit {
 
-  constructor() { }
-
   dataList: sectionData[] = [];
   formData= this.formBuilder.group({
 
