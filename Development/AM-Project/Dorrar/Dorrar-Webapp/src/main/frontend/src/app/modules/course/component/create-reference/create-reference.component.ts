@@ -9,8 +9,8 @@ import {CourseReference} from "../../shared/data/course-ref-dto.data";
 
 @Component({
   selector: 'course-reference',
-  templateUrl: './course-reference.component.html',
-  styleUrls: ['./course-reference.component.scss'],
+  templateUrl: './create-reference.component.html',
+  styleUrls: ['./create-reference.component.scss'],
   providers: [FormBuilder, CourseService]
 })
 export class CreateReferenceComponent implements OnInit {
