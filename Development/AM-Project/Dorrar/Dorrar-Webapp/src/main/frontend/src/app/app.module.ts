@@ -15,6 +15,9 @@ import { LoginComponent } from './modules/security/components/login/login.compon
 import {CreateReferenceComponent} from './modules/course/component/create-reference/create-reference.component';
 import { CreateSectionComponent } from './modules/section/components/create-section/create-section.component';
 import { CreateTutorialComponent } from './modules/tutorial/components/create-tutorial/create-tutorial.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
+import {CommonModule} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -36,7 +39,7 @@ import { CreateTutorialComponent } from './modules/tutorial/components/create-tu
     HomeComponent,
   ],
   imports: [
-    BrowserModule,
+    BrowserModule, HttpClientModule, FormsModule, ReactiveFormsModule, CommonModule,
     AppRoutingModule
   ],
   providers: [],

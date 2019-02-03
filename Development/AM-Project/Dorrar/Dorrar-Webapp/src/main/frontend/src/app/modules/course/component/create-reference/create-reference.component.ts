@@ -102,7 +102,7 @@ export class CreateReferenceComponent implements OnInit {
     this.formData.reset();
   }
   removerow(row):void{
-    var index=this.dataList.indexOf(row);
+    let index=this.dataList.indexOf(row);
     if(index!==-1){
       this.dataList.splice(index,1)
     }

@@ -16,7 +16,7 @@
             <div class="row"><div class="form-group col-md-9">
               <!--[ngClass]="{'has-error has-feedback':formData.get('ReferenceName').invalid}">-->
               <label for="referenceName">Reference Name</label>
-              <input type="referenceName" class="form-control" id="referenceName" formControlName="referenceName"
+              <input type="text" class="form-control" id="referenceName" formControlName="referenceName"
                      placeholder="Enter referencename">
               <!--<small class="form-text text-muted" *ngIf="formData.get('ReferenceName').hasError('required')"> This field-->
               <!--is required-->
@@ -46,9 +46,9 @@
 
             <div class="row">
               <div class="form-group col-md-12 ">
-                [ngClass]="{'has-error has-feedback':formData.get('ReferenceUrl').invalid}">
+                <!--[ngClass]="{'has-error has-feedback': formData.get('ReferenceUrl').invalid}">-->
                 <label for="referenceUrl">Reference URL</label>
-                <input type="referenceUrl" class="form-control " id="referenceUrl" formControlName="referenceUrl"
+                <input type="text" class="form-control " id="referenceUrl" formControlName="referenceUrl"
                        placeholder="Enter URL">
                 <!--<small class="form-text text-muted" *ngIf="formData.get('ReferenceUrl').hasError('required')"> This field-->
                 <!--is required-->
@@ -88,7 +88,7 @@
               <td>{{item.referenceUrl}}</td>
 
 
-              <td><i class="la la-eyedropper"  [hidden]="isEditMode"(click)="onEditRow(dataList[i])"></i></td>
+              <td><i class="la la-eyedropper"  [hidden]="isEditMode" (click)="onEditRow(dataList[i])"></i></td>
 
               <td><i class="la la-trash"  (click)='removerow(dataList[i])'></i></td>
 
