@@ -18,6 +18,7 @@ import { CreateTutorialComponent } from './modules/tutorial/components/create-tu
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import {CommonModule} from "@angular/common";
+import { CourseComponent } from './modules/course/course.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import {CommonModule} from "@angular/common";
     CreateTutorialComponent,
     CreateTutorialComponent,
     HomeComponent,
+    CourseComponent,
   ],
   imports: [
     BrowserModule, HttpClientModule, FormsModule, ReactiveFormsModule, CommonModule,

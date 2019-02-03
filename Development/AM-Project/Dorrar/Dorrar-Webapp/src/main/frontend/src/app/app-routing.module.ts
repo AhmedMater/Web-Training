@@ -6,17 +6,18 @@ import {HomeComponent} from "./modules/home/home.component";
 import {CreateReferenceComponent} from "./modules/course/component/create-reference/create-reference.component";
 // import * as path from "path";
 import {LoginComponent} from "./modules/security/components/login/login.component";
+import {CourseComponent} from "./modules/course/course.component";
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: 'home'},
   {path: '', component: SimpleLayoutComponent, children:[
-      {path: 'login', component: LoginComponent},
-      {path: 'reference', component: CreateReferenceComponent},
+      {path: 'login', component: LoginComponent}
 
     ]},
   {
     path: '', component: MainLayoutComponent, children: [
       {path:'home', component: HomeComponent},
+      {path: 'course', component: CourseComponent}
 
     ]
   }
