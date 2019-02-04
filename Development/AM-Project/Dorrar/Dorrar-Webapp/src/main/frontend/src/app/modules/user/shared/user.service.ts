@@ -15,12 +15,12 @@ export class UserService {
   getRoles()
   {
     return this.httpClient.get<Role[]>(
-      'http://localhost:8090/api/user/role' );
+      'http://localhost:8080/api/user/role' );
   }
 
   getPages() {
     return this.httpClient.get<Page[]>(
-      'http://localhost:8090/api/user/page');
+      'http://localhost:8080/api/user/page');
   }
 
   filter(data:UserList){
