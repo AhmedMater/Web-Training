@@ -6,23 +6,25 @@ import {University} from "./data/university";
 import {Country} from "./data/country";
 import {Page} from "./data/page";
 import {Role} from "./data/role";
+import {ConfigParam} from "../../../infrastructure/common/config-param";
 
 
 @Injectable()
 export class UserService {
+
+  BASE_URL: string = ConfigParam.APP_BASE_URL + "/user";
   constructor(private httpClient:HttpClient){
   }
   getRoles()
   {
-    return this.httpClient.get<Role[]>(
-      'http://localhost:8080/api/user/role' );
+    return this.httpClient.get<Role[]>(this.BASE_URL + '/role' );
   }
 
   //TODO: function labelEN to be camelCase
   getPages()
   {
     return this.httpClient.get<Page[]>(
-      'http://localhost:8080/api/user/page'
+      this.BASE_URL + '/page'
     ) ;
   }
 
