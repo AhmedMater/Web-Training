@@ -19,6 +19,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import {CommonModule} from "@angular/common";
 import { CourseComponent } from './modules/course/course.component';
+import { UserProfileComponent } from './modules/user/components/user-profile/user-profile.component';
+import { UserRoleComponent } from './modules/user/components/user-profile/user-role/user-role.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +41,8 @@ import { CourseComponent } from './modules/course/course.component';
     CreateTutorialComponent,
     HomeComponent,
     CourseComponent,
+    UserProfileComponent,
+    UserRoleComponent,
   ],
   imports: [
     BrowserModule, HttpClientModule, FormsModule, ReactiveFormsModule, CommonModule,

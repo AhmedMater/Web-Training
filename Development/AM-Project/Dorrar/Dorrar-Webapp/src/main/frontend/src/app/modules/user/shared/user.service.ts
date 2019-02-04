@@ -4,24 +4,42 @@ import {UserList} from "./data/user-filter.data";
 import {College} from "./data/college";
 import {University} from "./data/university";
 import {Country} from "./data/country";
+import {Role} from "./data/role";
+import {Page} from "./data/page";
 
 @Injectable()
 export class UserService {
-  constructor(private http:HttpClient){
-
+  constructor(private httpClient:HttpClient){
   }
+
+  getRoles()
+  {
+    return this.httpClient.get<Role[]>(
+      'http://localhost:8090/api/user/role' );
+  }
+
+  getPages() {
+    return this.httpClient.get<Page[]>(
+      'http://localhost:8090/api/user/page');
+  }
+
   filter(data:UserList){
-    return this.http.post("http://localhost:8080/api/user/filter",data);
+    return this.httpClient.post("http://localhost:8080/api/user/filter",data);
 
   }
+
     findallcollege(){
-     return this.http.get<College[]>("http://localhost:8080/api/user/filter/colleges");
+     return this.httpClient.get<College[]>("http://localhost:8080/api/user/filter/colleges");
 
    }
+
    findalluniversity(){
-    return this.http.get<University[]>("http://localhost:8080/api/user/filter/university")
+    return this.httpClient.get<University[]>("http://localhost:8080/api/user/filter/university")
    }
+
    findallcountry(){
-    return this.http.get<Country[]>("http://localhost:8080/api/user/filter/country")
+    return this.httpClient.get<Country[]>("http://localhost:8080/api/user/filter/country")
    }
+
+
 }

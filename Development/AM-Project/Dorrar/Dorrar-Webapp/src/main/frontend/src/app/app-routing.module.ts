@@ -7,6 +7,8 @@ import {CreateReferenceComponent} from "./modules/course/component/create-refere
 // import * as path from "path";
 import {LoginComponent} from "./modules/security/components/login/login.component";
 import {CourseComponent} from "./modules/course/course.component";
+import {UserProfileComponent} from "./modules/user/components/user-profile/user-profile.component";
+import {UserRoleComponent} from "./modules/user/components/user-profile/user-role/user-role.component";
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: 'home'},
@@ -17,7 +19,10 @@ const routes: Routes = [
   {
     path: '', component: MainLayoutComponent, children: [
       {path:'home', component: HomeComponent},
-      {path: 'course', component: CourseComponent}
+      {path: 'course', component: CourseComponent} ,
+      {path:'user/profile', component:UserProfileComponent,children:[
+          {path:'role',component:UserRoleComponent}
+        ]}
 
     ]
   }
