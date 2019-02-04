@@ -11,13 +11,13 @@ export class CourseService {
   //TODO: Rename function to saveCorReferences
   //TODO: Save all Course References using Course DTO Object
   references(data:CourseData){
-    return this.http.post("http://localhost:8080/api/user/reference",data)
+    return this.http.post("http://localhost:8080/api/course/reference",data)
 
 
   }
 
   findCorRefTypes() {
-    return this.http.get<CorRefType[]>("http://localhost:8080/api/user/findData")
+    return this.http.get<CorRefType[]>("http://localhost:8080/api/course/findData")
 
   }
 }

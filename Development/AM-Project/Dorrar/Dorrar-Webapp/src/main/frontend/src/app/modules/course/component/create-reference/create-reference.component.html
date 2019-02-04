@@ -1,10 +1,10 @@
 <div class="container-fluid">
-  <h4 class="page-title">Forms</h4>
+  <!--<h4 class="page-title">Forms</h4>-->
   <div class=" row">
-    <div class="offset-3 col-md-6">
+    <div class="offset-3 col-md-12">
       <div class="card">
         <div class="card-header">
-          <div class="card-title">Course Reference</div>
+          <!--<div class="card-title">Course Reference</div>-->
 
 
         </div>
@@ -88,9 +88,9 @@
               <td>{{item.referenceUrl}}</td>
 
 
-              <td><i class="la la-eyedropper"  [hidden]="isEditMode" (click)="onEditRow(dataList[i])"></i></td>
+              <td><i class="fa fa-edit"  [hidden]="isEditMode" (click)="onEditRow(dataList[i])"></i></td>
 
-              <td><i class="la la-trash"  (click)='removerow(dataList[i])'></i></td>
+              <td><i class="fa fa-trash"  (click)='removerow(dataList[i])'></i></td>
 
             </tr>
 
