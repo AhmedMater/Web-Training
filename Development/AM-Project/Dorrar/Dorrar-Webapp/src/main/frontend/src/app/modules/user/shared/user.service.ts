@@ -4,11 +4,26 @@ import {UserList} from "./data/user-filter.data";
 import {College} from "./data/college";
 import {University} from "./data/university";
 import {Country} from "./data/country";
+import {Page} from "./data/page";
+import {Role} from "./data/role";
 
 
 @Injectable()
 export class UserService {
   constructor(private httpClient:HttpClient){
+  }
+  getRoles()
+  {
+    return this.httpClient.get<Role[]>(
+      'http://localhost:8080/api/user/role' );
+  }
+
+  //TODO: function labelEN to be camelCase
+  getPages()
+  {
+    return this.httpClient.get<Page[]>(
+      'http://localhost:8080/api/user/page'
+    ) ;
   }
 
   filter(data:UserList){
