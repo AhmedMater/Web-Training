@@ -9,10 +9,12 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.util.ArrayList;
 @Path("/course")
+//TODO: Hala Class name should be CourseRes
 public class ReferenceRes {
 @Autowired
     private ReferenceRep repository;
     @POST
+    //TODO: Hala Path should be /{courseID}/reference
     @Path("/reference")
     @Consumes(MediaType.APPLICATION_JSON)
     //TODO: use Course Data Class as payload instead of Course Reference
@@ -24,6 +26,10 @@ public class ReferenceRes {
 
 
     }
+
+    //TODO: Yara your service will be here instead of SectionRes
+    //TODO: Yara Path /{courseID}/section
+
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)

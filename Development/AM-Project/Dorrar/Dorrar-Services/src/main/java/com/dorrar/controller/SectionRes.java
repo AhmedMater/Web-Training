@@ -10,7 +10,10 @@ import javax.ws.rs.core.MediaType;
 
 @Path("/course")
 public class SectionRes {
+
     private SectionSer ser ;
+
+
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Path("/section")

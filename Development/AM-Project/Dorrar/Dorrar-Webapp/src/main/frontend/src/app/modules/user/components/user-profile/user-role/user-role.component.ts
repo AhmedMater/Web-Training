@@ -7,14 +7,16 @@ import {UserService} from "../../../shared/user.service";
   selector: 'user-role',
   templateUrl: './user-role.component.html',
   styleUrls: ['./user-role.component.scss'] ,
-  providers:[UserService]
+  providers: [UserService]
 })
+//TODO: Fathy This component should be in components folder user-profile/components/user-role
 export class UserRoleComponent implements OnInit {
 
   public roleList :Role[]  ;
 
   public pageList :Page[] ;
 
+  //TODO: Fathy There is type in service variable name
   constructor(private privligeService:UserService) {
   }
 

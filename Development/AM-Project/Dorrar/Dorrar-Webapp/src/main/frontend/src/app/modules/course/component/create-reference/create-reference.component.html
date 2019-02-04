@@ -28,7 +28,7 @@
                 <!--[ngClass]="{'has-error has-feedback':formData.get('ReferenceType').invalid}">-->
                 <label for="referenceType">ReferenceType</label>
                 <select class="form-control" id="referenceType" formControlName="referenceType">
-                  <option *ngFor="let ref of refTypes">{{ref.labelEN}}</option>
+                  <option *ngFor="let ref of refTypes" [ngValue]="ref.id">{{ref.labelEN}}</option>
 
                 </select>
 
