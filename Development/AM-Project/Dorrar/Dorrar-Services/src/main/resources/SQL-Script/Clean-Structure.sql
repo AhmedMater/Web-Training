@@ -39,3 +39,32 @@ ADD CONSTRAINT `fk-reference-ref-type`
 
 
 
+
+CREATE TABLE `dorrar`.`course` (
+  `id` INT NOT NULL,
+  PRIMARY KEY (`id`));
+
+CREATE TABLE `dorrar`.`course-section` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `section-name` VARCHAR(50) NOT NULL,
+  `description` VARCHAR(200) NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `id_UNIQUE` (`id` ASC),
+  CONSTRAINT `fk-course-section-course`
+    FOREIGN KEY (`id`)
+    REFERENCES `dorrar`.`course` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
+ALTER TABLE `dorrar`.`course-section`
+DROP FOREIGN KEY `fk-course-section-course`;
+ALTER TABLE `dorrar`.`course-section`
+ADD COLUMN `course-id` INT NOT NULL AFTER `description`,
+ADD INDEX `fk-course-section-course_idx` (`course-id` ASC),
+DROP PRIMARY KEY;
+ALTER TABLE `dorrar`.`course-section`
+ADD CONSTRAINT `fk-course-section-course`
+  FOREIGN KEY (`course-id`)
+  REFERENCES `dorrar`.`course` (`id`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;

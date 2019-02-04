@@ -1,5 +1,6 @@
 package com.dorrar.configuration;
 
+import com.dorrar.controller.SectionRes;
 import com.dorrar.controller.ReferenceRes;
 import com.dorrar.controller.UserRes;
 import org.glassfish.jersey.server.ResourceConfig;
@@ -14,6 +15,8 @@ public class JerseyConfig extends ResourceConfig {
     public JerseyConfig(){
         register(CORSFilter.class);
         register(UserRes.class);
+        register(SectionRes.class);
+
         register(ReferenceRes.class);
     }
 

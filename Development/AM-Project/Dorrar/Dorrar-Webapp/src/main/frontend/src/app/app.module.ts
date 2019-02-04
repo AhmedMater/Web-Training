@@ -38,7 +38,6 @@ import { UserRoleComponent } from './modules/user/components/user-profile/user-r
     CreateReferenceComponent,
     CreateSectionComponent,
     CreateTutorialComponent,
-    CreateTutorialComponent,
     HomeComponent,
     CourseComponent,
     UserProfileComponent,
