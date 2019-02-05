@@ -1,11 +1,6 @@
-<div class="mt-4 row">
-  <div class="offset-3 col-md-6">
-    <div class="card">
-      <div class="card-header">
-        <div class="card-title">Sections</div>
-      </div>
-      <div class="card-body">
+
         <form [formGroup]="formData">
+          <div class="row">
           <div class="form-group col-md-12" [ngClass]="{'has-error':formData.get('name').invalid && formData.get('name').dirty ,
        'has-success':formData.get('name').valid && formData.get('name').dirty }">
             <label for="name">Name</label>
@@ -16,26 +11,27 @@
             <small class="form-text text-muted" *ngIf="formData.get('name').hasError('maxlength')"> Must be less than 15
             </small>
           </div>
+          </div>
 
+
+          <div class="row">
           <div class="form-group col-md-12">
             <label for="description">Description</label>
             <textarea class="form-control" id="description" formControlName="description" rows="4">
           </textarea>
           </div>
-
+          </div>
         </form>
 
-        <button class=" btn btn-danger pull-right ml-2" *ngIf = "!isEditMode " >clear</button>
+        <button class=" btn btn-danger pull-right ml-2" *ngIf = "!isEditMode " (click)="reset()" >clear</button>
         <button type="submit" class="btn btn-success  pull-right ml-2" *ngIf = "!isEditMode"(click)="addRow()">add</button>
 
         <button class=" btn btn-danger pull-right ml-2" *ngIf = "isEditMode"(click)="reset()">discard</button>
         <button type="submit" class="btn btn-success  pull-right ml-2" *ngIf = "isEditMode"(click)="addRow()">save</button>
 
-        <!--<button class=" btn btn-danger pull-right ml-2" [hidden]="" >clear</button>-->
-        <!--<button type="submit" class="btn btn-success  pull-right ml-2"[hidden]="" >add</button>-->
 
 
-        <table class="mt-5 table table-bordered">
+        <table class="table table-bordered">
           <thead>
           <tr>
             <th scope="col">#</th>
@@ -50,8 +46,10 @@
             <td>{{item.name}}</td>
             <td>{{item.description}}</td>
             <td>
-              <span class="la la-edit la-2x mr-lg-4" aria-hidden="true" (click)='editRow(dataList[i])' [hidden]="isEditMode"></span>
-              <span class="la la-trash la-2x" aria-hidden="true" (click)='removeRow(dataList[i])'></span>
+
+              <span class="fa fa-edit fa-2x" aria-hidden="true" (click)='editRow(dataList[i])' [hidden]="isEditMode"></span>
+              <span class="fa fa-trash fa-2x pull-right " aria-hidden="true" (click)='removeRow(dataList[i])'></span>
+
             </td>
           </tr>
           </tbody>
@@ -61,7 +59,5 @@
         <button class="btn  btn-success pull-right ml-2" (click)="saveData()">Save</button>
 
 
-      </div>
-    </div>
-  </div>
-</div>
+
+

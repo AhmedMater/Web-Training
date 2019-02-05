@@ -8,7 +8,9 @@ import {CourseData} from "../../../course/shared/data/course-data-dto.data";
 @Component({
   selector: 'create-section',
   templateUrl: './create-section.component.html',
-  styleUrls: ['./create-section.component.scss']
+  styleUrls: ['./create-section.component.scss'],
+  providers : [FormBuilder , SectionsService],
+
 })
 export class CreateSectionComponent implements OnInit {
 
@@ -17,8 +19,6 @@ export class CreateSectionComponent implements OnInit {
 
     name : [  '' , [Validators.required,Validators.maxLength(15)]],
     description :[ '' , Validators.required ],
-    id :[null],
-    items: this.formBuilder.array([])
   });
 
 
@@ -46,7 +46,7 @@ export class CreateSectionComponent implements OnInit {
   isEditMode : boolean = false ;
   editRow(row):void{
 
-    var index = this.dataList.indexOf(row);
+    let index = this.dataList.indexOf(row);
     this.formData.get('name').reset(this.dataList[0].name);
     this.formData.get('description').reset(this.dataList[0].description);
     if (index !== -1) {
@@ -61,7 +61,7 @@ export class CreateSectionComponent implements OnInit {
     console.log(data);
 
     this.userService.addNewSections(data).subscribe(
-      response=>{console.log('request sucessed') ;},
+      response =>{console.log('request sucessed') ;},
       err=>{console.log(err) ;}
 
     );
@@ -69,7 +69,7 @@ export class CreateSectionComponent implements OnInit {
   };
 
   removeRow(row){
-    var index = this.dataList.indexOf(row);
+    let index = this.dataList.indexOf(row);
     if (index !== -1) {
       this.dataList.splice(index, 1);
 

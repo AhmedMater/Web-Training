@@ -13,8 +13,7 @@ export class  SectionsService
 
   addNewSections( data : CourseData)
   {
-    return this.http.post('http://localhost:8080/api/create/section', data);
-
+    return this.http.post('http://localhost:8080/api/course/5/section', data);
 
   }
 }
