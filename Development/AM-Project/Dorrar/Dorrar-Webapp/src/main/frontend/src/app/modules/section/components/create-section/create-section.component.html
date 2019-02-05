@@ -23,10 +23,14 @@
           </div>
         </form>
 
+        <!-- TODO: Hala - Use Capital Letters for Names-->
         <button class=" btn btn-danger pull-right ml-2" *ngIf = "!isEditMode " (click)="reset()" >clear</button>
+        <!-- TODO: Hala - Use Capital Letters for Names-->
         <button type="submit" class="btn btn-success  pull-right ml-2" *ngIf = "!isEditMode"(click)="addRow()">add</button>
 
+        <!-- TODO: Hala - Use Capital Letters for Names-->
         <button class=" btn btn-danger pull-right ml-2" *ngIf = "isEditMode"(click)="reset()">discard</button>
+        <!-- TODO: Hala - Use Capital Letters for Names-->
         <button type="submit" class="btn btn-success  pull-right ml-2" *ngIf = "isEditMode"(click)="addRow()">save</button>
 
 
@@ -36,6 +40,7 @@
           <tr>
             <th scope="col">#</th>
             <th scope="col">Section Name</th>
+            <!-- TODO: Hala - Description instead of Descriptions-->
             <th scope="col">Descriptions</th>
             <th></th>
           </tr>
@@ -47,7 +52,9 @@
             <td>{{item.description}}</td>
             <td>
 
+              <!-- TODO: Yara - Use Index instead of Total Row Object-->
               <span class="fa fa-edit fa-2x" aria-hidden="true" (click)='editRow(dataList[i])' [hidden]="isEditMode"></span>
+              <!-- TODO: Yara - Use Index instead of Total Row Object-->
               <span class="fa fa-trash fa-2x pull-right " aria-hidden="true" (click)='removeRow(dataList[i])'></span>
 
             </td>
@@ -55,6 +62,7 @@
           </tbody>
         </table>
 
+        <!-- TODO: Yara - Wrong spelling-->
         <button class="btn btn-danger pull-right ml-2">Discrad</button>
         <button class="btn  btn-success pull-right ml-2" (click)="saveData()">Save</button>
 

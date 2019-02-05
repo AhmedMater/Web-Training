@@ -44,6 +44,7 @@ export class CreateSectionComponent implements OnInit {
   }
 
   isEditMode : boolean = false ;
+  // TODO: Yara - Use Index instead of Total Row Object
   editRow(row):void{
 
     let index = this.dataList.indexOf(row);
@@ -68,6 +69,7 @@ export class CreateSectionComponent implements OnInit {
 
   };
 
+  // TODO: Yara - Use Index instead of Total Row Object
   removeRow(row){
     let index = this.dataList.indexOf(row);
     if (index !== -1) {

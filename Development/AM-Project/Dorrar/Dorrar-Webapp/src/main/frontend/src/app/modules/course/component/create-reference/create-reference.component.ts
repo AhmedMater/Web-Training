@@ -61,10 +61,12 @@ export class CreateReferenceComponent implements OnInit {
 
   }
 
+  // TODO: Hala - remove unused functions
   isclick() {
   }
 
 
+  // TODO: Hala - remove unused functions
   createItem(): FormGroup {
     return this.formBuilder.group({
       referenceName: null,

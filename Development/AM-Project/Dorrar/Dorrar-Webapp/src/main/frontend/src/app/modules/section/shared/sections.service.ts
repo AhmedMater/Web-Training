@@ -5,14 +5,13 @@ import {CourseData} from "../../course/shared/data/course-data-dto.data";
 
 
 @Injectable()
-export class  SectionsService
-{
+export class  SectionsService {
 
   constructor(private http : HttpClient ) {
   }
 
-  addNewSections( data : CourseData)
-  {
+  //TODO: Yara - Use App_base_url such as in User Service
+  addNewSections( data : CourseData) {
     return this.http.post('http://localhost:8080/api/course/5/section', data);
 
   }
