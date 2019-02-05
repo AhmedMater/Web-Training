@@ -19,9 +19,9 @@ public class SectionRep {
     //TODO: Function Argument is SectionData
     public void insertCourseSection (int courseID , SectionData data){
 
-        String sql = "INSERT INTO sections (course_id , name , description) value (?,?,?)";
+        String sql = "INSERT INTO sections ( section_name , description , courseID ) value (?,?,?)";
 
-        this.jdbc.update(sql , courseID ,data.getName(),data.getDescription());
+        this.jdbc.update(sql ,data.getName(),data.getDescription() ,  courseID);
 
     }
 
