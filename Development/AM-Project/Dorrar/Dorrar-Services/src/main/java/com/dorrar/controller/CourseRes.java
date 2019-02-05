@@ -10,7 +10,7 @@ import javax.ws.rs.core.MediaType;
 import java.util.ArrayList;
 @Path("/course")
 //TODO: Hala Class name should be CourseRes
-public class ReferenceRes {
+public class CourseRes {
 @Autowired
     private ReferenceRep repository;
     @POST
