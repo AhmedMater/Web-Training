@@ -1,51 +1,89 @@
-<div class="row mt-5">
-  <div class="col-md-6 offset-3">
-    <div class="card">
-      <div class="card-header">
-        <h1 class="card-title">Login</h1>
-      </div>
-      <div class="card-body">
-        <form [formGroup]="formData">
-          <div class="form-group"
-               [ngClass]="{'has-error has-feedback': formData.get('username').invalid}">
-            <label for="username">User Name</label>
-            <input type="text" class="form-control" id="username"
-                   formControlName="username" placeholder="Enter User Name">
-            <small class="form-text text-muted"
-                   *ngIf="formData.get('username').hasError('required')">
-              User Name is mandatory.
-            </small>
-            <small class="form-text text-muted"
-                   *ngIf="formData.get('username').hasError('maxlength')">
-              User Name can't exceed 25 characters.
-            </small>
-            <small class="form-text text-muted"
-                   *ngIf="formData.get('username').hasError('minlength')">
-              User Name can't be less than 5 characters.
-            </small>
-          </div>
-          <div class="form-group" [ngClass]="{'has-error has-feedback': formData.get('password').invalid}">
-            <label for="password">Password</label>
-            <input type="password" class="form-control" id="password"
-                   formControlName="password" placeholder="Enter Your Password">
-            <small class="form-text text-muted"
-                   *ngIf="formData.get('password').hasError('required')">
-              Password is mandatory.
-            </small>
-            <small class="form-text text-muted"
-                   *ngIf="formData.get('password').hasError('minlength')">
-              Password can't be less than 7 characters.
-            </small>
-          </div>
-        </form>
-      </div>
-      <div class="card-action">
-        <button class="btn btn-success pull-right" (click)="login()">Login</button>
-        <!--<small class="form-text text-muted"-->
-        <!--*ngIf="!valid">-->
-        <!--User Name or/and password isn't/aren't valid.-->
-        <!--</small>-->
-      </div>
-    </div>
+<!--<div class="row mt-5">-->
+  <!--<div class="col-md-6 offset-3">-->
+    <!--<div class="card">-->
+      <!--<div class="card-header">-->
+        <!--<h1 class="card-title">Login</h1>-->
+      <!--</div>-->
+      <!--<div class="card-body">-->
+        <!--<form [formGroup]="formData">-->
+          <!--<div class="form-group"-->
+               <!--[ngClass]="{'has-error has-feedback': formData.get('username').invalid}">-->
+            <!--<label for="username">User Name</label>-->
+            <!--<input type="text" class="form-control" id="username"-->
+                   <!--formControlName="username" placeholder="Enter User Name">-->
+            <!--<small class="form-text text-muted"-->
+                   <!--*ngIf="formData.get('username').hasError('required')">-->
+              <!--User Name is mandatory.-->
+            <!--</small>-->
+            <!--<small class="form-text text-muted"-->
+                   <!--*ngIf="formData.get('username').hasError('maxlength')">-->
+              <!--User Name can't exceed 25 characters.-->
+            <!--</small>-->
+            <!--<small class="form-text text-muted"-->
+                   <!--*ngIf="formData.get('username').hasError('minlength')">-->
+              <!--User Name can't be less than 5 characters.-->
+            <!--</small>-->
+          <!--</div>-->
+          <!--<div class="form-group" [ngClass]="{'has-error has-feedback': formData.get('password').invalid}">-->
+            <!--<label for="password">Password</label>-->
+            <!--<input type="password" class="form-control" id="password"-->
+                   <!--formControlName="password" placeholder="Enter Your Password">-->
+            <!--<small class="form-text text-muted"-->
+                   <!--*ngIf="formData.get('password').hasError('required')">-->
+              <!--Password is mandatory.-->
+            <!--</small>-->
+            <!--<small class="form-text text-muted"-->
+                   <!--*ngIf="formData.get('password').hasError('minlength')">-->
+              <!--Password can't be less than 7 characters.-->
+            <!--</small>-->
+          <!--</div>-->
+        <!--</form>-->
+      <!--</div>-->
+      <!--<div class="card-action">-->
+        <!--<button class="btn btn-success pull-right" (click)="login()">Login</button>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
+
+
+
+
+
+<form action="#" id="loginForm" [formGroup]="formData">
+  <div class="form-group"
+       [ngClass]="{'has-error has-feedback': formData.get('username').invalid}">
+    <label class="control-label" for="username">Username</label>
+    <input type="text" placeholder="Please enter your username" id="username"
+           class="form-control" formControlName="username" >
+    <small class="form-text text-muted"
+           *ngIf="formData.get('username').hasError('required')">
+      User Name is mandatory.
+    </small>
+    <small class="form-text text-muted"
+           *ngIf="formData.get('username').hasError('maxlength')">
+      User Name can't exceed 25 characters.
+    </small>
+    <small class="form-text text-muted"
+           *ngIf="formData.get('username').hasError('minlength')">
+      User Name can't be less than 5 characters.
+    </small>
+    <span class="help-block small">Your unique username to app</span>
   </div>
-</div>
+  <div class="form-group">
+    <label class="control-label" for="password"
+           [ngClass]="{'has-error has-feedback': formData.get('password').invalid}">Password</label>
+    <input type="password" placeholder="******" id="password"
+           class="form-control" formControlName="password">
+    <small class="form-text text-muted"
+           *ngIf="formData.get('password').hasError('required')">
+      Password is mandatory.
+    </small>
+    <small class="form-text text-muted"
+           *ngIf="formData.get('password').hasError('minlength')">
+      Password can't be less than 7 characters.
+    </small>
+    <span class="help-block small">Your strong password</span>
+  </div>
+  <button class="btn btn-success btn-block loginbtn" (click)="login()">Login</button>
+</form>

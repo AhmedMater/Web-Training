@@ -1,24 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from "@angular/core";
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
-import {LoginDto} from "../../shared/data/login-dto.data";
 import {SecurityService} from "../../shared/security.service";
+import {LoginDto} from "../../shared/data/login-dto.data";
+import {AuthVto} from "../../shared/data/auth-vto.data";
 
 @Component({
-  selector: 'login',
+  selector: 'user-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
   providers: [FormBuilder, SecurityService]
 })
 export class LoginComponent implements OnInit {
 
- // valid: boolean;
+  authVto: AuthVto;
   formData: FormGroup = this.formBuilder.group({
     username: [null, [Validators.required, Validators.maxLength(25), Validators.minLength(5)]],
     password: [null, [Validators.required, Validators.minLength(7)]]
   });
 
   constructor(private formBuilder: FormBuilder,
-              private securityService: SecurityService) { }
+              private userService: SecurityService) { }
 
   ngOnInit() {
   }
@@ -27,18 +28,19 @@ export class LoginComponent implements OnInit {
     let data: LoginDto = new LoginDto();
     data.userName = this.formData.get('username').value;
     data.password = this.formData.get('password').value;
-
-    console.log(data);
-    //let valid: boolean;
-    // if(this.validateUserDataService.validateUserLoginData(data)){
+    // let authVto: AuthVto;
     if(this.formData.get('username').valid && this.formData.get('password').valid){
-      //this.valid = true;
-      this.securityService.Login(data).subscribe(
-        res=>{console.log("Success");},
+      this.userService.Login(data).subscribe(
+        res=>{
+          this.authVto = res;
+          console.log("Success");
+          console.log(res);
+          localStorage.setItem("token", res.token);
+        },
         err => {console.log(err);}
       );
     }else{
-      //this.valid = false;
+      console.log("Invalid user name or/and password");
     }
   }
 

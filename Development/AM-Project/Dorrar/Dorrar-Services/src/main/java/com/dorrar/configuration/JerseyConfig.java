@@ -1,11 +1,14 @@
 package com.dorrar.configuration;
 
 import com.dorrar.controller.CourseRes;
+import com.dorrar.controller.SecurityRes;
 import com.dorrar.controller.UserRes;
+import com.dorrar.controller.UserRowMapper;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.springframework.context.annotation.Configuration;
 
 import javax.ws.rs.ApplicationPath;
+import java.lang.SecurityManager;
 
 @ApplicationPath("/api")
 @Configuration
@@ -15,6 +18,9 @@ public class JerseyConfig extends ResourceConfig {
         register(CORSFilter.class);
         register(UserRes.class);
         register(CourseRes.class);
+        register(SecurityManager.class);
+        register(UserRowMapper.class);
+        register(SecurityRes.class);
     }
 
 }
