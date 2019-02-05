@@ -20,16 +20,8 @@ CREATE TABLE `dorrar`.`course` (
  ADD INDEX `fk-reference-ref-type_idx` (`ref-type-id` ASC);
 
 
- ALTER TABLE `dorrar`.`reference`
- ADD CONSTRAINT `fk-reference-ref-type`
-  FOREIGN KEY (`ref-type-id`)
-  REFERENCES `dorrar`.`ref-type` (`id`)
-  ON DELETE NO ACTION
-   ON UPDATE NO ACTION;
 
 
- ALTER TABLE `dorrar`.`ref-type`
- CHANGE COLUMN `label-en` `label_en` VARCHAR(45) NOT NULL , RENAME TO  `dorrar`.`ref_type` ;
 CREATE TABLE `dorrar`.`reference` (
   `course_id` INT NOT NULL,
   `ref_type_id` INT NOT NULL,
