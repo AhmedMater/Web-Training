@@ -17,7 +17,7 @@ public class SectionRep {
     }
 
     //TODO: Function Argument is SectionData
-    public void insertCourseSection (int courseID , SectionData data){
+    public void insertCourseSection(int courseID , SectionData data){
 
         String sql = "INSERT INTO sections ( section_name , description , courseID ) value (?,?,?)";
 

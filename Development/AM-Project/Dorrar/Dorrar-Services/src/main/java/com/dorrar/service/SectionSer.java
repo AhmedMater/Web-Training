@@ -11,7 +11,7 @@ public class SectionSer {
     @Autowired
     SectionRep repository ;
 
-    public void insertCourseSection (int courseID , List<SectionData> sections )
+    public void insertCourseSections (int courseID , List<SectionData> sections )
     {
 
         for(SectionData section : sections)

@@ -33,14 +33,19 @@ public class CourseRes {
 
     @Autowired
     private SectionSer service ;
+
+
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Path("/{courseID}/section")
     public void addCourseSections (@PathParam("courseID") int courseID ,CourseData data) {
         System.out.print("Data Recieved Sucessfully");
         System.out.print(data.toString());
-        this.service.insertCourseSection(courseID,data.getSection());
+        this.service.insertCourseSections(courseID,data.getSection());
     }
+
+
+
 
 
 
