@@ -8,8 +8,7 @@ export class CourseService {
 
   constructor(private http:HttpClient) { }
 
-  //TODO: Rename function to saveCorReferences
-  //TODO: Save all Course References using Course DTO Object
+  //TODO: Hala - Rename function to saveCorReferences
   references(data:CourseData){
     return this.http.post("http://localhost:8080/api/course/reference",data)
 

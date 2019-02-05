@@ -1,8 +1,8 @@
 export class CourseReference {
 
-  //TODO: use camelcase names for attributes
-  //TODO: use string instead of String
+  //TODO: Hala - use small names instead of large names
   referenceName: string;
+  //TODO: Hala - rename to refTypeID
   referenceType: number;
   referenceUrl: string;
 

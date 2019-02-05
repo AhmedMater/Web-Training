@@ -15,12 +15,8 @@ import {CourseReference} from "../../shared/data/course-ref-dto.data";
 })
 export class CreateReferenceComponent implements OnInit {
   dataList: CourseReference[] = [];
+  //TODO: Hala - use the initialize here instead of ngOnInit
   formData: FormGroup;
-
-  // TODO: Remove Uneeded variables
-
-  //TODO: There will be list for CorRefType[] Array
-
 
   constructor(private formBuilder: FormBuilder,
               private  courseService: CourseService) {
@@ -29,12 +25,14 @@ export class CreateReferenceComponent implements OnInit {
   refTypes: CorRefType[] = [];
   ngOnInit() {
 
-    //TODO: FormControl names to be Camelcase
-    //TODO: Add Form Validations
+    //TODO: Hala - Add Form Validations
+    //TODO: Hala - If the names are large we use abbreviation reference -> ref
     this.formData = this.formBuilder.group({
       referenceName: null,
+      //TODO: Hala - this should be refTypeID
       referenceType: null,
       referenceUrl: null,
+      //TODO: Hala - There is no need for items
       items: this.formBuilder.array([])
 
     });
@@ -48,8 +46,6 @@ export class CreateReferenceComponent implements OnInit {
 
   }
 
-  //TODO: Rename function to saveCorReferences
-  //TODO: add Reference List into CourseData Object and send it to Backend
   saveCorReferences() {
     let data: CourseData = new CourseData();
     data.reference = this.dataList;
@@ -101,6 +97,7 @@ export class CreateReferenceComponent implements OnInit {
   clear(): void {
     this.formData.reset();
   }
+  // TODO: Hala - Use Index instead of Total Row Object
   removerow(row):void{
     let index=this.dataList.indexOf(row);
     if(index!==-1){
@@ -109,6 +106,8 @@ export class CreateReferenceComponent implements OnInit {
 
 
   }
+
+  // TODO: Hala - Use Index instead of Total Row Object
   onEditRow(row):void{
     var index=this.dataList.indexOf(row);
     this.formData.get('referenceName').reset(this.dataList[0].referenceName);

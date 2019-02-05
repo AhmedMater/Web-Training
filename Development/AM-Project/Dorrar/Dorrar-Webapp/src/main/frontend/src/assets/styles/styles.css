@@ -95,20 +95,38 @@ body {}
 .mg-tb-15{
   margin:15px 0px;
 }
-.mg-t-30{
-  margin-top:30px;
-}
 .mg-b-10{
   margin-bottom:23px;
 }
 .mg-ub-10{
   margin-bottom:17px;
 }
+.mg-t-10{
+  margin-top:10px;
+}
 .mg-t-15{
   margin-top:15px;
 }
-.mg-t-10{
-  margin-top:10px;
+.mg-t-30{
+  margin-top:30px;
+}
+.mg-l-10{
+  margin-left:10px;
+}
+.mg-l-15{
+  margin-left:15px;
+}
+.mg-l-30{
+  margin-left:30px;
+}
+.mg-r-10{
+  margin-right:10px;
+}
+.mg-r-15{
+  margin-right:15px;
+}
+.mg-r-30{
+  margin-right:30px;
 }
 .mg-b-15{
   margin-bottom:20px;

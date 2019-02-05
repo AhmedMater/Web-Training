@@ -12,11 +12,13 @@
         <div class="card-body">
           <form [formGroup]="formData">
 
-            <!--TODO: Use Dirty with invalid in the ngClass Condition-->
+            <!--TODO: Hala - Use Dirty with invalid in the ngClass Condition-->
+            <!--TODO: Hala - placeholder should be Enter Reference Name-->
             <div class="row"><div class="form-group col-md-9"
               [ngClass]="{'has-error has-feedback':formData.get('ReferenceName').invalid}">
               <label for="referenceName">Reference Name</label>
-              <input type="text" class="form-control" id="referenceName" formControlName="referenceName"
+              <input type="text" class="form-control" id="referenceName"
+                     formControlName="referenceName"
                      placeholder="Enter referencename">
               <!--<small class="form-text text-muted" *ngIf="formData.get('ReferenceName').hasError('required')"> This field-->
               <!--is required-->
@@ -26,6 +28,8 @@
             </div>
               <div class="form-group col-md-3" >
                 <!--[ngClass]="{'has-error has-feedback':formData.get('ReferenceType').invalid}">-->
+
+                <!--TODO: Hala - Use Space in the Label-->
                 <label for="referenceType">ReferenceType</label>
                 <select class="form-control" id="referenceType" formControlName="referenceType">
                   <option *ngFor="let ref of refTypes" [ngValue]="ref.id">{{ref.labelEN}}</option>
@@ -59,10 +63,14 @@
             </div>
 
           </form>
+          <!--TODO: Hala - Use Capital Letter for Names Change add to Add-->
           <button type="submit" class="btn btn-success pull-right ml-2" *ngIf="!isEditMode" (click)="addItem()">add</button>
+          <!--TODO: Hala - Use Capital Letter for Names -->
           <button class=" btn btn-danger pull-right ml-2" *ngIf="!isEditMode" (click)="clear()">clear</button>
 
+          <!--TODO: Hala - Use Capital Letter for Names -->
           <button type="submit" class="btn btn-success pull-right ml-2" *ngIf="isEditMode" (click)="addItem()">Save</button>
+          <!--TODO: Hala - Use Capital Letter for Names -->
           <button class=" btn btn-danger pull-right ml-2" *ngIf="isEditMode" (click)="clear()">Discard</button>
 
 
@@ -70,7 +78,6 @@
           <table class="table table-striped mt-3">
             <thead>
             <tr>
-              <!--TODO: Spaces between Names-->
               <th scope="col">Reference Name</th>
               <th scope="col">Reference Type</th>
               <th scope="col">Reference Url</th>
@@ -88,8 +95,10 @@
               <td>{{item.referenceUrl}}</td>
 
 
+              <!-- TODO: Hala - Use Index instead of Total Row Object-->
               <td><i class="fa fa-edit"  [hidden]="isEditMode" (click)="onEditRow(dataList[i])"></i></td>
 
+              <!-- TODO: Hala - Use Index instead of Total Row Object-->
               <td><i class="fa fa-trash"  (click)='removerow(dataList[i])'></i></td>
 
             </tr>
@@ -100,7 +109,8 @@
 
 
           <div class="card-action">
-            <button class="btn btn-success mr-1 btn-sm pull-right ml-2" (click)="saveCorReferences()">next</button>
+            <!-- TODO: Hala - Use Capital Letters for Names-->
+            <button class="btn btn-lg btn-success mr-1 btn-sm pull-right mg-l-15" (click)="saveCorReferences()">next</button>
             <button class="btn btn-danger ml-1 btn-sm pull-right" (click)="isclick()">Back</button>
           </div>
         </div>
