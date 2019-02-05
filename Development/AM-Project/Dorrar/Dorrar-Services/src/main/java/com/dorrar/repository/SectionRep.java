@@ -17,11 +17,11 @@ public class SectionRep {
     }
 
     //TODO: Function Argument is SectionData
-    public void insertNewSection (SectionData data){
+    public void insertCourseSection (int courseID , SectionData data){
 
-        String sql = "INSERT INTO sections (name , description) value (?,?)";
+        String sql = "INSERT INTO sections (course_id , name , description) value (?,?,?)";
 
-        this.jdbc.update(sql , data.getName(),data.getDescription());
+        this.jdbc.update(sql , courseID ,data.getName(),data.getDescription());
 
     }
 

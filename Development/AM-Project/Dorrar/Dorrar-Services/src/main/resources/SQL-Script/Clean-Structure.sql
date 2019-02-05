@@ -4,7 +4,7 @@ CREATE SCHEMA `dorrar` ;
 
 CREATE TABLE `dorrar`.`course` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  UNIQUE INDEX `id_UNIQUE` (`id` ASC),
+  UNIQUE INDEX `id_unique` (`id` ASC),
   PRIMARY KEY (`id`));
 
 
@@ -48,35 +48,20 @@ ADD CONSTRAINT `fk-reference-ref-type`
 
 -- End Hala Create new Course Reference
 
-
 -- Start Yara Create new Course Section
--- TODO: Yara - Table names should be small char with underscore (ref_type)
-CREATE TABLE `dorrar`.`course-section` (
+
+CREATE TABLE `dorrar`.`course_section` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  -- TODO: Yara - columns names should be small char with underscore (section_name)
-  `section-name` VARCHAR(50) NOT NULL,
-  `description` VARCHAR(200) NULL,
+  `section_name` VARCHAR(50) NOT NULL,
+  `description` VARCHAR(200) NOT NULL,
+  `course_id` INT NOT NULL,
   PRIMARY KEY (`id`),
--- TODO: Yara - no capital letters in names should be small (id_unique)
-  UNIQUE INDEX `id_UNIQUE` (`id` ASC),
-  -- TODO: Yara - columns names should be small char with underscore (fk_reference_course_idx)
-  CONSTRAINT `fk-course-section-course`
-    FOREIGN KEY (`id`)
+  UNIQUE INDEX `id_unique` (`id` ASC),
+  INDEX `fk_course_section_course_idx` (`course_id` ASC),
+  CONSTRAINT `fk_course_section_course`
+    FOREIGN KEY (`course_id`)
     REFERENCES `dorrar`.`course` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
-
-ALTER TABLE `dorrar`.`course-section`
-DROP FOREIGN KEY `fk-course-section-course`;
-ALTER TABLE `dorrar`.`course-section`
-ADD COLUMN `course-id` INT NOT NULL AFTER `description`,
-ADD INDEX `fk-course-section-course_idx` (`course-id` ASC),
-DROP PRIMARY KEY;
-ALTER TABLE `dorrar`.`course-section`
-ADD CONSTRAINT `fk-course-section-course`
-  FOREIGN KEY (`course-id`)
-  REFERENCES `dorrar`.`course` (`id`)
-  ON DELETE NO ACTION
-  ON UPDATE NO ACTION;
 
 -- End Yara Create new Course Section

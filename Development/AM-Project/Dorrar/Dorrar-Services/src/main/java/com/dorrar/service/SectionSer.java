@@ -1,22 +1,26 @@
 package com.dorrar.service;
 import com.dorrar.model.SectionData;
 import com.dorrar.repository.SectionRep;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class SectionSer {
 
-    private SectionRep repository ;
-    public void sectionList (ArrayList<SectionData> sec ){
-        for (int i =1 ; i<sec.size() ;i++ )
-        {
+    @Autowired
+    SectionRep repository ;
 
-//            this.repository.insertNewSection(sec);
-            System.out.print("data inserted");
+    public void insertCourseSection (int courseID , List<SectionData> sections )
+    {
+
+        for(SectionData section : sections)
+
+        {
+            this.repository.insertCourseSection(courseID ,section);
 
         }
+
 
     }
 

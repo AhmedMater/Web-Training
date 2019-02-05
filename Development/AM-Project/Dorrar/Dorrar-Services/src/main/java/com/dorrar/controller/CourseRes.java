@@ -1,8 +1,11 @@
 package com.dorrar.controller;
 
+import com.dorrar.CourseData;
 import com.dorrar.data.CorRefType;
 import com.dorrar.data.CourseReference;
 import com.dorrar.repository.ReferenceRep;
+import com.dorrar.repository.SectionRep;
+import com.dorrar.service.SectionSer;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.ws.rs.*;
@@ -27,8 +30,18 @@ public class CourseRes {
 
     }
 
-    //TODO: Yara your service will be here instead of SectionRes
-    //TODO: Yara Path /{courseID}/section
+
+    @Autowired
+    private SectionSer service ;
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Path("/{courseID}/section")
+    public void addCourseSections (@PathParam("courseID") int courseID ,CourseData data) {
+        System.out.print("Data Recieved Sucessfully");
+        System.out.print(data.toString());
+        this.service.insertCourseSection(courseID,data.getSection());
+    }
+
 
 
     @GET
@@ -45,7 +58,8 @@ public class CourseRes {
 
         return list;
 
-
     }
+
+
 
 }
