@@ -13,8 +13,8 @@
           <form [formGroup]="formData">
 
             <!--TODO: Use Dirty with invalid in the ngClass Condition-->
-            <div class="row"><div class="form-group col-md-9">
-              <!--[ngClass]="{'has-error has-feedback':formData.get('ReferenceName').invalid}">-->
+            <div class="row"><div class="form-group col-md-9"
+              [ngClass]="{'has-error has-feedback':formData.get('ReferenceName').invalid}">
               <label for="referenceName">Reference Name</label>
               <input type="text" class="form-control" id="referenceName" formControlName="referenceName"
                      placeholder="Enter referencename">

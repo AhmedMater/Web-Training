@@ -4,6 +4,7 @@ import com.dorrar.CourseData;
 import com.dorrar.data.CorRefType;
 import com.dorrar.data.CourseReference;
 import com.dorrar.repository.ReferenceRep;
+import com.dorrar.service.CourseSer;
 import com.dorrar.repository.SectionRep;
 import com.dorrar.service.SectionSer;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,24 +16,24 @@ import java.util.ArrayList;
 //TODO: Hala Class name should be CourseRes
 public class CourseRes {
 @Autowired
-    private ReferenceRep repository;
+    private CourseSer service;
     @POST
     //TODO: Hala Path should be /{courseID}/reference
-    @Path("/reference")
+    @Path("/{courseID}/reference")
     @Consumes(MediaType.APPLICATION_JSON)
     //TODO: use Course Data Class as payload instead of Course Reference
     //TODO: rename Function to be addCourseReferences
-    public void reference(CourseReference data) {
+    public void reference(@PathParam("courseID") int course_id, CourseData data) {
         System.out.println("recieved is success");
         System.out.println(data.toString());
-        this.repository.insertNewCourse(data);
+        this.service.insertCourseRef(course_id,data.getReference());
 
 
     }
 
 
     @Autowired
-    private SectionSer service ;
+    private SectionSer sectionService ;
 
 
     @POST
@@ -41,7 +42,7 @@ public class CourseRes {
     public void addCourseSections (@PathParam("courseID") int courseID ,CourseData data) {
         System.out.print("Data Recieved Sucessfully");
         System.out.print(data.toString());
-        this.service.insertCourseSections(courseID,data.getSection());
+        this.sectionService.insertCourseSections(courseID,data.getSection());
     }
 
 
