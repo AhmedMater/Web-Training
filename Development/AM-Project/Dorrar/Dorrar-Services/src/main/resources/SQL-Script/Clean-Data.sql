@@ -9,3 +9,5 @@
 -- INSERT INTO `dorrar`.`course` (`id`) VALUES ('5');
 -- INSERT INTO `dorrar`.`course` (`id`) VALUES ('6');
 -- INSERT INTO `dorrar`.`course` (`id`) VALUES ('7');
+INSERT INTO `dorrar`.`ref_type` (`id`, `label_en`) VALUES ('1', 'Course');
+INSERT INTO `dorrar`.`ref_type` (`id`, `label_en`) VALUES ('2', 'Book');
