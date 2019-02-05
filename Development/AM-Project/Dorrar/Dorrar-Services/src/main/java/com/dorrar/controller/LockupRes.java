@@ -10,6 +10,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import java.util.ArrayList;
 
+//TODO: Hala -  This should have Path: 'lookup'
 public class LockupRes {
 
     @GET
