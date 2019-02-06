@@ -18,8 +18,8 @@ public class JerseyConfig extends ResourceConfig {
         register(CORSFilter.class);
         register(UserRes.class);
         register(CourseRes.class);
-        register(SecurityManager.class);
-        register(UserRowMapper.class);
+//        register(SecurityManager.class);
+//        register(UserRowMapper.class);
         register(SecurityRes.class);
     }
 
