@@ -39,7 +39,7 @@ export class CreateReferenceComponent implements OnInit {
     //TODO: Hala - If the names are large we use abbreviation reference -> ref
 
 
-    this.courseService.saveCorReferences().subscribe(
+    this.courseService.findCorRefTypes().subscribe(
       res => {
         this.refTypes = res;
         console.log(this.refTypes);
