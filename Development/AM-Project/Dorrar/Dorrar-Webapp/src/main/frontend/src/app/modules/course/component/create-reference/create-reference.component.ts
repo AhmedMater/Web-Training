@@ -1,5 +1,5 @@
 import {Component, OnInit} from "@angular/core";
-import {FormBuilder, FormGroup} from "@angular/forms";
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {CourseService} from "../../shared/course.service";
 
 import {CorRefType} from "../../shared/data/cor-ref-type-dto.data";
@@ -16,7 +16,17 @@ import {CourseReference} from "../../shared/data/course-ref-dto.data";
 export class CreateReferenceComponent implements OnInit {
   dataList: CourseReference[] = [];
   //TODO: Hala - use the initialize here instead of ngOnInit
-  formData: FormGroup;
+  formData:FormGroup = this.formBuilder.group({
+    refName: [  '' , [Validators.required,Validators.maxLength(15)]],
+    //TODO: Hala - this should be refTypeID
+    refTypeID: [  '' , [Validators.required]],
+    refUrl: [  '' , [Validators.required]],
+    //TODO: Hala - There is no need for items
+    // items: this.formBuilder.array([])
+
+  });
+
+
 
   constructor(private formBuilder: FormBuilder,
               private  courseService: CourseService) {
@@ -27,17 +37,9 @@ export class CreateReferenceComponent implements OnInit {
 
     //TODO: Hala - Add Form Validations
     //TODO: Hala - If the names are large we use abbreviation reference -> ref
-    this.formData = this.formBuilder.group({
-      referenceName: null,
-      //TODO: Hala - this should be refTypeID
-      referenceType: null,
-      referenceUrl: null,
-      //TODO: Hala - There is no need for items
-      items: this.formBuilder.array([])
 
-    });
 
-    this.courseService.findCorRefTypes().subscribe(
+    this.courseService.saveCorReferences().subscribe(
       res => {
         this.refTypes = res;
         console.log(this.refTypes);
@@ -50,7 +52,7 @@ export class CreateReferenceComponent implements OnInit {
     let data: CourseData = new CourseData();
     data.reference = this.dataList;
     console.log(data);
-    this.courseService.references(data).subscribe(
+    this.courseService.saveCorReferences(data).subscribe(
       res => {
         console.log('request succed')
       },
@@ -81,16 +83,16 @@ export class CreateReferenceComponent implements OnInit {
 
   addItem(): void {
     let data: CourseReference = new CourseReference();
-    data.referenceName = this.formData.get('referenceName').value;
-    data.referenceType = this.formData.get('referenceType').value;
-    data.referenceUrl = this.formData.get('referenceUrl').value;
+    data.refName = this.formData.get('refName').value;
+    data.refTypeID = this.formData.get('refTypeID').value;
+    data.refUrl = this.formData.get('refUrl').value;
 
     this.dataList.push(data);
 
     this.formData.reset({
-      "referenceName": '',
-      "referenceType": '',
-      "referenceUrl": ''
+      "refName": '',
+      "refTypeID": '',
+      "refUrl": ''
     });
     this.isEditMode=false;
     // this.formData.get('referenceName').reset('Enter new Value');
@@ -100,8 +102,8 @@ export class CreateReferenceComponent implements OnInit {
     this.formData.reset();
   }
   // TODO: Hala - Use Index instead of Total Row Object
-  removerow(row):void{
-    let index=this.dataList.indexOf(row);
+  removerow(index):void{
+    // let index=this.dataList.indexOf(row);
     if(index!==-1){
       this.dataList.splice(index,1)
     }
@@ -110,11 +112,11 @@ export class CreateReferenceComponent implements OnInit {
   }
 
   // TODO: Hala - Use Index instead of Total Row Object
-  onEditRow(row):void{
-    var index=this.dataList.indexOf(row);
-    this.formData.get('referenceName').reset(this.dataList[0].referenceName);
-    this.formData.get('referenceType').reset(this.dataList[0].referenceType);
-    this.formData.get('referenceUrl').reset(this.dataList[0].referenceUrl);
+  onEditRow(index):void{
+    // var index=this.dataList.indexOf(row);
+    this.formData.get('refName').reset(this.dataList[0].refName);
+    this.formData.get('refTypeID').reset(this.dataList[0].refTypeID);
+    this.formData.get('refUrl').reset(this.dataList[0].refUrl);
     if(index!==-1){
       this.dataList.splice(index,1)
     }

@@ -2,43 +2,43 @@ package com.dorrar.data;
 
 public class CourseReference {
     //TODO: Change attribute names to be camelcase
-    private String referenceName;
-    private  String referenceType;
-    private String referenceUrl;
+    private String refName;
+    private  String refTypeID;
+    private String refUrl;
 
     public CourseReference() {
     }
 
-    public String getreferenceName() {
-        return referenceName;
+    public String getRefName() {
+        return refName;
     }
 
-    public void setreferenceName(String referenceName) {
-        referenceName = referenceName;
+    public void setRefName(String refName) {
+        this.refName = refName;
     }
 
-    public String getreferenceType() {
-        return referenceType;
+    public String getRefTypeID() {
+        return refTypeID;
     }
 
-    public void setreferenceType(String referenceID) {
-        referenceType = referenceType;
+    public void setRefTypeID(String refTypeID) {
+        this.refTypeID = refTypeID;
     }
 
-    public String getreferenceUrl() {
-        return referenceUrl;
+    public String getRefUrl() {
+        return refUrl;
     }
 
-    public void setreferenceUrl(String referenceUrl) {
-        referenceUrl = referenceUrl;
+    public void setRefUrl(String refUrl) {
+        this.refUrl = refUrl;
     }
 
     @Override
     public String toString() {
         return "CourseReference{" +
-                "referenceName='" + referenceName + '\'' +
-                ", referenceID='" + referenceType + '\'' +
-                ", referenceUrl='" + referenceUrl + '\'' +
+                "refName='" + refName + '\'' +
+                ", refTypeID='" + refTypeID + '\'' +
+                ", refUrl='" + refUrl + '\'' +
                 '}';
     }
 }

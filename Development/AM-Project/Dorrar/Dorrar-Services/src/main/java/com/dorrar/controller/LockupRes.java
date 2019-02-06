@@ -1,5 +1,6 @@
 package com.dorrar.controller;
 
+import com.dorrar.data.CorRefType;
 import com.dorrar.model.College;
 import com.dorrar.model.Country;
 import com.dorrar.model.University;
@@ -48,5 +49,18 @@ public class LockupRes {
         countryArrayList.add(country2);
         return countryArrayList;
     }
+    //TODO: Hala - Select CorRefType from Database instead of Hard coded values
+    //TODO: Hala - Move this function to Lookup Res
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    //TODO: Hala - Path to corRefType
+    @Path("/findData")
+    public ArrayList<CorRefType> findData() {
+        ArrayList<CorRefType> list = new ArrayList<CorRefType>();
+        list.add(new CorRefType(1, "Course"));
+        list.add(new CorRefType(2, "Book"));
 
+        return list;
+
+    }
 }

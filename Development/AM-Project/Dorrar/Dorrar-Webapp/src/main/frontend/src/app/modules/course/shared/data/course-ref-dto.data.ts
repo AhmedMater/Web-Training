@@ -3,9 +3,9 @@
 export class CourseReference {
 
   //TODO: Hala - use small names instead of large names
-  referenceName: string;
+  refName: string;
   //TODO: Hala - rename to refTypeID
-  referenceType: number;
-  referenceUrl: string;
+  refTypeID: number;
+  refUrl: string;
 
 }
