@@ -1,5 +1,5 @@
 import {CourseReference} from "./course-ref-dto.data";
-import {sectionData} from "../../../section/shared/data/section-data";
+import {SectionData} from "../../../section/shared/data/section-data";
 
 
 //TODO: Youssef - should be CourseDTO-->
@@ -8,6 +8,6 @@ export class CourseData {
   reference: CourseReference[] = [];
 
   //TODO: Yara - should be sections-->
-  section : sectionData[] = [];
+  sections : SectionData[] = [];
 }
 

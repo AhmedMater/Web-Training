@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {sectionData} from "../../shared/data/section-data";
+import {SectionData} from "../../shared/data/section-data";
 import {FormBuilder, Validators} from "@angular/forms";
 import {SectionsService} from "../../shared/sections.service";
 import {CourseData} from "../../../course/shared/data/course-data-dto.data";
+import {ActivatedRoute} from "@angular/router";
 
 
 @Component({
@@ -14,16 +15,18 @@ import {CourseData} from "../../../course/shared/data/course-data-dto.data";
 })
 export class CreateSectionComponent implements OnInit {
 
-  dataList: sectionData[] = [];
-  formData= this.formBuilder.group({
+  dataList: SectionData[] = [];
+  formData = this.formBuilder.group({
 
-    name : [  '' , [Validators.required,Validators.maxLength(15)]],
-    description :[ '' , Validators.required ],
+    name: ['', [Validators.required, Validators.maxLength(15)]],
+    description: ['', Validators.required],
   });
 
+  courseID : string ;
 
-  constructor(private formBuilder : FormBuilder , private userService : SectionsService) {
+  constructor(private formBuilder: FormBuilder, private userService: SectionsService , private route : ActivatedRoute) {
 
+    this.route.params.subscribe(params => {this.courseID = params.get("courseID")})
 
   }
 
@@ -32,51 +35,54 @@ export class CreateSectionComponent implements OnInit {
   }
 
   addRow(): void {
-    let data: sectionData = new sectionData();
+    let data: SectionData = new SectionData();
     data.name = this.formData.get('name').value;
     data.description = this.formData.get('description').value;
     this.dataList.push(data);
     this.formData.reset();
-    this.isEditMode=false;
+    this.isEditMode = false;
   }
-  reset():void {
+
+  reset(): void {
     this.formData.reset();
   }
 
-  isEditMode : boolean = false ;
-  // TODO: Yara - Use Index instead of Total Row Object
-  editRow(row):void{
+  isEditMode: boolean = false;
 
-    let index = this.dataList.indexOf(row);
+  editRow(index): void {
+    // TODO: Yara - Use Index instead of Total Row Object
     this.formData.get('name').reset(this.dataList[0].name);
     this.formData.get('description').reset(this.dataList[0].description);
-    if (index !== -1) {
-      this.dataList.splice(index, 1);
-      this.isEditMode = true;
-    }
+    this.dataList.splice(index, 1);
+    this.isEditMode = true;
   };
-  saveData()
-  {
-    let data : CourseData = new CourseData();
-    data.section = this.dataList;
+
+  saveData() {
+    let data: CourseData = new CourseData();
+    data.sections = this.dataList;
     console.log(data);
 
     this.userService.addNewSections(data).subscribe(
-      response =>{console.log('request sucessed') ;},
-      err=>{console.log(err) ;}
-
+      response => {
+        console.log('request sucessed');
+      },
+      err => {
+        console.log(err);
+      }
     );
 
   };
 
   // TODO: Yara - Use Index instead of Total Row Object
-  removeRow(row){
-    let index = this.dataList.indexOf(row);
+  removeRow(index) {
+    //let index = this.dataList.indexOf(row);
     if (index !== -1) {
+      //let index = this.dataList.indexOf(row);
       this.dataList.splice(index, 1);
 
-    }};
+    }
 
 
 
+  }
 }

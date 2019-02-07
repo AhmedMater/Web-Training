@@ -9,7 +9,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class SectionRep {
     private JdbcTemplate jdbc ;
-
     @Autowired
     public SectionRep(JdbcTemplate jdbc)
     {
@@ -19,9 +18,9 @@ public class SectionRep {
     //TODO: Function Argument is SectionData
     public void insertCourseSection(int courseID , SectionData data){
 
-        String sql = "INSERT INTO sections ( section_name , description , courseID ) value (?,?,?)";
+        String sql = "INSERT INTO course_section ( section_name , description , course_id ) value (?,?,?)";
 
-        this.jdbc.update(sql ,data.getName(),data.getDescription() ,  courseID);
+        this.jdbc.update(sql ,data.getName(),data.getDescription() , courseID);
 
     }
 
