@@ -1,5 +1,5 @@
 import {CourseReference} from "./course-ref-dto.data";
-import {SectionData} from "../../../section/shared/data/section-data";
+import {SectionData} from "./section-data";
 
 
 //TODO: Youssef - rename class to CourseDTO

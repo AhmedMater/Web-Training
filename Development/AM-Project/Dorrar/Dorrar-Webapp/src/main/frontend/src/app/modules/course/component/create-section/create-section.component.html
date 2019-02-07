@@ -1,0 +1,68 @@
+<form [formGroup]="formData">
+  <div class="row">
+    <div class="form-group col-md-12" [ngClass]="{'has-error':formData.get('name').invalid && formData.get('name').dirty ,
+       'has-success':formData.get('name').valid && formData.get('name').dirty }">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" formControlName="name" placeholder="Enter Name">
+      <small class="form-text text-muted" *ngIf="formData.get('name').hasError('required')&&
+          formData.get('name').dirty"> This field is required
+      </small>
+      <small class="form-text text-muted" *ngIf="formData.get('name').hasError('maxlength')"> Must be less than 15
+      </small>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="form-group col-md-12">
+      <label for="description">Description</label>
+      <textarea class="form-control" id="description" formControlName="description" rows="4">
+          </textarea>
+    </div>
+  </div>
+</form>
+
+
+<!-- TODO: Yara - Use Capital Letters for Names-->
+<button class=" btn btn-danger pull-right ml-2" *ngIf="!isEditMode " (click)="reset()">Clear</button>
+<!-- TODO: Yara - Use Capital Letters for Names-->
+<button type="submit" class="btn btn-success  pull-right ml-2" *ngIf="!isEditMode" (click)="addRow()">Add</button>
+<button class=" btn btn-danger pull-right ml-2" *ngIf="isEditMode" (click)="reset()">Discard</button>
+<button type="submit" class="btn btn-success  pull-right ml-2" *ngIf="isEditMode" (click)="addRow()">Save</button>
+
+
+<table class="table table-bordered">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Section Name</th>
+    <!-- TODO: Yara - Description instead of Descriptions-->
+    <th scope="col">Description</th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let item of dataList; index as i">
+    <td>{{i+1}}</td>
+    <td>{{item.name}}</td>
+    <td>{{item.description}}</td>
+    <td>
+
+      <!-- TODO: Yara - Use Index instead of Total Row Object-->
+      <span class="fa fa-edit fa-2x" aria-hidden="true" (click)='editRow(i)' [hidden]="isEditMode"></span>
+      <!-- TODO: Yara - Use Index instead of Total Row Object-->
+      <span class="fa fa-trash fa-2x pull-right " aria-hidden="true" (click)='removeRow(i)'></span>
+
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+<!-- TODO: Yara - Wrong spelling-->
+<button class="btn btn-danger pull-right ml-2">Discard</button>
+<button class="btn  btn-success pull-right ml-2" (click)="saveData()">Save</button>
+
+
+
+
+
