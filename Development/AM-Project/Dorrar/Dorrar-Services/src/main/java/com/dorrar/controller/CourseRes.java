@@ -14,12 +14,12 @@ import javax.ws.rs.core.MediaType;
 import java.util.ArrayList;
 @Path("/course")
 public class CourseRes {
-
-
-    //TODO: Hala - Use Constructor Injection
     private CourseSer service;
+    private SectionSer sectionService ;
+
     @Autowired
-    public CourseRes(SectionSer sectionService) {
+    public CourseRes(CourseSer service,    SectionSer sectionService) {
+        this.service = service;
         this.sectionService = sectionService ;
     }
 
@@ -28,19 +28,13 @@ public class CourseRes {
     @POST
     @Path("/{courseID}/reference")
     @Consumes(MediaType.APPLICATION_JSON)
-    //TODO: rename Function to be addCourseReferences
-    public void addCourseReferences(@PathParam("courseID") int course_id, CourseData data) {
+    public void addCourseReferences(@PathParam("courseID") int courseID, CourseData data) {
         System.out.println("recieved is success");
         System.out.println(data.toString());
-        this.service.insertCourseRef(course_id,data.getReference());
+        this.service.insertCourseRefs(courseID,data.getReference());
 
 
     }
-
-
-    //TODO: Yara - Use Constructor Injection
-
-    private SectionSer sectionService ;
 
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
@@ -52,20 +46,6 @@ public class CourseRes {
     }
 
 
-    //TODO: Hala - Select CorRefType from Database instead of Hard coded values
-    //TODO: Hala - Move this function to Lookup Res
-    @GET
-    @Produces(MediaType.APPLICATION_JSON)
-    //TODO: Hala - Path to corRefType
-    @Path("/findData")
-    public ArrayList<CorRefType> findData() {
-        ArrayList<CorRefType> list = new ArrayList<CorRefType>();
-        list.add(new CorRefType(1, "Course"));
-        list.add(new CorRefType(2, "Book"));
-
-        return list;
-
-    }
 
 
 

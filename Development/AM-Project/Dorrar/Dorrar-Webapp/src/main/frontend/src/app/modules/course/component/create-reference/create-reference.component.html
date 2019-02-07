@@ -22,6 +22,7 @@
               <small class="form-text text-muted" *ngIf="formData.get('refName').hasError('maxlength')"> Must be less than 15
               </small>
 
+              </div>
 
               <div class="form-group col-md-3"
                 [ngClass]="{'has-error has-feedback':formData.get('refTypeID').invalid&& formData.get('refTypeID').dirty}">
@@ -37,7 +38,6 @@
                 </small>
 
               </div>
-            </div>
             </div>
             <div class="row">
               <div class="form-group col-md-12 "

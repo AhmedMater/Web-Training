@@ -1,8 +1,10 @@
 package com.dorrar.data;
 
-public class CorRefType {
-    int id;
-    String labelEN;
+import java.io.Serializable;
+
+public class CorRefType  implements Serializable {
+    private  int id;
+   private String labelEN;
 
     public CorRefType() {
     }

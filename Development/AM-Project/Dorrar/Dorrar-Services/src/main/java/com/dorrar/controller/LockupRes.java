@@ -4,15 +4,26 @@ import com.dorrar.data.CorRefType;
 import com.dorrar.model.College;
 import com.dorrar.model.Country;
 import com.dorrar.model.University;
+import com.dorrar.repository.ReferenceRep;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import java.util.ArrayList;
+import java.util.List;
 
 //TODO: Hala -  This should have Path: 'lookup'
+@Path("/lookup")
 public class LockupRes {
+
+    private ReferenceRep repositry;
+
+    @Autowired
+    public LockupRes(ReferenceRep repositry) {
+        this.repositry = repositry;
+    }
 
     @GET
     @Path("/colleges")
@@ -53,12 +64,11 @@ public class LockupRes {
     //TODO: Hala - Move this function to Lookup Res
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    //TODO: Hala - Path to corRefType
-    @Path("/findData")
-    public ArrayList<CorRefType> findData() {
-        ArrayList<CorRefType> list = new ArrayList<CorRefType>();
-        list.add(new CorRefType(1, "Course"));
-        list.add(new CorRefType(2, "Book"));
+
+    @Path("/corRefType")
+    public List<CorRefType> findData() {
+        List<CorRefType> list =this.repositry.findRefType();
+
 
         return list;
 

@@ -1,5 +1,6 @@
 package com.dorrar.configuration;
 
+import com.dorrar.controller.*;
 import com.dorrar.controller.CourseRes;
 import com.dorrar.controller.DetailsRes;
 import com.dorrar.controller.SecurityRes;
@@ -19,6 +20,7 @@ public class JerseyConfig extends ResourceConfig {
         register(CORSFilter.class);
         register(UserRes.class);
         register(CourseRes.class);
+        register(LockupRes.class);
         register(DetailsRes.class);
 //        register(SecurityManager.class);
 //        register(UserRowMapper.class);
