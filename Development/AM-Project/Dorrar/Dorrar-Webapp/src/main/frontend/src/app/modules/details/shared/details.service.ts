@@ -10,14 +10,18 @@ export class DetailsService {
   constructor(private http : HttpClient) {
   }
 
-  //TODO: use CourseDTO instead
+  //TODO: Youssef - use CourseData instead of CourseDetailsData
+  //TODO: Youssef - creat is worng spelling
   creatNewCourse(data : CourseDetailsData){
     return this.http.post("http://localhost:8080/api/course/new", data);
 
   }
+
+  //TODO: Youssef - Return CorTypeList
   findType(){
     return this.http.get<OptionsDropList[]>("http://localhost:8080/api/course/findType");
   }
+  //TODO: Youssef - Return CorLevelList
   findLevel(){
     return this.http.get<LevelDropList[]>("http://localhost:8080/api/course/findLevel")
   }

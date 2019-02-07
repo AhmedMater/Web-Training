@@ -39,7 +39,9 @@
                  [ngClass]= "{'has-error has-feedback' : formData.get('Level').invalid && (formData.get('Level').touched ||formData.get('Level').dirty)}">
               <label class="font-weight-bold">Level :</label>
               <select  class="form-control " formControlName="Level">
-                <option class="mt-auto" *ngFor="let level of levelList">{{type.levelLabel}}</option>
+                <option class="mt-auto"
+                        *ngFor="let level of levelList"
+                        [ngValue]="level.levelId">{{type.levelLabel}}</option>
 
               </select>
               <small  class="form-text text-muted">Level Must be required.</small>

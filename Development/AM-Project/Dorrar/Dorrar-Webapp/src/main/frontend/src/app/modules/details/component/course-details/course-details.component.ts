@@ -10,25 +10,31 @@ import {LevelDropList} from "../../shared/data/LevelDropList";
   templateUrl: './course-details.component.html',
   styleUrls: ['./course-details.component.scss']
 })
+//TODO: Youssef - This Component should be in course/components/main-details
 export class CourseDetailsComponent implements OnInit {
 
 
-  //TODO: User camelcase for Formcontrol names
+  //TODO: Youssef - User camelcase for Formcontrol names
   formData: FormGroup = this.formBuilder.group({
     Name: [null, [Validators.required, Validators.maxLength(15)]],
-    Duration: [null, [Validators.required, Validators.min(1)]], //TODO: no negative values
-    Date: [null, Validators.required], //TODO: should be in Future
-    Type: [null, Validators.required],
-    Level: [null, Validators.required],
-    Description: [null, Validators.maxLength(200)] //TODO: max 200 Char
+    Duration: [null, [Validators.required, Validators.min(1)]],
+    Date: [null, Validators.required], //TODO: Youssef - should be in Future
 
-  })
+    //TODO: Youssef - should be corTypeID
+    Type: [null, Validators.required],
+    //TODO: Youssef - should be corLevelID
+    Level: [null, Validators.required],
+    Description: [null, Validators.maxLength(200)]
+
+  });
 
   constructor(private formBuilder: FormBuilder,
               private details: DetailsService) {
   }
 
+  //TODO: Youssef - should be corTypes
   optionList: OptionsDropList[] = [];
+  //TODO: Youssef - should be corLevels
   levelList : LevelDropList [] = [];
   ngOnInit() {
     this.details.findType().subscribe(
@@ -43,6 +49,7 @@ export class CourseDetailsComponent implements OnInit {
     );
   }
 
+  //TODO: Youssef - creat is worng spelling
   creatNewCourse() {
 
     let data: CourseDetailsData = new CourseDetailsData();

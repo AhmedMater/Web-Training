@@ -2,7 +2,6 @@ package com.dorrar.model;
 
 public class Action {
     private int id ;
-    //TODO: change En to EN
     private String labelEN;
 
 

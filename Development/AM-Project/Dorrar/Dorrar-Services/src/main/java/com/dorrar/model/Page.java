@@ -5,7 +5,6 @@ import java.util.List;
 public class Page {
 
     private int id ;
-    //TODO: change En to EN
     private String labelEN;
     private List<Action> actionList;
 
