@@ -8,6 +8,6 @@ export class CourseData {
   reference: CourseReference[] = [];
 
   //TODO: Yara - should be sections-->
-  sections : SectionData[] = [];
+  section : SectionData[] = [];
 }
 

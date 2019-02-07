@@ -22,11 +22,11 @@ export class CreateSectionComponent implements OnInit {
     description: ['', Validators.required],
   });
 
-  courseID : string ;
+ // courseID : string ;
 
-  constructor(private formBuilder: FormBuilder, private userService: SectionsService , private route : ActivatedRoute) {
+  constructor(private formBuilder: FormBuilder, private userService: SectionsService) {
 
-    this.route.params.subscribe(params => {this.courseID = params.get("courseID")})
+    //this.route.params.subscribe(params => {this.courseID = params.get("courseID")})
 
   }
 
@@ -59,7 +59,7 @@ export class CreateSectionComponent implements OnInit {
 
   saveData() {
     let data: CourseData = new CourseData();
-    data.sections = this.dataList;
+    data.section = this.dataList;
     console.log(data);
 
     this.userService.addNewSections(data).subscribe(

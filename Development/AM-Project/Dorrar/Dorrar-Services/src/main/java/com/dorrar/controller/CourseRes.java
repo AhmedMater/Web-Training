@@ -19,7 +19,8 @@ public class CourseRes {
     //TODO: Hala - Use Constructor Injection
     private CourseSer service;
     @Autowired
-    public CourseRes() {
+    public CourseRes(SectionSer sectionService) {
+        this.sectionService = sectionService ;
     }
 
 

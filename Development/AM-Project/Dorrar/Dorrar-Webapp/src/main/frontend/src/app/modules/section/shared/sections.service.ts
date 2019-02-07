@@ -15,7 +15,7 @@ export class  SectionsService {
   //TODO: Yara - Use App_base_url such as in User Service
 
   addNewSections( data : CourseData) {
-    return this.http.post(this.BASE_URL + "/1/sections", data);
+    return this.http.post( this.BASE_URL +"/1/section", data);
 
   }
 }
