@@ -17,6 +17,7 @@ import java.util.Date;
  * Created by ahmed.motair on 9/26/2017.
  */
 @Service
+//TODO: Aya - This Should be in services folder
 public class SecurityManager {
 
     // Generated at https://www.random.org/strings

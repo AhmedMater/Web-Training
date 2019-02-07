@@ -15,10 +15,8 @@ import {CourseReference} from "../../shared/data/course-ref-dto.data";
 })
 export class CreateReferenceComponent implements OnInit {
   dataList: CourseReference[] = [];
-  //TODO: Hala - use the initialize here instead of ngOnInit
   formData:FormGroup = this.formBuilder.group({
     refName: [  '' , [Validators.required,Validators.maxLength(15)]],
-    //TODO: Hala - this should be refTypeID
     refTypeID: [  '' , [Validators.required]],
     refUrl: [  '' , [Validators.required]],
     //TODO: Hala - There is no need for items
@@ -35,8 +33,6 @@ export class CreateReferenceComponent implements OnInit {
   refTypes: CorRefType[] = [];
   ngOnInit() {
 
-    //TODO: Hala - Add Form Validations
-    //TODO: Hala - If the names are large we use abbreviation reference -> ref
 
 
     this.courseService.findCorRefTypes().subscribe(
@@ -101,7 +97,7 @@ export class CreateReferenceComponent implements OnInit {
   clear(): void {
     this.formData.reset();
   }
-  // TODO: Hala - Use Index instead of Total Row Object
+  // TODO: Hala - function name should be Camelcase
   removerow(index):void{
     // let index=this.dataList.indexOf(row);
     if(index!==-1){
@@ -111,7 +107,6 @@ export class CreateReferenceComponent implements OnInit {
 
   }
 
-  // TODO: Hala - Use Index instead of Total Row Object
   onEditRow(index):void{
     // var index=this.dataList.indexOf(row);
     this.formData.get('refName').reset(this.dataList[0].refName);

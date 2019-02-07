@@ -15,7 +15,7 @@ import java.util.ArrayList;
 @Path("/course")
 public class CourseRes {
 
-    //TODO: Hala - Use Constructor Injection
+    //TODO: Hala - Use Constructor Injection - Same as in ReferenceRep
 
     private CourseSer service;
     @Autowired
@@ -28,7 +28,6 @@ public class CourseRes {
     @POST
     @Path("/{courseID}/addCourseReferences")
     @Consumes(MediaType.APPLICATION_JSON)
-    //TODO: rename Function to be addCourseReferences
     public void addCourseReferences(@PathParam("courseID") int course_id, CourseData data) {
         System.out.println("recieved is success");
         System.out.println(data.toString());

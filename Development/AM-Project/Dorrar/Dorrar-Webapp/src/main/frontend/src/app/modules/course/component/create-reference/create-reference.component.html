@@ -1,3 +1,4 @@
+<!--TODO: Hala - There is no Need for Cards here - Check the HTML of the template-->
 <div class="container-fluid">
   <!--<h4 class="page-title">Forms</h4>-->
   <div class=" row">
@@ -8,8 +9,6 @@
         <div class="card-body">
           <form [formGroup]="formData">
 
-            <!--TODO: Hala - Use Dirty with invalid in the ngClass Condition-->
-            <!--TODO: Hala - placeholder should be Enter Reference Name-->
             <div class="row">
               <div class="form-group col-md-9"
               [ngClass]="{'has-error has-feedback':formData.get('refName').invalid && formData.get('refName').dirty}">
@@ -27,7 +26,6 @@
               <div class="form-group col-md-3"
                 [ngClass]="{'has-error has-feedback':formData.get('refTypeID').invalid&& formData.get('refTypeID').dirty}">
 
-                <!--TODO: Hala - Use Space in the Label-->
                 <label for="refTypeID">Reference Type</label>
                 <select class="form-control" id="refTypeID" formControlName="refTypeID">
                   <option *ngFor="let ref of refTypes" [ngValue]="ref.id">{{ref.labelEN}}</option>
@@ -55,14 +53,11 @@
             </div>
 
           </form>
-          <!--TODO: Hala - Use Capital Letter for Names Change add to Add-->
+
           <button type="submit" class="btn btn-lg btn-success mr-1 btn-sm pull-right mg-l-15" *ngIf="!isEditMode" (click)="addItem()">Add</button>
-          <!--TODO: Hala - Use Capital Letter for Names -->
           <button class=" btn btn-danger ml-1 btn-sm pull-right" *ngIf="!isEditMode" (click)="clear()">Clear</button>
 
-          <!--TODO: Hala - Use Capital Letter for Names -->
           <button type="submit" class="btn btn-lg btn-success mr-1 btn-sm pull-right mg-l-15" *ngIf="isEditMode" (click)="addItem()">Save</button>
-          <!--TODO: Hala - Use Capital Letter for Names -->
           <button class=" btn btn-danger ml-1 btn-sm pull-right" *ngIf="isEditMode" (click)="clear()">Discard</button>
 
 
@@ -87,10 +82,7 @@
               <td>{{item.refUrl}}</td>
 
 
-              <!-- TODO: Hala - Use Index instead of Total Row Object-->
               <td><i class="fa fa-edit"  [hidden]="isEditMode" (click)="onEditRow(i)"></i></td>
-
-              <!-- TODO: Hala - Use Index instead of Total Row Object-->
               <td><i class="fa fa-trash"  (click)='removerow(i)'></i></td>
 
             </tr>
@@ -101,7 +93,6 @@
 
 
           <div class="card-action">
-            <!-- TODO: Hala - Use Capital Letters for Names-->
             <button class="btn btn-lg btn-success mr-1 btn-sm pull-right mg-l-15" (click)="saveCorReferences()">Next</button>
             <button class="btn btn-danger ml-1 btn-sm pull-right" (click)="isclick()">Back</button>
           </div>

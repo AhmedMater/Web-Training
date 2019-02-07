@@ -8,7 +8,6 @@ export class CourseService {
 
   constructor(private http:HttpClient) { }
 
-  //TODO: Hala - Rename function to saveCorReferences
   saveCorReferences(data:CourseData) {
     //TODO: Hala - Use App_base_url such as in User Service
     return this.http.post("http://localhost:8080/api/course/reference", data);

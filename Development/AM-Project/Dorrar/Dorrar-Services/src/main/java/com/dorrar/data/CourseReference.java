@@ -1,7 +1,6 @@
 package com.dorrar.data;
 
 public class CourseReference {
-    //TODO: Change attribute names to be camelcase
     private String refName;
     private  String refTypeID;
     private String refUrl;
