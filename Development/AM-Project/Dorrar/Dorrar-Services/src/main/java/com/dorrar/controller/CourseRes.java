@@ -12,18 +12,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.util.ArrayList;
+
 @Path("/course")
 public class CourseRes {
     private CourseSer service;
     private SectionSer sectionService ;
 
     @Autowired
-    public CourseRes(CourseSer service,    SectionSer sectionService) {
+    public CourseRes(
+            CourseSer service,    
+            SectionSer sectionService) {
         this.service = service;
         this.sectionService = sectionService ;
     }
-
-
 
     @POST
     @Path("/{courseID}/reference")
@@ -32,8 +33,6 @@ public class CourseRes {
         System.out.println("recieved is success");
         System.out.println(data.toString());
         this.service.insertCourseRefs(courseID,data.getReference());
-
-
     }
 
     @POST

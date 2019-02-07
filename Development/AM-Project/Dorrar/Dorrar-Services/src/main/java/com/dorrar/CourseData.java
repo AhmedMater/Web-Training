@@ -6,6 +6,7 @@ import com.dorrar.model.SectionData;
 import java.io.Serializable;
 import java.util.ArrayList;
 
+//TODO: Youssef - Move this to model/course
 public class CourseData implements Serializable {
     ArrayList<CourseReference> reference;
     ArrayList<SectionData> section ;

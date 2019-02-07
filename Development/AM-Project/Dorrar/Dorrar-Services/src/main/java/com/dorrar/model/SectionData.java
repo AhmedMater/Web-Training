@@ -4,9 +4,12 @@ import java.io.Serializable;
 
 
 public class SectionData implements Serializable {
+    //TODO: Yara - These attributes should be private
     String name ;
     String description ;
 
+    //TODO: Yara - Where is the empty Constructor
+    //TODO: Yara - Generate the Setters & Getters
 
     @Override
     public String toString() {

@@ -8,19 +8,25 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.util.ArrayList;
 
+//TODO: Youssef - After Moving the functions Remove this class
 @Path("/course")
 public class DetailsRes {
     @POST
+    //TODO: Youssef - Path should be /mainDetails
     @Path("/new")
     @Consumes(MediaType.APPLICATION_JSON)
+    //TODO: Youssef - move this function to CourseRes
     public void next(detailsData data){
         System.out.printf("success.");
         System.out.printf(data.toString());
 
     }
     @GET
+    //TODO: Youssef - Path should be /corType
     @Path("/findType")
     @Produces(MediaType.APPLICATION_JSON)
+    //TODO: Youssef - move this function to LookupRes
+    //TODO: Youssef - This Function should retreive the Data from Database instead of Hardcoded
     public ArrayList<OptionDropList> findType (){
         ArrayList<OptionDropList> typeList = new ArrayList<>();
         typeList.add(new OptionDropList(1 , "Acadmic"));
@@ -30,8 +36,11 @@ public class DetailsRes {
     }
 
     @GET
+    //TODO: Youssef - Path should be /corLevel
     @Path("/findLevel")
     @Produces(MediaType.APPLICATION_JSON)
+    //TODO: Youssef - move this function to LookupRes
+    //TODO: Youssef - This Function should retreive the Data from Database instead of Hardcoded
     public ArrayList<LevelDropList> findLevel (){
         ArrayList<LevelDropList> levelList = new ArrayList<>();
         levelList.add(new LevelDropList(1 , "Intern"));

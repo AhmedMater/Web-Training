@@ -9,19 +9,17 @@ import java.util.List;
 
 @Service
 public class CourseSer {
-    private ReferenceRep repositry;
+    private ReferenceRep repository;
+
     @Autowired
-    public CourseSer(ReferenceRep repositry) {
-        this.repositry=repositry;
+    public CourseSer(ReferenceRep repository) {
+        this.repository = repository;
     }
 
-    //TODO: Hala - Use Constructor Injection
-
-
-public void insertCourseRefs(int course_id ,List<CourseReference>references){
-    for (CourseReference reference:references) {
-        this.repositry.insertCourseRef(course_id,reference);
+    public void insertCourseRefs(int course_id, List<CourseReference> references) {
+        for (CourseReference reference : references) {
+            this.repository.insertCourseRef(course_id, reference);
+        }
     }
-}
 
 }

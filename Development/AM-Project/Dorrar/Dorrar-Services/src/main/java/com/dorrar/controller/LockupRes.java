@@ -14,7 +14,6 @@ import javax.ws.rs.core.MediaType;
 import java.util.ArrayList;
 import java.util.List;
 
-//TODO: Hala -  This should have Path: 'lookup'
 @Path("/lookup")
 public class LockupRes {
 
@@ -60,17 +59,12 @@ public class LockupRes {
         countryArrayList.add(country2);
         return countryArrayList;
     }
-    //TODO: Hala - Select CorRefType from Database instead of Hard coded values
-    //TODO: Hala - Move this function to Lookup Res
+
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-
     @Path("/corRefType")
     public List<CorRefType> findData() {
         List<CorRefType> list =this.repositry.findRefType();
-
-
         return list;
-
     }
 }

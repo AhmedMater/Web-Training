@@ -22,11 +22,13 @@ public class ReferenceRep {
     }
 
     public void insertCourseRef(int course_id, CourseReference data) {
-        String sql = "INSERT INTO course_reference (course_id   ,ref_type_id,name, url) VALUES(?,?,?,?)";
+        String sql = "INSERT INTO course_reference (course_id, ref_type_id, name, url) " +
+                "VALUES(?,?,?,?)";
         this.jdbc.update(sql, course_id , data.getRefTypeID(),data.getRefName(), data.getRefUrl());
 
     }
 
+    //TODO: Hala - Move this function to LookupRep
 public List<CorRefType> findRefType(){
         String sql="SELECT id,label_en FROM cor_ref_type";
     List<CorRefType> list = this.jdbc.query(sql,new CorRefTypeRM());

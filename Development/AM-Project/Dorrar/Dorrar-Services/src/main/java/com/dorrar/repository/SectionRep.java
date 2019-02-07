@@ -16,11 +16,9 @@ public class SectionRep {
     }
 
     public void insertCourseSection(int courseID , SectionData data){
-
-        String sql = "INSERT INTO course_section ( section_name , description , course_id ) value (?,?,?)";
-
+        String sql = "INSERT INTO course_section ( section_name , description , course_id ) " +
+                "value (?,?,?)";
         this.jdbc.update(sql ,data.getName(),data.getDescription() , courseID);
-
     }
 
 }

@@ -18,10 +18,7 @@ export class CreateReferenceComponent implements OnInit {
   formData:FormGroup = this.formBuilder.group({
     refName: [  '' , [Validators.required,Validators.maxLength(15)]],
     refTypeID: [  '' , [Validators.required]],
-    refUrl: [  '' , [Validators.required]],
-    //TODO: Hala - There is no need for items
-    // items: this.formBuilder.array([])
-
+    refUrl: [  '' , [Validators.required]]
   });
 
 
