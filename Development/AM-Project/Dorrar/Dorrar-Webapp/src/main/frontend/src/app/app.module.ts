@@ -21,6 +21,7 @@ import {CommonModule} from "@angular/common";
 import { CourseComponent } from './modules/course/course.component';
 import { UserProfileComponent } from './modules/user/components/user-profile/user-profile.component';
 import { UserRoleComponent } from './modules/user/components/user-profile/user-role/user-role.component';
+import { CourseDetailsComponent } from './modules/details/component/course-details/course-details.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { UserRoleComponent } from './modules/user/components/user-profile/user-r
     CourseComponent,
     UserProfileComponent,
     UserRoleComponent,
+    CourseDetailsComponent,
 
   ],
   imports: [
