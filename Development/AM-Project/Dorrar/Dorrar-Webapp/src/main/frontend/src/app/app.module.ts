@@ -13,7 +13,7 @@ import { HomeComponent } from './modules/home/home.component';
 import { LoginComponent } from './modules/security/components/login/login.component';
 // import { CourseReferenceComponent } from './modules/course/component/create-reference/create-reference.component';
 import {CreateReferenceComponent} from './modules/course/component/create-reference/create-reference.component';
-import { CreateSectionComponent } from './modules/section/components/create-section/create-section.component';
+import { CreateSectionComponent } from './modules/course/component/create-section/create-section.component';
 import { CreateTutorialComponent } from './modules/tutorial/components/create-tutorial/create-tutorial.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
