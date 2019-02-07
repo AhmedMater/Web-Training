@@ -13,6 +13,7 @@ import {ActivatedRoute} from "@angular/router";
   providers : [FormBuilder , SectionsService],
 
 })
+//TODO - Yara move Component to course/component
 export class CreateSectionComponent implements OnInit {
 
   dataList: SectionData[] = [];
