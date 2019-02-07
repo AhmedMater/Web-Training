@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {SectionData} from "../../shared/data/section-data";
 import {FormBuilder, Validators} from "@angular/forms";
-import {SectionsService} from "../../shared/sections.service";
+// import {SectionsService} from "../../shared/sections.service";
 import {CourseData} from "../../../course/shared/data/course-data-dto.data";
 import {ActivatedRoute} from "@angular/router";
 import {CourseService} from "../../shared/course.service";
