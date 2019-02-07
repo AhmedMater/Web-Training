@@ -4,13 +4,14 @@ import {FormBuilder, Validators} from "@angular/forms";
 import {SectionsService} from "../../shared/sections.service";
 import {CourseData} from "../../../course/shared/data/course-data-dto.data";
 import {ActivatedRoute} from "@angular/router";
+import {CourseService} from "../../shared/course.service";
 
 
 @Component({
   selector: 'create-section',
   templateUrl: './create-section.component.html',
   styleUrls: ['./create-section.component.scss'],
-  providers : [FormBuilder , SectionsService],
+  providers : [FormBuilder , CourseService],
 
 })
 //TODO - Yara move Component to course/component
@@ -25,7 +26,7 @@ export class CreateSectionComponent implements OnInit {
 
  // courseID : string ;
 
-  constructor(private formBuilder: FormBuilder, private userService: SectionsService) {
+  constructor(private formBuilder: FormBuilder, private userService: CourseService) {
 
     //this.route.params.subscribe(params => {this.courseID = params.get("courseID")})
 
