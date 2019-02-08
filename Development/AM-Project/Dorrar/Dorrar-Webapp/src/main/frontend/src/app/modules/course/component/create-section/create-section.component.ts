@@ -61,7 +61,7 @@ export class CreateSectionComponent implements OnInit {
 
   saveData() {
     let data: CourseData = new CourseData();
-    data.section = this.dataList;
+    data.sections = this.dataList;
     console.log(data);
 
     this.userService.addNewSections(data).subscribe(

@@ -9,7 +9,7 @@ import java.util.ArrayList;
 //TODO: Youssef - Move this to model/course
 public class CourseData implements Serializable {
     ArrayList<CourseReference> reference;
-    ArrayList<SectionData> section ;
+    ArrayList<SectionData> sections ;
     public CourseData() {
     }
 
@@ -22,18 +22,18 @@ public class CourseData implements Serializable {
         this.reference = reference;
     }
 
-    public ArrayList<SectionData> getSection() {
-        return section;
+    public ArrayList<SectionData> getSections() {
+        return sections;
     }
 
-    public void setSection(ArrayList<SectionData> section) {
-        this.section = section;
+    public void setSections(ArrayList<SectionData> sections) {
+        this.sections = sections;
     }
 
     @Override
     public String toString() {
         return "CourseData{" +
-                "section=" + section +
+                "sections=" + sections +
                 '}';
     }
 }

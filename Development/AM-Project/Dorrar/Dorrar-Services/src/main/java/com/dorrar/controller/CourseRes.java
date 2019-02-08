@@ -41,7 +41,7 @@ public class CourseRes {
     public void addCourseSections (@PathParam("courseID") int courseID ,CourseData data) {
         System.out.print("Data Recieved Sucessfully");
         System.out.print(data.toString());
-        this.sectionService.insertCourseSections(courseID,data.getSection());
+        this.sectionService.insertCourseSections(courseID,data.getSections());
     }
 
 

@@ -9,7 +9,7 @@ export class CourseData {
   reference: CourseReference[] = [];
 
   //TODO: Yara - should be sections
-  section : SectionData[] = [];
+  sections : SectionData[] = [];
 
   //TODO: Youssef - should have mainDetails Object here
 }
