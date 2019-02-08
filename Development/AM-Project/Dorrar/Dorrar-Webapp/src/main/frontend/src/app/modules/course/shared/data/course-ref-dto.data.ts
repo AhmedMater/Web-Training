@@ -1,6 +1,6 @@
 
 //TODO: Hala - should be CourseRefDTO
-export class CourseReference {
+export class CourseRefDTO {
   refName: string;
   refTypeID: number;
   refUrl: string;

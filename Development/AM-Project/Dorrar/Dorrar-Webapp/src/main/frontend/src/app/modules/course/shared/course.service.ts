@@ -2,23 +2,22 @@ import {Injectable} from "@angular/core";
 import {HttpClient} from "@angular/common/http";
 import {CorRefType} from "./data/cor-ref-type-dto.data";
 import {CourseData} from "./data/course-data-dto.data";
+import {ConfigParam} from "../../../infrastructure/common/config-param";
 
 @Injectable()
 export class CourseService {
-  BASE_URL : string ="http://localhost:8080/api/course";
+  BASE_URL : string = ConfigParam.APP_BASE_URL + "/course";
   constructor(private http:HttpClient) { }
 
   saveCorReferences(data:CourseData) {
     //TODO: Hala - Use App_base_url such as in User Service
-    return this.http.post("http://localhost:8080/api/course/2/reference", data);
+    return this.http.post(this.BASE_URL +"/2/reference", data);
   }
+  // "http://localhost:8080/api/course/2/reference"
 
   //TODO: Hala - Use App_base_url such as in User Service
 
-  findCorRefTypes() {
-    return this.http.get<CorRefType[]>("http://localhost:8080/api/lookup/corRefType")
 
-  }
   //TODO: Yara - Use App_base_url such as in User Service
 
   addNewSections( data : CourseData) {

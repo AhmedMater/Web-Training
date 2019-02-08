@@ -4,17 +4,18 @@ import {CourseService} from "../../shared/course.service";
 
 import {CorRefType} from "../../shared/data/cor-ref-type-dto.data";
 import {CourseData} from "../../shared/data/course-data-dto.data";
-import {CourseReference} from "../../shared/data/course-ref-dto.data";
+import {CourseRefDTO} from "../../shared/data/course-ref-dto.data";
+import {LookupService} from "../../shared/lookup.service";
 
 
 @Component({
   selector: 'course-reference',
   templateUrl: './create-reference.component.html',
   styleUrls: ['./create-reference.component.scss'],
-  providers: [FormBuilder, CourseService]
+  providers: [FormBuilder, CourseService,LookupService]
 })
 export class CreateReferenceComponent implements OnInit {
-  dataList: CourseReference[] = [];
+  dataList: CourseRefDTO[] = [];
   formData:FormGroup = this.formBuilder.group({
     refName: [  '' , [Validators.required,Validators.maxLength(15)]],
     refTypeID: [  '' , [Validators.required]],
@@ -24,7 +25,8 @@ export class CreateReferenceComponent implements OnInit {
 
 
   constructor(private formBuilder: FormBuilder,
-              private  courseService: CourseService) {
+              private  courseService: CourseService,
+              private  lookupService: LookupService) {
   }
 
   refTypes: CorRefType[] = [];
@@ -32,7 +34,7 @@ export class CreateReferenceComponent implements OnInit {
 
 
 
-    this.courseService.findCorRefTypes().subscribe(
+    this.lookupService.findCorRefTypes().subscribe(
       res => {
         this.refTypes = res;
         console.log(this.refTypes);
@@ -43,7 +45,7 @@ export class CreateReferenceComponent implements OnInit {
 
   saveCorReferences() {
     let data: CourseData = new CourseData();
-    data.reference = this.dataList;
+    data.references = this.dataList;
     console.log(data);
     this.courseService.saveCorReferences(data).subscribe(
       res => {
@@ -56,26 +58,17 @@ export class CreateReferenceComponent implements OnInit {
 
   }
 
-  // TODO: Hala - remove unused functions
-  isclick() {
-  }
 
 
-  // TODO: Hala - remove unused functions
-  createItem(): FormGroup {
-    return this.formBuilder.group({
-      referenceName: null,
-      referenceType: null,
-      referenceUrl: null
-    });
 
 
-  }
+
+
 
   isEditMode:boolean=false;
 
   addItem(): void {
-    let data: CourseReference = new CourseReference();
+    let data: CourseRefDTO = new CourseRefDTO();
     data.refName = this.formData.get('refName').value;
     data.refTypeID = this.formData.get('refTypeID').value;
     data.refUrl = this.formData.get('refUrl').value;

@@ -2,7 +2,7 @@ package com.dorrar.data;
 
 public class CourseReference {
     private String refName;
-    private  String refTypeID;
+    private  int refTypeID;
     private String refUrl;
 
     public CourseReference() {
@@ -16,11 +16,11 @@ public class CourseReference {
         this.refName = refName;
     }
 
-    public String getRefTypeID() {
+    public int getRefTypeID() {
         return refTypeID;
     }
 
-    public void setRefTypeID(String refTypeID) {
+    public void setRefTypeID(int refTypeID) {
         this.refTypeID = refTypeID;
     }
 

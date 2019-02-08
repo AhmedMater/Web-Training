@@ -32,7 +32,7 @@ public class CourseRes {
     public void addCourseReferences(@PathParam("courseID") int courseID, CourseData data) {
         System.out.println("recieved is success");
         System.out.println(data.toString());
-        this.service.insertCourseRefs(courseID,data.getReference());
+        this.service.insertCourseRefs(courseID,data.getReferences());
     }
 
     @POST

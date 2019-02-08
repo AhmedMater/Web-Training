@@ -8,18 +8,17 @@ import java.util.ArrayList;
 
 //TODO: Youssef - Move this to model/course
 public class CourseData implements Serializable {
-    ArrayList<CourseReference> reference;
+    ArrayList<CourseReference> references;
     ArrayList<SectionData> sections ;
     public CourseData() {
     }
 
-
-    public ArrayList<CourseReference> getReference() {
-        return reference;
+    public ArrayList<CourseReference> getReferences() {
+        return references;
     }
 
-    public void setReference(ArrayList<CourseReference> reference) {
-        this.reference = reference;
+    public void setReferences(ArrayList<CourseReference> references) {
+        this.references = references;
     }
 
     public ArrayList<SectionData> getSections() {
