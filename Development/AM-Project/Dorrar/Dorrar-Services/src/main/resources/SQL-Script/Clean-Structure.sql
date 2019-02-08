@@ -1,4 +1,5 @@
 CREATE SCHEMA `dorrar` ;
+USE dorrar;
 
 CREATE TABLE `dorrar`.`course` (
  `id` INT NOT NULL AUTO_INCREMENT,
@@ -42,15 +43,6 @@ CREATE TABLE `dorrar`.`course_section` (
 );
 
 -- Fathy - Start Authorization Task
-CREATE TABLE `auth_action` (
-  `id` int(11) NOT NULL,
-  `label_en` varchar(45) NOT NULL,
-  `page_id` int(11) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `page_id` (`page_id`),
-  CONSTRAINT `page_id` FOREIGN KEY (`page_id`) REFERENCES `auth_page` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-);
-
 CREATE TABLE `auth_page` (
   `id` int(11) NOT NULL,
   `label_en` varchar(45) NOT NULL,
@@ -62,14 +54,21 @@ CREATE TABLE `auth_role` (
   `label_en` varchar(45) NOT NULL,
   PRIMARY KEY (`id`)
 ) ;
-
-
 CREATE TABLE `auth_user` (
   `id` int(11) NOT NULL,
   `user_name` varchar(45) NOT NULL,
   `password` varchar(15) NOT NULL,
   PRIMARY KEY (`id`)
 ) ;
+
+CREATE TABLE `auth_action` (
+  `id` int(11) NOT NULL,
+  `label_en` varchar(45) NOT NULL,
+  `page_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `page_id` (`page_id`),
+  CONSTRAINT `page_id` FOREIGN KEY (`page_id`) REFERENCES `auth_page` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+);
 
 CREATE TABLE `role_action` (
   `role_id` int(11) NOT NULL,
