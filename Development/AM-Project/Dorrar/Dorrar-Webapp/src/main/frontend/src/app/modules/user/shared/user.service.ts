@@ -12,12 +12,12 @@ import {ConfigParam} from "../../../infrastructure/common/config-param";
 @Injectable()
 export class UserService {
 
-  BASE_URL: string = ConfigParam.APP_BASE_URL + "/user";
+  BASE_URL: string = ConfigParam.APP_BASE_URL + "/lookup";
   constructor(private httpClient:HttpClient){
   }
   getRoles()
   {
-    return this.httpClient.get<Role[]>(this.BASE_URL + '/role' );
+    return this.httpClient.get<Role[]>(this.BASE_URL + '/roles' );
   }
 
   //TODO: function labelEN to be camelCase

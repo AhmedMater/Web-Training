@@ -1,10 +1,9 @@
 package com.dorrar.controller;
 
 import com.dorrar.data.CorRefType;
-import com.dorrar.model.College;
-import com.dorrar.model.Country;
-import com.dorrar.model.University;
+import com.dorrar.model.*;
 import com.dorrar.repository.ReferenceRep;
+import com.dorrar.service.LookupSer;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.ws.rs.GET;
@@ -16,12 +15,53 @@ import java.util.List;
 
 @Path("/lookup")
 public class LockupRes {
-
     private ReferenceRep repositry;
-
+    private LookupSer service;
     @Autowired
-    public LockupRes(ReferenceRep repositry) {
+    public LockupRes(ReferenceRep repositry ,LookupSer service) {
         this.repositry = repositry;
+        this.service=service ;
+    }
+    @Path("/roles")
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    //TODO: Fathy - Service should be in Class LookupRes
+    public List<Role> getRoles() {
+
+        return service.getAllRoles();
+
+    }
+
+    @Path("/page")
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    //TODO: Fathy - Service should be in Lookup Resource
+    public ArrayList<Page> getPages(){
+        List<Action> actionList =new ArrayList<>();
+        Action a = new Action(1,"view course details") ;
+        Action a2 =new Action(2,"view assignment") ;
+        Action a3 =new Action(3,"View grades") ;
+        actionList.add(a) ;
+        actionList.add(a2) ;
+        actionList.add(a3) ;
+        Page page1 =new Page(1,"course details" ) ;
+        page1.setActionList(actionList);
+
+
+        List<Action> actionList2 =new ArrayList<>();
+        Action a4 = new Action(4,"create course") ;
+        Action a5 =new Action(5,"create assignment") ;
+        Action a6 =new Action(6,"submit  grades") ;
+        actionList2.add(a4) ;
+        actionList2.add(a5) ;
+        actionList2.add(a6) ;
+        Page page2=new Page(2,"courses");
+        page2.setActionList(actionList2);
+        ArrayList<Page> pageList =new ArrayList<>() ;
+        pageList.add(page1) ;
+        pageList.add(page2) ;
+        return pageList ;
+
     }
 
     @GET

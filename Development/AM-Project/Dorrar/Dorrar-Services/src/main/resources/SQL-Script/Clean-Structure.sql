@@ -40,3 +40,85 @@ CREATE TABLE `dorrar`.`course_section` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 );
+
+-- Fathy - Start Authorization Task
+CREATE TABLE `auth_action` (
+  `id` int(11) NOT NULL,
+  `label_en` varchar(45) NOT NULL,
+  `page_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `page_id` (`page_id`),
+  CONSTRAINT `page_id` FOREIGN KEY (`page_id`) REFERENCES `auth_page` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+);
+
+CREATE TABLE `auth_page` (
+  `id` int(11) NOT NULL,
+  `label_en` varchar(45) NOT NULL,
+  PRIMARY KEY (`id`)
+) ;
+
+CREATE TABLE `auth_role` (
+  `id` int(11) NOT NULL,
+  `label_en` varchar(45) NOT NULL,
+  PRIMARY KEY (`id`)
+) ;
+
+
+CREATE TABLE `auth_user` (
+  `id` int(11) NOT NULL,
+  `user_name` varchar(45) NOT NULL,
+  `password` varchar(15) NOT NULL,
+  PRIMARY KEY (`id`)
+) ;
+
+CREATE TABLE `role_action` (
+  `role_id` int(11) NOT NULL,
+  `action_id` int(11) NOT NULL,
+  KEY `fk_ra_auth_role_idx` (`role_id`),
+  KEY `fk_ra_auth_action_idx` (`action_id`),
+  CONSTRAINT `fk_ra_auth_action` FOREIGN KEY (`action_id`) REFERENCES `auth_action` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_ra_auth_role` FOREIGN KEY (`role_id`) REFERENCES `auth_role` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ;
+
+
+CREATE TABLE `role_page` (
+  `role_id` int(11) NOT NULL,
+  `page_id` int(11) NOT NULL,
+  KEY `fk-rp-auth-role_idx` (`role_id`),
+  KEY `fk-rp-auth-page_idx` (`page_id`),
+  CONSTRAINT `fk-rp-auth-page` FOREIGN KEY (`page_id`) REFERENCES `auth_page` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk-rp-auth-role` FOREIGN KEY (`role_id`) REFERENCES `auth_role` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+);
+
+
+CREATE TABLE `user_action` (
+  `user_id` int(11) NOT NULL,
+  `action_id` int(11) NOT NULL,
+  KEY `fk_ua_auth_user_idx` (`user_id`),
+  KEY `fk_ua_auth_action_idx` (`action_id`),
+  CONSTRAINT `fk_ua_-auth_action` FOREIGN KEY (`action_id`) REFERENCES `auth_action` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_ua_auth_user` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+);
+
+
+
+CREATE TABLE `user_page` (
+  `user_id` int(11) NOT NULL,
+  `page_id` int(11) NOT NULL,
+  KEY `fk-up-auth-user_idx` (`user_id`),
+  KEY `fk-up-auth-page_idx` (`page_id`),
+  CONSTRAINT `fk-up-auth-page` FOREIGN KEY (`page_id`) REFERENCES `auth_page` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk-up-auth-user` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+);
+
+CREATE TABLE `user_role` (
+  `user_id` int(11) NOT NULL,
+  `role-id` int(11) NOT NULL,
+  KEY `fk_ur_auth_user_idx` (`user_id`),
+  KEY `fk_ur_auth_role_idx` (`role-id`),
+  CONSTRAINT `fk_ur_auth_role` FOREIGN KEY (`role-id`) REFERENCES `auth_role` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_ur_auth_user` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+);
+
+
+-- Fathy - End Authorization Task
