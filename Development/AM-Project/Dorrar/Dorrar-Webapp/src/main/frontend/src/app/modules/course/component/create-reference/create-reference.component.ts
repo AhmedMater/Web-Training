@@ -3,9 +3,9 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {CourseService} from "../../shared/course.service";
 
 import {CorRefType} from "../../shared/data/cor-ref-type-dto.data";
-import {CourseData} from "../../shared/data/course-data-dto.data";
 import {CourseRefDTO} from "../../shared/data/course-ref-dto.data";
 import {LookupService} from "../../shared/lookup.service";
+import {CourseDTO} from "../../shared/data/course-dto.data";
 
 
 @Component({
@@ -44,7 +44,7 @@ export class CreateReferenceComponent implements OnInit {
   }
 
   saveCorReferences() {
-    let data: CourseData = new CourseData();
+    let data: CourseDTO = new CourseDTO();
     data.references = this.dataList;
     console.log(data);
     this.courseService.saveCorReferences(data).subscribe(

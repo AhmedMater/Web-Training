@@ -11,7 +11,6 @@ import { MainFooterComponent } from './layout/components/main-layout/components/
 import { SimpleFooterComponent } from './layout/components/simple-layout/components/simple-footer/simple-footer.component';
 import { HomeComponent } from './modules/home/home.component';
 import { LoginComponent } from './modules/security/components/login/login.component';
-// import { CourseReferenceComponent } from './modules/course/component/create-reference/create-reference.component';
 import {CreateReferenceComponent} from './modules/course/component/create-reference/create-reference.component';
 import { CreateSectionComponent } from './modules/course/component/create-section/create-section.component';
 import { CreateTutorialComponent } from './modules/tutorial/components/create-tutorial/create-tutorial.component';
@@ -21,7 +20,7 @@ import {CommonModule} from "@angular/common";
 import { CourseComponent } from './modules/course/course.component';
 import { UserProfileComponent } from './modules/user/components/user-profile/user-profile.component';
 import { UserRoleComponent } from './modules/user/components/user-profile/user-role/user-role.component';
-import { CourseDetailsComponent } from './modules/details/component/course-details/course-details.component';
+import { CourseDetailsComponent } from './modules/course/component/course-details/course-details.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +33,6 @@ import { CourseDetailsComponent } from './modules/details/component/course-detai
     SimpleFooterComponent,
     HomeComponent,
     LoginComponent,
-    // CourseReferenceComponent,
     CreateReferenceComponent,
     CreateSectionComponent,
     CreateTutorialComponent,

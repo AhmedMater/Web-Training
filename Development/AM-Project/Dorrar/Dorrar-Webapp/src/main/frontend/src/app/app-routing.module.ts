@@ -9,7 +9,7 @@ import {LoginComponent} from "./modules/security/components/login/login.componen
 import {CourseComponent} from "./modules/course/course.component";
 import {UserProfileComponent} from "./modules/user/components/user-profile/user-profile.component";
 import {UserRoleComponent} from "./modules/user/components/user-profile/user-role/user-role.component";
-import {CourseDetailsComponent} from "./modules/details/component/course-details/course-details.component";
+import {CourseDetailsComponent} from "./modules/course/component/course-details/course-details.component";
 
 
 const routes: Routes = [
@@ -22,7 +22,7 @@ const routes: Routes = [
     path: '', component: MainLayoutComponent, children: [
       {path:'home', component: HomeComponent},
       {path: 'course', component: CourseComponent} ,
-      {path: 'course/new', component:CourseDetailsComponent},
+      {path: 'course/new', component:CourseComponent},
       {path:'user/profile', component:UserProfileComponent,children:[
           {path:'role',component:UserRoleComponent}
         ]}

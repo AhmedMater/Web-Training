@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import {SectionData} from "../../shared/data/section-data";
 import {FormBuilder, Validators} from "@angular/forms";
 // import {SectionsService} from "../../shared/sections.service";
-import {CourseData} from "../../../course/shared/data/course-data-dto.data";
+// import {CourseData} from "../../shared/data/course-dto.data";
 import {ActivatedRoute} from "@angular/router";
 import {CourseService} from "../../shared/course.service";
+import {CourseDTO} from "../../shared/data/course-dto.data";
 
 
 @Component({
@@ -60,7 +61,7 @@ export class CreateSectionComponent implements OnInit {
   };
 
   saveData() {
-    let data: CourseData = new CourseData();
+    let data: CourseDTO = new CourseDTO();
     data.sections = this.dataList;
     console.log(data);
 
