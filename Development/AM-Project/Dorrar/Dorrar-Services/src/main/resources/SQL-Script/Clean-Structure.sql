@@ -41,6 +41,37 @@ CREATE TABLE `dorrar`.`course_section` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 );
+# Youssef Data Base Script
+# main details table
+CREATE TABLE `dorrar`.`cor_main_details` (
+  `name` VARCHAR(15) NOT NULL,
+  `duration` INT NOT NULL,
+  `start_date` INT NOT NULL,
+  `description` VARCHAR(200) NULL,
+  `cousre_id` INT NOT NULL,
+  PRIMARY KEY (`cousre_id`),
+  CONSTRAINT `fk_cor_main_details_course`
+  FOREIGN KEY (`cousre_id`)
+  REFERENCES `dorrar`.`course` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION
+);
+
+#course type table
+ALTER TABLE `dorrar`.`cor_type`
+  DROP FOREIGN KEY `fk_type_cor_main_details`;
+ALTER TABLE `dorrar`.`cor_type`
+  DROP COLUMN `course_id`,
+  DROP INDEX `fk_type_cor_main_details_idx` ;
+
+
+#course level table
+CREATE TABLE `dorrar`.`cor_level` (
+  `id` INT NOT NULL,
+  `label` VARCHAR(15) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `id_UNIQUE` (`id` ASC));
+
 -- Fathy - Start Authorization Task
 CREATE TABLE `auth_page` (
   `id` int(11) NOT NULL,
@@ -115,39 +146,6 @@ CREATE TABLE `user_role` (
   CONSTRAINT `fk_ur_auth_user` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 );
 -- Fathy - End Authorization Task
-
-
-# Youssef Data Base Script
-# main details table
-CREATE TABLE `dorrar`.`cor_main_details` (
-  `name` VARCHAR(15) NOT NULL,
-  `duration` INT NOT NULL,
-  `start_date` INT NOT NULL,
-  `description` VARCHAR(200) NULL,
-  `cousre_id` INT NOT NULL,
-  PRIMARY KEY (`cousre_id`),
-  CONSTRAINT `fk_cor_main_details_course`
-  FOREIGN KEY (`cousre_id`)
-  REFERENCES `dorrar`.`course` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION
-);
-
-#course type table
-ALTER TABLE `dorrar`.`cor_type`
-  DROP FOREIGN KEY `fk_type_cor_main_details`;
-ALTER TABLE `dorrar`.`cor_type`
-  DROP COLUMN `course_id`,
-  DROP INDEX `fk_type_cor_main_details_idx` ;
-
-
-#course level table
-CREATE TABLE `dorrar`.`cor_level` (
-  `id` INT NOT NULL,
-  `label` VARCHAR(15) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE INDEX `id_UNIQUE` (`id` ASC));
-
 
 
 
