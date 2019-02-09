@@ -41,6 +41,7 @@ CREATE TABLE `dorrar`.`course_section` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 );
+
 # Youssef Data Base Script
 # main details table
 CREATE TABLE `dorrar`.`cor_main_details` (
@@ -58,11 +59,11 @@ CREATE TABLE `dorrar`.`cor_main_details` (
 );
 
 #course type table
-ALTER TABLE `dorrar`.`cor_type`
-  DROP FOREIGN KEY `fk_type_cor_main_details`;
-ALTER TABLE `dorrar`.`cor_type`
-  DROP COLUMN `course_id`,
-  DROP INDEX `fk_type_cor_main_details_idx` ;
+CREATE TABLE `dorrar`.`cor_type` (
+  `id` INT NOT NULL,
+  `label_en` VARCHAR(15) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `cor_type_idx` (`id` ASC));
 
 
 #course level table
@@ -70,7 +71,14 @@ CREATE TABLE `dorrar`.`cor_level` (
   `id` INT NOT NULL,
   `label` VARCHAR(15) NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE INDEX `id_UNIQUE` (`id` ASC));
+  UNIQUE INDEX `cor_level_idx` (`id` ASC));
+
+
+
+
+
+
+
 
 -- Fathy - Start Authorization Task
 CREATE TABLE `auth_page` (
@@ -109,6 +117,7 @@ CREATE TABLE `role_action` (
   CONSTRAINT `fk_ra_auth_role` FOREIGN KEY (`role_id`) REFERENCES `auth_role` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ;
 
+
 CREATE TABLE `role_page` (
   `role_id` int(11) NOT NULL,
   `page_id` int(11) NOT NULL,
@@ -128,6 +137,8 @@ CREATE TABLE `user_action` (
   CONSTRAINT `fk_ua_auth_user` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 );
 
+
+
 CREATE TABLE `user_page` (
   `user_id` int(11) NOT NULL,
   `page_id` int(11) NOT NULL,
@@ -145,11 +156,6 @@ CREATE TABLE `user_role` (
   CONSTRAINT `fk_ur_auth_role` FOREIGN KEY (`role-id`) REFERENCES `auth_role` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_ur_auth_user` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 );
+
+
 -- Fathy - End Authorization Task
-
-
-
-
-
-
-

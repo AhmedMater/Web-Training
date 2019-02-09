@@ -16,5 +16,41 @@
         <module>Dorrar-Webapp</module>
     </modules>
 
+    <properties>
+        <build.directory>${deployment.directory}/</build.directory>
+    </properties>
 
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.0.2</version>
+                <executions>
+                    <!--Copy Database Scripts-->
+                    <execution>
+                        <id>Copy Database Scripts</id>
+                        <!-- here the phase you need -->
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>../../../Deployment/${build.path}/DB-Scripts</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>Dorrar-Webapp/src/main/resources/SQL-Script</directory>
+                                    <filtering>true</filtering>
+                                    <includes>
+                                        <include>1.Clean-Structure.sql</include>
+                                        <include>2.Clean-Data.sql</include>
+                                        <include>Alter.sql</include>
+                                    </includes>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>

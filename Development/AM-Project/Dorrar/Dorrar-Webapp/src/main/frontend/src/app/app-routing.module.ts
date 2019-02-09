@@ -3,13 +3,10 @@ import { Routes, RouterModule } from '@angular/router';
 import {SimpleLayoutComponent} from "./layout/components/simple-layout/simple-layout.component";
 import {MainLayoutComponent} from "./layout/components/main-layout/main-layout.component";
 import {HomeComponent} from "./modules/home/home.component";
-import {CreateReferenceComponent} from "./modules/course/component/create-reference/create-reference.component";
-// import * as path from "path";
 import {LoginComponent} from "./modules/security/components/login/login.component";
 import {CourseComponent} from "./modules/course/course.component";
 import {UserProfileComponent} from "./modules/user/components/user-profile/user-profile.component";
 import {UserRoleComponent} from "./modules/user/components/user-profile/user-role/user-role.component";
-import {CourseDetailsComponent} from "./modules/course/component/course-details/course-details.component";
 
 
 const routes: Routes = [
