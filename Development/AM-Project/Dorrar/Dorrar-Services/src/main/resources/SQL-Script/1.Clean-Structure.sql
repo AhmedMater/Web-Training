@@ -74,7 +74,7 @@ CREATE TABLE auth_action (
 );
 
 -- TODO: Fathy - rename table to start with auth_
-CREATE TABLE role_action (
+CREATE TABLE auth_role_action (
   role_id int(11) NOT NULL,
   action_id int(11) NOT NULL,
   CONSTRAINT fk_ra_auth_action FOREIGN KEY (action_id) REFERENCES auth_action (id),
@@ -83,39 +83,39 @@ CREATE TABLE role_action (
 
 
 -- TODO: Fathy - rename table to start with auth_
-CREATE TABLE role_page (
+CREATE TABLE auth_role_page (
   role_id int(11) NOT NULL,
   page_id int(11) NOT NULL,
   -- TODO: Fathy - replace dash with underscore and add script to Alter.sql
-  CONSTRAINT fk-rp-auth-page FOREIGN KEY (page_id) REFERENCES auth_page (id),
+  CONSTRAINT fk_rp_auth_page FOREIGN KEY (page_id) REFERENCES auth_page (id),
   -- TODO: Fathy - replace dash with underscore and add script to Alter.sql
-  CONSTRAINT fk-rp-auth-role FOREIGN KEY (role_id) REFERENCES auth_role (id) 
+  CONSTRAINT fk_rp_auth_role FOREIGN KEY (role_id) REFERENCES auth_role (id)
 );
 
 -- TODO: Fathy - rename table to start with auth_
-CREATE TABLE user_action (
+CREATE TABLE auth_user_action (
   user_id int(11) NOT NULL,
   action_id int(11) NOT NULL,
   -- TODO: Fathy - remove dash and add script to Alter.sql
-  CONSTRAINT fk_ua_-auth_action FOREIGN KEY (action_id) REFERENCES auth_action (id),
+  CONSTRAINT fk_ua_auth_action FOREIGN KEY (action_id) REFERENCES auth_action (id),
   CONSTRAINT fk_ua_auth_user FOREIGN KEY (user_id) REFERENCES auth_user (id) 
 );
 
 -- TODO: Fathy - rename table to start with auth_
-CREATE TABLE user_page (
+CREATE TABLE auth_user_page (
   user_id int(11) NOT NULL,
   page_id int(11) NOT NULL,
   -- TODO: Fathy - replace dash with underscore and add script to Alter.sql
-  CONSTRAINT fk-up-auth-page FOREIGN KEY (page_id) REFERENCES auth_page (id),
+  CONSTRAINT fk_up_auth_page FOREIGN KEY (page_id) REFERENCES auth_page (id),
   -- TODO: Fathy - replace dash with underscore and add script to Alter.sql
-  CONSTRAINT fk-up-auth-user FOREIGN KEY (user_id) REFERENCES auth_user (id) 
+  CONSTRAINT fk_up_auth_user FOREIGN KEY (user_id) REFERENCES auth_user (id)
 );
 
 -- TODO: Fathy - rename table to start with auth_
-CREATE TABLE user_role (
+CREATE TABLE auth_user_role (
   user_id int(11) NOT NULL,
   -- TODO: Fathy - replace dash with underscore and add script to Alter.sql
-  role-id int(11) NOT NULL,
-  CONSTRAINT fk_ur_auth_role FOREIGN KEY (role-id) REFERENCES auth_role (id),
+  role_id int(11) NOT NULL,
+  CONSTRAINT fk_ur_auth_role FOREIGN KEY (role_id) REFERENCES auth_role (id),
   CONSTRAINT fk_ur_auth_user FOREIGN KEY (user_id) REFERENCES auth_user (id) 
 );
