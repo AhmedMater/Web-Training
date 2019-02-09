@@ -7,7 +7,6 @@ import {CourseRefDTO} from "../../shared/data/course-ref-dto.data";
 import {CourseDTO} from "../../shared/data/course-dto.data";
 import {LookupService} from "../../../../layout/shared/services/lookup.service";
 
-
 @Component({
   selector: 'course-reference',
   templateUrl: './create-reference.component.html',
@@ -22,8 +21,6 @@ export class CreateReferenceComponent implements OnInit {
     refUrl: [  '' , [Validators.required]]
   });
 
-
-
   constructor(private formBuilder: FormBuilder,
               private  courseService: CourseService,
               private  lookupService: LookupService) {
@@ -31,16 +28,7 @@ export class CreateReferenceComponent implements OnInit {
 
   refTypes: CorRefType[] = [];
   ngOnInit() {
-
-
-
-    this.lookupService.findCorRefTypes().subscribe(
-      res => {
-        this.refTypes = res;
-        console.log(this.refTypes);
-      }
-    );
-
+    this.lookupService.findCorRefTypes().subscribe(res => this.refTypes = res);
   }
 
   saveCorReferences() {
@@ -55,15 +43,7 @@ export class CreateReferenceComponent implements OnInit {
         console.log(error1)
       }
     );
-
   }
-
-
-
-
-
-
-
 
   isEditMode:boolean=false;
 
@@ -81,7 +61,6 @@ export class CreateReferenceComponent implements OnInit {
       "refUrl": ''
     });
     this.isEditMode=false;
-    // this.formData.get('referenceName').reset('Enter new Value');
   }
 
   clear(): void {
@@ -89,12 +68,8 @@ export class CreateReferenceComponent implements OnInit {
   }
   // TODO: Hala - function name should be Camelcase
   removerow(index):void{
-    // let index=this.dataList.indexOf(row);
-    if(index!==-1){
+    if(index!==-1)
       this.dataList.splice(index,1)
-    }
-
-
   }
 
   onEditRow(index):void{
@@ -107,8 +82,6 @@ export class CreateReferenceComponent implements OnInit {
     }
 
     this.isEditMode = true;
-
-
   }
 }
 

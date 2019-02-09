@@ -13,10 +13,11 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.Date;
+
 @Path("/security")
 public class SecurityRes {
 
-    //TODO: Aya - Use Constructor Injection same as in
+    //TODO: Aya - Use Constructor Injection same as in CourseRes
     @Autowired
     SecurityRep userData;
     @Autowired
@@ -27,6 +28,7 @@ public class SecurityRes {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response login(LoginUserDto data) throws Exception {
+        //TODO: Aya - This Logic should be move to login function in SecuritySer Class
 //        System.out.println("Data received successfully");
 //        System.out.println(data.toString());
 //        System.out.println(securityManager.dm5Hash(data.getPassword()));

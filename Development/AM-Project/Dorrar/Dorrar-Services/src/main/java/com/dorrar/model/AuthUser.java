@@ -1,5 +1,6 @@
 package com.dorrar.model;
 
+//TODO: Aya - Move to model/security/
 public class AuthUser {
     private int userId;
     private String fullName;

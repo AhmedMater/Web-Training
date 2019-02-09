@@ -1,5 +1,6 @@
 package com.dorrar.model;
 
+//TODO: Manar - Move to /model/lookup/
 public class Country {
 
     private int id;

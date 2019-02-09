@@ -6,6 +6,7 @@ import org.springframework.jdbc.core.RowMapper;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+//TODO: Aya - Should be moved to model/user/rm/
 public class UserRowMapper implements RowMapper<User> {
     @Override
     public User mapRow(ResultSet row, int rowNum) throws SQLException {

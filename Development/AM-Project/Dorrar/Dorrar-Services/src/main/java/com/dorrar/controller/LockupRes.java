@@ -15,20 +15,20 @@ import java.util.List;
 
 @Path("/lookup")
 public class LockupRes {
-    private ReferenceRep repositry;
+    private ReferenceRep repository;
     private LookupSer service;
+
     @Autowired
-    public LockupRes(ReferenceRep repositry ,LookupSer service) {
-        this.repositry = repositry;
+    public LockupRes(ReferenceRep repository ,LookupSer service) {
+        this.repository = repository;
         this.service=service ;
     }
+
     @Path("/roles")
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public List<Role> getRoles() {
-
         return service.getAllRoles();
-
     }
 
     @Path("/page")
@@ -102,7 +102,6 @@ public class LockupRes {
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/corRefType")
     public List<CorRefType> findData() {
-        List<CorRefType> list =this.repositry.findRefType();
-        return list;
+        return this.repository.findRefType();
     }
 }

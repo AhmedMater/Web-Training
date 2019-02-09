@@ -29,6 +29,7 @@ export class LoginComponent implements OnInit {
     data.userName = this.formData.get('username').value;
     data.password = this.formData.get('password').value;
     // let authVto: AuthVto;
+    //TODO: Aya - use formData.valid instead
     if(this.formData.get('username').valid && this.formData.get('password').valid){
       this.userService.Login(data).subscribe(
         res=>{

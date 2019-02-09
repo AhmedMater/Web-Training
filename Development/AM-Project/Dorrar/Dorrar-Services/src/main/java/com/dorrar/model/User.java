@@ -1,5 +1,6 @@
 package com.dorrar.model;
 
+//TODO: Manar - Move to /model/user/
 public class User {
     private int id;
     private String userName;

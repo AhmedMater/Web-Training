@@ -2,6 +2,7 @@ package com.dorrar.model;
 
 import java.io.Serializable;
 
+//TODO: Aya - Move to model/security/
 public class LoginUserDto implements Serializable {
 
     private String userName;

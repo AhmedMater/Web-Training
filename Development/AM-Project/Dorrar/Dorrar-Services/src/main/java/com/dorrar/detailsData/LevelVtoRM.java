@@ -5,6 +5,8 @@ import org.springframework.jdbc.core.RowMapper;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+//TODO: Youssef - Move to /model/lookup/rm
+//TODO: Youssef - Rename to CorLevelVTORM
 public class LevelVtoRM implements RowMapper<LevelVto> {
     @Override
     public LevelVto mapRow(ResultSet rs, int rowIndex) throws SQLException {

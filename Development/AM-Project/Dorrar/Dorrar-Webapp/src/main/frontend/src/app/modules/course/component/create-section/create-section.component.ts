@@ -4,13 +4,11 @@ import {FormBuilder, Validators} from "@angular/forms";
 import {CourseService} from "../../shared/course.service";
 import {CourseDTO} from "../../shared/data/course-dto.data";
 
-
 @Component({
   selector: 'create-section',
   templateUrl: './create-section.component.html',
   styleUrls: ['./create-section.component.scss'],
-  providers : [FormBuilder , CourseService],
-
+  providers : [FormBuilder , CourseService]
 })
 export class CreateSectionComponent implements OnInit {
 

@@ -12,19 +12,13 @@ import {CourseDTO} from "../../shared/data/course-dto.data";
   styleUrls: ['./course-details.component.scss'],
   providers: [DetailsService]
 })
-//TODO: Youssef - This Component should be in course/components/main-details
 export class CourseDetailsComponent implements OnInit {
-
-
-  //TODO: Youssef - User camelcase for Formcontrol names
   formData: FormGroup = this.formBuilder.group({
     name: [null, [Validators.required, Validators.maxLength(15)]],
     duration: [null, [Validators.required, Validators.min(1)]],
-    startDate: [null, Validators.required], //TODO: Youssef - should be in Future
-
-    //TODO: Youssef - should be corTypeID
+    //TODO: Youssef - should be in Future
+    startDate: [null, Validators.required],
     corTypeID: [null, Validators.required],
-    //TODO: Youssef - should be corLevelID
     corLevelID: [null, Validators.required],
     description: [null, Validators.maxLength(200)]
 
@@ -34,9 +28,7 @@ export class CourseDetailsComponent implements OnInit {
               private details: DetailsService) {
   }
 
-  //TODO: Youssef - should be corTypes
   corTypes: CorType [] = [];
-  //TODO: Youssef - should be corLevels
   corLevels : CorLevel [] = [];
   ngOnInit() {
     this.details.findType().subscribe(
@@ -51,7 +43,6 @@ export class CourseDetailsComponent implements OnInit {
     );
   }
 
-  //TODO: Youssef - creat is worng spelling
   createNewCourse() {
 
     let data: CorMainDetail = new CorMainDetail();

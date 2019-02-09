@@ -2,11 +2,15 @@ package com.dorrar.model;
 
 import java.io.Serializable;
 
+//TODO: Manar - Move to /model/user/
+//TODO: Manar - Rename to UserVTO
 public class UserList  implements Serializable {
+    //TODO: should be camelcase
     private String fullname;
     private String college;
     private String university;
     private String country;
+    //TODO: should be camelcase & should be birthDate Only
     private Integer birthdatefrom;
     private Integer birthdateto;
 

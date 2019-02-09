@@ -4,12 +4,15 @@ package com.dorrar.detailsData;
 import java.io.Serializable;
 import java.util.Date;
 
-//TODO:
+//TODO: Youssef - Rename to CorMainDetail
+//TODO: Youssef - Move to model/course/
 public class detailsData implements Serializable {
     private String courseName ;
     private int duration;
     private Date startDate;
+    //TODO: Youssef - Rename to corTypeID
     private int typeID;
+    //TODO: Youssef - Rename to corLevelID
     private int levelID;
     private String description;
 

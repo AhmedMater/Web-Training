@@ -2,6 +2,7 @@ package com.dorrar.data;
 
 import java.io.Serializable;
 
+//TODO: Hala - Move File to model/lookup/
 public class CorRefType  implements Serializable {
     private  int id;
    private String labelEN;

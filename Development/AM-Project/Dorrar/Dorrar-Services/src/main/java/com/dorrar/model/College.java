@@ -1,5 +1,7 @@
 package com.dorrar.model;
 
+
+//TODO: Manar - Move to /model/lookup/
 public class College {
     private int id;
     private String labelEN;

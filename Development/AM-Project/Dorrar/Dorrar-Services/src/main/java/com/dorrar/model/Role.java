@@ -2,7 +2,9 @@ package com.dorrar.model;
 
 import java.util.List;
 
+//TODO: Fathy - Move to model/user/auth/
 public class Role {
+    //TODO: Fathy - Rename to id
     private int roleid ;
     private String labelEN;
     private List<Action> actionList;

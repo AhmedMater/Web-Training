@@ -3,6 +3,8 @@ package com.dorrar.model;
 import java.io.Serializable;
 
 
+//TODO: Yara - Rename to CourseSecDTO
+//TODO: Yara - Move to model/course/
 public class SectionData implements Serializable {
     //TODO: Yara - These attributes should be private
     String name ;

@@ -1,6 +1,5 @@
 import {Injectable} from "@angular/core";
 import {HttpClient} from "@angular/common/http";
-import {CorRefType} from "./data/cor-ref-type-dto.data";
 import {CourseDTO} from "./data/course-dto.data";
 import {ConfigParam} from "../../../infrastructure/common/config-param";
 

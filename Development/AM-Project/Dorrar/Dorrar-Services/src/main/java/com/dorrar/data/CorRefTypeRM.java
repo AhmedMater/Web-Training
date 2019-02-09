@@ -5,6 +5,7 @@ import org.springframework.jdbc.core.RowMapper;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+//TODO: Hala - Move File to model/lookup/rm/
 public class CorRefTypeRM implements RowMapper<CorRefType> {
     @Override
     public CorRefType mapRow(ResultSet rs, int rowIndex) throws SQLException {

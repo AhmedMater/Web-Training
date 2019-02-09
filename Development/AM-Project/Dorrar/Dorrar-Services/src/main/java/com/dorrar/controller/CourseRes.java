@@ -30,8 +30,6 @@ public class CourseRes {
     @Path("/{courseID}/reference")
     @Consumes(MediaType.APPLICATION_JSON)
     public void addCourseReferences(@PathParam("courseID") int courseID, CourseData data) {
-        System.out.println("recieved is success");
-        System.out.println(data.toString());
         this.service.insertCourseRefs(courseID,data.getReferences());
     }
 
@@ -39,8 +37,6 @@ public class CourseRes {
     @Consumes(MediaType.APPLICATION_JSON)
     @Path("/{courseID}/section")
     public void addCourseSections (@PathParam("courseID") int courseID ,CourseData data) {
-        System.out.print("Data Recieved Sucessfully");
-        System.out.print(data.toString());
         this.sectionService.insertCourseSections(courseID,data.getSections());
     }
 

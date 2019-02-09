@@ -1,5 +1,7 @@
 package com.dorrar.data;
 
+//TODO: Hala - Move File to model/course/
+//TODO: Hala - Rename Class to CourseRefDTO
 public class CourseReference {
     private String refName;
     private  int refTypeID;

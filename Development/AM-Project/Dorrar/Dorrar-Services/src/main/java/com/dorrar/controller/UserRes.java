@@ -18,12 +18,6 @@ import java.util.ArrayList;
 @Path("/user")
 public class UserRes {
 
-
-
-
-
-
-
     @POST
     @Path("/filter")
     @Consumes(MediaType.APPLICATION_JSON)

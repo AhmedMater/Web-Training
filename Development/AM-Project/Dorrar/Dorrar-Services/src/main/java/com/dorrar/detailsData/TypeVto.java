@@ -1,7 +1,11 @@
 package com.dorrar.detailsData;
 
+//TODO: Youssef - Rename to CorType
+//TODO: Youssef - Move to /model/lookup/
 public class TypeVto {
+    //TODO: Youssef - Rename to id
     private int typeID ;
+    //TODO: Youssef - Rename to labelEN
     private String typeLabel ;
 
 

@@ -1,6 +1,5 @@
 package com.dorrar.repository;
 
-import com.dorrar.CourseData;
 import com.dorrar.model.SectionData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;

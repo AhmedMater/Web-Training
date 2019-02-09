@@ -1,7 +1,11 @@
 package com.dorrar.detailsData;
 
+//TODO: Youssef - Rename to CorLevel
+//TODO: Youssef - Move to /model/lookup/
 public class LevelVto {
+    //TODO: Youssef - Rename to id
     private int levelID ;
+    //TODO: Youssef - Rename to labelEN
     private String levelLabel ;
 
     public LevelVto() {

@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-//TODO: Fathy - should be RolePageRM
+//TODO: Fathy - Move to model/user/auth/rowMapper
 public class RolePageRM implements RowMapper<Role> {
 
     @Override

@@ -1,5 +1,6 @@
 
 
+//TODO: Youssef - move to shared/data/course/
 export class CorMainDetail {
   courseName : string;
   duration: number;

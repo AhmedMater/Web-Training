@@ -17,6 +17,7 @@ public class DetailsRep {
         this.jdbc = jdbc;
     }
 
+    //TODO: Youssef - should be moved to CourseRep
     public void createNewCourse (detailsData data){
         String sql = "INSERT INTO cor_main_details(name, duration , start_date, description" +
                 " , type_id , level_id ) Values (?,?,?,?,?,?)";
@@ -24,12 +25,14 @@ public class DetailsRep {
         this.jdbc.update(sql , data.getCourseName(),data.getDuration(),data.getStartDate()
         ,data.getDescription(),data.getTypeID(),data.getLevelID());
     }
+    //TODO: Youssef - should be moved to LookupRep
     public List<TypeVto> findTypeListData() {
         String sql = "SELECT id , label_en FROM cor_type";
         List<TypeVto> typeList = this.jdbc.query(sql, new TypeVtoRM());
         return typeList;
     }
 
+    //TODO: Youssef - should be moved to LookupRep
     public List<LevelVto> findLevelListData() {
         String sql = "SELECT id , label FROM cor_level";
         List<LevelVto> levelList = this.jdbc.query(sql, new LevelVtoRM());

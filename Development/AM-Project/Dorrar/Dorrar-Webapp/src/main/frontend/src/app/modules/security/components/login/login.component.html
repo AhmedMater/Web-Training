@@ -50,7 +50,7 @@
 
 
 
-<form action="#" id="loginForm" [formGroup]="formData">
+<form [formGroup]="formData">
   <div class="form-group"
        [ngClass]="{'has-error has-feedback': formData.get('username').invalid}">
     <label class="control-label" for="username">Username</label>
