@@ -1,9 +1,7 @@
 package com.dorrar.repository;
 
 
-import com.dorrar.model.Role;
-import com.dorrar.model.RoleActionRM;
-import com.dorrar.model.RolePageRM;
+import com.dorrar.model.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
@@ -37,7 +35,7 @@ public class LookupRep {
     }
 
     public List<Role> getRolePages() {
-        String sql2 = "SELECT ar.id as role_id , ar.label_en as role_name_en,     " +
+        String sql = "SELECT ar.id as role_id , ar.label_en as role_name_en,     " +
                 "                group_concat( ap.label_en separator ',') as page_labels, " +
                 "               group_concat(ap.id separator ',')  as pageids" +
                 "               FROM role_page rp" +
@@ -46,8 +44,33 @@ public class LookupRep {
                 "               group by rp.role_id;";
 
         RowMapper<Role> rowMapper2 = new RolePageRM();
-        List<Role> rolePages = this.jdbcTemplate.query(sql2, rowMapper2);
+        List<Role> rolePages = this.jdbcTemplate.query(sql, rowMapper2);
         return rolePages;
+    }
+
+    public List<Action> getUserActions(int userID)
+    {
+       // userID= 1 ;
+       String sql ="SELECT aa.id , aa.label_en as user_actions FROM auth_user_action ua\n" +
+               "LEFT JOIN auth_user au ON ua.user_id = au.id \n" +
+               "LEFT JOIN auth_action aa ON ua.action_id = aa.id \n" +
+               "WHERE ua.user_id ="+userID+";" ;
+       RowMapper<Action> userActionRM =new UserActionsRM() ;
+       List<Action> userActionsList =this.jdbcTemplate.query(sql ,userActionRM) ;
+       return userActionsList ;
+    }
+
+
+    public List<Page> getUserPage(int userID)
+    {
+       // userID =1 ;
+        String sql ="SELECT ap.id ,   ap.label_en as user_pages FROM auth_user_page up\n" +
+                "LEFT JOIN auth_user au ON up.user_id = au.id \n" +
+                "LEFT JOIN auth_page ap ON up.page_id = ap.id \n" +
+                "WHERE up.user_id ="+userID+";" ;
+        RowMapper<Page> userPageRM =new UserPageRM() ;
+        List<Page> userPagesList = this.jdbcTemplate.query(sql ,userPageRM) ;
+        return userPagesList ;
     }
 
 }

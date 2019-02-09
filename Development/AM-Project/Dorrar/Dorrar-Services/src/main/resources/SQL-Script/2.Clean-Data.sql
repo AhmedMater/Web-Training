@@ -37,3 +37,13 @@ INSERT INTO auth_role_action (role_id, action_id) VALUES (2,4);
 INSERT INTO auth_role_action (role_id, action_id) VALUES (2,5);
 INSERT INTO auth_role_action (role_id, action_id) VALUES (2,6);
 
+INSERT INTO `dorrar`.`auth_user` (`id`, `user_name`, `password`) VALUES ('1', 'ahmed', '123');
+INSERT INTO `dorrar`.`auth_user_action` (`user_id`, `action_id`) VALUES ('1', '1');
+INSERT INTO `dorrar`.`auth_user_action` (`user_id`, `action_id`) VALUES ('1', '2');
+INSERT INTO `dorrar`.`auth_user_action` (`user_id`, `action_id`) VALUES ('1', '3');
+
+INSERT INTO `dorrar`.`auth_user_page` (`user_id`, `page_id`) VALUES ('1', '1');
+INSERT INTO `dorrar`.`auth_user_role` (`user_id`, `role_id`) VALUES ('1', '1');
+
+-- Fathy - Start Authorization Task
+
