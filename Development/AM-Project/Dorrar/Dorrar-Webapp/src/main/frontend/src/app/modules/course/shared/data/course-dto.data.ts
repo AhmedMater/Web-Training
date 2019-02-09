@@ -1,10 +1,10 @@
-import {CourseReference} from "./course-ref-dto.data";
 import {SectionData} from "./section-data";
 import {CorMainDetail} from "./cor-main-detail.data";
+import {CourseRefDTO} from "./course-ref-dto.data";
 
 
 export class CourseDTO {
-  references: CourseReference[] = [];
+  references: CourseRefDTO[] = [];
   sections : SectionData[] = [];
   detail : CorMainDetail ;
 }
