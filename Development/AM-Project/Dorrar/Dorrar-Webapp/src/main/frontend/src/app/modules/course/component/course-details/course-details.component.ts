@@ -1,14 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
-import {CourseDetailsData} from "../../shared/data/course-details.data";
-import {OptionsDropList} from "../../shared/data/optionDrobList";
 import {DetailsService} from "../../shared/details.service";
-import {LevelDropList} from "../../shared/data/LevelDropList";
+import {CorLevel} from "../../shared/data/cor-level";
+import {CorType} from "../../shared/data/cor-type.data";
+import {CorMainDetail} from "../../shared/data/cor-main-detail.data";
+import {CourseDTO} from "../../shared/data/course-dto.data";
 
 @Component({
   selector: 'course-details',
   templateUrl: './course-details.component.html',
-  styleUrls: ['./course-details.component.scss']
+  styleUrls: ['./course-details.component.scss'],
+  providers: [DetailsService]
 })
 //TODO: Youssef - This Component should be in course/components/main-details
 export class CourseDetailsComponent implements OnInit {
@@ -16,15 +18,15 @@ export class CourseDetailsComponent implements OnInit {
 
   //TODO: Youssef - User camelcase for Formcontrol names
   formData: FormGroup = this.formBuilder.group({
-    Name: [null, [Validators.required, Validators.maxLength(15)]],
-    Duration: [null, [Validators.required, Validators.min(1)]],
-    Date: [null, Validators.required], //TODO: Youssef - should be in Future
+    name: [null, [Validators.required, Validators.maxLength(15)]],
+    duration: [null, [Validators.required, Validators.min(1)]],
+    startDate: [null, Validators.required], //TODO: Youssef - should be in Future
 
     //TODO: Youssef - should be corTypeID
-    Type: [null, Validators.required],
+    corTypeID: [null, Validators.required],
     //TODO: Youssef - should be corLevelID
-    Level: [null, Validators.required],
-    Description: [null, Validators.maxLength(200)]
+    corLevelID: [null, Validators.required],
+    description: [null, Validators.maxLength(200)]
 
   });
 
@@ -33,35 +35,38 @@ export class CourseDetailsComponent implements OnInit {
   }
 
   //TODO: Youssef - should be corTypes
-  optionList: OptionsDropList[] = [];
+  corTypes: CorType [] = [];
   //TODO: Youssef - should be corLevels
-  levelList : LevelDropList [] = [];
+  corLevels : CorLevel [] = [];
   ngOnInit() {
     this.details.findType().subscribe(
       res => {
-        this.optionList = res;
-        console.log(this.optionList);
+        this.corTypes = res;
+        console.log(this.corTypes);
       }
     );
     this.details.findLevel().subscribe(
-      res =>{this.levelList = res;
-      console.log(this.levelList);}
+      res =>{this.corLevels = res;
+      console.log(this.corLevels);}
     );
   }
 
   //TODO: Youssef - creat is worng spelling
-  creatNewCourse() {
+  createNewCourse() {
 
-    let data: CourseDetailsData = new CourseDetailsData();
-    let option: OptionsDropList = new OptionsDropList();
+    let data: CorMainDetail = new CorMainDetail();
+    let dto : CourseDTO = new CourseDTO();
+
     data.courseName = this.formData.get('Name').value;
     data.duration = this.formData.get('Duration').value;
     data.startDate = this.formData.get('Date').value;
-    data.typeID = this.formData.get('Type').value;
-    data.levelID = this.formData.get('Level').value;
+    data.corTypeID = this.formData.get('Type').value;
+    data.corLevelID = this.formData.get('Level').value;
     data.description = this.formData.get('Description').value;
     console.log(data);
-    this.details.creatNewCourse(data).subscribe(
+
+      dto.detail = data;
+    this.details.createNewCourse(dto).subscribe(
       res => {
         console.log(" Res succeeded");
       },

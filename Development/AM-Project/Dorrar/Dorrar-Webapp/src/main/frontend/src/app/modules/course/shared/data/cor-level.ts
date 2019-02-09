@@ -1,10 +1,10 @@
 
 //TODO: Youssef - rename class name to CorLevel
 //TODO: Youssef - rename file name to cor-level.data
-export class LevelDropList {
+export class CorLevel {
   //TODO: Youssef - rename variable to id
-  levelId : number ;
+  ID : number ;
   //TODO: Youssef - rename variable to labelEN
-  levelLabel : String ;
+  labelEN : String ;
 
 }
