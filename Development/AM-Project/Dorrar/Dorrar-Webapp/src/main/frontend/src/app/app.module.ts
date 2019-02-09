@@ -21,6 +21,8 @@ import { CourseComponent } from './modules/course/course.component';
 import { UserProfileComponent } from './modules/user/components/user-profile/user-profile.component';
 import { UserRoleComponent } from './modules/user/components/user-profile/user-role/user-role.component';
 import { CourseDetailsComponent } from './modules/course/component/course-details/course-details.component';
+import {LookupService} from "./layout/shared/services/lookup.service";
+import {LocalStorageService} from "./layout/shared/services/local-storage.service";
 
 @NgModule({
   declarations: [
@@ -48,7 +50,7 @@ import { CourseDetailsComponent } from './modules/course/component/course-detail
     BrowserModule, HttpClientModule, FormsModule, ReactiveFormsModule, CommonModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [LookupService, LocalStorageService],
   bootstrap: [LayoutComponent]
 })
 export class AppModule { }

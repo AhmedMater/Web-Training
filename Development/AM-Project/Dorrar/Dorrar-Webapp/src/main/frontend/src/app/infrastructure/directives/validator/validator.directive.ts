@@ -1,9 +1,9 @@
 // import {Directive, ElementRef, HostListener, Input, OnChanges, OnInit, Renderer2, SimpleChanges} from "@angular/core";
-// import {ValidatorInputData} from "./validator-input.data";
+// import {ValData} from "./validator-input.data";
 // import {TranslateService} from "@ngx-translate/core";
 // import {Languages} from "../../data/enums/Languages";
 // import {LanguageService} from "../../../services/language.service";
-// import {STCErrorData} from "./error.data";
+// import {ErrorData} from "./error.data";
 // import {LocalStorageService} from "../../../services/local-storage.service";
 //
 // @Directive({
@@ -11,16 +11,16 @@
 //   providers: [LanguageService]
 // })
 // export class ValidatorDirective implements OnInit, OnChanges {
-//   @Input("validatorInput") valid: ValidatorInputData;
+//   @Input("validatorInput") valid: ValData;
 //
-//   private controlErrors: STCErrorData[] = [
-//     new STCErrorData("required"),       new STCErrorData("pattern"),     new STCErrorData("emptyStr"),
-//     new STCErrorData("maxlength"),      new STCErrorData("minlength"),   new STCErrorData("invalidWords"),
-//     new STCErrorData("min"),            new STCErrorData("max"),         new STCErrorData("invalidFromDept"),
-//     new STCErrorData("inPast"),         new STCErrorData("isHoliday"),   new STCErrorData("repeatedChars"),
-//     new STCErrorData("notInSequence"),  new STCErrorData("notUnique"),   new STCErrorData("invalidEmail"),
-//     new STCErrorData("notInFuture"),  new STCErrorData("notInPast"), new STCErrorData("invalidDueDate"),
-//     new STCErrorData("invalidReportID")
+//   private controlErrors: ErrorData[] = [
+//     new ErrorData("required"),       new ErrorData("pattern"),     new ErrorData("emptyStr"),
+//     new ErrorData("maxlength"),      new ErrorData("minlength"),   new ErrorData("invalidWords"),
+//     new ErrorData("min"),            new ErrorData("max"),         new ErrorData("invalidFromDept"),
+//     new ErrorData("inPast"),         new ErrorData("isHoliday"),   new ErrorData("repeatedChars"),
+//     new ErrorData("notInSequence"),  new ErrorData("notUnique"),   new ErrorData("invalidEmail"),
+//     new ErrorData("notInFuture"),  new ErrorData("notInPast"), new ErrorData("invalidDueDate"),
+//     new ErrorData("invalidReportID")
 //   ];
 //
 //   private formControlName: string;
@@ -55,7 +55,7 @@
 //       this.formControlName = tagAttributes['formcontrolname'].nodeValue;
 //
 //   }
-//   createErrorTag(error: STCErrorData, currentLang: Languages) {
+//   createErrorTag(error: ErrorData, currentLang: Languages) {
 //     let errorDivID = this.formControlName + "_ValDiv_" + error.error + "_" + currentLang;
 //     this.translationKey = this.inputData.localizationPrefix + "." + this.formControlName
 //       + ".formError." + error.error;

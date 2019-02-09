@@ -1,16 +1,16 @@
 import {FormGroup} from "@angular/forms";
 
 
-export class ValidatorInputData{
-  localizationPrefix:string;
+export class ValData{
+  localPrefix:string;
   formData: FormGroup;
 
-  constructor(localizationPrefix:string, formData: FormGroup){
-    this.localizationPrefix = localizationPrefix;
+  constructor(localPrefix:string, formData: FormGroup){
+    this.localPrefix = localPrefix;
     this.formData = formData;
   }
 
-  clone(): ValidatorInputData{
-    return new ValidatorInputData(this.localizationPrefix, this.formData);
+  clone(): ValData{
+    return new ValData(this.localPrefix, this.formData);
   }
 }
