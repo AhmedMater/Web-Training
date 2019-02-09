@@ -1,5 +1,6 @@
 package com.dorrar.detailsData;
 
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -7,7 +8,7 @@ public class detailsData implements Serializable {
     private String courseName ;
     private int duration;
     private Date startDate;
-    private String typeID;
+    private int typeID;
     private int levelID;
     private String description;
 
@@ -38,13 +39,9 @@ public class detailsData implements Serializable {
         this.startDate = startDate;
     }
 
-    public String getTypeID() {
-        return typeID;
-    }
+    public int getTypeID() { return typeID; }
 
-    public void setTypeID(String typeID) {
-        this.typeID = typeID;
-    }
+    public void setTypeID(int typeID) { this.typeID = typeID; }
 
     public int getLevelID() {
         return levelID;

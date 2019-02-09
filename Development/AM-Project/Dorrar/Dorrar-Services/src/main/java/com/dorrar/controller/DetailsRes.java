@@ -1,53 +1,58 @@
 package com.dorrar.controller;
 
-import com.dorrar.detailsData.LevelDropList;
-import com.dorrar.detailsData.OptionDropList;
+import com.dorrar.detailsData.LevelVto;
+import com.dorrar.detailsData.TypeVto;
 import com.dorrar.detailsData.detailsData;
+import com.dorrar.repository.DetailsRep;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
-import java.util.ArrayList;
+import java.util.List;
 
 //TODO: Youssef - After Moving the functions Remove this class
 @Path("/course")
 public class DetailsRes {
+
+
+    @Autowired
+    private DetailsRep repository ;
+
     @POST
     //TODO: Youssef - Path should be /mainDetails
-    @Path("/new")
+    @Path("/mainDetails")
     @Consumes(MediaType.APPLICATION_JSON)
     //TODO: Youssef - move this function to CourseRes
-    public void next(detailsData data){
+    public void createNewCourse(detailsData data){
         System.out.printf("success.");
         System.out.printf(data.toString());
+
+        repository.createNewCourse(data);
 
     }
     @GET
     //TODO: Youssef - Path should be /corType
-    @Path("/findType")
+    @Path("/corType")
     @Produces(MediaType.APPLICATION_JSON)
     //TODO: Youssef - move this function to LookupRes
     //TODO: Youssef - This Function should retreive the Data from Database instead of Hardcoded
-    public ArrayList<OptionDropList> findType (){
-        ArrayList<OptionDropList> typeList = new ArrayList<>();
-        typeList.add(new OptionDropList(1 , "Acadmic"));
-        typeList.add(new OptionDropList(2 , "Practical"));
+    public List<TypeVto> findType (){
 
-        return typeList;
+        List<TypeVto> result = this.repository.findTypeListData();
+        return result;
     }
 
     @GET
     //TODO: Youssef - Path should be /corLevel
-    @Path("/findLevel")
+    @Path("/corLevel")
     @Produces(MediaType.APPLICATION_JSON)
     //TODO: Youssef - move this function to LookupRes
     //TODO: Youssef - This Function should retreive the Data from Database instead of Hardcoded
-    public ArrayList<LevelDropList> findLevel (){
-        ArrayList<LevelDropList> levelList = new ArrayList<>();
-        levelList.add(new LevelDropList(1 , "Intern"));
-        levelList.add(new LevelDropList(2 , "Entry"));
-        levelList.add(new LevelDropList(2 , "Advance"));
+    public List<LevelVto> findLevel (){
 
-        return levelList;
+        List<LevelVto> result = this.repository.findLevelListData();
+        return result;
+
     }
 
 }
