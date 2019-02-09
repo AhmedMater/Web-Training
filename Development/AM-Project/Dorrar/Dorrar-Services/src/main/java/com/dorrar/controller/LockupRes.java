@@ -25,7 +25,6 @@ public class LockupRes {
     @Path("/roles")
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    //TODO: Fathy - Service should be in Class LookupRes
     public List<Role> getRoles() {
 
         return service.getAllRoles();
@@ -35,7 +34,6 @@ public class LockupRes {
     @Path("/page")
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    //TODO: Fathy - Service should be in Lookup Resource
     public ArrayList<Page> getPages(){
         List<Action> actionList =new ArrayList<>();
         Action a = new Action(1,"view course details") ;

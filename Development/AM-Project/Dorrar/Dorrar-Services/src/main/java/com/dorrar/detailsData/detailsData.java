@@ -4,6 +4,7 @@ package com.dorrar.detailsData;
 import java.io.Serializable;
 import java.util.Date;
 
+//TODO:
 public class detailsData implements Serializable {
     private String courseName ;
     private int duration;

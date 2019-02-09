@@ -20,7 +20,6 @@ public class LookupSer {
 
     public List<Role> getAllRoles()
     {
-        //TODO: Fathy - Start - This logic should be in Service function getAllRoles
         List<Role> roles =new ArrayList<>();
         for(Role role: rep.getRoleActions() )
             roles.add(role);
@@ -37,7 +36,6 @@ public class LookupSer {
                 roles.add(role);
         }
         return roles ;
-        //TODO: Fathy - End - This logic should be in Service function getAllRoles
     }
 
 

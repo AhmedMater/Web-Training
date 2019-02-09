@@ -10,17 +10,10 @@ export class CourseService {
   constructor(private http:HttpClient) { }
 
   saveCorReferences(data:CourseDTO) {
-    //TODO: Hala - Use App_base_url such as in User Service
     return this.http.post(this.BASE_URL +"/2/reference", data);
   }
-  // "http://localhost:8080/api/course/2/reference"
 
-  //TODO: Hala - Use App_base_url such as in User Service
-
-
-  //TODO: Yara - Use App_base_url such as in User Service
-
-  addNewSections( data : CourseDTO) {
+  addNewSections(data : CourseDTO) {
     return this.http.post( this.BASE_URL +"/1/section", data);
 
   }

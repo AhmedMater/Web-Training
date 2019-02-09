@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {SectionData} from "../../shared/data/section-data";
 import {FormBuilder, Validators} from "@angular/forms";
-// import {SectionsService} from "../../shared/sections.service";
-// import {CourseData} from "../../shared/data/course-dto.data";
-import {ActivatedRoute} from "@angular/router";
 import {CourseService} from "../../shared/course.service";
 import {CourseDTO} from "../../shared/data/course-dto.data";
 
@@ -15,7 +12,6 @@ import {CourseDTO} from "../../shared/data/course-dto.data";
   providers : [FormBuilder , CourseService],
 
 })
-//TODO - Yara move Component to course/component
 export class CreateSectionComponent implements OnInit {
 
   dataList: SectionData[] = [];
@@ -53,7 +49,6 @@ export class CreateSectionComponent implements OnInit {
   isEditMode: boolean = false;
 
   editRow(index): void {
-    // TODO: Yara - Use Index instead of Total Row Object
     this.formData.get('name').reset(this.dataList[0].name);
     this.formData.get('description').reset(this.dataList[0].description);
     this.dataList.splice(index, 1);
@@ -76,16 +71,7 @@ export class CreateSectionComponent implements OnInit {
 
   };
 
-  // TODO: Yara - Use Index instead of Total Row Object
   removeRow(index) {
-    //let index = this.dataList.indexOf(row);
-    if (index !== -1) {
-      //let index = this.dataList.indexOf(row);
-      this.dataList.splice(index, 1);
-
-    }
-
-
-
+    this.dataList.splice(index, 1);
   }
 }

@@ -1,101 +1,89 @@
-<!--TODO: Hala - There is no Need for Cards here - Check the HTML of the template-->
 <div class="container-fluid">
   <div class=" row">
     <div class="offset-3 col-md-12">
       <form [formGroup]="formData">
 
-            <div class="row">
-              <div class="form-group col-md-9"
-              [ngClass]="{'has-error has-feedback':formData.get('refName').invalid && formData.get('refName').dirty}">
-              <label for="refName">Reference Name</label>
-              <input type="text" class="form-control" id="refName"
-                     formControlName="refName"
-                     placeholder="Enter Reference Name">
-              <small class="form-text text-muted" *ngIf="formData.get('refName').hasError('required')"> This field
+        <div class="row">
+          <div class="form-group col-md-9"
+               [ngClass]="{'has-error has-feedback':formData.get('refName').invalid && formData.get('refName').dirty}">
+            <label for="refName">Reference Name</label>
+            <input type="text" class="form-control" id="refName"
+                   formControlName="refName"
+                   placeholder="Enter Reference Name">
+            <small class="form-text text-muted" *ngIf="formData.get('refName').hasError('required')"> This field
               is required
-              </small>
-              <small class="form-text text-muted" *ngIf="formData.get('refName').hasError('maxlength')"> Must be less than 15
-              </small>
+            </small>
+            <small class="form-text text-muted" *ngIf="formData.get('refName').hasError('maxlength')"> Must be less than
+              15
+            </small>
 
-              </div>
-
-              <div class="form-group col-md-3"
-                [ngClass]="{'has-error has-feedback':formData.get('refTypeID').invalid&& formData.get('refTypeID').dirty}">
-
-                <label for="refTypeID">Reference Type</label>
-                <select class="form-control" id="refTypeID" formControlName="refTypeID">
-                  <option *ngFor="let ref of refTypes" [ngValue]="ref.id">{{ref.labelEN}}</option>
-
-                </select>
-
-                <small class="form-text text-muted" *ngIf="formData.get('refTypeID').hasError('required')"> This field
-                is required
-                </small>
-
-              </div>
-            </div>
-            <div class="row">
-              <div class="form-group col-md-12 "
-                [ngClass]="{'has-error has-feedback': formData.get('refUrl').invalid&& formData.get('refUrl').dirty}">
-                <label for="refUrl">Reference URL</label>
-                <input type="text" class="form-control " id="refUrl" formControlName="refUrl"
-                       placeholder="Enter URL">
-                <small class="form-text text-muted" *ngIf="formData.get('refUrl').hasError('required')"> This field
-                is required
-                </small>
-
-              </div>
-            </div>
-
-          </form>
-
-          <button type="submit" class="btn btn-lg btn-success mr-1 btn-sm pull-right mg-l-15" *ngIf="!isEditMode" (click)="addItem()">Add</button>
-          <button class=" btn btn-danger ml-1 btn-sm pull-right" *ngIf="!isEditMode" (click)="clear()">Clear</button>
-
-          <button type="submit" class="btn btn-lg btn-success mr-1 btn-sm pull-right mg-l-15" *ngIf="isEditMode" (click)="addItem()">Save</button>
-          <button class=" btn btn-danger ml-1 btn-sm pull-right" *ngIf="isEditMode" (click)="clear()">Discard</button>
-
-
-
-          <table class="table table-striped mt-3">
-            <thead>
-            <tr>
-              <th scope="col">Reference Name</th>
-              <th scope="col">Reference Type</th>
-              <th scope="col">Reference Url</th>
-              <th scope="col"></th>
-            </tr>
-
-            </thead>
-            <tbody>
-
-            <tr *ngFor="let item of dataList; index as i">
-
-
-              <td>{{item.refName}}</td>
-              <td>{{item.refTypeID}}</td>
-              <td>{{item.refUrl}}</td>
-
-
-              <td><i class="fa fa-edit"  [hidden]="isEditMode" (click)="onEditRow(i)"></i></td>
-              <td><i class="fa fa-trash"  (click)='removerow(i)'></i></td>
-
-            </tr>
-
-
-            </tbody>
-          </table>
-
-
-          <div class="card-action">
-            <button class="btn btn-lg btn-success mr-1 btn-sm pull-right mg-l-15" (click)="saveCorReferences()">Next</button>
-            <button class="btn btn-danger ml-1 btn-sm pull-right" (click)="isclick()">Back</button>
           </div>
 
+          <div class="form-group col-md-3"
+               [ngClass]="{'has-error has-feedback':formData.get('refTypeID').invalid&& formData.get('refTypeID').dirty}">
 
+            <label for="refTypeID">Reference Type</label>
+            <select class="form-control" id="refTypeID" formControlName="refTypeID">
+              <option *ngFor="let ref of refTypes" [ngValue]="ref.id">{{ref.labelEN}}</option>
 
+            </select>
 
+            <small class="form-text text-muted" *ngIf="formData.get('refTypeID').hasError('required')"> This field
+              is required
+            </small>
 
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-md-12 "
+               [ngClass]="{'has-error has-feedback': formData.get('refUrl').invalid&& formData.get('refUrl').dirty}">
+            <label for="refUrl">Reference URL</label>
+            <input type="text" class="form-control " id="refUrl" formControlName="refUrl"
+                   placeholder="Enter URL">
+            <small class="form-text text-muted" *ngIf="formData.get('refUrl').hasError('required')"> This field
+              is required
+            </small>
+
+          </div>
+        </div>
+
+      </form>
+
+      <button type="submit" class="btn btn-lg btn-success mr-1 btn-sm pull-right mg-l-15" *ngIf="!isEditMode"
+              (click)="addItem()">Add
+      </button>
+      <button class=" btn btn-danger ml-1 btn-sm pull-right" *ngIf="!isEditMode" (click)="clear()">Clear</button>
+
+      <button type="submit" class="btn btn-lg btn-success mr-1 btn-sm pull-right mg-l-15" *ngIf="isEditMode"
+              (click)="addItem()">Save
+      </button>
+      <button class=" btn btn-danger ml-1 btn-sm pull-right" *ngIf="isEditMode" (click)="clear()">Discard</button>
+
+      <table class="table table-striped mt-3">
+        <thead>
+        <tr>
+          <th scope="col">Reference Name</th>
+          <th scope="col">Reference Type</th>
+          <th scope="col">Reference Url</th>
+          <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let item of dataList; index as i">
+          <td>{{item.refName}}</td>
+          <td>{{item.refTypeID}}</td>
+          <td>{{item.refUrl}}</td>
+          <td><i class="fa fa-edit" [hidden]="isEditMode" (click)="onEditRow(i)"></i></td>
+          <td><i class="fa fa-trash" (click)='removerow(i)'></i></td>
+        </tr>
+        </tbody>
+      </table>
+
+      <div class="card-action">
+        <button class="btn btn-lg btn-success mr-1 btn-sm pull-right mg-l-15" (click)="saveCorReferences()">Next
+        </button>
+        <button class="btn btn-danger ml-1 btn-sm pull-right" (click)="isclick()">Back</button>
+      </div>
     </div>
   </div>
 </div>
