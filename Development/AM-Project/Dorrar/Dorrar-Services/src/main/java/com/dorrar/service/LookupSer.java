@@ -13,35 +13,30 @@ import java.util.List;
 public class LookupSer {
 
     @Autowired
-    private LookupRep rep ;
+    private LookupRep rep;
+
     public LookupSer(LookupRep rep) {
-        this.rep =rep ;
+        this.rep = rep;
     }
 
-    public List<Role> getAllRoles()
-    {
-        List<Role> roles =new ArrayList<>();
-        for(Role role: rep.getRoleActions() )
+    public List<Role> getAllRoles() {
+        List<Role> roles = new ArrayList<>();
+        for (Role role : rep.getRoleActions())
             roles.add(role);
 
-        for(Role role: rep.getRolePages() ){
+        for (Role role : rep.getRolePages()) {
             boolean isFound = false;
-            for(Role r:roles)
-                if(role.getRoleid() == r.getRoleid()){
+            for (Role r : roles)
+                if (role.getRoleid() == r.getRoleid()) {
                     isFound = true;
                     r.setPageList(role.getPageList());
                     break;
                 }
-            if(!isFound)
+            if (!isFound)
                 roles.add(role);
         }
-        return roles ;
+        return roles;
     }
-
-
-
-
-
 
 
 }

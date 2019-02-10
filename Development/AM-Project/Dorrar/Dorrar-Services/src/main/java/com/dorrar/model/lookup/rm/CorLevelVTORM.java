@@ -6,8 +6,6 @@ import org.springframework.jdbc.core.RowMapper;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-//TODO: Youssef - Move to /model/lookup/rm
-//TODO: Youssef - Rename to CorLevelVTORM
 public class CorLevelVTORM implements RowMapper<CorLevel> {
     @Override
     public CorLevel mapRow(ResultSet rs, int rowIndex) throws SQLException {

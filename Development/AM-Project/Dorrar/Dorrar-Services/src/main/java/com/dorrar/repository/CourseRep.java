@@ -12,7 +12,7 @@ public class CourseRep {
     public CourseRep(JdbcTemplate jdbc) {
         this.jdbc = jdbc;
     }
-    //TODO: Youssef - should be moved to CourseRep
+
     public void createNewCourse (CorMainDetail data){
         String sql = "INSERT INTO cor_main_details(name, duration , start_date, description" +
                 " , type_id , level_id ) Values (?,?,?,?,?,?)";

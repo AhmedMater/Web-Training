@@ -46,7 +46,6 @@ public class CourseRes {
     @POST
     @Path("/mainDetails")
     @Consumes(MediaType.APPLICATION_JSON)
-    //TODO: Youssef - move this function to CourseRes
     public void createNewCourse(CorMainDetail data){
         repository.createNewCourse(data);
 

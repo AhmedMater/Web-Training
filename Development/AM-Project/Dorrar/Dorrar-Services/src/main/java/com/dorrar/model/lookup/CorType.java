@@ -1,11 +1,7 @@
 package com.dorrar.model.lookup;
 
-//TODO: Youssef - Rename to CorType
-//TODO: Youssef - Move to /model/lookup/
 public class CorType {
-    //TODO: Youssef - Rename to id
     private int id;
-    //TODO: Youssef - Rename to labelEN
     private String labelEN;
 
 

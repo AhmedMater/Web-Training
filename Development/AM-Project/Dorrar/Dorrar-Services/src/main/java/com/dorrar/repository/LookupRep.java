@@ -57,14 +57,12 @@ public class LookupRep {
     }
 
 
-    //TODO: Youssef - should be moved to LookupRep
     public List<CorType> findTypeListData() {
         String sql = "SELECT id , label_en FROM cor_type";
         List<CorType> typeList = this.jdbcTemplate.query(sql, new CorTypeVTORM());
         return typeList;
     }
 
-    //TODO: Youssef - should be moved to LookupRep
     public List<CorLevel> findLevelListData() {
         String sql = "SELECT id , label FROM cor_level";
         List<CorLevel> levelList = this.jdbcTemplate.query(sql, new CorLevelVTORM());

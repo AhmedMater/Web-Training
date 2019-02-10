@@ -2,8 +2,6 @@ import {Injectable} from "@angular/core";
 import {HttpClient} from "@angular/common/http";
 import {CourseDTO} from "./data/course/course-dto.data";
 import {ConfigParam} from "../../../infrastructure/common/config-param";
-import {CorType} from "./data/cor-type.data";
-import {CorLevel} from "./data/cor-level";
 
 @Injectable()
 export class CourseService {

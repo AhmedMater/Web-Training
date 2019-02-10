@@ -115,19 +115,15 @@ public class LockupRes {
     @GET
     @Path("/corType")
     @Produces(MediaType.APPLICATION_JSON)
-    //TODO: Youssef - move this function to LookupRes
     public List<CorType> findType (){
-        List<CorType> result = this.LookupRep.findTypeListData();
-        return result;
+        return this.LookupRep.findTypeListData();
     }
 
     @GET
     @Path("/corLevel")
     @Produces(MediaType.APPLICATION_JSON)
-    //TODO: Youssef - move this function to LookupRes
     public List<CorLevel> findLevel (){
-        List<CorLevel> result = this.LookupRep.findLevelListData();
-        return result;
+        return this.LookupRep.findLevelListData();
 
     }
 }
