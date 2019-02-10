@@ -1,50 +1,50 @@
 <form [formGroup]="formData">
   <div class="row">
     <div class="form-group col-md-12"
-         [ngClass]="{'has-error has-feedback' : formData.get('Name').invalid && (formData.get('Name').touched ||formData.get('Name').dirty)}">
+         [ngClass]="{'has-error has-feedback' : formData.get('name').invalid && (formData.get('name').touched ||formData.get('name').dirty)}">
       <label class="font-weight-bold">Name :</label>
-      <input type="text" id="Name" class="form-control" formControlName="Name">
+      <input type="text" id="name" class="form-control" formControlName="name">
       <!--TODO: Youssef - use dirty here to show message only in case of error only-->
-      <small class="form-text text-muted ">Please Max Length of name 15 char.</small>
+      <small class="form-text text-muted" *ngIf="formData.get('name').hasError('maxlength')">Please Max Length of name 15 char.</small>
     </div>
   </div>
 
   <div class="row">
     <div class="form-group col-md-6 d-inline-block "
-         [ngClass]="{'has-error has-feedback' : formData.get('Duration').invalid && (formData.get('Duration').touched ||formData.get('Duration').dirty)}">
+         [ngClass]="{'has-error has-feedback' : formData.get('duration').invalid && (formData.get('duration').touched ||formData.get('duration').dirty)}">
       <label class="font-weight-bold">Duration :</label>
-      <input type="number" id="Duration" class="form-control" formControlName="Duration"
+      <input type="number" id="duration" class="form-control" formControlName="duration"
              placeholder="Duration with Hours">
       <!--TODO: Youssef - use dirty here to show message only in case of error only-->
-      <small class="form-text text-muted"> Duration Must be Required</small>
+      <small class="form-text text-muted" *ngIf="formData.get('duration').hasError('required')"> Duration Must be Required</small>
     </div>
 
     <div class="form-group col-md-6 d-inline-block"
-         [ngClass]="{'has-error has-feedback' : formData.get('Date').invalid && (formData.get('Date').touched ||formData.get('Date').dirty)}">
+         [ngClass]="{'has-error has-feedback' : formData.get('startDate').invalid && (formData.get('startDate').touched ||formData.get('startDate').dirty)}">
       <label class="font-weight-bold">Expected Start Date :</label>
-      <input type="date" id="Date" class="form-control" formControlName="Date">
+      <input type="date" id="startDate" class="form-control" formControlName="startDate">
       <!--TODO: Youssef - use dirty here to show message only in case of error only-->
-      <small class="form-text text-muted">Start Date Must be required.</small>
+      <small class="form-text text-muted" *ngIf="formData.get('startDate').hasError('required')">Start Date Must be required.</small>
     </div>
   </div>
 
   <div class="row">
     <div class="form-group  col-md-6 d-inline-block"
-         [ngClass]="{'has-error has-feedback' : formData.get('Type').invalid && (formData.get('Type').touched ||formData.get('Type').dirty)}">
+         [ngClass]="{'has-error has-feedback' : formData.get('corTypeID').invalid && (formData.get('corTypeID').touched ||formData.get('corTypeID').dirty)}">
       <label class="font-weight-bold">Type :</label>
-      <select class="form-control" formControlName="Type">
+      <select class="form-control" formControlName="corTypeID">
         <option class="mt-auto" *ngFor="let type of corTypes"
                 [ngValue]="type.typeId">{{type.typeLabel}}
         </option>
       </select>
       <!--TODO: Youssef - use dirty here to show message only in case of error only-->
-      <small class="form-text text-muted">Type Must be required.</small>
+      <small class="form-text text-muted" *ngIf="formData.get('corTypeID').hasError('required')">Type Must be required.</small>
     </div>
 
     <div class="form-group col-md-6 d-inline-block"
-         [ngClass]="{'has-error has-feedback' : formData.get('Level').invalid && (formData.get('Level').touched ||formData.get('Level').dirty)}">
+         [ngClass]="{'has-error has-feedback' : formData.get('corLevelID').invalid && (formData.get('corLevelID').touched ||formData.get('corLevelID').dirty)}">
       <label class="font-weight-bold">Level :</label>
-      <select class="form-control " formControlName="Level">
+      <select class="form-control " formControlName="corLevelID">
         <option class="mt-auto"
                 *ngFor="let level of corLevels"
                 [ngValue]="level.levelId">{{level.levelLabel}}
@@ -52,16 +52,17 @@
 
       </select>
       <!--TODO: Youssef - use dirty here to show message only in case of error only-->
-      <small class="form-text text-muted">Level Must be required.</small>
+      <small class="form-text text-muted" *ngIf="formData.get('corLevelID').hasError('required')">Level Must be required.</small>
     </div>
   </div>
 
   <div class="row">
     <div class="form-group col-md-12">
       <label class="font-weight-bold">Description :</label>
-      <textarea class="form-control" formControlName="Description"> </textarea>
+      <textarea class="form-control" formControlName="description"> </textarea>
     </div>
   </div>
+
   <div class="row">
     <div class="pull-right card-action">
       <button class="btn btn-success" (click)="createNewCourse()">Next</button>

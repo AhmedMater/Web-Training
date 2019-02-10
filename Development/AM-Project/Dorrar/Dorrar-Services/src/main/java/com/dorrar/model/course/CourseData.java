@@ -1,4 +1,4 @@
-package com.dorrar;
+package com.dorrar.model.course;
 
 import com.dorrar.data.CourseReference;
 import com.dorrar.model.SectionData;

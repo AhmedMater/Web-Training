@@ -1,7 +1,9 @@
 import {Injectable} from "@angular/core";
 import {HttpClient} from "@angular/common/http";
-import {CourseDTO} from "./data/course-dto.data";
+import {CourseDTO} from "./data/course/course-dto.data";
 import {ConfigParam} from "../../../infrastructure/common/config-param";
+import {CorType} from "./data/cor-type.data";
+import {CorLevel} from "./data/cor-level";
 
 @Injectable()
 export class CourseService {
@@ -16,6 +18,12 @@ export class CourseService {
     return this.http.post( this.BASE_URL +"/1/section", data);
 
   }
+
+  createNewCourse(detail : CourseDTO ){
+    return this.http.post(this.BASE_URL+"/mainDetails", detail);
+
+  }
+
 
 
 }

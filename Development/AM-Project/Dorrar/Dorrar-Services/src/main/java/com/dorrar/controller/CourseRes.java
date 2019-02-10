@@ -1,29 +1,32 @@
 package com.dorrar.controller;
 
-import com.dorrar.CourseData;
-import com.dorrar.data.CorRefType;
-import com.dorrar.data.CourseReference;
-import com.dorrar.repository.ReferenceRep;
+import com.dorrar.model.course.CorMainDetail;
+import com.dorrar.model.course.CourseData;
+import com.dorrar.repository.CourseRep;
 import com.dorrar.service.CourseSer;
-import com.dorrar.repository.SectionRep;
 import com.dorrar.service.SectionSer;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
-import java.util.ArrayList;
 
 @Path("/course")
 public class CourseRes {
     private CourseSer service;
     private SectionSer sectionService ;
+    private CourseRep repository ;
+
 
     @Autowired
     public CourseRes(
             CourseSer service,    
-            SectionSer sectionService) {
+            SectionSer sectionService,
+            CourseRep repository) {
         this.service = service;
+
         this.sectionService = sectionService ;
+
+        this.repository = repository;
     }
 
     @POST
@@ -40,8 +43,14 @@ public class CourseRes {
         this.sectionService.insertCourseSections(courseID,data.getSections());
     }
 
+    @POST
+    @Path("/mainDetails")
+    @Consumes(MediaType.APPLICATION_JSON)
+    //TODO: Youssef - move this function to CourseRes
+    public void createNewCourse(CorMainDetail data){
+        repository.createNewCourse(data);
 
-
+    }
 
 
 }

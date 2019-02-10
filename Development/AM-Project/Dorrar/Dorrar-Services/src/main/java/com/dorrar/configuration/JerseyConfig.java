@@ -1,10 +1,5 @@
 package com.dorrar.configuration;
 
-import com.dorrar.controller.*;
-import com.dorrar.controller.CourseRes;
-import com.dorrar.controller.DetailsRes;
-import com.dorrar.controller.SecurityRes;
-import com.dorrar.controller.UserRes;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.springframework.context.annotation.Configuration;
 

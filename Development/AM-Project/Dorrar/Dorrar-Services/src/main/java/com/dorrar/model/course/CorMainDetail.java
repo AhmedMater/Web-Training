@@ -1,4 +1,4 @@
-package com.dorrar.detailsData;
+package com.dorrar.model.course;
 
 
 import java.io.Serializable;
@@ -6,17 +6,17 @@ import java.util.Date;
 
 //TODO: Youssef - Rename to CorMainDetail
 //TODO: Youssef - Move to model/course/
-public class detailsData implements Serializable {
+public class CorMainDetail implements Serializable {
     private String courseName ;
     private int duration;
     private Date startDate;
     //TODO: Youssef - Rename to corTypeID
-    private int typeID;
+    private int corTypeID;
     //TODO: Youssef - Rename to corLevelID
-    private int levelID;
+    private int corLevelID;
     private String description;
 
-    public detailsData() {
+    public CorMainDetail() {
     }
 
     public String getCourseName() {
@@ -43,16 +43,20 @@ public class detailsData implements Serializable {
         this.startDate = startDate;
     }
 
-    public int getTypeID() { return typeID; }
-
-    public void setTypeID(int typeID) { this.typeID = typeID; }
-
-    public int getLevelID() {
-        return levelID;
+    public int getCorTypeID() {
+        return corTypeID;
     }
 
-    public void setLevelID(int levelID) {
-        this.levelID = levelID;
+    public void setCorTypeID(int corTypeID) {
+        this.corTypeID = corTypeID;
+    }
+
+    public int getCorLevelID() {
+        return corLevelID;
+    }
+
+    public void setCorLevelID(int corLevelID) {
+        this.corLevelID = corLevelID;
     }
 
     public String getDescription() {
@@ -69,8 +73,8 @@ public class detailsData implements Serializable {
                 "courseName='" + courseName + '\'' +
                 ", duration=" + duration +
                 ", startDate=" + startDate +
-                ", typeID='" + typeID + '\'' +
-                ", levelID=" + levelID +
+                ", typeID='" + corTypeID + '\'' +
+                ", levelID=" + corLevelID +
                 ", description='" + description + '\'' +
                 '}';
     }

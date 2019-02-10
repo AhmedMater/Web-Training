@@ -2,6 +2,9 @@ package com.dorrar.controller;
 
 import com.dorrar.data.CorRefType;
 import com.dorrar.model.*;
+import com.dorrar.model.lookup.CorLevel;
+import com.dorrar.model.lookup.CorType;
+import com.dorrar.repository.LookupRep;
 import com.dorrar.repository.ReferenceRep;
 import com.dorrar.service.LookupSer;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,11 +20,15 @@ import java.util.List;
 public class LockupRes {
     private ReferenceRep repository;
     private LookupSer service;
+    private LookupRep LookupRep;
 
     @Autowired
-    public LockupRes(ReferenceRep repository ,LookupSer service) {
+    public LockupRes(ReferenceRep repository , LookupSer service , LookupRep lookUpRep) {
         this.repository = repository;
         this.service=service ;
+        this.LookupRep=lookUpRep;
+
+
     }
 
     @Path("/roles")
@@ -103,5 +110,24 @@ public class LockupRes {
     @Path("/corRefType")
     public List<CorRefType> findData() {
         return this.repository.findRefType();
+    }
+
+    @GET
+    @Path("/corType")
+    @Produces(MediaType.APPLICATION_JSON)
+    //TODO: Youssef - move this function to LookupRes
+    public List<CorType> findType (){
+        List<CorType> result = this.LookupRep.findTypeListData();
+        return result;
+    }
+
+    @GET
+    @Path("/corLevel")
+    @Produces(MediaType.APPLICATION_JSON)
+    //TODO: Youssef - move this function to LookupRes
+    public List<CorLevel> findLevel (){
+        List<CorLevel> result = this.LookupRep.findLevelListData();
+        return result;
+
     }
 }

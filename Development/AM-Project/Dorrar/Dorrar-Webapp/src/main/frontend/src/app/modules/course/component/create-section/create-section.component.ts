@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {SectionData} from "../../shared/data/section-data";
 import {FormBuilder, Validators} from "@angular/forms";
 import {CourseService} from "../../shared/course.service";
-import {CourseDTO} from "../../shared/data/course-dto.data";
+import {CourseDTO} from "../../shared/data/course/course-dto.data";
 
 @Component({
   selector: 'create-section',

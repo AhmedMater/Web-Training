@@ -1,6 +1,10 @@
 package com.dorrar.repository;
 
 
+import com.dorrar.model.lookup.CorLevel;
+import com.dorrar.model.lookup.rm.CorLevelVTORM;
+import com.dorrar.model.lookup.CorType;
+import com.dorrar.model.lookup.rm.CorTypeVTORM;
 import com.dorrar.model.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -14,6 +18,8 @@ import static java.lang.reflect.Array.newInstance;
 @Repository
 public class LookupRep {
     private final JdbcTemplate jdbcTemplate;
+//    private JdbcTemplate jdbc ;
+
 
     @Autowired
     public LookupRep(JdbcTemplate jdbcTemplate) {
@@ -50,6 +56,20 @@ public class LookupRep {
         return rolePages;
     }
 
+
+    //TODO: Youssef - should be moved to LookupRep
+    public List<CorType> findTypeListData() {
+        String sql = "SELECT id , label_en FROM cor_type";
+        List<CorType> typeList = this.jdbcTemplate.query(sql, new CorTypeVTORM());
+        return typeList;
+    }
+
+    //TODO: Youssef - should be moved to LookupRep
+    public List<CorLevel> findLevelListData() {
+        String sql = "SELECT id , label FROM cor_level";
+        List<CorLevel> levelList = this.jdbcTemplate.query(sql, new CorLevelVTORM());
+        return levelList;
+    }
 
 }
 

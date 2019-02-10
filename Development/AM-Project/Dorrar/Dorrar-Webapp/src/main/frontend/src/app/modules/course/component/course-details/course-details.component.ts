@@ -1,16 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
-import {DetailsService} from "../../shared/details.service";
 import {CorLevel} from "../../shared/data/cor-level";
 import {CorType} from "../../shared/data/cor-type.data";
-import {CorMainDetail} from "../../shared/data/cor-main-detail.data";
-import {CourseDTO} from "../../shared/data/course-dto.data";
+import {CorMainDetail} from "../../shared/data/course/cor-main-detail.data";
+import {CourseDTO} from "../../shared/data/course/course-dto.data";
+import {CourseService} from "../../shared/course.service";
+import {LookupService} from "../../../../layout/shared/services/lookup.service";
 
 @Component({
   selector: 'course-details',
   templateUrl: './course-details.component.html',
   styleUrls: ['./course-details.component.scss'],
-  providers: [DetailsService]
+  providers: [CourseService ,LookupService]
 })
 export class CourseDetailsComponent implements OnInit {
   formData: FormGroup = this.formBuilder.group({
@@ -25,19 +26,20 @@ export class CourseDetailsComponent implements OnInit {
   });
 
   constructor(private formBuilder: FormBuilder,
-              private details: DetailsService) {
+              private details: CourseService,
+              private lookUp: LookupService) {
   }
 
   corTypes: CorType [] = [];
   corLevels : CorLevel [] = [];
   ngOnInit() {
-    this.details.findType().subscribe(
+    this.lookUp.findCorTypes().subscribe(
       res => {
         this.corTypes = res;
         console.log(this.corTypes);
       }
     );
-    this.details.findLevel().subscribe(
+    this.lookUp.findCorLevels().subscribe(
       res =>{this.corLevels = res;
       console.log(this.corLevels);}
     );
@@ -48,12 +50,12 @@ export class CourseDetailsComponent implements OnInit {
     let data: CorMainDetail = new CorMainDetail();
     let dto : CourseDTO = new CourseDTO();
 
-    data.courseName = this.formData.get('Name').value;
-    data.duration = this.formData.get('Duration').value;
-    data.startDate = this.formData.get('Date').value;
-    data.corTypeID = this.formData.get('Type').value;
-    data.corLevelID = this.formData.get('Level').value;
-    data.description = this.formData.get('Description').value;
+    data.courseName = this.formData.get('name').value;
+    data.duration = this.formData.get('duration').value;
+    data.startDate = this.formData.get('startDate').value;
+    data.corTypeID = this.formData.get('corTypeID').value;
+    data.corLevelID = this.formData.get('corLevelID').value;
+    data.description = this.formData.get('description').value;
     console.log(data);
 
       dto.detail = data;
