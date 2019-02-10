@@ -8,4 +8,8 @@ public enum Actions {
     Actions(int id){
         this.id = id;
     }
+
+    public int getID() {
+        return id;
+    }
 }
