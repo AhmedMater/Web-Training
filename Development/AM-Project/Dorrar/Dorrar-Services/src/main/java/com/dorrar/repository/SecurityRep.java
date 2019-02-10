@@ -28,7 +28,7 @@ public class SecurityRep {
 
     public boolean userExist(String userName) {
         String sql = "select count(*) from users where user_name = ?;";
-        RowMapper<User> rowMapper = new UserRowMapper();
+//        RowMapper<User> rowMapper = new UserRowMapper();
         int count = jdbcTemplate.queryForObject(sql, Integer.class, userName);
         if(count == 0) {
             return false;

@@ -15,7 +15,7 @@ import {CreateReferenceComponent} from './modules/course/component/create-refere
 import { CreateSectionComponent } from './modules/course/component/create-section/create-section.component';
 import { CreateTutorialComponent } from './modules/tutorial/components/create-tutorial/create-tutorial.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {HttpClientModule} from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {CommonModule} from "@angular/common";
 import { CourseComponent } from './modules/course/course.component';
 import { UserProfileComponent } from './modules/user/components/user-profile/user-profile.component';
@@ -23,6 +23,7 @@ import { UserRoleComponent } from './modules/user/components/user-profile/user-r
 import { CourseDetailsComponent } from './modules/course/component/course-details/course-details.component';
 import {LookupService} from "./layout/shared/services/lookup.service";
 import {LocalStorageService} from "./layout/shared/services/local-storage.service";
+import {AuthInterceptor} from "./infrastructure/interceptor/auth.interceptor";
 
 @NgModule({
   declarations: [
@@ -50,7 +51,12 @@ import {LocalStorageService} from "./layout/shared/services/local-storage.servic
     BrowserModule, HttpClientModule, FormsModule, ReactiveFormsModule, CommonModule,
     AppRoutingModule
   ],
-  providers: [LookupService, LocalStorageService],
+  providers: [LookupService, LocalStorageService,
+    {
+    provide: HTTP_INTERCEPTORS,
+    useClass: AuthInterceptor,
+    multi: true
+  }],
   bootstrap: [LayoutComponent]
 })
 export class AppModule { }
