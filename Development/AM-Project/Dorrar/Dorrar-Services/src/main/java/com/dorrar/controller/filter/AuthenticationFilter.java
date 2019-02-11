@@ -4,6 +4,7 @@ import javax.annotation.Priority;
 import javax.ws.rs.Priorities;
 import javax.ws.rs.container.ContainerRequestContext;
 import javax.ws.rs.container.ContainerRequestFilter;
+import javax.ws.rs.core.Response;
 import javax.ws.rs.ext.Provider;
 
 @Provider
@@ -13,5 +14,6 @@ public class AuthenticationFilter implements ContainerRequestFilter {
 
     public void filter(ContainerRequestContext requestContext) {
 
+//        requestContext.abortWith(Response.status(400));
     }
 }

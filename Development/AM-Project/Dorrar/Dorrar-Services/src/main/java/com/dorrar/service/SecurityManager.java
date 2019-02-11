@@ -1,4 +1,4 @@
-package com.dorrar.controller;
+package com.dorrar.service;
 
 
 import org.springframework.stereotype.Service;
@@ -40,7 +40,7 @@ public class SecurityManager {
         return result;
     }
 
-    public static byte[] getHashedPassword(String password) throws Exception{
+    private static byte[] getHashedPassword(String password) throws Exception{
         String key = String.join(":", new String[]{password, _salt});
         Mac sha256_HMAC;
             sha256_HMAC = Mac.getInstance(SHA_256_ALGORITHM);

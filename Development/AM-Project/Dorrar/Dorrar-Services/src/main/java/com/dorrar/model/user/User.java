@@ -1,6 +1,6 @@
-package com.dorrar.model;
+package com.dorrar.model.user;
 
-//TODO: Manar - Move to /model/user/
+//TODO: Aya - Move to /model/user/
 public class User {
     private int id;
     private String userName;

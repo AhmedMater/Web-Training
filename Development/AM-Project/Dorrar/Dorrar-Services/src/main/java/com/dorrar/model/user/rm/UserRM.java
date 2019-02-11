@@ -1,13 +1,16 @@
-package com.dorrar.controller;
+package com.dorrar.model.user.rm;
 
-import com.dorrar.model.User;
+import com.dorrar.model.user.User;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Service;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 //TODO: Aya - Should be moved to model/user/rm/
-public class UserRowMapper implements RowMapper<User> {
+//TODO: Aya - rename to UserRM
+@Service
+public class UserRM implements RowMapper<User> {
     @Override
     public User mapRow(ResultSet row, int rowNum) throws SQLException {
         User user = new User();

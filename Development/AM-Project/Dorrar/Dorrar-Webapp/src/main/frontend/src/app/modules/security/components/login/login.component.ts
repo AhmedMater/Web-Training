@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
           this.authVto = res;
           console.log("Success");
           console.log(this.authVto);
-          localStorage.setItem("token", this.authVto.token);
+          localStorage.setItem('token', this.authVto.token);
         },
         err => {console.log(err);}
       );

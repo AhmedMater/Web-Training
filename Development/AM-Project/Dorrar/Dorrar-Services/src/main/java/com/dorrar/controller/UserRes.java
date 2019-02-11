@@ -15,7 +15,7 @@ public class UserRes {
     @Path("/filter")
     @Consumes(MediaType.APPLICATION_JSON)
     public void filter(UserList data){
-        System.out.println("Data is received successfuly");
+        System.out.println("Data is received successfully");
         System.out.println(data.toString());
 
     }
