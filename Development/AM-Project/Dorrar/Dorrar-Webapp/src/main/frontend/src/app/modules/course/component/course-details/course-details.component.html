@@ -34,7 +34,7 @@
       <label class="font-weight-bold">Type :</label>
       <select class="form-control" formControlName="corTypeID">
         <option class="mt-auto" *ngFor="let type of corTypes"
-                [ngValue]="type.typeId">{{type.typeLabel}}
+                [ngValue]="type.id">{{type.labelEN}}
         </option>
       </select>
       <!--TODO: Youssef - use dirty here to show message only in case of error only-->
@@ -47,7 +47,7 @@
       <select class="form-control " formControlName="corLevelID">
         <option class="mt-auto"
                 *ngFor="let level of corLevels"
-                [ngValue]="level.levelId">{{level.levelLabel}}
+                [ngValue]="level.id">{{level.labelEN}}
         </option>
 
       </select>

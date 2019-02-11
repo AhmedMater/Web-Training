@@ -64,7 +64,7 @@ public class LookupRep {
     }
 
     public List<CorLevel> findLevelListData() {
-        String sql = "SELECT id , label FROM cor_level";
+        String sql = "SELECT id , label_en FROM cor_level";
         List<CorLevel> levelList = this.jdbcTemplate.query(sql, new CorLevelVTORM());
         return levelList;
     }

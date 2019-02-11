@@ -11,7 +11,7 @@ public class CorLevelVTORM implements RowMapper<CorLevel> {
     public CorLevel mapRow(ResultSet rs, int rowIndex) throws SQLException {
         CorLevel level = new CorLevel();
         level.setId(rs.getInt("id"));
-        level.setLabelEN(rs.getString("label"));
+        level.setLabelEN(rs.getString("label_en"));
         return level;
     }
 }
