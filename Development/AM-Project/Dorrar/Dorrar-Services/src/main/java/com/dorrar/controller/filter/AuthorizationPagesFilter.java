@@ -26,7 +26,6 @@ public class AuthorizationPagesFilter implements ContainerRequestFilter {
         List<Pages> pages =getAnnotatedPage() ;
         Pages page = pages.get(0) ;
         List<Page> userPages =userRep.getUserPages(1) ;
-        Response.ResponseBuilder builder = null;
 
         for(Page pageElement:userPages)
         {
