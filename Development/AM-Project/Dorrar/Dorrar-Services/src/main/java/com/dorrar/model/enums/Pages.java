@@ -8,4 +8,8 @@ public enum Pages {
     Pages(int id){
         this.id = id;
     }
+
+    public int getID() {
+        return id;
+    }
 }

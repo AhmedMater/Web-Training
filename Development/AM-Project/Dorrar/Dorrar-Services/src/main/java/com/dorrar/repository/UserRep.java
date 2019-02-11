@@ -23,9 +23,9 @@ public class UserRep {
                 "LEFT JOIN auth_user au ON ua.user_id = au.id " +
                 "LEFT JOIN auth_action aa ON ua.action_id = aa.id " +
                 //TODO: Fathy - We pass Parameters using queryForObject function
-                "WHERE ua.user_id =" + userID + ";";
+                "WHERE ua.user_id = ?";
         RowMapper<Action> userActionRM = new UserActionsRM();
-        List<Action> userActionsList = this.jdbcTemplate.query(sql, userActionRM);
+        List<Action> userActionsList = this.jdbcTemplate.query(sql,userActionRM,userID);
         return userActionsList;
     }
 

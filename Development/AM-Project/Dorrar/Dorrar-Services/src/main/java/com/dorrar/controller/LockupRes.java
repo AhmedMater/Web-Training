@@ -2,6 +2,10 @@ package com.dorrar.controller;
 
 import com.dorrar.data.CorRefType;
 import com.dorrar.model.*;
+import com.dorrar.model.annotation.AuthorizeAction;
+import com.dorrar.model.annotation.AuthorizePage;
+import com.dorrar.model.enums.Actions;
+import com.dorrar.model.enums.Pages;
 import com.dorrar.model.lookup.CorLevel;
 import com.dorrar.model.lookup.CorType;
 import com.dorrar.repository.LookupRep;
@@ -34,6 +38,8 @@ public class LockupRes {
     @Path("/roles")
     @GET
     @Produces(MediaType.APPLICATION_JSON)
+    @AuthorizeAction(Actions.CREATE_COURSE)
+    //@AuthorizePage(Pages.VIEW_COURSE)
     public List<Role> getRoles() {
         return service.getAllRoles();
     }
