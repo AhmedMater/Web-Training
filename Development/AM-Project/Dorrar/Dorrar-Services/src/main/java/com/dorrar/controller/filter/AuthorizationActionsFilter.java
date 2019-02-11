@@ -30,7 +30,7 @@ public class AuthorizationActionsFilter implements ContainerRequestFilter {
     @Context
     private ResourceInfo resourceInfo;
     //@Autowired
-    private UserRep userRep;
+    private UserRep userRep ;
     public void filter(ContainerRequestContext requestContext) throws IOException {
 
       List<Actions> actions=getAnnotadedAction() ;
@@ -42,7 +42,8 @@ public class AuthorizationActionsFilter implements ContainerRequestFilter {
           if (action1.getId()==action.getID()) ;
 
           if (action1.getId()!=action.getID()) {
-              getResponse() ;
+              requestContext.abortWith(getResponse());
+
           }
         }
 

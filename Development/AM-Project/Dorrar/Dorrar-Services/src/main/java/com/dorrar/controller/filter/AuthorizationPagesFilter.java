@@ -22,7 +22,7 @@ public class AuthorizationPagesFilter implements ContainerRequestFilter {
     @Context
     private ResourceInfo resourceInfo;
     private UserRep userRep;
-    public void filter(ContainerRequestContext containerRequestContext) throws IOException {
+    public void filter(ContainerRequestContext requestContext) throws IOException {
         List<Pages> pages =getAnnotatedPage() ;
         Pages page = pages.get(0) ;
         List<Page> userPages =userRep.getUserPages(1) ;
@@ -33,7 +33,7 @@ public class AuthorizationPagesFilter implements ContainerRequestFilter {
             if(pageElement.getId()==page.getID()) ;
 
             if(pageElement.getId()!=page.getID()) {
-                  getResponse() ;
+                requestContext.abortWith(getResponse());
             }
         }
 
