@@ -1,7 +1,7 @@
 package com.dorrar.service;
 
-import com.dorrar.model.AuthUser;
-import com.dorrar.model.LoginUserDto;
+import com.dorrar.model.security.AuthUser;
+import com.dorrar.model.security.LoginUserDTO;
 import com.dorrar.model.user.User;
 import com.dorrar.repository.SecurityRep;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,8 +24,8 @@ public class SecuritySer {
         this.userData = userData;
     }
 
-    public Response Login(LoginUserDto data) throws Exception {
-        User user = userData.getUserByUserName(data.getUserName());
+    public Response Login(LoginUserDTO data) throws Exception {
+        User user = userData.getUserByUserName(data.getUsername());
         if(user != null){
             if(user.isActive()){
                 String hashedPassword = securityManager.dm5Hash(data.getPassword());

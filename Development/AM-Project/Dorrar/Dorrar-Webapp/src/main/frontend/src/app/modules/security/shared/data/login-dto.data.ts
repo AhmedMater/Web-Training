@@ -1,8 +1,8 @@
 
 //TODO: Aya - rename to LoginDTO
-export class LoginDto {
+export class LoginDTO {
   //TODO: Aya - rename to username
-  userName: string;
+  username: string;
   password: string;
 
 }

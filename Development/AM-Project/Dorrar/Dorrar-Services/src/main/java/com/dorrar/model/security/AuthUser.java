@@ -1,4 +1,4 @@
-package com.dorrar.model;
+package com.dorrar.model.security;
 
 //TODO: Aya - Move to model/security/
 public class AuthUser {

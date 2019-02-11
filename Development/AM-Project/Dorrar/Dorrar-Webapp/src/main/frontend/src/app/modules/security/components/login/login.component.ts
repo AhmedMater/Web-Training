@@ -1,8 +1,8 @@
 import {Component, OnInit} from "@angular/core";
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {SecurityService} from "../../shared/security.service";
-import {LoginDto} from "../../shared/data/login-dto.data";
 import {AuthVto} from "../../shared/data/auth-vto.data";
+import {LoginDTO} from "../../shared/data/login-dto.data";
 
 @Component({
   selector: 'user-login',
@@ -25,11 +25,11 @@ export class LoginComponent implements OnInit {
   }
 
   login(){
-    let data: LoginDto = new LoginDto();
-    data.userName = this.formData.get('username').value;
+    let data: LoginDTO = new LoginDTO();
+    data.username = this.formData.get('username').value;
     data.password = this.formData.get('password').value;
     //TODO: Aya - use formData.valid instead
-    if(this.formData.get('username').valid && this.formData.get('password').valid){
+    if(this.formData.valid){
       this.userService.Login(data).subscribe(
         res=>{
           this.authVto = res;
