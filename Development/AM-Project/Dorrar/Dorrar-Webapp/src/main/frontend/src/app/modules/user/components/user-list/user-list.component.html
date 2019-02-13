@@ -1,115 +1,153 @@
-<!--<div class="mt-5 row">-->
-  <!--<div class="offset-3 col-md-6">-->
-    <!--<div class="card">-->
-      <!--<div class="card-header">-->
-        <!--<div class="card-title">Filters</div>-->
-      <!--</div>-->
-      <!--<div class="card-body">-->
+<div class="mt-5 row">
+  <div class="offset-3 col-md-6">
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">Filters</div>
+      </div>
+      <div class="card-body">
 
-        <!--<form [formGroup]="formData">-->
+        <form [formGroup]="formData">
 
-          <!--<div class="row">-->
-            <!--<div class="col-md-4">-->
-              <!--<div class="form-group" [ngClass]="{'has-error has-feedback': formData.get('fullname').invalid}">-->
-                <!--<label for="full name">Full Name</label>-->
-                <!--<input type="text" class="form-control input-square" id="full name"-->
-                       <!--formControlName="fullname" placeholder="Enter full name">-->
-                <!--<small  class="form-text text-muted"-->
-                        <!--*ngIf=" formData.get('fullname').hasError('required')">-->
-                  <!--Full Name is mandatory</small>-->
-                <!--<small  class="form-text text-muted"-->
-                        <!--*ngIf=" formData.get('fullname').hasError('maxlength')">-->
-                  <!--First Name can not exceed 20 character</small>-->
-              <!--</div>-->
-            <!--</div>-->
-            <!--<div class="col-md-4">-->
-              <!--<div class="form-group">-->
-                <!--<label for="college">College</label>-->
-                <!--<select class="form-control input-square" id="college"  formControlName="college">-->
-                  <!--<option>Computing and Information</option>-->
-                  <!--<option>Engineering</option>-->
-                  <!--<option>Science</option>-->
-                  <!--<option>Nursing</option>-->
-                  <!--<option>Low</option>-->
-                <!--</select>-->
-              <!--</div>-->
-            <!--</div>-->
-            <!--<div class="col-md-4">-->
-              <!--<div class="form-group">-->
-                <!--<label for="university">University</label>-->
-                <!--<select class="form-control input-square" id="university"  formControlName="university">-->
-                  <!--<option>Benha</option>-->
-                  <!--<option>Cairo</option>-->
-                  <!--<option>Ain-Shams</option>-->
-                  <!--<option>Zagazig</option>-->
-                  <!--<option>Helwan</option>-->
-                <!--</select>-->
-              <!--</div>-->
-
-
-            <!--</div>-->
-          <!--</div>-->
-          <!--<div class="row">-->
-            <!--<div class="col-md-4">-->
-              <!--<div class="form-group">-->
-                <!--<label for="country">Country</label>-->
-                <!--<select class="form-control input-square" id="country"  formControlName="country">-->
-                  <!--<option>Egypt</option>-->
-                  <!--<option>United Arab Emirates</option>-->
-                  <!--<option>Sudan</option>-->
-                  <!--<option>United kingdom</option>-->
-
-                <!--</select>-->
-              <!--</div>-->
-            <!--</div>-->
-            <!--<div class="col-md-4">-->
-              <!--<div class="form-group">-->
-                <!--<label for="birthdate-from">Birth Date From</label>-->
-                <!--<select class="form-control input-square" id="birthdate-from"  formControlName="birthdatefrom">-->
-                  <!--<option>2015</option>-->
-                  <!--<option>2016</option>-->
-                  <!--<option>2017</option>-->
-                  <!--<option>2018</option>-->
-                  <!--<option>2019</option>-->
-                  <!--<option>2020</option>-->
-                  <!--<option>2021</option>-->
-                  <!--<option>2022</option>-->
-                  <!--<option>2023</option>-->
-                  <!--<option>2024</option>-->
-                <!--</select>-->
-              <!--</div>-->
-            <!--</div>-->
-            <!--<div class="col-md-4">-->
-              <!--<div class="form-group">-->
-                <!--<label for="birthdate-to">Birth Date To</label>-->
-                <!--<select class="form-control input-square" id="birthdate-to" formControlName="birthdateto">-->
-                  <!--<option>2019</option>-->
-                  <!--<option>2020</option>-->
-                  <!--<option>2021</option>-->
-                  <!--<option>2022</option>-->
-                  <!--<option>2023</option>-->
-                  <!--<option>2024</option>-->
-                  <!--<option>2025</option>-->
-                  <!--<option>2026</option>-->
-                  <!--<option>2027</option>-->
-                  <!--<option>2028</option>-->
-                  <!--<option>2029</option>-->
-                <!--</select>-->
-              <!--</div>-->
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-group" [ngClass]="{'has-error has-feedback': formData.get('fullname').invalid}">
+                <label for="full name">Full Name</label>
+                <input type="text" class="form-control input-square" id="full name"
+                       formControlName="fullname" placeholder="Enter full name">
+                <small  class="form-text text-muted"
+                        *ngIf=" formData.get('fullname').hasError('required')">
+                  Full Name is mandatory</small>
+                <small  class="form-text text-muted"
+                        *ngIf=" formData.get('fullname').hasError('maxlength')">
+                  First Name can not exceed 20 character</small>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label for="college">College</label>
+                <select class="form-control input-square" id="college"  formControlName="college">
+                  <option>Computing and Information</option>
+                  <option>Engineering</option>
+                  <option>Science</option>
+                  <option>Nursing</option>
+                  <option>Low</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label for="university">University</label>
+                <select class="form-control input-square" id="university"  formControlName="university">
+                  <option>Benha</option>
+                  <option>Cairo</option>
+                  <option>Ain-Shams</option>
+                  <option>Zagazig</option>
+                  <option>Helwan</option>
+                </select>
+              </div>
 
 
-            <!--</div>-->
-          <!--</div>-->
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-group">
+                <label for="country">Country</label>
+                <select class="form-control input-square" id="country"  formControlName="country">
+                  <option>Egypt</option>
+                  <option>United Arab Emirates</option>
+                  <option>Sudan</option>
+                  <option>United kingdom</option>
 
-        <!--</form>-->
+                </select>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label for="birthdate-from">Birth Date From</label>
+                <select class="form-control input-square" id="birthdate-from"  formControlName="birthdatefrom">
+                  <option>2015</option>
+                  <option>2016</option>
+                  <option>2017</option>
+                  <option>2018</option>
+                  <option>2019</option>
+                  <option>2020</option>
+                  <option>2021</option>
+                  <option>2022</option>
+                  <option>2023</option>
+                  <option>2024</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label for="birthdate-to">Birth Date To</label>
+                <select class="form-control input-square" id="birthdate-to" formControlName="birthdateto">
+                  <option>2019</option>
+                  <option>2020</option>
+                  <option>2021</option>
+                  <option>2022</option>
+                  <option>2023</option>
+                  <option>2024</option>
+                  <option>2025</option>
+                  <option>2026</option>
+                  <option>2027</option>
+                  <option>2028</option>
+                  <option>2029</option>
+                </select>
+              </div>
 
-      <!--</div>-->
 
-      <!--<div class="card-action">-->
-        <!--<button class="btn btn-success btn-sm " (click)="filter()">Search</button>-->
-        <!--<button class="btn btn-danger btn-sm ml-2">Clear</button>-->
-      <!--</div>-->
-    <!--</div>-->
-  <!--</div>-->
-<!--</div>-->
+            </div>
+          </div>
+
+        </form>
+
+      </div>
+      <div class="card-action">
+        <button class="btn btn-success btn-sm " (click)="filter()">Search</button>
+        <button class="btn btn-danger btn-sm ml-2 "(click)="clear()">Clear</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mt-5 row">
+  <div class="offset-3 col-md-6">
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">All Users Data</div>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table mt-3">
+            <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Full Name</th>
+              <th scope="col">BirthDate</th>
+              <th scope="col">College</th>
+              <th scope="col">University</th>
+              <th scope="col">Country</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr  *ngFor="let personal_info of userList ; index as i ;">
+              <td>{{i+1}}</td>
+              <td>{{personal_info.fullName}}</td>
+              <td>x</td>
+              <td>y</td>
+              <td>z</td>
+
+            </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
