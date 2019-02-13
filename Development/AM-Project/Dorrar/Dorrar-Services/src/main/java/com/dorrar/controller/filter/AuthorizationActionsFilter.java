@@ -29,7 +29,7 @@ import static javax.ws.rs.core.Response.*;
 public class AuthorizationActionsFilter implements ContainerRequestFilter {
     @Context
     private ResourceInfo resourceInfo;
-    //@Autowired
+    @Autowired
     private UserRep userRep ;
     public void filter(ContainerRequestContext requestContext) throws IOException {
 

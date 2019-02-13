@@ -21,7 +21,7 @@ public class UserRep {
     }
 
     public List<Action> getUserActions(int userID) {
-        String sql = "SELECT aa.id , aa.label_en as user_actions FROM auth_user_action ua" +
+        String sql = "SELECT aa.id , aa.label_en as user_actions FROM auth_user_action ua " +
                 "LEFT JOIN auth_user au ON ua.user_id = au.id " +
                 "LEFT JOIN auth_action aa ON ua.action_id = aa.id " +
                 //TODO: Fathy - We pass Parameters using queryForObject function
