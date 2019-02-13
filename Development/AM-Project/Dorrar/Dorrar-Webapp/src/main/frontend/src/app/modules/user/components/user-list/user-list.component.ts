@@ -5,15 +5,17 @@ import {UserList} from "../../shared/data/user-filter.data";
 import {College} from "../../shared/data/college";
 import {University} from "../../shared/data/university";
 import {Country} from "../../shared/data/country";
+import {UserVTO} from "../../shared/data/user-vto.data";
 
 
 @Component({
-  selector: 'user-filter',
-  templateUrl: './user-filter.component.html',
-  styleUrls: ['./user-filter.component.scss'],
+  selector: 'user-list',
+  templateUrl: './user-list.component.html',
+  styleUrls: ['./user-list.component.scss'],
   providers:[FormBuilder,UserService]
 })
-export class UserFilterComponent implements OnInit {
+export class UserListComponent implements OnInit {
+  userList:UserVTO[]=[];
   formData :FormGroup=this.formBuilder.group({
     fullname:[null,[Validators.required,Validators.maxLength(20)]],
     college:[null,[Validators.required]],
@@ -25,9 +27,13 @@ export class UserFilterComponent implements OnInit {
   public collegeArrayList :College[];
   public universityArrayList:University[];
   public countryArrayList:Country[];
+
   constructor(private formBuilder:FormBuilder ,private userService:UserService) { }
 
   ngOnInit() {
+    this.userService.findAll().subscribe(
+      res=> this.userList=res
+    )
 
   }
 
@@ -39,7 +45,6 @@ export class UserFilterComponent implements OnInit {
     data.country=this.formData.get('country').value;
     data.birthdatefrom=this.formData.get('birthdatefrom').value;
     data.birthdateto=this.formData.get('birthdateto').value;
-
 
     console.log(data);
 
@@ -78,4 +83,8 @@ export class UserFilterComponent implements OnInit {
 
     })
 
-}}
+}
+  clear(): void {
+    this.formData.reset();
+  }
+}
