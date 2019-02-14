@@ -38,9 +38,10 @@ public class LockupRes {
     @Path("/roles")
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    @AuthorizeAction(Actions.CREATE_COURSE)
+    @AuthorizeAction(Actions.VIEW_ASSIGNMENT)
     //@AuthorizePage(Pages.VIEW_COURSE)
-    public List<Role> getRoles() {
+    public List<Role> getRoles()
+    {
         return service.getAllRoles();
     }
 

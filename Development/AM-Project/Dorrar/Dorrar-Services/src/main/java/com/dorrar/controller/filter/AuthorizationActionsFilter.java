@@ -48,24 +48,34 @@ public class AuthorizationActionsFilter implements ContainerRequestFilter {
         }
 
         Actions action = actions.get(0);
-
-        List<Action> userActions = userRep.getUserActions(1);
-
         //TODO: Fathy - Bug - 1st Case User has no actions
         //TODO: Fathy - 2nd Case User has actions and don't has the action in @AuthorizeAction()
         //TODO: Fathy - 3nd Case User has actions and has the action in @AuthorizeAction()
 
-        for (Action action1 : userActions) {
-            //TODO: Fathy - There is no need for this
-            if (action1.getId() == action.getID()) ;
+        List<Action> userActions = userRep.getUserActions(1);
+         if(userActions.size()==0)
+         {
+             requestContext.abortWith(Response.status(Response.Status.UNAUTHORIZED).build());
+         }
+         else {
+             boolean isFound =false ;
+             for (Action action1 : userActions) {
+                 //TODO: Fathy - There is no need for this
+                 if (action.getID() == action1.getId()) {
+                     isFound = true;
+                     break;
+                 }
+             }
+             if (!isFound ) {
+                 requestContext.abortWith(Response.status(Response.Status.UNAUTHORIZED).build());
+             }
 
-            //TODO: Fathy - This Logic isn't correct check it again and test the filter again
-            if (action1.getId() != action.getID()) {
-                requestContext.abortWith(Response.status(Response.Status.UNAUTHORIZED).build());
+                 //TODO: Fathy - This Logic isn't correct check it again and test the filter again
 
-            }
-        }
+             }
+
+         }
 
 
     }
-}
+

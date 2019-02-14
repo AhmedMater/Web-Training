@@ -1,7 +1,7 @@
 package com.dorrar.model.enums;
 
 public enum Actions {
-    CREATE_COURSE(1);
+    view_course_details(1), VIEW_ASSIGNMENT(2) ;
 
     private int id;
 
