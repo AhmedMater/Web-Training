@@ -50,6 +50,11 @@ public class AuthorizationActionsFilter implements ContainerRequestFilter {
         Actions action = actions.get(0);
 
         List<Action> userActions = userRep.getUserActions(1);
+
+        //TODO: Fathy - Bug - 1st Case User has no actions
+        //TODO: Fathy - 2nd Case User has actions and don't has the action in @AuthorizeAction()
+        //TODO: Fathy - 3nd Case User has actions and has the action in @AuthorizeAction()
+
         for (Action action1 : userActions) {
             //TODO: Fathy - There is no need for this
             if (action1.getId() == action.getID()) ;
