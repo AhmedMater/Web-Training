@@ -29,44 +29,38 @@ import static javax.ws.rs.core.Response.*;
 public class AuthorizationActionsFilter implements ContainerRequestFilter {
     @Context
     private ResourceInfo resourceInfo;
+    private UserRep userRep;
+
     @Autowired
-    private UserRep userRep ;
+    public AuthorizationActionsFilter(UserRep userRep){
+        this.userRep = userRep;
+    }
+
     public void filter(ContainerRequestContext requestContext) throws IOException {
 
-      List<Actions> actions=getAnnotadedAction() ;
-      Actions action =actions.get(0);
-
-       List<Action> userActions = userRep.getUserActions(1) ;
-       for (Action action1:userActions)
-        {
-          if (action1.getId()==action.getID()) ;
-
-          if (action1.getId()!=action.getID()) {
-              requestContext.abortWith(getResponse());
-
-          }
-        }
-
-
-
-
-    }
-
-    public List<Actions> getAnnotadedAction()
-    {
         // Get the resource method which matches with the requested URL
         AnnotatedElement annotatedElement = resourceInfo.getResourceMethod();
-
-        if (annotatedElement == null) {
-            return new ArrayList<>();
-        } else {
-            AuthorizeAction annotationaction= annotatedElement.getAnnotation(AuthorizeAction.class);
-            Actions[] requestedActions = annotationaction.value();
-                return Arrays.asList(requestedActions);
+        List<Actions> actions = new ArrayList<>();
+        if (annotatedElement != null) {
+            AuthorizeAction annotation = annotatedElement.getAnnotation(AuthorizeAction.class);
+            Actions[] requestedActions = annotation.value();
+            actions = Arrays.asList(requestedActions);
         }
-    }
-    public Response getResponse()
-    {
-        return Response.status(Response.Status.UNAUTHORIZED).build() ;
+
+        Actions action = actions.get(0);
+
+        List<Action> userActions = userRep.getUserActions(1);
+        for (Action action1 : userActions) {
+            //TODO: Fathy - There is no need for this
+            if (action1.getId() == action.getID()) ;
+
+            //TODO: Fathy - This Logic isn't correct check it again and test the filter again
+            if (action1.getId() != action.getID()) {
+                requestContext.abortWith(Response.status(Response.Status.UNAUTHORIZED).build());
+
+            }
+        }
+
+
     }
 }
