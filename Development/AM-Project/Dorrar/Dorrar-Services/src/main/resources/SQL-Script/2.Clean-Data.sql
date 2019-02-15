@@ -47,7 +47,7 @@ INSERT INTO auth_user_role (user_id, role_id) VALUES (1, 1);
 
 -- Fathy - Start Authorization Task
 
---Manar
+-- Manar
 INSERT INTO `dorrar`.`college` (`id`, `labelEN`) VALUES ('1', 'engineering');
 INSERT INTO `dorrar`.`college` (`id`, `labelEN`) VALUES ('2', 'low');
 
