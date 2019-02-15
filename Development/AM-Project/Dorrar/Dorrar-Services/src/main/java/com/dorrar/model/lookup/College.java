@@ -1,4 +1,4 @@
-package com.dorrar.model;
+package com.dorrar.model.lookup;
 
 
 //TODO: Manar - Move to /model/lookup/
