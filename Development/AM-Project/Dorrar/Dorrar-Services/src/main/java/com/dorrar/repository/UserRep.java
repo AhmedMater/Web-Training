@@ -1,9 +1,6 @@
 package com.dorrar.repository;
 
-import com.dorrar.model.Action;
-import com.dorrar.model.Page;
-import com.dorrar.model.UserActionsRM;
-import com.dorrar.model.UserPageRM;
+import com.dorrar.model.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
