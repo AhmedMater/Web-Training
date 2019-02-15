@@ -47,3 +47,14 @@ INSERT INTO auth_user_role (user_id, role_id) VALUES (1, 1);
 
 -- Fathy - Start Authorization Task
 
+--Manar
+INSERT INTO `dorrar`.`college` (`id`, `labelEN`) VALUES ('1', 'engineering');
+INSERT INTO `dorrar`.`college` (`id`, `labelEN`) VALUES ('2', 'low');
+
+INSERT INTO `dorrar`.`university` (`id`, `labelEN`) VALUES ('1', 'Benha');
+INSERT INTO `dorrar`.`university` (`id`, `labelEN`) VALUES ('2', 'Cairo');
+
+INSERT INTO `dorrar`.`country` (`id`, `labelEN`) VALUES ('1', 'Egypt');
+INSERT INTO `dorrar`.`country` (`id`, `labelEN`) VALUES ('2', 'Sudan');
+
+
