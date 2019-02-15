@@ -102,6 +102,9 @@ public class LockupRes {
         return universityArrayList;
 
     }
+    @GET
+    @Path("/country")
+    @Produces(MediaType.APPLICATION_JSON)
     public ArrayList<Country> findallcountry(){
         Country country1=new Country(1,"Egypt");
         Country country2=new Country(2,"sudan");
