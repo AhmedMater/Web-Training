@@ -19,6 +19,13 @@ public class UserRes {
         System.out.println(data.toString());
 
     }
+    @GET
+    @Path("/find")
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<UserVTO> findAllUsers(){
+        List<UserVTO> result=this.repository.findAll();
+        return result;
 
+    }
 
 }
