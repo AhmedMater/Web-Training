@@ -34,17 +34,19 @@ export class UserService {
   }
 
     findallcollege(){
-     return this.httpClient.get<College[]>("http://localhost:8080/api/user/filter/colleges");
+     return this.httpClient.get<College[]>("http://localhost:8080/api/user/colleges");
 
    }
 
    findalluniversity(){
-    return this.httpClient.get<University[]>("http://localhost:8080/api/user/filter/university")
+    return this.httpClient.get<University[]>("http://localhost:8080/api/user/university")
    }
 
    findallcountry(){
-    return this.httpClient.get<Country[]>("http://localhost:8080/api/user/filter/country")
+    return this.httpClient.get<Country[]>("http://localhost:8080/api/user/country")
    }
 
-
+  findAll(){
+    return this.http.get<UserVTO[]>("http://localhost:8080/api/user/find")
+  }
 }
