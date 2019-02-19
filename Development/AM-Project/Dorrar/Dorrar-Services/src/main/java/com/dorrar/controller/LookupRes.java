@@ -6,8 +6,10 @@ import com.dorrar.model.annotation.AuthorizeAction;
 import com.dorrar.model.annotation.AuthorizePage;
 import com.dorrar.model.enums.Actions;
 import com.dorrar.model.enums.Pages;
+import com.dorrar.model.lookup.College;
 import com.dorrar.model.lookup.CorLevel;
 import com.dorrar.model.lookup.CorType;
+import com.dorrar.model.lookup.Country;
 import com.dorrar.repository.LookupRep;
 import com.dorrar.repository.ReferenceRep;
 import com.dorrar.service.LookupSer;
@@ -21,13 +23,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Path("/lookup")
-public class LockupRes {
+public class LookupRes {
     private ReferenceRep repository;
     private LookupSer service;
     private LookupRep LookupRep;
 
     @Autowired
-    public LockupRes(ReferenceRep repository , LookupSer service , LookupRep lookUpRep) {
+    public LookupRes(ReferenceRep repository , LookupSer service , LookupRep lookUpRep) {
         this.repository = repository;
         this.service=service ;
         this.LookupRep=lookUpRep;
@@ -89,6 +91,7 @@ public class LockupRes {
         return collegeArrayList;
 
     }
+
     @GET
     @Path("/university")
     @Produces(MediaType.APPLICATION_JSON)
@@ -102,6 +105,7 @@ public class LockupRes {
         return universityArrayList;
 
     }
+
     @GET
     @Path("/country")
     @Produces(MediaType.APPLICATION_JSON)

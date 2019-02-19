@@ -1,11 +1,12 @@
 package com.dorrar.controller;
 
 import com.dorrar.model.UserList;
+import com.dorrar.model.UserVTO;
 
-import javax.ws.rs.Consumes;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+import java.util.ArrayList;
+import java.util.List;
 
 
 @Path("/user")
@@ -23,8 +24,8 @@ public class UserRes {
     @Path("/find")
     @Produces(MediaType.APPLICATION_JSON)
     public List<UserVTO> findAllUsers(){
-        List<UserVTO> result=this.repository.findAll();
-        return result;
+//        List<UserVTO> result=this.repository.findAll();
+        return new ArrayList<>();
 
     }
 
