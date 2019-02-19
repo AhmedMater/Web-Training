@@ -61,7 +61,11 @@ CREATE TABLE auth_role (
 CREATE TABLE auth_user (
   id INT(11) NOT NULL PRIMARY KEY,
   user_name varchar(45) NOT NULL,
-  user_pass varchar(15) NOT NULL
+  user_pass varchar(45) NOT NULL,
+  first_name varchar(45) NOT NULL,
+  last_name varchar(45) NOT NULL,
+  email varchar(45) NOT NULL,
+  is_active int(1) NOT NULL,
 );
 
 CREATE TABLE auth_action (
@@ -105,42 +109,42 @@ CREATE TABLE auth_user_role (
   CONSTRAINT fk_ur_auth_role FOREIGN KEY (role_id) REFERENCES auth_role (id),
   CONSTRAINT fk_ur_auth_user FOREIGN KEY (user_id) REFERENCES auth_user (id) 
 );
-CREATE TABLE `dorrar`.`personal_info` (
-  `user_id` int(11) NOT NULL AUTO_INCREMENT,
-  `first_name` varchar(45) NOT NULL,
-  `last_name` varchar(45) NOT NULL,
-  `birthdate` datetime NOT NULL,
-  `college_id` int(11) NOT NULL,
-  `university_id` int(11) NOT NULL,
-  `country_id` int(11) NOT NULL,
-  PRIMARY KEY (`user_id`),
-  UNIQUE KEY `user_id_unique` (`user_id`),
-  KEY `fk_personal_info_college_idx` (`college_id`),
-  KEY `fk_personal_info_university_idx` (`university_id`),
-  KEY `fk_personal_info_country_idx` (`country_id`),
-  CONSTRAINT `fk_personal_info_college` FOREIGN KEY (`college_id`) REFERENCES `college` (`id`),
-  CONSTRAINT `fk_personal_info_country` FOREIGN KEY (`country_id`) REFERENCES `country` (`id`),
-  CONSTRAINT `fk_personal_info_university` FOREIGN KEY (`university_id`) REFERENCES `university` (`id`)
+CREATE TABLE personal_info (
+  user_id int(11) NOT NULL AUTO_INCREMENT,
+  first_name varchar(45) NOT NULL,
+  last_name varchar(45) NOT NULL,
+  birthdate datetime NOT NULL,
+  college_id int(11) NOT NULL,
+  university_id int(11) NOT NULL,
+  country_id int(11) NOT NULL,
+  PRIMARY KEY (user_id),
+  UNIQUE KEY user_id_unique (user_id),
+  KEY fk_personal_info_college_idx (college_id),
+  KEY fk_personal_info_university_idx (university_id),
+  KEY fk_personal_info_country_idx (country_id),
+  CONSTRAINT fk_personal_info_college FOREIGN KEY (college_id) REFERENCES college (id),
+  CONSTRAINT fk_personal_info_country FOREIGN KEY (country_id) REFERENCES country (id),
+  CONSTRAINT fk_personal_info_university FOREIGN KEY (university_id) REFERENCES university (id)
 );
 
-CREATE TABLE `dorrar`.`college` (
-  `id` INT NOT NULL,
-  `labelEN` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE INDEX `id_unique` (`id` ASC));
+CREATE TABLE college (
+  id INT NOT NULL,
+  labelEN VARCHAR(45) NOT NULL,
+  PRIMARY KEY (id),
+  UNIQUE INDEX id_unique (id ASC));
 
 
 
-CREATE TABLE `dorrar`.`university` (
-  `id` INT NOT NULL,
-  `labelEN` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE INDEX `id_unique` (`id` ASC));
+CREATE TABLE university (
+  id INT NOT NULL,
+  labelEN VARCHAR(45) NOT NULL,
+  PRIMARY KEY (id),
+  UNIQUE INDEX id_unique (id ASC));
 
 
 
-CREATE TABLE `dorrar`.`country` (
-  `id` INT NOT NULL,
-  `labelEN` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE INDEX `id_unique` (`id` ASC));
+CREATE TABLE country (
+  id INT NOT NULL,
+  labelEN VARCHAR(45) NOT NULL,
+  PRIMARY KEY (id),
+  UNIQUE INDEX id_unique (id ASC));
