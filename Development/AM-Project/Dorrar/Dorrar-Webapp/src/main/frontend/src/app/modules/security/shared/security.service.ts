@@ -1,6 +1,6 @@
 import {Injectable} from "@angular/core";
 import {HttpClient} from "@angular/common/http";
-import {AuthVto} from "./data/auth-vto.data";
+import {AuthUser} from "./data/auth-vto.data";
 import {ConfigParam} from "../../../infrastructure/common/config-param";
 import {LoginDTO} from "./data/login-dto.data";
 @Injectable()
@@ -13,6 +13,6 @@ export class SecurityService{
   Login(data:LoginDTO){
     console.log(data);
 
-    return this.http.post<AuthVto>(this.BASE_URL + "/login", data);
+    return this.http.post<AuthUser>(this.BASE_URL + "/login", data);
   }
 }

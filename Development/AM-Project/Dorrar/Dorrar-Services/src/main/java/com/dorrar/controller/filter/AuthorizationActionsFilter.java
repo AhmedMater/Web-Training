@@ -2,8 +2,9 @@ package com.dorrar.controller.filter;
 
 
 import com.dorrar.model.Action;
-import com.dorrar.model.annotation.AuthorizeAction;
+import com.dorrar.model.annotation.Authenticate;
 import com.dorrar.model.enums.Actions;
+import com.dorrar.model.user.User;
 import com.dorrar.repository.UserRep;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -21,11 +22,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static javax.ws.rs.core.Response.*;
-
+@Authenticate
 @Provider
 @Priority(Priorities.AUTHORIZATION)
-@AuthorizeAction
 public class AuthorizationActionsFilter implements ContainerRequestFilter {
     @Context
     private ResourceInfo resourceInfo;
@@ -37,13 +36,14 @@ public class AuthorizationActionsFilter implements ContainerRequestFilter {
     }
 
     public void filter(ContainerRequestContext requestContext) throws IOException {
+        User userOfToken = (User) requestContext.getProperty("Authenticated-User");
 
         // Get the resource method which matches with the requested URL
         AnnotatedElement annotatedElement = resourceInfo.getResourceMethod();
         List<Actions> actions = new ArrayList<>();
         if (annotatedElement != null) {
-            AuthorizeAction annotation = annotatedElement.getAnnotation(AuthorizeAction.class);
-            Actions[] requestedActions = annotation.value();
+            Authenticate annotation = annotatedElement.getAnnotation(Authenticate.class);
+            Actions[] requestedActions = annotation.actions();
             actions = Arrays.asList(requestedActions);
         }
 

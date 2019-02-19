@@ -1,5 +1,6 @@
 package com.dorrar.controller.filter;
 
+import com.dorrar.model.annotation.Authenticate;
 import com.dorrar.service.SecurityManager;
 import com.dorrar.model.user.User;
 import com.dorrar.repository.SecurityRep;
@@ -18,6 +19,7 @@ import javax.ws.rs.ext.Provider;
 import java.io.IOException;
 import java.util.Base64;
 
+@Authenticate
 @Provider
 @Priority(Priorities.AUTHENTICATION)
 public class AuthenticationFilter implements ContainerRequestFilter {

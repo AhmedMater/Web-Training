@@ -1,7 +1,7 @@
 import {Component, OnInit} from "@angular/core";
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {SecurityService} from "../../shared/security.service";
-import {AuthVto} from "../../shared/data/auth-vto.data";
+import {AuthUser} from "../../shared/data/auth-vto.data";
 import {LoginDTO} from "../../shared/data/login-dto.data";
 
 @Component({
@@ -12,7 +12,7 @@ import {LoginDTO} from "../../shared/data/login-dto.data";
 })
 export class LoginComponent implements OnInit {
 
-  authVto: AuthVto;
+  authVto: AuthUser;
   formData: FormGroup = this.formBuilder.group({
     username: [null, [Validators.required, Validators.maxLength(25), Validators.minLength(5)]],
     password: [null, [Validators.required, Validators.minLength(8)]]

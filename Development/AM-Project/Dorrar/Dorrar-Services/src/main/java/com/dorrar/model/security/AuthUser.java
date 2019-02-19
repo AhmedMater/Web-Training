@@ -1,7 +1,9 @@
 package com.dorrar.model.security;
 
+import java.io.Serializable;
+
 //TODO: Aya - Move to model/security/
-public class AuthUser {
+public class AuthUser implements Serializable {
     private int userId;
     private String fullName;
     private String token;

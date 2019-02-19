@@ -1,15 +1,12 @@
 package com.dorrar.controller.filter;
 
 import com.dorrar.model.Page;
-import com.dorrar.model.annotation.AuthorizeAction;
-import com.dorrar.model.annotation.AuthorizePage;
-import com.dorrar.model.enums.Actions;
+import com.dorrar.model.annotation.Authenticate;
 import com.dorrar.model.enums.Pages;
 import com.dorrar.repository.UserRep;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.annotation.Priority;
-import javax.ws.rs.Priorities;
 import javax.ws.rs.container.ContainerRequestContext;
 import javax.ws.rs.container.ContainerRequestFilter;
 import javax.ws.rs.container.ResourceInfo;
@@ -21,9 +18,10 @@ import java.lang.reflect.AnnotatedElement;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+@Authenticate
 @Provider
-@Priority(Priorities.AUTHORIZATION)
-@AuthorizePage
+@Priority(2001)
 public class AuthorizationPagesFilter implements ContainerRequestFilter {
     @Context
     private ResourceInfo resourceInfo;
@@ -39,8 +37,8 @@ public class AuthorizationPagesFilter implements ContainerRequestFilter {
         AnnotatedElement annotatedElement = resourceInfo.getResourceMethod();
         List<Pages> pages =new ArrayList<>() ;
         if (annotatedElement != null) {
-            AuthorizePage annotationPage = annotatedElement.getAnnotation(AuthorizePage.class);
-            Pages[] requestedPages = annotationPage.value();
+            Authenticate annotationPage = annotatedElement.getAnnotation(Authenticate.class);
+            Pages[] requestedPages = annotationPage.pages();
             pages = Arrays.asList(requestedPages);
         }
 

@@ -1,10 +1,10 @@
 
 //TODO: Aya - rename to AuthUser
-export class AuthVto{
+export class AuthUser{
   //TODO: Aya - rename to id
-  id: number;
+  userId: number;
   //TODO: Aya - rename to username
-  username: string;
+  fullName: string;
   token: string;
 
 }

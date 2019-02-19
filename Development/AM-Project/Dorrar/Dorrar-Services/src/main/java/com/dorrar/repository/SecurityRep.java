@@ -20,7 +20,7 @@ public class SecurityRep {
     }
 
     public User getUserByUserName(String userName) {
-        String sql = "select * from users where user_name = ?;";
+        String sql = "select * from auth_user where user_name = ?;";
         RowMapper<User> rowMapper = new UserRM();
         User user = jdbcTemplate.queryForObject(sql, rowMapper, userName);
         return user;
