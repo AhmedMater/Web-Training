@@ -1,0 +1,33 @@
+
+		
+	Spring Guidelines:
+	------------------
+		1. Rest Resources: are Classes created in controller folder ex: CourseRes, LookupRes
+		2. Services: are Classes created in services folder to perform Logic ex: CourseSer, LookupSer
+		3. Repositories: are Classes created in repository folder to execute DB Queries ex: CourseRep, LookupRep
+		
+		4. Namings:	
+			1. Classes: should be Capitalized ex (CourseRes, AttendanceSer, GradeRep, SecurityManager, ...)
+			2. Functions & variables: should be Camelcase ex (courseService, stdList, courseData, findByID(), editCourse())
+			3. Constants: should be uppercase (SPEED_OF_LIGHT, PI_VALUE, COURSE_PREFIX, ...)
+			4. Namings should be meaningful (courseData, courseList, courseStdList, ...)
+			5. Functions: (Controller - Service) getCourse, editCourse, createCourse, removeCourse
+			6. Functions: (Repository) findCourse, updateCourse, insertCourse, deleteCourse
+			7. Functions: (in CourseRep) -> findByID(), updateByID(), insert(), deleteByID(), findAll(), findStudentsByID()
+		
+		7. Rest Service Pathes: (in CourseRes)
+			/ -------------------(GET)------------------> getAllCourses (with query Parameters)
+			/ -------------------(POST)-----------------> createCourse (with Payload)
+			/{courseID} ---------(GET)------------------> getCourseByID (with courseID as Path Parameter)
+			/{courseID} ---------(PUT)------------------> editCourse (with courseID as Path Parameter)
+			/{courseID}/students/ ----------------------> getAllCourseStds (with courseID as Path Parameter)
+			/{courseID}/student/{stdID}/grades ---------> getStdGrades (with corID & stdID as Path Parameters)
+			/{courseID}/student/{stdID}/attendance -----> getStdAttendance (with corID & stdID as Path Parameters)
+		
+		8. Model Folder: should be categories
+			1. lookup/ -------> has all Model Classes of Lookups in the System
+			2. lookup/rm -----> has all Row Mapper Classes for Selecting Lookups from Database
+			3. course/ -------> has all Model Classes of Course in the System
+			4. course/rm -----> has all Row Mapper Classes for Selecting Course from Database
+			5. attendance/ -------> has all Model Classes of Attendance in the System
+			6. attendance/rm -----> has all Row Mapper Classes for Selecting Attendance from Database

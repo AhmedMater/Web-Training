@@ -1,0 +1,46 @@
+
+			
+	Angular Guidelines:
+	--------------------
+		1. Folder Structure:
+			1. infrastructure -> should have all generic functions, service, components
+			2. layout -> should have the structure of the Design (Header, Sidebar, Footer, ...)
+			3. modules -> should have the Application Components categorized into folders) (course, user, college, ...)
+			
+		2. Each Module should has 2 folders: (components & shared)
+			/modules/course/
+				/components/
+					/detail/
+						/create-course/create-course.component.[ts/html/css]
+						/edit-course/edit-course.component.[ts/html/css]
+						/view-course/view-course.component.[ts/html/css]
+					/grade/
+						/create-grade-sheet/create-grade-sheet.component.[ts/html/css]
+						/view-std-grades/edit-std-grades.component.[ts/html/css]
+						/view-grade-sheet/view-grade-sheet.component.[ts/html/css]
+					/attendance/
+						/create-attendance-sheet/create-attendance-sheet.component.[ts/html/css]
+						/view-std-attendance/edit-std-attendance.component.[ts/html/css]
+						/view-attendance-sheet/view-attendance-sheet.component.[ts/html/css]
+				/shared/
+					/data/
+						/course-dto.data.ts
+						/course-vto.data.ts
+						/std-dto.data.ts
+						/attendance-dto.data.ts
+					/services/
+						/course.service.ts
+						/grade.service.ts
+						/attendance.service.ts
+		
+		3. Namings:
+			1. components, directive, service, model:
+				1. all letters are small letter: ex (course, grade, ...
+				2. separate words with dash: ex: (course-dto, view-course, create-grade-sheet)
+				3. add postfix according to the type (.component, .directive, .service, .data)
+			2. variables, functions: shoud be camelCase
+			3. Constants: should be UPPER_CASE
+			
+			
+			
+			

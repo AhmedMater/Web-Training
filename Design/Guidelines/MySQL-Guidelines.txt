@@ -1,0 +1,9 @@
+
+Database Guidelines:
+--------------------
+	1. Tables names: should be small letters with underscore in between ex: course_main_details
+	2. Column Names: should be small letters with underscore in between ex: course_duration
+	3. FK Column Names: should start [table_name]_id ex: course_id, user_id, cor_main_id
+	4. PK Column Names: should be id
+	5. FK Constraint Names: should be fk_[table_name_1]_[table_name_2] ex: fk_course_instructor, fk_course_student
+	6. Any Lookup Table will contain 2 columns: (id, label_en) ex: cor_type (id, label_en)
