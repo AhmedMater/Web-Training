@@ -5,7 +5,7 @@ import {CorType} from "../../shared/data/cor-type.data";
 import {CorMainDetail} from "../../shared/data/course/cor-main-detail.data";
 import {CourseDTO} from "../../shared/data/course/course-dto.data";
 import {CourseService} from "../../shared/course.service";
-import {LookupService} from "../../../../layout/shared/services/lookup.service";
+import {LookupService} from "../../../../infrastructure/services/lookup.service";
 
 @Component({
   selector: 'course-details',

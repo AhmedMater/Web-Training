@@ -1,6 +1,6 @@
 import {Directive, Input, OnInit, TemplateRef, ViewContainerRef} from "@angular/core";
 import {AuthActions} from "./data/auth-action.data";
-import {LocalStorageService} from "../../../layout/shared/services/local-storage.service";
+import {LocalStorageService} from "../../services/local-storage.service";
 
 @Directive({
   selector: '[authorizeAction]'

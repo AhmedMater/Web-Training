@@ -8,6 +8,9 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Dorrar-Services" />
         <module name="Dorrar-Webapp" />
+        <module name="ISM" />
+        <module name="ISM-Services" />
+        <module name="ISM-Webapp" />
       </profile>
     </annotationProcessing>
   </component>

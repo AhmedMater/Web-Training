@@ -5,7 +5,7 @@ import {CourseService} from "../../shared/course.service";
 import {CorRefType} from "../../shared/data/cor-ref-type-dto.data";
 import {CourseRefDTO} from "../../shared/data/course-ref-dto.data";
 import {CourseDTO} from "../../shared/data/course/course-dto.data";
-import {LookupService} from "../../../../layout/shared/services/lookup.service";
+import {LookupService} from "../../../../infrastructure/services/lookup.service";
 
 @Component({
   selector: 'course-reference',

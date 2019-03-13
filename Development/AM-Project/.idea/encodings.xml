@@ -2,21 +2,12 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/Auth" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/Auth/Auth-Services" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/Auth/Auth-Webapp" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Dorrar" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Dorrar/Dorrar-Services" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Dorrar/Dorrar-Webapp" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/File-Manager" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/File-Manager/FM-Services" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/File-Manager/FM-Webapp" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/Notification-Manager" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/Notification-Manager/NM-Services" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/Notification-Manager/NM-Webapp" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/SubHub" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/SubHub/SubHub-Services" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/SubHub/SubHub-Webapp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ISM" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ISM/ISM-Services" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ISM/ISM-Webapp" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

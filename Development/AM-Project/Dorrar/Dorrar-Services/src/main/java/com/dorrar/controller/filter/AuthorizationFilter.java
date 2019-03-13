@@ -33,7 +33,7 @@ public class AuthorizationFilter implements ContainerRequestFilter {
     private UserRep userRep;
 
     @Autowired
-    public AuthorizationFilter(UserRep userRep){
+    public AuthorizationFilter(UserRep userRep) {
         this.userRep = userRep;
     }
 
@@ -42,8 +42,8 @@ public class AuthorizationFilter implements ContainerRequestFilter {
 
         // Get the resource method which matches with the requested URL
         AnnotatedElement annotatedElement = resourceInfo.getResourceMethod();
-        List<Actions> actions ;
-        List<Pages> pages  ;
+        List<Actions> actions;
+        List<Pages> pages;
 
         if (annotatedElement != null) {
             Authenticate annotation = annotatedElement.getAnnotation(Authenticate.class);
@@ -51,56 +51,45 @@ public class AuthorizationFilter implements ContainerRequestFilter {
             actions = Arrays.asList(requestedActions);
             Pages[] requestedPages = annotation.pages();
             pages = Arrays.asList(requestedPages);
-            if(annotation.actions().length !=0){
+            if (annotation.actions().length != 0) {
                 //Check the Action Authorization
                 Actions action = actions.get(0);
 
                 List<Action> userActions = userRep.getUserActions(1);
-                if(userActions.size()==0)
-                {
+                if (userActions.size() == 0) {
                     requestContext.abortWith(Response.status(Response.Status.UNAUTHORIZED).build());
-                }
-                else {
-                    boolean isFound =false ;
+                } else {
+                    boolean isFound = false;
                     for (Action action1 : userActions) {
                         if (action.getID() == action1.getId()) {
                             isFound = true;
                             break;
                         }
                     }
-                    if (!isFound ) {
+                    if (!isFound)
                         requestContext.abortWith(Response.status(Response.Status.UNAUTHORIZED).build());
-                    }
                 }
-            }else if(annotation.pages().length !=0){
-                Pages page = pages.get(0) ;
-                List<Page> userPages =userRep.getUserPages(1) ;
-                boolean isFound =false ;
-                if(userPages.size()==0)
-                {
+            } else if (annotation.pages().length != 0) {
+                Pages page = pages.get(0);
+                List<Page> userPages = userRep.getUserPages(1);
+                boolean isFound = false;
+                if (userPages.size() == 0)
                     requestContext.abortWith(Response.status(Response.Status.UNAUTHORIZED).build());
-                }
                 else {
-                    for (Page pageElement : userPages) {
-                        if (pageElement.getId() == page.getID()) ;
-                        {
+                    for (Page pageElement : userPages)
+                        if (pageElement.getId() == page.getID()){
                             isFound = true;
                             break;
                         }
-                    }
 
-                    if (!isFound) {
+                    if (!isFound)
                         requestContext.abortWith(Response.status(Response.Status.UNAUTHORIZED).build());
-                    }
-                }
 
+                }
             }
         }
-
-
-
-         }
-
-
     }
+
+
+}
 

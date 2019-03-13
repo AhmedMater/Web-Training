@@ -5,6 +5,9 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/ISM/pom.xml" />
+        <option value="$PROJECT_DIR$/ISM/ISM-Services/pom.xml" />
+        <option value="$PROJECT_DIR$/ISM/ISM-Webapp/pom.xml" />
       </list>
     </option>
   </component>
@@ -14,6 +17,7 @@
   <component name="StateStorage">
     <option name="argHtml" value="true" />
     <option name="argSpec" value="false" />
+    <option name="argStyle" value="false" />
     <option name="hasAngularCli" value="true" />
   </component>
   <component name="SvnBranchConfigurationManager">
