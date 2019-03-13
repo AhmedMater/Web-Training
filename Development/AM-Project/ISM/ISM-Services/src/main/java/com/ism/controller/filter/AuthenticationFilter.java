@@ -61,6 +61,7 @@ public class AuthenticationFilter implements ContainerRequestFilter {
                 if(!newToken.equals(token))
                     request.abortWith(Response.status(Response.Status.UNAUTHORIZED).entity("Incorrect User Password").build());
                 else{
+                    user.setPassword(null);
                     request.setProperty(AuthenticationFilter.AUTH_USER, user);
                 }
             } catch (Exception e) {
