@@ -1,13 +1,18 @@
 package com.ism.controller;
 
+import com.ism.controller.filter.AuthenticationFilter;
 import com.ism.model.LoginDTO;
 import com.ism.model.RegisterDTO;
+import com.ism.model.annotation.Authenticated;
 import com.ism.model.security.AuthUserVTO;
+import com.ism.model.user.UserVTO;
 import com.ism.repository.SecurityRep;
 import com.ism.service.SecuritySer;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.ws.rs.*;
+import javax.ws.rs.container.ContainerRequestContext;
+import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
@@ -43,7 +48,10 @@ public class SecurityRes {
 
     @Path("test")
     @GET
-    public void sayHello(){
+    @Authenticated
+    public void sayHello(@Context ContainerRequestContext request){
+        UserVTO currentUser = (UserVTO) request.getProperty(AuthenticationFilter.AUTH_USER);
+
         System.out.println("Testing Authorization Header");
     }
 
