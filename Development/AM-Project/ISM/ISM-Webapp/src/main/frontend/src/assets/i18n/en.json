@@ -1,0 +1,11 @@
+{
+  "formControls": {
+    "courseStartDate": {
+      "label": "Course Start Date",
+      "formError": {
+        "required" : "Course Start Date is Mandatory",
+        "pattern": "invalid Date"
+      }
+    }
+  }
+}

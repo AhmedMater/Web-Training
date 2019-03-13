@@ -1,0 +1,11 @@
+{
+  "formControls": {
+    "courseStartDate": {
+      "label": "تاريخ بداية الكورس",
+      "formError": {
+        "required" : "يجب إدخال تاريخ بداية الكورس",
+        "pattern": "يجب إدخال تاريخ صحيح"
+      }
+    }
+  }
+}
