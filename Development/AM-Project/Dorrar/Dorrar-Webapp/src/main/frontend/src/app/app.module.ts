@@ -24,6 +24,7 @@ import { CourseDetailsComponent } from './modules/course/component/course-detail
 import {LookupService} from "./infrastructure/services/lookup.service";
 import {LocalStorageService} from "./infrastructure/services/local-storage.service";
 import {AuthInterceptor} from "./infrastructure/interceptor/auth.interceptor";
+import {UserListComponent} from "./modules/user/components/user-list/user-list.component";
 import { UserListComponent } from './infrastructure/interfaces/user-list/user-list.component';
 
 @NgModule({
@@ -44,6 +45,7 @@ import { UserListComponent } from './infrastructure/interfaces/user-list/user-li
     HomeComponent,
     CourseComponent,
     UserProfileComponent,
+    UserListComponent,
     UserRoleComponent,
     CourseDetailsComponent,
     UserListComponent,

@@ -7,6 +7,7 @@ import {LoginComponent} from "./modules/security/components/login/login.componen
 import {CourseComponent} from "./modules/course/course.component";
 import {UserProfileComponent} from "./modules/user/components/user-profile/user-profile.component";
 import {UserRoleComponent} from "./modules/user/components/user-profile/user-role/user-role.component";
+import {UserListComponent} from "./modules/user/components/user-list/user-list.component";
 
 
 const routes: Routes = [
@@ -18,6 +19,7 @@ const routes: Routes = [
   {
     path: '', component: MainLayoutComponent, children: [
       {path:'home', component: HomeComponent},
+      {path:'filter',component:UserListComponent},
       {path: 'course', component: CourseComponent} ,
       {path: 'course/new', component:CourseComponent},
       {path:'user/profile', component:UserProfileComponent,children:[

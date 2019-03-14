@@ -38,21 +38,21 @@ public class AuthenticationFilter implements ContainerRequestFilter {
     }
 
     public void filter(ContainerRequestContext requestContext) throws IOException {
-        try {
-            String authorizationHeader =
-                    requestContext.getHeaderString("authorization");
-            if (authorizationHeader == null || !authorizationHeader.startsWith("Bearer ")) {
-                throw new NotAuthorizedException("Authorization header must be provided");
-            }
-            // Extract the token from the HTTP Authorization header
-            String token = authorizationHeader.substring("Bearer".length()).trim();
-            //Validate the token
-            validateToken(token, requestContext);
-
-//            ConfigManager.logger.endDebugLog(session, AuthenticationFilter.class, "filter");
-        } catch (Exception e) {
-            requestContext.abortWith(Response.status(Response.Status.UNAUTHORIZED).build());
-        }
+//        try {
+//            String authorizationHeader =
+//                    requestContext.getHeaderString("authorization");
+//            if (authorizationHeader == null || !authorizationHeader.startsWith("Bearer ")) {
+//                throw new NotAuthorizedException("Authorization header must be provided");
+//            }
+//            // Extract the token from the HTTP Authorization header
+//            String token = authorizationHeader.substring("Bearer".length()).trim();
+//            //Validate the token
+//            validateToken(token, requestContext);
+//
+////            ConfigManager.logger.endDebugLog(session, AuthenticationFilter.class, "filter");
+//        } catch (Exception e) {
+//            requestContext.abortWith(Response.status(Response.Status.UNAUTHORIZED).build());
+//        }
     }
 
     private void validateToken(String token, ContainerRequestContext requestContext) {
