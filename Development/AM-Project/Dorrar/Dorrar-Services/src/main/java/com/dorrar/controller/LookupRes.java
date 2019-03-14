@@ -2,8 +2,10 @@ package com.dorrar.controller;
 
 import com.dorrar.data.CorRefType;
 import com.dorrar.model.*;
+//import com.dorrar.model.annotation.AuthorizeAction;
 import com.dorrar.model.annotation.Authenticate;
 import com.dorrar.model.enums.Actions;
+import com.dorrar.model.lookup.*;
 import com.dorrar.model.lookup.College;
 import com.dorrar.model.lookup.CorLevel;
 import com.dorrar.model.lookup.CorType;
@@ -92,11 +94,11 @@ public class LookupRes {
     @GET
     @Path("/university")
     @Produces(MediaType.APPLICATION_JSON)
-    public ArrayList<University> findalluniversity(){
-        University university1 =new University(1,"Benha");
-        University university2 =new University(2,"Cairo");
+    public ArrayList<Universty> findalluniversity(){
+        Universty university1 =new Universty(1,"Benha");
+        Universty university2 =new Universty(2,"Cairo");
 
-        ArrayList<University> universityArrayList=new ArrayList<>();
+        ArrayList<Universty> universityArrayList=new ArrayList<>();
         universityArrayList.add(university1);
         universityArrayList.add(university2);
         return universityArrayList;

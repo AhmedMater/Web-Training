@@ -38,6 +38,7 @@ public class UserRep {
         List<Page> userPagesList = this.jdbcTemplate.query(sql ,userPageRM) ;
         return userPagesList;
     }
+
     public List<UserVTO> findAll(){
 
         String sql="SELECT first_name,last_name,birthdate,college_id,university_id," +
