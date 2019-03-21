@@ -11,12 +11,14 @@ import {SecurityService} from "../security/shared/security.service";
 })
 export class HomeComponent implements OnInit {
 
+  currentUser: AuthUserVTO;
+
   constructor(private localStorageService: LocalStorageService,
-              private securityService: SecurityService) { }
+              private securityService: SecurityService) {
+    this.currentUser = this.localStorageService.getCurrentUser();
+  }
 
   ngOnInit() {
-    let authUser: AuthUserVTO = this.localStorageService.getCurrentUser();
-    console.log(authUser);
   }
 
   onClick(){

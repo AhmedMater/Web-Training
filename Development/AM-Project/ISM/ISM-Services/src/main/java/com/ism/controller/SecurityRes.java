@@ -4,6 +4,8 @@ import com.ism.controller.filter.AuthenticationFilter;
 import com.ism.model.LoginDTO;
 import com.ism.model.RegisterDTO;
 import com.ism.model.annotation.Authenticated;
+import com.ism.model.authorization.AuthActions;
+import com.ism.model.authorization.AuthViews;
 import com.ism.model.security.AuthUserVTO;
 import com.ism.model.user.UserVTO;
 import com.ism.repository.SecurityRep;
@@ -51,8 +53,31 @@ public class SecurityRes {
     @Authenticated
     public void sayHello(@Context ContainerRequestContext request){
         UserVTO currentUser = (UserVTO) request.getProperty(AuthenticationFilter.AUTH_USER);
+        currentUser.getId();
 
         System.out.println("Testing Authorization Header");
     }
+
+    @Path("test")
+    @GET
+    @Authenticated(actions = {AuthActions.SUBMIT_COURSE, AuthActions.SUBMIT_TRANSLATION})
+    public void createCourse(){
+        System.out.println("Testing Authorization Header");
+    }
+
+    @Path("test")
+    @GET
+    @Authenticated(views = {AuthViews.VIEW_COURSE, AuthViews.CREATE_COURSE})
+    public void viewCourse(){
+        System.out.println("Testing Authorization Header");
+    }
+
+    @Path("test")
+    @GET
+    @Authenticated(views = {AuthViews.VIEW_COURSE}, actions = {AuthActions.SUBMIT_COURSE})
+    public void viewCouarse(){
+        System.out.println("Testing Authorization Header");
+    }
+
 
 }

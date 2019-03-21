@@ -14,7 +14,7 @@ public class UserVTORM implements RowMapper<UserVTO> {
         data.setFirstName(rs.getString("first_name"));
         data.setLastName(rs.getString("last_name"));
         data.setUsername(rs.getString("username"));
-        data.setPassword(rs.getString("password"));
+        data.setPassword(rs.getString("user_password"));
         data.setEmail(rs.getString("email"));
 
         return data;
