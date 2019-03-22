@@ -18,7 +18,15 @@ export class SecurityService {
     return this.http.post<AuthUserVTO>('http://localhost:8080/api/login', data);
   }
 
-  test(){
+  testAuthentication(){
     return this.http.get('http://localhost:8080/api/test');
+  }
+
+  testAction(){
+    return this.http.get('http://localhost:8080/api/test-action');
+  }
+
+  testView(){
+    return this.http.get('http://localhost:8080/api/test-view');
   }
 }

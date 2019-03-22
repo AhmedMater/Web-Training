@@ -40,6 +40,8 @@ public class SecuritySer {
                 authUser.setFullName(user.getFirstName() + " " + user.getLastName());
                 authUser.setUserID(user.getId());
                 authUser.setToken(token);
+                authUser.setActionIDs(this.securityRep.getUserActions(user.getId()));
+                authUser.setViewIDs(this.securityRep.getUserViews(user.getId()));
                 return authUser;
             }
         }

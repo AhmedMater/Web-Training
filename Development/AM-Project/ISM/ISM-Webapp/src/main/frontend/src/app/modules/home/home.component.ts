@@ -21,8 +21,21 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
-  onClick(){
-    this.securityService.test().subscribe(res=>{});
+  onClickAuthentication(){
+    this.securityService.testAuthentication().subscribe(
+    res=>console.log('Authentication-Successful'),
+      err=> console.log(err));
   }
 
+  onClickAction(){
+    this.securityService.testAction().subscribe(
+      res=>console.log('Authorization-Action-Successful'),
+      err=> console.log(err));
+  }
+
+  onClickView(){
+    this.securityService.testView().subscribe(
+      res=>console.log('Authorization-View-Successful'),
+      err=> console.log(err));
+  }
 }

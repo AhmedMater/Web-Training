@@ -58,24 +58,17 @@ public class SecurityRes {
         System.out.println("Testing Authorization Header");
     }
 
-    @Path("test")
+    @Path("test-action")
     @GET
-    @Authenticated(actions = {AuthActions.SUBMIT_COURSE, AuthActions.SUBMIT_TRANSLATION})
-    public void createCourse(){
+    @Authenticated(actions = {AuthActions.SUBMIT_TRANSLATION})
+    public void testAction(){
         System.out.println("Testing Authorization Header");
     }
 
-    @Path("test")
+    @Path("test-view")
     @GET
-    @Authenticated(views = {AuthViews.VIEW_COURSE, AuthViews.CREATE_COURSE})
-    public void viewCourse(){
-        System.out.println("Testing Authorization Header");
-    }
-
-    @Path("test")
-    @GET
-    @Authenticated(views = {AuthViews.VIEW_COURSE}, actions = {AuthActions.SUBMIT_COURSE})
-    public void viewCouarse(){
+    @Authenticated(views = {AuthViews.CREATE_COURSE, AuthViews.CREATE_TRANSLATION})
+    public void testView(){
         System.out.println("Testing Authorization Header");
     }
 

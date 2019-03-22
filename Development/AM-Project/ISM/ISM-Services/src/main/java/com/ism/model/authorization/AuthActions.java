@@ -9,5 +9,5 @@ public enum AuthActions {
         this.id = id;
     }
 
-    int getID(){ return id; }
+    public int getID(){ return id; }
 }

@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
       res=> {
         // let authUser: AuthUserVTO = new AuthUserVTO();
         // authUser = res;
-        // console.log(res);
+        console.log('Login Successfully');
 
         this.localStorageService.setAuthUser(res);
       },

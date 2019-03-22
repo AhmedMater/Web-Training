@@ -1,11 +1,14 @@
 package com.ism.model.security;
 
 import java.io.Serializable;
+import java.util.List;
 
 public class AuthUserVTO implements Serializable {
     private int userID;
     private String fullName;
     private String token;
+    private List<Integer> actionIDs;
+    private List<Integer> viewIDs;
 
     public AuthUserVTO() {
     }
@@ -32,5 +35,21 @@ public class AuthUserVTO implements Serializable {
 
     public void setToken(String token) {
         this.token = token;
+    }
+
+    public List<Integer> getActionIDs() {
+        return actionIDs;
+    }
+
+    public void setActionIDs(List<Integer> actionIDs) {
+        this.actionIDs = actionIDs;
+    }
+
+    public List<Integer> getViewIDs() {
+        return viewIDs;
+    }
+
+    public void setViewIDs(List<Integer> viewIDs) {
+        this.viewIDs = viewIDs;
     }
 }
