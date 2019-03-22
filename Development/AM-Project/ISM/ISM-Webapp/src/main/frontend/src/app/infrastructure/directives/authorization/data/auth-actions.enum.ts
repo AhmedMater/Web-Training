@@ -1,0 +1,7 @@
+export enum AuthActions {
+  ENROLL_COURSE = 1,
+  SUBMIT_COURSE = 2,
+  SUBMIT_TRANSLATION = 3,
+  EDIT_TRANSLATION = 4
+
+}

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {LocalStorageService} from "../../infrastructure/services/local-storage.service";
 import {AuthUserVTO} from "../security/shared/data/auth-user-vto.data";
 import {SecurityService} from "../security/shared/security.service";
+import {AuthActions} from "../../infrastructure/directives/authorization/data/auth-actions.enum";
+import {AuthViews} from "../../infrastructure/directives/authorization/data/auth-views.enum";
 
 @Component({
   selector: 'home',
@@ -10,6 +12,9 @@ import {SecurityService} from "../security/shared/security.service";
   providers: [SecurityService]
 })
 export class HomeComponent implements OnInit {
+
+  AUTH_ACTIONS: typeof AuthActions = AuthActions;
+  AUTH_VIEWS: typeof AuthViews = AuthViews;
 
   currentUser: AuthUserVTO;
 

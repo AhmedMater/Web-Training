@@ -16,7 +16,14 @@ import { RegisterComponent } from './modules/security/components/register/regist
 import { LoginComponent } from './modules/security/components/login/login.component';
 import {LocalStorageService} from "./infrastructure/services/local-storage.service";
 import { HomeComponent } from './modules/home/home.component';
-import {AuthInterceptor} from "./infrastructure/interfaces/auth-interceptor";
+import {AuthInterceptor} from "./infrastructure/interceptor/auth-interceptor";
+import { AuthorizeActionDirective } from './infrastructure/directives/authorization/authorize-action.directive';
+import { AuthorizeViewDirective } from './infrastructure/directives/authorization/authorize-view.directive';
+import { CreateCourseComponent } from './modules/create-course/create-course.component';
+import {AuthorizationGuard} from "./infrastructure/interceptor/authorization.guard";
+import { UnAuthorizedComponent } from './modules/un-authorized/un-authorized.component';
+import { ViewCourseComponent } from './modules/view-course/view-course.component';
+import {AuthenticationGuard} from "./infrastructure/interceptor/authentication.guard";
 
 @NgModule({
   declarations: [
@@ -29,14 +36,19 @@ import {AuthInterceptor} from "./infrastructure/interfaces/auth-interceptor";
     SimpleFooterComponent,
     RegisterComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    AuthorizeActionDirective,
+    AuthorizeViewDirective,
+    CreateCourseComponent,
+    UnAuthorizedComponent,
+    ViewCourseComponent
 
   ],
   imports: [
     BrowserModule, HttpClientModule, FormsModule, ReactiveFormsModule, CommonModule,
     AppRoutingModule
   ],
-  providers: [LocalStorageService,
+  providers: [LocalStorageService, AuthorizationGuard, AuthenticationGuard,
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }],
   bootstrap: [LayoutComponent]
 })

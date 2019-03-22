@@ -1,7 +1,20 @@
-<p>
-  home works!
-</p>
 
-<button type="button" (click)="onClickAuthentication()">Test-Authentication</button>
-<button type="button" (click)="onClickAction()">Test-Action</button>
-<button type="button" (click)="onClickView()">Test-View</button>
+
+<!--<button type="button" (click)="onClickAuthentication()">Test-Authentication</button>-->
+
+
+<button type="button" (click)="onClickAction()"
+        *authorizeAction="[AUTH_ACTIONS.ENROLL_COURSE]">Enroll</button>
+
+<button type="button" (click)="onClickAction()"
+        *authorizeAction="[AUTH_ACTIONS.SUBMIT_TRANSLATION]">Submit Translation</button>
+
+<ng-template [authorizeAction]="[AUTH_ACTIONS.EDIT_TRANSLATION]">
+  <button type="button" (click)="onClickAction()" *ngIf="true"
+          >Edit Translation</button>
+</ng-template>
+
+
+<p *authorizeView="[AUTH_VIEWS.CREATE_COURSE]">This is Create Course Section</p>
+<p *authorizeView="[AUTH_VIEWS.VIEW_COURSE]">This is Course Details</p>
+<p *authorizeView="[AUTH_VIEWS.CREATE_TRANSLATION]">This is Create Translation Section</p>
