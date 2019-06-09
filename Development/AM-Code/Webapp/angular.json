@@ -2,5 +2,215 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
-  "projects": {}
+  "projects": {
+    "home-app": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/home-app",
+      "sourceRoot": "projects/home-app/src",
+      "prefix": "ho",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/home-app",
+            "index": "projects/home-app/src/index.html",
+            "main": "projects/home-app/src/main.ts",
+            "polyfills": "projects/home-app/src/polyfills.ts",
+            "tsConfig": "projects/home-app/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "projects/home-app/src/favicon.ico",
+              "projects/home-app/src/assets"
+            ],
+            "styles": [
+              "projects/home-app/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/home-app/src/environments/environment.ts",
+                  "with": "projects/home-app/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "home-app:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "home-app:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "home-app:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/home-app/tsconfig.app.json",
+              "projects/home-app/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "dorrar-app": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/dorrar-app",
+      "sourceRoot": "projects/dorrar-app/src",
+      "prefix": "do",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/dorrar-app",
+            "index": "projects/dorrar-app/src/index.html",
+            "main": "projects/dorrar-app/src/main.ts",
+            "polyfills": "projects/dorrar-app/src/polyfills.ts",
+            "tsConfig": "projects/dorrar-app/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "projects/dorrar-app/src/favicon.ico",
+              "projects/dorrar-app/src/assets"
+            ],
+            "styles": [
+              "projects/dorrar-app/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/dorrar-app/src/environments/environment.ts",
+                  "with": "projects/dorrar-app/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "dorrar-app:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "dorrar-app:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "dorrar-app:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/dorrar-app/tsconfig.app.json",
+              "projects/dorrar-app/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "am-lib": {
+      "projectType": "library",
+      "root": "projects/am-lib",
+      "sourceRoot": "projects/am-lib/src",
+      "prefix": "aml",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/am-lib/tsconfig.lib.json",
+            "project": "projects/am-lib/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/am-lib/src/test.ts",
+            "tsConfig": "projects/am-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/am-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/am-lib/tsconfig.lib.json",
+              "projects/am-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }},
+  "defaultProject": "home-app"
 }
