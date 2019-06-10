@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'ho-root',
+  selector: 'app-root',
   template: `
     <!--The content below is only a placeholder and can be replaced.-->
     <div style="text-align:center">
@@ -22,11 +22,10 @@ import { Component } from '@angular/core';
         <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
       </li>
     </ul>
-    <aml-no-data-list [list]="[]"></aml-no-data-list>
     <router-outlet></router-outlet>
   `,
   styles: []
 })
 export class AppComponent {
-  title = 'home-app';
+  title = 'am-lib-samples';
 }

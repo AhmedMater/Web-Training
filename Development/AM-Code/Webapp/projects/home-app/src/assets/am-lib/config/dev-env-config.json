@@ -1,0 +1,4 @@
+{
+  "IDAS_URL": "http://localhost:8080/idas/api/",
+  "DORRAR_URL": "http://localhost:8181/dorrar/api/"
+}

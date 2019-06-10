@@ -2,7 +2,24 @@
   "name": "am-lib",
   "version": "0.0.1",
   "peerDependencies": {
-    "@angular/common": "^8.0.0",
-    "@angular/core": "^8.0.0"
+    "@angular/cdk": "^8.0.0",
+    "@angular/animations": "^8.0.0",
+    "@angular/common": "~8.0.0",
+    "@angular/compiler": "~8.0.0",
+    "@angular/core": "~8.0.0",
+    "@angular/forms": "~8.0.0",
+    "rxjs": "^6.5.2",
+    "zone.js": "^0.9.1",
+    "@angular/material": "^8.0.0",
+    "@angular/material-moment-adapter": "^8.0.0",
+    "@angular/platform-browser": "^8.0.0",
+    "@ngx-translate/core": "^11.0.1",
+    "@ngx-translate/http-loader": "^4.0.0",
+    "file-saver": "^2.0.2",
+    "moment": "^2.24.0",
+    "ngx-bootstrap": "^4.2.0",
+    "ngx-pagination": "^3.2.1"
+  },
+  "dependencies": {
   }
 }

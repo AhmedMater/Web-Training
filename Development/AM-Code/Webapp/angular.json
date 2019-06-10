@@ -17,6 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "preserveSymlinks": true,
             "outputPath": "dist/home-app",
             "index": "projects/home-app/src/index.html",
             "main": "projects/home-app/src/main.ts",
@@ -25,7 +26,12 @@
             "aot": false,
             "assets": [
               "projects/home-app/src/favicon.ico",
-              "projects/home-app/src/assets"
+              "projects/home-app/src/assets",
+              {
+                "glob": "*",
+                "input": "projects/am-lib/src/assets",
+                "output": "projects/home-app/src/assets"
+              }
             ],
             "styles": [
               "projects/home-app/src/styles.scss"
@@ -195,7 +201,11 @@
           "options": {
             "main": "projects/am-lib/src/test.ts",
             "tsConfig": "projects/am-lib/tsconfig.spec.json",
-            "karmaConfig": "projects/am-lib/karma.conf.js"
+            "karmaConfig": "projects/am-lib/karma.conf.js",
+            "assets": [
+              { "glob": "**/*", "input": "src/assets", "output": "/assets" }
+            ],
+            "preserveSymlinks": true
           }
         },
         "lint": {
@@ -204,6 +214,93 @@
             "tsConfig": [
               "projects/am-lib/tsconfig.lib.json",
               "projects/am-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "am-lib-samples": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/am-lib-samples",
+      "sourceRoot": "projects/am-lib-samples/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/am-lib-samples",
+            "index": "projects/am-lib-samples/src/index.html",
+            "main": "projects/am-lib-samples/src/main.ts",
+            "polyfills": "projects/am-lib-samples/src/polyfills.ts",
+            "tsConfig": "projects/am-lib-samples/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "projects/am-lib-samples/src/favicon.ico",
+              "projects/am-lib-samples/src/assets"
+            ],
+            "styles": [
+              "projects/am-lib-samples/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/am-lib-samples/src/environments/environment.ts",
+                  "with": "projects/am-lib-samples/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "am-lib-samples:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "am-lib-samples:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "am-lib-samples:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/am-lib-samples/tsconfig.app.json",
+              "projects/am-lib-samples/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
