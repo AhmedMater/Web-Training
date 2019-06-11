@@ -1,18 +1,20 @@
 import {OnInit} from "@angular/core";
-import {ExportTypes} from "../../../modules/correspondence/shared/enums/export-types-enum";
-import {ListRS} from "./data/list-result-set.model";
-import {AuthActions} from "../authorization/data/auth-action.data";
-import {getLang, Languages} from "../../data/enums/Languages";
 import {FormGroup} from "@angular/forms";
-import {PaginationInfo} from "./data/pagination-info.model";
-import {OrderInfo} from "./data/order-info.model";
-import {ConfigParam} from "../../common/ConfigParam";
 import {ActivatedRoute, Params, Router} from "@angular/router";
 import {Title} from "@angular/platform-browser";
-import {LocalStorageService} from "../../../services/local-storage.service";
 import {TranslateService} from "@ngx-translate/core";
-import {Utils} from "../../common/utils";
 import * as FileSaver from "file-saver";
+import {startWith, distinctUntilChanged} from 'rxjs/operators';
+
+import {ExportTypes} from "./data/export-types.enum";
+import {AuthActions} from "../authorization/data/auth-actions.enum";
+import {Languages} from "../../services/language/language.enum";
+import {ListRS} from "./data/list-result-set.model";
+import {OrderInfo} from "./data/order-info.model";
+import {PaginationInfo} from "./data/pagination-info.model";
+import {LanguageService} from "../../services/language/language.service";
+import {UtilService} from "../../services/util.service";
+import {DateService} from "../../services/date.service";
 
 
 export abstract class AbstractList<U> implements OnInit{
@@ -25,19 +27,23 @@ export abstract class AbstractList<U> implements OnInit{
   paginationInfo: PaginationInfo = new PaginationInfo();
 
   public CURRENT_LANG: Languages;
-  public readonly DATE_FORMAT: string = ConfigParam.HTML_DISPLAY_DATE;
+  public readonly DATE_FORMAT: string;
 
   protected constructor(pageTitle: string, public translate: TranslateService,
-                        public localStorageService: LocalStorageService,
+                        public languageService: LanguageService,
+                        public utilService: UtilService,
                         public titleService: Title,
                         public activatedRoute: ActivatedRoute,
-                        public router: Router){
+                        public router: Router,
+                        public dateService: DateService){
     this.translate.get(pageTitle).subscribe(res => this.titleService.setTitle(res));
+    this.CURRENT_LANG = this.languageService.getCurrentLanguage();
+    
     this.translate.onLangChange.subscribe(lang => {
       this.translate.get(pageTitle).subscribe(res => this.titleService.setTitle(res));
-      this.CURRENT_LANG = getLang(lang);
+      this.CURRENT_LANG = this.languageService.getLang(lang);
     });
-    this.CURRENT_LANG = this.localStorageService.getCurrentLanguage();
+    this.DATE_FORMAT = this.dateService.HTML_DATE_FORMAT;
   }
 
   onRouteChange(){
@@ -52,17 +58,17 @@ export abstract class AbstractList<U> implements OnInit{
       }
       this.router.navigate([window.location.pathname], {queryParams: queryParams});
     }
-    this.activatedRoute.queryParams.startWith(queryParams).distinctUntilChanged().subscribe(changes => {
-      if (Utils.hasValueAndIsNumber(changes.pageSize))
+    this.activatedRoute.queryParams.pipe(startWith(queryParams),distinctUntilChanged()).subscribe(changes => {
+      if (this.utilService.hasValueAndIsNumber(changes.pageSize))
         this.paginationInfo.pageSize = parseInt(changes.pageSize);
-      if (Utils.hasValueAndIsNumber(changes.pageNum)) {
+      if (this.utilService.hasValueAndIsNumber(changes.pageNum)) {
         this.paginationInfo.pageNum = parseInt(changes.pageNum);
         this.paginationInfo.offset = this.paginationInfo.pageNum * this.paginationInfo.pageSize;
       }
       if(this.orderInfo != null) {
-        if (Utils.hasValue(changes.orderBy))
+        if (this.utilService.hasValue(changes.orderBy))
           this.orderInfo.orderBy = changes.orderBy;
-        if (Utils.hasValue(changes.orderDirection))
+        if (this.utilService.hasValue(changes.orderDirection))
           this.orderInfo.orderDir = changes.orderDirection;
       }
       this.loadQueryParametersIntoForm(changes);

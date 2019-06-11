@@ -6,6 +6,8 @@ export class DateService {
     DISPLAY_MOMENT_DF: string = "YYYY-MM-DD";
     MOMENT_DATE_FORMAT: string = 'DD/MM/YYYY';
     SQL_DATE_FORMAT: string = 'yyyy-MM-dd';
+    
+    HTML_DATE_FORMAT: string = 'DD/MM/YYYY';
 
     private moment = momentNs;
     changeDateFormat(dateStr: string, fromFormat: string, toFormat: string){

@@ -2,8 +2,8 @@ import {Directive, ElementRef, HostListener, Input, OnChanges, OnInit, Renderer2
 import {TranslateService} from "@ngx-translate/core";
 import {FormGroup} from "@angular/forms";
 import {ErrorModel} from "./error.model";
-import {LocalStorageService} from "../../services/local-storage.service";
-import {Languages} from "../../common/language.enum";
+import {Languages} from "../../services/language/language.enum";
+import {LanguageService} from "../../services/language/language.service";
 
 @Directive({
   selector: '[validate]'
@@ -33,7 +33,7 @@ export class ValidatorDirective implements OnInit, OnChanges {
 
   constructor(private renderer: Renderer2,
               private el: ElementRef,
-              private localStorageService: LocalStorageService,
+              private languageService: LanguageService,
               private translateService: TranslateService) {
   }
 
@@ -89,7 +89,7 @@ export class ValidatorDirective implements OnInit, OnChanges {
       if(this.formControlName == null)
         this.evaluateFormControlName();
 
-      const currentLang: Languages = this.localStorageService.getCurrentLanguage();
+      const currentLang: Languages = this.languageService.getCurrentLanguage();
       let tags: HTMLCollection = this.el.nativeElement.parentElement.children;
 
       for (let error of this.controlErrors) {

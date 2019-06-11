@@ -1,6 +1,6 @@
 import {Component, Input} from "@angular/core";
 import {FormGroup} from "@angular/forms";
-import {Languages} from "../common/language.enum";
+import {Languages} from "../services/language/language.enum";
 
 @Component({
   selector: 'aml-date-picker-discard',

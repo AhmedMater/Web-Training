@@ -22,7 +22,6 @@ export class PaginationComponent implements OnInit {
   @Output() changePageSize = new EventEmitter<number>();
   @Output() changePage = new EventEmitter();
   @Input() paginationID: string;
-  @Input() resultSet;
 
   pageSize: number = 5;
 
