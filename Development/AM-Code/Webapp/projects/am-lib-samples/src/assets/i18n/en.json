@@ -1,0 +1,44 @@
+{
+  "amLib": {
+    "emptyPage": {
+      "noData": "No Data",
+      "unAuthorized": "401 Un Authorized"
+    },
+    "abstractList": {
+      "filter": {
+        "header": "Filters",
+        "export": {
+          "btnLabel": "Export",
+          "pdf": "Pdf",
+          "xls": "Excel",
+          "doc": "Word",
+          "csv": "CSV"
+        },
+        "btn": {
+          "search": "Search",
+          "clear": "Clear"
+        }
+      },
+      "data": "Data"
+    }
+  },
+  "amLibSamples": {
+    "abstractList": {
+      "pageTitle":"Abstract List Sample (User List)",
+      "filter": {
+        "name": "Name",
+        "username": "Username",
+        "email": "Email",
+        "role": "Role"
+      },
+      "data": {
+        "seq": "#",
+        "name": "Name",
+        "isActive": "Is Active",
+        "email": "Email",
+        "expiryDate": "Expiry Date",
+        "role": "Def Role"
+      }
+    }
+  }
+}
