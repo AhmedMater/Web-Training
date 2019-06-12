@@ -30,7 +30,7 @@ export class AbstractListSampleComponent extends AbstractList<ListItemVto> {
               public formBuilder: FormBuilder,
               public router: Router,
               public dateService: DateService){
-    super('page.title', translate, languageService, utilService,
+    super('amLibSamples.abstractList.pageTitle', translate, languageService, utilService,
       titleService, activatedRoute, router, dateService);
   }
   

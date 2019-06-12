@@ -13,8 +13,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {AuthorizeActionDirective} from "./generic/authorization/authorize-action.directive";
 import {AuthorizeViewDirective} from "./generic/authorization/authorize-view.directive";
 import {ValidatorDirective} from "./generic/validator/validator.directive";
-import {NoDataListComponent} from "./generic/abstract-list/components/no-data.component";
-import {PaginationComponent} from "./generic/abstract-list/components/page-size.component";
+import {AMLNoDataListComponent} from "./generic/abstract-list/components/aml-no-data/aml-no-data.component";
+import {AMLPaginationComponent} from "./generic/abstract-list/components/aml-pagination/aml-pagination.component";
 import {SortArrowsComponent} from "./generic/abstract-list/components/sort-arrows.component";
 import {NotFoundComponent} from "./components/not-found.component";
 import {DatePickerRemoveComponent} from "./components/date-picker-remove.component";
@@ -25,16 +25,22 @@ import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
 import {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} from "@angular/material";
 import {CommonModule} from "@angular/common";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
+import {AMLExportButtonComponent} from "./generic/abstract-list/components/export-button.component";
+import { AmlListSearchBtnComponent } from './generic/abstract-list/components/aml-list-search-btn.component';
+import {AmlListClearBtnComponent} from "./generic/abstract-list/components/aml-list-clear-btn.component";
 
 const appInitializerFn = (appConfig: AppConfigService) => {
     return () => {return appConfig.loadAppConfig(AppConfigService.DEV_ENV)};
 };
 
 const PIPES = [CollapseStrPipe];
-const COMPONENTS = [NotFoundComponent, DatePickerRemoveComponent, UnauthorizedComponent];
 const DIRECTIVES = [AuthorizeViewDirective, AuthorizeActionDirective, ValidatorDirective];
 const SHARED_MODULES = [CommonModule, TranslateModule, ReactiveFormsModule, FormsModule, NgxPaginationModule, HttpClientModule];
-const ABSTRACT_COMPONENTS = [NoDataListComponent, PaginationComponent, SortArrowsComponent];
+const ABSTRACT_COMPONENTS = [
+  AMLNoDataListComponent, AMLPaginationComponent, SortArrowsComponent, AMLExportButtonComponent, AmlListSearchBtnComponent,
+  AmlListClearBtnComponent
+];
+const COMPONENTS = [NotFoundComponent, DatePickerRemoveComponent, UnauthorizedComponent, ABSTRACT_COMPONENTS];
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);

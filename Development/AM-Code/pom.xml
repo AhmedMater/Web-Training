@@ -12,6 +12,7 @@
         <module>Dorrar-Services</module>
         <module>IDAS-Services</module>
         <module>Webapp-Spring-Boot</module>
+        <module>AML-Samples-Services</module>
     </modules>
 
 

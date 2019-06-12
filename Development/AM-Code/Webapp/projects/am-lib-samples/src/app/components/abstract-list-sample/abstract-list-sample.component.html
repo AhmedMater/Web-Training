@@ -1,180 +1,76 @@
-
 <div class="container">
-<nav aria-label="breadcrumb">
+  <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Courses</li>
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Courses</li>
     </ol>
-</nav>
+  </nav>
 
-<div class="card">
+  <div class="card">
     <div class="card-header">
-        Filters
+      {{'amLib.abstractList.filter.header' | translate}}
     </div>
     <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+      <form [formGroup]="filters" (keydown.enter)="onListSearch()">
+
+        <div class="row">
+          <div class="col-3">
+            <div class="form-group">
+              <label>User name</label>
+              <input type="text" class="form-control" id="username" aria-describedby="username"
+                     placeholder="Enter Username">
+            </div>
+          </div>
+        </div>
+      </form>
     </div>
-</div>
+    <div class="card-footer">
+      <div class="btn-group float-right" role="group" aria-label="Basic example">
+        <aml-export-button></aml-export-button>
+        <aml-list-clear-btn (click)="onListClear()"></aml-list-clear-btn>
+        <aml-list-search-btn (click)="onListSearch()"></aml-list-search-btn>
+      </div>
+    </div>
+  </div>
 
-
-<div class="card">
+  <div class="card mt-4">
     <div class="card-header">
-        Table Data
+      {{'amLib.abstractList.data' | translate}}
     </div>
     <div class="card-body">
-        <table class="table table-hover">
-            <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
-</div>
-<div class="createUserScroll userPage p-0">
-    <section class="main-section">
-        <div class="content-body">
-            <div class="page-container">
-                <div class="page-title mt-1 mb-4">
-                    <div class="heading">
-                        <h3 class="parent">{{'rightPanel.reports' | translate}}</h3>
-                        <h3>{{'reports.titles.generalStatistical' | translate}}</h3>
-                    </div>
-                </div>
-                <section class="table-section">
-                    <form [formGroup]="filters" (keydown.enter)="onListSearch()">
-                        <div class="add-row row mb-1">
-                            <!--&lt;!&ndash;fromRegistryDate&ndash;&gt;-->
-                            <!--<div class="col-md-3">-->
-                            <!--<div class="label-detail">-->
-                            <!--<div class="d-flex flex-column">-->
-                            <!--<label class="col-form-label w-100">-->
-                            <!--{{'reports.statisticalProductivity.periodDateFrom' | translate}}-->
-                            <!--</label>-->
-                            <!--<div class="detail w-100 hijri">-->
-                            <!--<mat-form-field>-->
-                            <!--<input matInput [matDatepicker]="periodDateFrom" formControlName="periodDateFrom">-->
-                            <!--<mat-datepicker-toggle matSuffix [for]="periodDateFrom"></mat-datepicker-toggle>-->
-                            <!--<mat-datepicker #periodDateFrom></mat-datepicker>-->
-                            <!--</mat-form-field>-->
-                            <!--</div>-->
-                            <!--</div>-->
-                            <!--</div>-->
-                            <!--</div>-->
-                            <!--&lt;!&ndash;toRegistryDate&ndash;&gt;-->
-                            <!--<div class="col-md-3">-->
-                            <!--<div class="label-detail">-->
-                            <!--<div class="d-flex flex-column">-->
-                            <!--<label class="col-form-label w-100">-->
-                            <!--{{'reports.statisticalProductivity.periodDateTo' | translate}}-->
-                            <!--</label>-->
-                            <!--<div class="detail w-100 hijri">-->
-                            <!--<mat-form-field>-->
-                            <!--<input matInput [matDatepicker]="periodDateTo" formControlName="periodDateTo">-->
-                            <!--<mat-datepicker-toggle matSuffix [for]="periodDateTo"></mat-datepicker-toggle>-->
-                            <!--<mat-datepicker #periodDateTo></mat-datepicker>-->
-                            <!--</mat-form-field>-->
-                            <!--</div>-->
-                            <!--</div>-->
-                            <!--</div>-->
-                            <!--</div>-->
-
-                            <div class="form-group col-md-6 add-row-actions">
-                                <button type="submit" class="btn-1 btn-primary" (click)="onListSearch()">
-                                    <i class="fa fa-search"></i> {{'systemParams.search' | translate}}
-                                </button>
-
-                                <button type="reset" class="btn-1 btn-gray" (click)="onListClear()">
-                                    <i class="fa fa-eraser"></i> {{'systemParams.searchReset' | translate}}
-                                </button>
-
-                                <button class="btn-1 btn-tertiary" type="button" id="dropdownMenuButton"
-                                        data-toggle="dropdown"
-                                        aria-haspopup="true" aria-expanded="false">
-                                    <i class="fa fa-external-link"></i> {{'reports.export' | translate}}
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" (click)="onExport(EXPORT_TYPES.PDF)">PDF<i
-                                            class="fa fa-file-pdf-o"
-                                            style="padding-right: 10px"></i></a>
-                                    <a class="dropdown-item" (click)="onExport(EXPORT_TYPES.WORD)">WORD<i
-                                            class="fa fa-file-word-o"
-                                            style="padding-right: 10px"></i></a>
-                                    <a class="dropdown-item" (click)="onExport(EXPORT_TYPES.EXCEL)">CSV<i
-                                            class="fa fa-file-excel-o"
-                                            style="padding-right: 10px"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-
-                    <div class="table-body">
-                        <!--displayed data-->
-                        <div class="table-row">
-                            <table class="table">
-                                <thead class="thead-light">
-                                <tr>
-                                    <th rowspan="2">{{'reports.generalStatistical.outgoingCorNum' | translate}}</th>
-                                    <th rowspan="2">{{'reports.generalStatistical.incomingCorNum' | translate}}</th>
-                                    <th rowspan="2">{{'reports.generalStatistical.distributionNum' | translate}}</th>
-                                    <th rowspan="2">{{'reports.generalStatistical.redistributionNum' | translate}}</th>
-                                    <th colspan="3">{{'reports.generalStatistical.corNeedAction' | translate}}</th>
-                                </tr>
-                                <tr>
-                                    <th>{{'reports.generalStatistical.corNeedActionNum' | translate}}</th>
-                                    <th>{{'reports.generalStatistical.corDoneNum' | translate}}</th>
-                                    <th>{{'reports.generalStatistical.corDonePercentage' | translate}}</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr *ngFor="let item of resultSet.data  | paginate: { id: 'reportPage',
+      <table class="table table-hover">
+        <thead>
+        <tr>
+          <th scope="col">{{'amLibSamples.abstractList.data.seq' | translate}}</th>
+          <th scope="col">{{'amLibSamples.abstractList.data.name' | translate}}</th>
+          <th scope="col">{{'amLibSamples.abstractList.data.email' | translate}}</th>
+          <th scope="col">{{'amLibSamples.abstractList.data.isActive' | translate}}</th>
+          <th scope="col">{{'amLibSamples.abstractList.data.expiryDate' | translate}}</th>
+          <th scope="col">{{'amLibSamples.abstractList.data.role' | translate}}</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let item of resultSet.data  | paginate: { id: 'reportPage',
                                                      itemsPerPage: paginationInfo.pageSize,
                                                      currentPage: paginationInfo.pageNum+1,
                                                      totalItems: resultSet.total }">
-                                    <!--<td>{{item.outgoingCorNum}}</td>-->
-                                    <!--<td>{{item.incomingCorNum}}</td>-->
-                                    <!--<td>{{item.distributionNum}}</td>-->
-                                    <!--<td>{{item.redistributionNum}}</td>-->
-                                    <!--<td>{{item.corNeedActionNum}}</td>-->
-                                    <!--<td>{{item.corDoneNum}}</td>-->
-                                    <!--<td>{{item.corNeedActionNum != 0 ? ((item.corDoneNum * 100 / item.corNeedActionNum) | number:'2.2-2') : 0}} {{' %'}}-->
-                                    <!--</td>-->
-                                </tr>
-                                </tbody>
-                            </table>
-                            <aml-pagination (changePageSize)="onChangePageSize($event)"
-                                            [paginationID]="'reportPage'"
-                                            (changePage)="onChangePage($event)"></aml-pagination>
-                            <aml-no-data-list [list]="resultSet.data"></aml-no-data-list>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </div>
-    </section>
+          <th scope="row">{{((paginationInfo.pageNum+1) * paginationInfo.pageSize) + (i+1)}}</th>
+          <td>{{item.name}}</td>
+          <td>{{item.isActive}}</td>
+          <td>{{item.email}}</td>
+          <td>{{item.isActive}}</td>
+          <td>{{item.expiryDate}}</td>
+        </tr>
+        </tbody>
+      </table>
+      <aml-no-data-list [list]="resultSet.data"></aml-no-data-list>
+    </div>
+    <div class="card-footer">
+      <aml-pagination (changePageSize)="onChangePageSize($event)"
+                      [paginationID]="'reportPage'" [list]="resultSet.data"
+                      (changePage)="onChangePage($event)"></aml-pagination>
+    </div>
+  </div>
 </div>
+
+

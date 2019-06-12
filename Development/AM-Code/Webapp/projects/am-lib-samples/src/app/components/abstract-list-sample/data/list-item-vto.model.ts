@@ -1,7 +1,9 @@
 
 
 export class ListItemVto {
-  id: number;
   name: string;
-  createdOn: string;
+  isActive: boolean;
+  email: string;
+  expiryDate: string;
+  role: string;
 }
