@@ -12,5 +12,8 @@
         <module name="Webapp-Spring-Boot" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="AML-Samples-Services" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

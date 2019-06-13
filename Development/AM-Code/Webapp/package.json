@@ -30,6 +30,7 @@
     "@angular/router": "~8.0.0",
     "@ngx-translate/core": "^11.0.1",
     "@ngx-translate/http-loader": "^4.0.0",
+    "@types/moment": "^2.13.0",
     "am-lib": "file:dist/am-lib/am-lib-0.0.1.tgz",
     "bootstrap": "^4.3.1",
     "file-saver": "^2.0.2",

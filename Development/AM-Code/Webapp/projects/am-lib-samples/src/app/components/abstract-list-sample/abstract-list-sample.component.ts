@@ -8,7 +8,7 @@ import {LanguageService} from "../../../../../am-lib/src/lib/services/language/l
 import {Title} from "@angular/platform-browser";
 import {UtilService} from "../../../../../am-lib/src/lib/services/util.service";
 import {TranslateService} from "@ngx-translate/core";
-import {DateService} from "../../../../../am-lib/src/lib/services/date.service";
+import {DateService} from "../../../../../am-lib/src/lib/services/date/date.service";
 
 @Component({
   selector: 'app-abstract-list-sample',
@@ -25,13 +25,13 @@ export class AbstractListSampleComponent extends AbstractList<ListItemVto> {
   constructor(public translate: TranslateService,
               public languageService: LanguageService,
               public utilService: UtilService,
+              public dateService: DateService,
               public titleService: Title,
               public activatedRoute: ActivatedRoute,
               public formBuilder: FormBuilder,
-              public router: Router,
-              public dateService: DateService){
-    super('amLibSamples.abstractList.pageTitle', translate, languageService, utilService,
-      titleService, activatedRoute, router, dateService);
+              public router: Router){
+    super('amLibSamples.abstractList.pageTitle', translate, languageService, utilService, dateService,
+      titleService, activatedRoute, router);
   }
   
   ngOnInit() {
@@ -41,11 +41,4 @@ export class AbstractListSampleComponent extends AbstractList<ListItemVto> {
   
   initializeFilters() {
   }
-  
-  loadFromDataIntoQueryParameters(queryParams: Params) {
-  }
-  
-  loadQueryParametersIntoForm(changes) {
-  }
-
 }

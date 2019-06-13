@@ -8,7 +8,7 @@ import {UtilService} from "./services/util.service";
 import {LocalStorageService} from "./services/local-storage.service";
 import {AuthorizationGuard} from "./generic/authorization/guards/authorization.guard";
 import {AuthenticationGuard} from "./generic/authorization/guards/authentication.guard";
-import {DateService} from "./services/date.service";
+import {DateService} from "./services/date/date.service";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {AuthorizeActionDirective} from "./generic/authorization/authorize-action.directive";
 import {AuthorizeViewDirective} from "./generic/authorization/authorize-view.directive";
