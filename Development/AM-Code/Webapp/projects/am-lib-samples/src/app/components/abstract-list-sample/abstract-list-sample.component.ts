@@ -21,7 +21,11 @@ import {ExportTypes} from "../../../../../am-lib/src/lib/generic/abstract-list/d
 export class AbstractListSampleComponent extends AbstractList<UserVTO> {
   
   filters: FormGroup = this.formBuilder.group({
-    name: null
+    fullName: null,
+    username: null,
+    email: null,
+    isActive: null,
+    expiryDateFrom: null
   });
   orderInfo: OrderInfo;
   

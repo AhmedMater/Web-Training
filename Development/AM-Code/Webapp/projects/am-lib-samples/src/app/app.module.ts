@@ -9,6 +9,7 @@ import {AMLibModule} from "../../../am-lib/src/lib/am-lib.module";
 import {LocalStorageService} from "../../../am-lib/src/lib/services/local-storage.service";
 import {LanguageService} from "../../../am-lib/src/lib/services/language/language.service";
 import {AppConfigService} from "../../../am-lib/src/lib/services/app-init/app-config.service";
+import {MatDatepickerModule, MatInputModule} from "@angular/material";
 
 @NgModule({
   declarations: [

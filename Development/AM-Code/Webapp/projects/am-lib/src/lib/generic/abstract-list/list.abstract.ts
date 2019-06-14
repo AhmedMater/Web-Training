@@ -19,6 +19,7 @@ import {DateFormats} from "../../services/date/date-formats.enum";
 
 
 export abstract class AbstractList<U> implements OnInit{
+  EXPORT_TYPES: typeof ExportTypes = ExportTypes;
   public resultSet: ResultSet<U> =  new ResultSet<U>();
   abstract filters: FormGroup;
   abstract orderInfo: OrderInfo;
@@ -76,7 +77,7 @@ export abstract class AbstractList<U> implements OnInit{
   }
   public onClear() {
     this.filters.reset();
-    this.onListSearch();
+    this.onSearch();
   }
   public onOrder(orderBy: string) {
     if(this.orderInfo != null) {

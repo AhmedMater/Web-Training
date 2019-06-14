@@ -1,3 +1,12 @@
+
+<mat-form-field>
+  <input matInput [matDatepicker]="expirysDateFrom">
+  <mat-datepicker-toggle matSuffix [for]="expirysDateFrom"></mat-datepicker-toggle>
+  <mat-datepicker #expirysDateFrom></mat-datepicker>
+  <!--<aml-date-picker-remove [language]="CURRENT_LANG" [formGroup]="filters"-->
+  <!--[formContName]="'expiryDateFrom'"></aml-date-picker-remove>-->
+</mat-form-field>
+
 <div class="container">
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
@@ -11,19 +20,62 @@
       {{'amLib.abstractList.filter.header' | translate}}
     </div>
     <div class="card-body">
-      <form [formGroup]="filters" (keydown.enter)="onListSearch()">
+      <form [formGroup]="filters" (keydown.enter)="onSearch()">
 
         <div class="row">
           <div class="col-3">
             <div class="form-group">
               <label>User name</label>
+              <input type="text" class="form-control" id="fullName" aria-describedby="fullName"
+                     placeholder="Enter Full Name" formControlName="fullName">
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="form-group">
+              <label>User name</label>
               <input type="text" class="form-control" id="username" aria-describedby="username"
-                     placeholder="Enter Username">
+                     placeholder="Enter Username" formControlName="username">
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="form-group">
+              <label>User name</label>
+              <input type="text" class="form-control" id="email" aria-describedby="email"
+                     placeholder="Enter email" formControlName="email">
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="form-group">
+              <label>User Active</label>
+              <select class="form-control" id="isActive" formControlName="isActive">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+
+          <div class="col-md-3">
+            <div class="form-group">
+              <label>Expiry Date From</label>
+              <!--<div class="detail-date-input">-->
+              <mat-form-field>
+                <input class="form-control" matInput [matDatepicker]="expiryDateFrom" formControlName="expiryDateFrom">
+                <mat-datepicker-toggle matSuffix [for]="expiryDateFrom"></mat-datepicker-toggle>
+                <mat-datepicker #expiryDateFrom></mat-datepicker>
+                <aml-date-picker-remove [language]="CURRENT_LANG" [formGroup]="filters"
+                                        [formContName]="'expiryDateFrom'"></aml-date-picker-remove>
+              </mat-form-field>
+              <!--</div>-->
             </div>
           </div>
         </div>
       </form>
     </div>
+
     <div class="card-footer">
       <div class="btn-group float-right" role="group" aria-label="Basic example">
         <aml-export-button (click)="onExport()"></aml-export-button>

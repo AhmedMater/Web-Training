@@ -22,25 +22,46 @@ import {UnauthorizedComponent} from "./components/unauthorized.component";
 import {CollapseStrPipe} from "./pipes/collapse-str.pipe";
 import {NgxPaginationModule} from "ngx-pagination";
 import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
-import {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} from "@angular/material";
+import {
+  DateAdapter,
+  MAT_DATE_FORMATS,
+  MAT_DATE_LOCALE,
+  MatDatepickerModule, MatInputModule,
+  MatNativeDateModule
+} from "@angular/material";
 import {CommonModule} from "@angular/common";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 import {AMLExportButtonComponent} from "./generic/abstract-list/components/aml-export-button.component";
 import { AmlListSearchBtnComponent } from './generic/abstract-list/components/aml-list-search-btn.component';
 import {AmlListClearBtnComponent} from "./generic/abstract-list/components/aml-list-clear-btn.component";
 import {LookupTranslatePipe} from "./pipes/lookup-translate.pipe";
+import {AmlDatePickerClearComponent} from "./generic/abstract-list/components/aml-date-picker-clear.component";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 const appInitializerFn = (appConfig: AppConfigService) => {
     return () => {return appConfig.loadAppConfig(AppConfigService.DEV_ENV)};
 };
 
 const PIPES = [CollapseStrPipe, LookupTranslatePipe];
+
 const DIRECTIVES = [AuthorizeViewDirective, AuthorizeActionDirective, ValidatorDirective];
-const SHARED_MODULES = [CommonModule, TranslateModule, ReactiveFormsModule, FormsModule, NgxPaginationModule, HttpClientModule];
+
+const MAT_MODULES = [
+  MatDatepickerModule, MatInputModule
+];
+
+const SHARED_MODULES = [
+  CommonModule, TranslateModule, ReactiveFormsModule, FormsModule, NgxPaginationModule, HttpClientModule,
+  BrowserAnimationsModule, MAT_MODULES
+];
+
+
 const ABSTRACT_COMPONENTS = [
   AMLNoDataListComponent, AMLPaginationComponent, SortArrowsComponent, AMLExportButtonComponent, AmlListSearchBtnComponent,
-  AmlListClearBtnComponent
+  AmlListClearBtnComponent, AmlDatePickerClearComponent
 ];
+
+
 const COMPONENTS = [NotFoundComponent, DatePickerRemoveComponent, UnauthorizedComponent, ABSTRACT_COMPONENTS];
 
 export function HttpLoaderFactory(http: HttpClient) {
