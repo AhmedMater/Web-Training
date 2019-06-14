@@ -1,7 +1,7 @@
 package am.dorrar.model.course;
 
-import com.dorrar.data.CourseReference;
-import com.dorrar.model.SectionData;
+import am.dorrar.data.CourseReference;
+import am.dorrar.model.SectionData;
 
 import java.io.Serializable;
 import java.util.ArrayList;

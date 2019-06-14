@@ -25,15 +25,16 @@ import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
 import {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} from "@angular/material";
 import {CommonModule} from "@angular/common";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
-import {AMLExportButtonComponent} from "./generic/abstract-list/components/export-button.component";
+import {AMLExportButtonComponent} from "./generic/abstract-list/components/aml-export-button.component";
 import { AmlListSearchBtnComponent } from './generic/abstract-list/components/aml-list-search-btn.component';
 import {AmlListClearBtnComponent} from "./generic/abstract-list/components/aml-list-clear-btn.component";
+import {LookupTranslatePipe} from "./pipes/lookup-translate.pipe";
 
 const appInitializerFn = (appConfig: AppConfigService) => {
     return () => {return appConfig.loadAppConfig(AppConfigService.DEV_ENV)};
 };
 
-const PIPES = [CollapseStrPipe];
+const PIPES = [CollapseStrPipe, LookupTranslatePipe];
 const DIRECTIVES = [AuthorizeViewDirective, AuthorizeActionDirective, ValidatorDirective];
 const SHARED_MODULES = [CommonModule, TranslateModule, ReactiveFormsModule, FormsModule, NgxPaginationModule, HttpClientModule];
 const ABSTRACT_COMPONENTS = [
@@ -59,7 +60,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true},
       {provide: DateAdapter, useClass: LocalizedMomentDatePicker, deps: [MAT_DATE_LOCALE]},
       {provide: MAT_DATE_FORMATS, useValue: MAT_DATE_PICKER_CONFIG},
-      {provide: APP_INITIALIZER, useFactory: appInitializerFn, multi: true, deps: [AppConfigService]}
+      {provide: APP_INITIALIZER, multi: true, deps: [AppConfigService],
+        useFactory: (config: AppConfigService) => {return () => {return config.loadAppConfig(AppConfigService.DEV_ENV)}}}
   ],
   exports: [SHARED_MODULES, DIRECTIVES, ABSTRACT_COMPONENTS, PIPES, COMPONENTS]
 })

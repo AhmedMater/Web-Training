@@ -1,7 +1,7 @@
 package am.dorrar.repository;
 
-import com.dorrar.model.user.User;
-import com.dorrar.model.user.rm.UserRM;
+import am.dorrar.model.user.User;
+import am.dorrar.model.user.rm.UserRM;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;

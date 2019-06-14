@@ -1,13 +1,13 @@
 package am.dorrar.controller.filter;
 
 
-import com.dorrar.model.Action;
-import com.dorrar.model.Page;
-import com.dorrar.model.annotation.Authenticate;
-import com.dorrar.model.enums.Actions;
-import com.dorrar.model.enums.Pages;
-import com.dorrar.model.user.User;
-import com.dorrar.repository.UserRep;
+import am.dorrar.model.Action;
+import am.dorrar.model.Page;
+import am.dorrar.model.annotation.Authenticate;
+import am.dorrar.model.enums.Actions;
+import am.dorrar.model.enums.Pages;
+import am.dorrar.model.user.User;
+import am.dorrar.repository.UserRep;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.annotation.Priority;

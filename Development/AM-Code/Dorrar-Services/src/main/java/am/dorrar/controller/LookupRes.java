@@ -1,13 +1,13 @@
 package am.dorrar.controller;
 
-import com.dorrar.data.CorRefType;
-import com.dorrar.model.*;
-import com.dorrar.model.annotation.Authenticate;
-import com.dorrar.model.enums.Actions;
-import com.dorrar.model.lookup.*;
-import com.dorrar.repository.LookupRep;
-import com.dorrar.repository.ReferenceRep;
-import com.dorrar.service.LookupSer;
+import am.dorrar.data.CorRefType;
+import am.dorrar.model.*;
+import am.dorrar.model.annotation.Authenticate;
+import am.dorrar.model.enums.Actions;
+import am.dorrar.model.lookup.*;
+import am.dorrar.repository.LookupRep;
+import am.dorrar.repository.ReferenceRep;
+import am.dorrar.service.LookupSer;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.ws.rs.GET;
@@ -17,7 +17,7 @@ import javax.ws.rs.core.MediaType;
 import java.util.ArrayList;
 import java.util.List;
 
-//import com.am.dorrar.model.annotation.AuthorizeAction;
+//import am.am.dorrar.model.annotation.AuthorizeAction;
 
 @Path("/lookup")
 public class LookupRes {

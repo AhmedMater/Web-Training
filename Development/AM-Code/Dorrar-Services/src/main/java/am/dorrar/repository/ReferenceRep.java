@@ -1,8 +1,8 @@
 package am.dorrar.repository;
 
-import com.dorrar.data.CorRefType;
-import com.dorrar.data.CorRefTypeRM;
-import com.dorrar.data.CourseReference;
+import am.dorrar.data.CorRefType;
+import am.dorrar.data.CorRefTypeRM;
+import am.dorrar.data.CourseReference;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;

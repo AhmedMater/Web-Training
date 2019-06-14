@@ -1,8 +1,8 @@
 package am.dorrar.service;
 
 
-import com.dorrar.model.Role;
-import com.dorrar.repository.LookupRep;
+import am.dorrar.model.Role;
+import am.dorrar.repository.LookupRep;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

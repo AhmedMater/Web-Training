@@ -1,9 +1,9 @@
 package am.dorrar.service;
 
-import com.dorrar.model.security.AuthUser;
-import com.dorrar.model.security.LoginUserDTO;
-import com.dorrar.model.user.User;
-import com.dorrar.repository.SecurityRep;
+import am.dorrar.model.security.AuthUser;
+import am.dorrar.model.security.LoginUserDTO;
+import am.dorrar.model.user.User;
+import am.dorrar.repository.SecurityRep;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

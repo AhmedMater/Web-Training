@@ -36,6 +36,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jdbc</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>am</groupId>
+            <artifactId>AM-Lib</artifactId>
+            <version>0.0.1</version>
+        </dependency>
     </dependencies>
 
     <properties>

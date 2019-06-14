@@ -5,21 +5,17 @@ import {ConfigParam} from "../../common/config-param";
 
 @Injectable()
 export class AppConfigService {
-  static DEV_ENV: string = ConfigParam.ASSETS_CONFIG + '/dev-env-config.json';
-  static TEST_ENV: string = ConfigParam.ASSETS_CONFIG + '/test-env-config.json';
-  private configs: AppInit;
+  static DEV_ENV: string =  '/dev-env-config.json';
+  static TEST_ENV: string = '/test-env-config.json';
+  
+  config: AppInit;
 
   constructor(private http: HttpClient) {
   }
 
   loadAppConfig(env: string) {
-    return this.http.get<AppInit>(env).toPromise().then(data => {
-      this.configs = data;
-      ConfigParam.APP_BASE_URL = data.DORRAR_URL;
+    return this.http.get<AppInit>(ConfigParam.ASSETS_CONFIG + env).toPromise().then(data => {
+      this.config = data;
     });
-  }
-
-  getConfig() {
-    return this.configs;
   }
 }

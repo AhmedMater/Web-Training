@@ -1,11 +1,11 @@
 package am.dorrar.repository;
 
 
-import com.dorrar.model.*;
-import com.dorrar.model.lookup.CorLevel;
-import com.dorrar.model.lookup.CorType;
-import com.dorrar.model.lookup.rm.CorLevelVTORM;
-import com.dorrar.model.lookup.rm.CorTypeVTORM;
+import am.dorrar.model.*;
+import am.dorrar.model.lookup.CorLevel;
+import am.dorrar.model.lookup.CorType;
+import am.dorrar.model.lookup.rm.CorLevelVTORM;
+import am.dorrar.model.lookup.rm.CorTypeVTORM;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;

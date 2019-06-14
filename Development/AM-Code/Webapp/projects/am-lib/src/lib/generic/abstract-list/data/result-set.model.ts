@@ -1,4 +1,6 @@
-export class ListRS<T> {
+
+
+export class ResultSet<T> {
   data: T[] = [];
   total: number = 0;
 }

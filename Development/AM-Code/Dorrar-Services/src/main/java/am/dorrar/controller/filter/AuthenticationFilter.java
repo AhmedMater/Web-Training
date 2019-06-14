@@ -1,8 +1,9 @@
 package am.dorrar.controller.filter;
 
-import com.dorrar.model.annotation.Authenticate;
-import com.dorrar.model.user.User;
-import com.dorrar.repository.SecurityRep;
+import am.dorrar.model.annotation.Authenticate;
+import am.dorrar.model.user.User;
+import am.dorrar.repository.SecurityRep;
+import am.dorrar.service.SecurityManager;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.annotation.Priority;

@@ -9,6 +9,7 @@
     <packaging>pom</packaging>
     <version>0.0.1</version>
     <modules>
+        <module>AM-Lib</module>
         <module>Dorrar-Services</module>
         <module>IDAS-Services</module>
         <module>Webapp-Spring-Boot</module>

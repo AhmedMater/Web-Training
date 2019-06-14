@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {AbstractList} from "../../../../../am-lib/src/lib/generic/abstract-list/list.abstract";
-import {ListItemVto} from "./data/list-item-vto.model";
+import {UserVTO} from "./data/user-vto.model";
 import {FormBuilder, FormGroup} from "@angular/forms";
 import {OrderInfo} from "../../../../../am-lib/src/lib/generic/abstract-list/data/order-info.model";
 import {ActivatedRoute, Params, Router} from "@angular/router";
@@ -9,16 +9,19 @@ import {Title} from "@angular/platform-browser";
 import {UtilService} from "../../../../../am-lib/src/lib/services/util.service";
 import {TranslateService} from "@ngx-translate/core";
 import {DateService} from "../../../../../am-lib/src/lib/services/date/date.service";
+import {AbstractListService} from "./abstract-list.service";
+import {ListOptions} from "../../../../../am-lib/src/lib/generic/abstract-list/data/list-options.model";
+import {ExportTypes} from "../../../../../am-lib/src/lib/generic/abstract-list/data/export-types.enum";
 
 @Component({
   selector: 'app-abstract-list-sample',
   templateUrl: 'abstract-list-sample.component.html',
-  providers: [FormBuilder]
+  providers: [FormBuilder, AbstractListService]
 })
-export class AbstractListSampleComponent extends AbstractList<ListItemVto> {
+export class AbstractListSampleComponent extends AbstractList<UserVTO> {
   
   filters: FormGroup = this.formBuilder.group({
-   name: null
+    name: null
   });
   orderInfo: OrderInfo;
   
@@ -29,16 +32,21 @@ export class AbstractListSampleComponent extends AbstractList<ListItemVto> {
               public titleService: Title,
               public activatedRoute: ActivatedRoute,
               public formBuilder: FormBuilder,
-              public router: Router){
+              public router: Router,
+              private abstractListService: AbstractListService){
     super('amLibSamples.abstractList.pageTitle', translate, languageService, utilService, dateService,
       titleService, activatedRoute, router);
   }
   
-  ngOnInit() {
-  }
-  findAll() {
+  findAll(exportType: ExportTypes) {
+    this.abstractListService.findAll({
+    
+    }, new ListOptions(this.paginationInfo, this.orderInfo, exportType)).subscribe(
+      res=> this.resultSet = res
+    );
   }
   
   initializeFilters() {
+  
   }
 }

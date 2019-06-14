@@ -1,4 +1,5 @@
-import {Component} from "@angular/core";
+import {Component, EventEmitter, Output} from "@angular/core";
+import {ExportTypes} from "../data/export-types.enum";
 
 
 @Component({
@@ -17,16 +18,16 @@ import {Component} from "@angular/core";
       </button>
       
       <div class="dropdown-menu" aria-labelledby="exportDropdownBtn">
-        <a class="dropdown-item" (click)="onExport(EXPORT_TYPES.PDF)">
+        <a class="dropdown-item clickable" (click)="onExport(EXPORT_TYPES.PDF)">
           <i class="fa fa-file-pdf-o"></i>{{'amLib.abstractList.filter.export.pdf' | translate}}
         </a>
-        <a class="dropdown-item" (click)="onExport(EXPORT_TYPES.WORD)">
+        <a class="dropdown-item clickable" (click)="onExport(EXPORT_TYPES.WORD)">
           <i class="fa fa-file-word-o"></i>{{'amLib.abstractList.filter.export.doc' | translate}}
         </a>
-        <a class="dropdown-item" (click)="onExport(EXPORT_TYPES.EXCEL)">
+        <a class="dropdown-item clickable" (click)="onExport(EXPORT_TYPES.EXCEL)">
           <i class="fa fa-file-excel-o"></i>{{'amLib.abstractList.filter.export.xls' | translate}}
         </a>
-        <a class="dropdown-item" (click)="onExport(EXPORT_TYPES.EXCEL)">
+        <a class="dropdown-item clickable" (click)="onExport(EXPORT_TYPES.EXCEL)">
           <i class="fa fa-file-excel-o"></i>{{'amLib.abstractList.filter.export.csv' | translate}}
         </a>
       </div>
@@ -34,8 +35,10 @@ import {Component} from "@angular/core";
   `
 })
 export class AMLExportButtonComponent {
+  EXPORT_TYPES: typeof ExportTypes = ExportTypes;
+  @Output() click = new EventEmitter<ExportTypes>();
   
   onExport(type){
-  
+    this.click.emit(type);
   }
 }

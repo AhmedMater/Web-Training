@@ -36,7 +36,8 @@
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/font-awesome/css/font-awesome.min.css",
-              "projects/home-app/src/styles.scss"
+              "projects/home-app/src/styles.scss",
+              "projects/am-lib/src/assets/styles/aml-general.scss"
             ],
             "scripts": []
           },
@@ -251,7 +252,8 @@
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.css",
               "node_modules/font-awesome/scss/font-awesome.scss",
-              "projects/am-lib-samples/src/styles.scss"
+              "projects/am-lib-samples/src/styles.scss",
+              "projects/am-lib/src/assets/styles/aml-general.scss"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.js",

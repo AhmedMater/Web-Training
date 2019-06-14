@@ -1,0 +1,4 @@
+{
+  "BACKEND_URL": "http://localhost:8080/amlSamples/api",
+  "DORRAR_URL": "http://localhost:8181/dorrar/api/"
+}

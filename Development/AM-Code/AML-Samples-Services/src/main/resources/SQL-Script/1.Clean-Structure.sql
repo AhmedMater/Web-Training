@@ -14,14 +14,14 @@ CREATE TABLE aml_users (
   created_on DATETIME NOT NULL,
   last_updated_by INT NULL,
   last_updated_on DATETIME NULL,
-  life_brief VARCHAR(500) NOT NULL,
+  about_brief VARCHAR(500) NOT NULL,
   CONSTRAINT pk_aml_users PRIMARY KEY (id)
 );
 
 CREATE TABLE aml_role (
   id INT NOT NULL AUTO_INCREMENT,
-  title_ar INT NOT NULL,
-  title_en INT NOT NULL,
+  title_ar VARCHAR(45) NOT NULL,
+  title_en VARCHAR(45) NOT NULL,
   CONSTRAINT pk_aml_role PRIMARY KEY (id)
 );
 

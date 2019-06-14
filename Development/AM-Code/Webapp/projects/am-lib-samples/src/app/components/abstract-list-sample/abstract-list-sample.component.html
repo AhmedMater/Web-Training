@@ -26,9 +26,9 @@
     </div>
     <div class="card-footer">
       <div class="btn-group float-right" role="group" aria-label="Basic example">
-        <aml-export-button></aml-export-button>
-        <aml-list-clear-btn (click)="onListClear()"></aml-list-clear-btn>
-        <aml-list-search-btn (click)="onListSearch()"></aml-list-search-btn>
+        <aml-export-button (click)="onExport()"></aml-export-button>
+        <aml-list-clear-btn (click)="onClear()"></aml-list-clear-btn>
+        <aml-list-search-btn (click)="onSearch()"></aml-list-search-btn>
       </div>
     </div>
   </div>
@@ -53,13 +53,13 @@
         <tr *ngFor="let item of resultSet.data  | paginate: { id: 'reportPage',
                                                      itemsPerPage: paginationInfo.pageSize,
                                                      currentPage: paginationInfo.pageNum+1,
-                                                     totalItems: resultSet.total }">
-          <th scope="row">{{((paginationInfo.pageNum+1) * paginationInfo.pageSize) + (i+1)}}</th>
-          <td>{{item.name}}</td>
-          <td>{{item.isActive}}</td>
+                                                     totalItems: resultSet.total }; index as i;">
+          <th scope="row">{{(paginationInfo.pageNum * paginationInfo.pageSize) + (i+1)}}</th>
+          <td>{{item | lookupTranslate: 'fullName'}}</td>
           <td>{{item.email}}</td>
           <td>{{item.isActive}}</td>
           <td>{{item.expiryDate}}</td>
+          <td>{{item.role | lookupTranslate: 'title'}}</td>
         </tr>
         </tbody>
       </table>
@@ -67,7 +67,7 @@
     </div>
     <div class="card-footer">
       <aml-pagination (changePageSize)="onChangePageSize($event)"
-                      [paginationID]="'reportPage'" [list]="resultSet.data"
+                      [paginationID]="'reportPage'" [resultSet]="resultSet"
                       (changePage)="onChangePage($event)"></aml-pagination>
     </div>
   </div>

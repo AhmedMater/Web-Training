@@ -1,4 +1,4 @@
-package aml.samples.data.abstractList;
+package aml.data;
 
 import java.io.Serializable;
 import java.util.ArrayList;

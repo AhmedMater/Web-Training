@@ -1,7 +1,7 @@
 package am.dorrar.controller;
 
-import com.dorrar.model.security.LoginUserDTO;
-import com.dorrar.service.SecuritySer;
+import am.dorrar.model.security.LoginUserDTO;
+import am.dorrar.service.SecuritySer;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.ws.rs.*;

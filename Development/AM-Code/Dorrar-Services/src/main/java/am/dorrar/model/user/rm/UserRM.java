@@ -1,6 +1,6 @@
 package am.dorrar.model.user.rm;
 
-import com.dorrar.model.user.User;
+import am.dorrar.model.user.User;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Service;
 

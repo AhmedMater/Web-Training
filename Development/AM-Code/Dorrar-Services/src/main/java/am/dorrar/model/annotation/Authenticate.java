@@ -1,7 +1,7 @@
 package am.dorrar.model.annotation;
 
-import com.dorrar.model.enums.Actions;
-import com.dorrar.model.enums.Pages;
+import am.dorrar.model.enums.Actions;
+import am.dorrar.model.enums.Pages;
 
 import javax.ws.rs.NameBinding;
 import java.lang.annotation.Retention;

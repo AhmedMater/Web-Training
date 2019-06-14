@@ -1,8 +1,8 @@
 package am.dorrar.controller;
 
-import com.dorrar.model.UserList;
-import com.dorrar.model.UserVTO;
-import com.dorrar.repository.UserRep;
+import am.dorrar.model.UserList;
+import am.dorrar.model.UserVTO;
+import am.dorrar.repository.UserRep;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.ws.rs.*;

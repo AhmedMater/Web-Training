@@ -1,7 +1,7 @@
 package am.dorrar.service;
 
-import com.dorrar.data.CourseReference;
-import com.dorrar.repository.ReferenceRep;
+import am.dorrar.data.CourseReference;
+import am.dorrar.repository.ReferenceRep;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

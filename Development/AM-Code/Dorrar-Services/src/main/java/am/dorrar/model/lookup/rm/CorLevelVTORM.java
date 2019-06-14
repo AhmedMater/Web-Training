@@ -1,6 +1,6 @@
 package am.dorrar.model.lookup.rm;
 
-import com.dorrar.model.lookup.CorLevel;
+import am.dorrar.model.lookup.CorLevel;
 import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;

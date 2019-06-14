@@ -1,10 +1,10 @@
 package am.dorrar.controller;
 
-import com.dorrar.model.course.CorMainDetail;
-import com.dorrar.model.course.CourseData;
-import com.dorrar.repository.CourseRep;
-import com.dorrar.service.CourseSer;
-import com.dorrar.service.SectionSer;
+import am.dorrar.model.course.CorMainDetail;
+import am.dorrar.model.course.CourseData;
+import am.dorrar.repository.CourseRep;
+import am.dorrar.service.CourseSer;
+import am.dorrar.service.SectionSer;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.ws.rs.*;
