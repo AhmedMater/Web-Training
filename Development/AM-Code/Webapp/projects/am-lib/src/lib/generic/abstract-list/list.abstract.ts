@@ -17,7 +17,6 @@ import {DateService} from "../../services/date/date.service";
 import {Moment} from "moment";
 import {DateFormats} from "../../services/date/date-formats.enum";
 
-
 export abstract class AbstractList<U> implements OnInit{
   EXPORT_TYPES: typeof ExportTypes = ExportTypes;
   public resultSet: ResultSet<U> =  new ResultSet<U>();
@@ -82,12 +81,12 @@ export abstract class AbstractList<U> implements OnInit{
   public onOrder(orderBy: string) {
     if(this.orderInfo != null) {
       this.orderInfo.orderBy = orderBy;
-      if (this.orderInfo.orderBy == orderBy && this.orderInfo.orderDir == 'asc')
-        this.orderInfo.orderDir = 'desc';
+      if (this.orderInfo.orderBy == orderBy && this.orderInfo.orderDir == OrderInfo.ASC)
+        this.orderInfo.orderDir = OrderInfo.DESC;
       else if (this.orderInfo.orderBy == orderBy)
-        this.orderInfo.orderDir = 'asc';
+        this.orderInfo.orderDir = OrderInfo.ASC;
       else
-        this.orderInfo.orderDir = 'desc';
+        this.orderInfo.orderDir = OrderInfo.DESC;
       
       const queryParams: Params = Object.assign({}, this.activatedRoute.snapshot.queryParams);
       queryParams[OrderInfo.ORDER_BY_QUERY] = this.orderInfo.orderBy;

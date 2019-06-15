@@ -20,7 +20,6 @@ import {ResultSet} from "../../data/result-set.model";
                  previousLabel="Previous" nextLabel="Next">
       </pagination-controls>
     </div>
-    
   `
 })
 export class AMLPaginationComponent implements OnInit {
@@ -28,7 +27,7 @@ export class AMLPaginationComponent implements OnInit {
   @Output() changePageSize = new EventEmitter<number>();
   @Output() changePage = new EventEmitter();
   @Input() paginationID: string;
-  @Input() resultSet : ResultSet;
+  @Input() resultSet : any;
 
   pageSize: number = 5;
 

@@ -1,11 +1,7 @@
-
-
 ::ng-deep .mat-form-field-underline {
   width: 0 !important;
   transform: none !important;
 }
-
-
 
 ::ng-deep .mat-form-field-infix{
   border: 0;
@@ -40,4 +36,13 @@
 
 ::ng-deep .mat-form-field{
   width: 100%;
+}
+
+.date-close-ar {
+  position: relative;
+  left: 20px !important;
+}
+.date-close-en {
+  position: relative;
+  right: 20px !important;
 }

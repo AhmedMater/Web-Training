@@ -12,3 +12,9 @@
 .pagination{
   display: inline-block;
 }
+
+
+::ng-deep .ngx-pagination {
+  padding-top: 4px;
+  margin-bottom: 0 !important;
+}

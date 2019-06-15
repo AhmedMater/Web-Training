@@ -9,7 +9,6 @@ import {ConfigParam} from "../../../../common/config-param";
       <img [src]="imgPath">
       <h3>{{'amLib.emptyPage.noData' | translate}}</h3>
     </div>
-
   `
 })
 export class AMLNoDataListComponent implements OnInit {

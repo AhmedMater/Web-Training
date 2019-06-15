@@ -8,7 +8,7 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
     </button>
   `
 })
-export class AmlListSearchBtnComponent implements OnInit {
+export class AMLListSearchBtnComponent implements OnInit {
   @Output() click = new EventEmitter();
   
   forwardEvent(){
