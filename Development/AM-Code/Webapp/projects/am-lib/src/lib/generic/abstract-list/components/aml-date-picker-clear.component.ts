@@ -15,10 +15,7 @@ import {Languages} from "../../../services/language/language.enum";
     }
   `],
   template: `
-    <span class="fa fa-times clickable" (click)="clearField()" *ngIf="formGroup.getRawValue()[formContName] != null"
-          [ngClass]="{ 
-              'date-close-ar': language == LANG.AR,
-              'date-close-en': language == LANG.EN }"></span>
+  
   `
 })
 export class AmlDatePickerClearComponent{

@@ -57,21 +57,24 @@
         </div>
 
         <div class="row">
+          <!--<div >-->
 
-          <div class="col-md-3">
-            <div class="form-group">
-              <label>Expiry Date From</label>
-              <!--<div class="detail-date-input">-->
-              <mat-form-field>
-                <input class="form-control" matInput [matDatepicker]="expiryDateFrom" formControlName="expiryDateFrom">
-                <mat-datepicker-toggle matSuffix [for]="expiryDateFrom"></mat-datepicker-toggle>
-                <mat-datepicker #expiryDateFrom></mat-datepicker>
-                <aml-date-picker-remove [language]="CURRENT_LANG" [formGroup]="filters"
-                                        [formContName]="'expiryDateFrom'"></aml-date-picker-remove>
-              </mat-form-field>
-              <!--</div>-->
-            </div>
-          </div>
+          <aml-date-picker class="col-md-3" formControlName="expiryDateFrom" ngDefaultControl
+                               label="Expiry Date From" idd="expiryDateFrom"></aml-date-picker>
+          <!--<div class="col-md-3">-->
+            <!--<div class="form-group">-->
+              <!--<label>Expiry Date From</label>-->
+              <!--&lt;!&ndash;<div class="detail-date-input">&ndash;&gt;-->
+              <!--<mat-form-field>-->
+                <!--<input class="form-control" matInput [matDatepicker]="expiryDateFrom" formControlName="expiryDateFrom">-->
+                <!--<mat-datepicker-toggle matSuffix [for]="expiryDateFrom"></mat-datepicker-toggle>-->
+                <!--<mat-datepicker #expiryDateFrom></mat-datepicker>-->
+                <!--<aml-date-picker-remove [language]="CURRENT_LANG" [formGroup]="filters"-->
+                                        <!--[formContName]="'expiryDateFrom'"></aml-date-picker-remove>-->
+              <!--</mat-form-field>-->
+              <!--&lt;!&ndash;</div>&ndash;&gt;-->
+            <!--</div>-->
+          <!--</div>-->
         </div>
       </form>
     </div>

@@ -134,7 +134,13 @@ export abstract class AbstractList<U> implements OnInit{
     Object.keys(changes).forEach((key: string) => {
       if(this.filters.controls[key] != null) {
         if (this.utilService.hasValue(changes[key])) {
-          let value = (/^.Date.$/.test(key)) ? this.dateService.toMoment(changes[key], DateFormats.M_DASH_DD_MM_YYYY) : changes[key];
+          let value = null;
+          
+          if(/^.+Date.+$/.test(key))
+            value = this.dateService.toMoment(changes[key], DateFormats.M_DASH_DD_MM_YYYY)
+          else
+            value = changes[key];
+          
           this.filters.controls[key].setValue(value);
         }
       }
@@ -142,8 +148,12 @@ export abstract class AbstractList<U> implements OnInit{
   }
   private loadFormDataIntoQueryParams(queryParams: Params){
     Object.keys(this.filters.controls).forEach((key: string) => {
-      let value = (/^.Date.$/.test(key)) ? this.dateService.toStr(<Moment>this.filters.get(key).value, DateFormats.M_DASH_DD_MM_YYYY) :
-        this.filters.get(key).value;
+      let value = null;
+      
+      if(/^.+Date.+$/.test(key))
+        value = this.dateService.toStr(<Moment>this.filters.get(key).value, DateFormats.M_DASH_DD_MM_YYYY)
+      else
+        value = this.filters.get(key).value;
       
       if (this.utilService.hasValue(value))
         queryParams[key] = value;

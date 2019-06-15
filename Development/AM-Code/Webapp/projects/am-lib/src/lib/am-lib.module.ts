@@ -37,6 +37,7 @@ import {AmlListClearBtnComponent} from "./generic/abstract-list/components/aml-l
 import {LookupTranslatePipe} from "./pipes/lookup-translate.pipe";
 import {AmlDatePickerClearComponent} from "./generic/abstract-list/components/aml-date-picker-clear.component";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { AmlDatePickerComponent } from './generic/form-components/aml-date-picker/aml-date-picker.component';
 
 const appInitializerFn = (appConfig: AppConfigService) => {
     return () => {return appConfig.loadAppConfig(AppConfigService.DEV_ENV)};
@@ -58,7 +59,7 @@ const SHARED_MODULES = [
 
 const ABSTRACT_COMPONENTS = [
   AMLNoDataListComponent, AMLPaginationComponent, SortArrowsComponent, AMLExportButtonComponent, AmlListSearchBtnComponent,
-  AmlListClearBtnComponent, AmlDatePickerClearComponent
+  AmlListClearBtnComponent, AmlDatePickerClearComponent, AmlDatePickerComponent
 ];
 
 

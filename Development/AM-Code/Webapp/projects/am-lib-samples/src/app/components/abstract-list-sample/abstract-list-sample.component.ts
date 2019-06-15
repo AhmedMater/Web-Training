@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {AbstractList} from "../../../../../am-lib/src/lib/generic/abstract-list/list.abstract";
 import {UserVTO} from "./data/user-vto.model";
-import {FormBuilder, FormGroup} from "@angular/forms";
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {OrderInfo} from "../../../../../am-lib/src/lib/generic/abstract-list/data/order-info.model";
 import {ActivatedRoute, Params, Router} from "@angular/router";
 import {LanguageService} from "../../../../../am-lib/src/lib/services/language/language.service";
@@ -25,7 +25,7 @@ export class AbstractListSampleComponent extends AbstractList<UserVTO> {
     username: null,
     email: null,
     isActive: null,
-    expiryDateFrom: null
+    expiryDateFrom: [null, [Validators.required]]
   });
   orderInfo: OrderInfo;
   
@@ -43,6 +43,8 @@ export class AbstractListSampleComponent extends AbstractList<UserVTO> {
   }
   
   findAll(exportType: ExportTypes) {
+    console.log(this.filters.get('expiryDateFrom'));
+    
     this.abstractListService.findAll({
     
     }, new ListOptions(this.paginationInfo, this.orderInfo, exportType)).subscribe(
