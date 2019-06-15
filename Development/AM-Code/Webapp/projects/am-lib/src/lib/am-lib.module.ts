@@ -1,14 +1,14 @@
 import {APP_INITIALIZER, NgModule} from '@angular/core';
 import {AppConfigService} from "./services/app-init/app-config.service";
-import {MAT_DATE_PICKER_CONFIG} from "./common/material-date-picker/material-date-picker-config";
-import {LocalizedMomentDatePicker} from "./common/material-date-picker/localized-moment-date-picker";
+import {MAT_DATE_PICKER_CONFIG} from "./generic/date/config/material-date-picker-config";
+import {LocalizedMomentDatePicker} from "./generic/date/config/localized-moment-date-picker";
 import {AuthInterceptor} from "./interceptor/auth-interceptor";
 import {HTTP_INTERCEPTORS, HttpClient, HttpClientModule} from "@angular/common/http";
 import {UtilService} from "./services/util.service";
 import {LocalStorageService} from "./services/local-storage.service";
 import {AuthorizationGuard} from "./generic/authorization/guards/authorization.guard";
 import {AuthenticationGuard} from "./generic/authorization/guards/authentication.guard";
-import {DateService} from "./services/date/date.service";
+import {DateService} from "./generic/date/date.service";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {AuthorizeActionDirective} from "./generic/authorization/authorize-action.directive";
 import {AuthorizeViewDirective} from "./generic/authorization/authorize-view.directive";
@@ -27,9 +27,9 @@ import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 import {AMLExportButtonComponent} from "./generic/abstract-list/components/aml-export-button.component";
 import { AMLListSearchBtnComponent } from './generic/abstract-list/components/aml-list-search-btn.component';
 import {AMLListClearBtnComponent} from "./generic/abstract-list/components/aml-list-clear-btn.component";
-import {LookupTranslatePipe} from "./pipes/lookup-translate.pipe";
+import {LookupTranslatePipe} from "./generic/language/lookup-translate.pipe";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import { AMLDatePickerComponent } from './generic/form-components/aml-date-picker/aml-date-picker.component';
+import { AMLDatePickerComponent } from './generic/date/aml-date-picker/aml-date-picker.component';
 
 
 const PIPES = [CollapseStrPipe, LookupTranslatePipe];

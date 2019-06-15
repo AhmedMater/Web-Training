@@ -2,8 +2,8 @@ import {Directive, ElementRef, HostListener, Input, OnChanges, OnInit, Renderer2
 import {TranslateService} from "@ngx-translate/core";
 import {FormGroup} from "@angular/forms";
 import {ErrorModel} from "./error.model";
-import {Languages} from "../../services/language/language.enum";
-import {LanguageService} from "../../services/language/language.service";
+import {Languages} from "../language/language.enum";
+import {LanguageService} from "../language/language.service";
 
 @Directive({
   selector: '[validate]'

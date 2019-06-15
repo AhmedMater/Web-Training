@@ -7,15 +7,15 @@ import * as FileSaver from "file-saver";
 import {startWith, distinctUntilChanged} from 'rxjs/operators';
 
 import {ExportTypes} from "./data/export-types.enum";
-import {Languages} from "../../services/language/language.enum";
+import {Languages} from "../language/language.enum";
 import {ResultSet} from "./data/result-set.model";
 import {OrderInfo} from "./data/order-info.model";
 import {PaginationInfo} from "./data/pagination-info.model";
-import {LanguageService} from "../../services/language/language.service";
+import {LanguageService} from "../language/language.service";
 import {UtilService} from "../../services/util.service";
-import {DateService} from "../../services/date/date.service";
+import {DateService} from "../date/date.service";
 import {Moment} from "moment";
-import {DateFormats} from "../../services/date/date-formats.enum";
+import {DateFormats} from "../date/date-formats.enum";
 
 export abstract class AbstractList<U> implements OnInit{
   EXPORT_TYPES: typeof ExportTypes = ExportTypes;

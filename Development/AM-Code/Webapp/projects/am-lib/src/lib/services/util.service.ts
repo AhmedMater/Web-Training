@@ -1,7 +1,7 @@
 import {FormGroup} from "@angular/forms";
 import {Injectable} from "@angular/core";
 import {LocalStorageService} from "./local-storage.service";
-import {Languages} from "./language/language.enum";
+import {Languages} from "../generic/language/language.enum";
 
 @Injectable()
 export class UtilService {
